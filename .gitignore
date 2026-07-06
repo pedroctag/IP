@@ -1,0 +1,14 @@
+# Xcelium e ModelSim
+**/xcelium.d/
+**/work/
+**/cov_work/
+**/.simvision/
+**/waves.shm/
+
+# Simulação
+*.vcd
+*.fsdb
+*.shm
+*.pak
+*.history
+*.tstamp

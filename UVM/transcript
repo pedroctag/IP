@@ -1,0 +1,152 @@
+# do simular.do
+# C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:43 on Jul 06,2026
+# vlog -work work "+acc" "+define+UVM_NO_DPI" "+incdir+C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src" C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/uvm.sv 
+# -- Compiling package uvm_pkg (uvm-1.2 Built-in)
+# ** Warning: ** while parsing file included at C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/uvm.sv(23)
+# ** at C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/seq/uvm_sequencer_base.svh(1499): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: ** while parsing file included at C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/uvm.sv(23)
+# ** at C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/seq/uvm_sequencer_base.svh(1662): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: ** while parsing file included at C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/uvm.sv(23)
+# ** at C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/seq/uvm_sequence_base.svh(1333): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:13:44 on Jul 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:13:44 on Jul 06,2026
+# vlog -work work "+acc" "+define+UVM_NO_DPI" "+incdir+C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src" -f files.f 
+# -- Compiling package my_pkg
+# -- Importing package uvm_pkg (uvm-1.2 Built-in)
+# -- Compiling package top_tb_sv_unit
+# -- Importing package uvm_pkg (uvm-1.2 Built-in)
+# -- Importing package my_pkg
+# -- Compiling module top_tb
+# -- Compiling module my_checker
+# -- Scanning library directory './../RTL/lib/Common'
+# -- Scanning library directory './../RTL/lib/Core_FPU'
+# -- Compiling interface dut_if
+# -- Compiling module pipelined_processor_FPU
+# -- Compiling module Control_Unit
+# -- Compiling module Fetch
+# -- Compiling module F_D_flipflop
+# -- Compiling module Decode
+# -- Compiling module D_E_flipflop
+# -- Compiling module Execute
+# -- Compiling module Brancher
+# -- Compiling module E_M_flipflop
+# -- Compiling module M_W_flipflop
+# -- Compiling module Main_Decoder
+# -- Compiling module FPU_Decoder
+# -- Compiling module PC_Plus_4
+# -- Compiling module Cflag
+# -- Compiling module InstructionAlign
+# -- Compiling module Decompressor
+# -- Compiling module FPU
+# -- Compiling module adder
+# -- Compiling module multiply
+# -- Compiling module fp2int
+# -- Compiling module int2fp
+# -- Scanning library directory './../RTL/lib/Core_FPU/memory'
+# -- Scanning library directory './../RTL/lib/Common'
+# -- Compiling module mux_2x1
+# -- Compiling module Hazard_unit
+# -- Compiling module mux_3x1
+# -- Compiling module Memory
+# -- Compiling module Writeback
+# -- Compiling module ALU_Decoder
+# -- Compiling module Instruction_Memory
+# -- Compiling module PC
+# -- Compiling module Register_File
+# -- Compiling module Extend
+# -- Compiling module ALU
+# -- Scanning library directory './../RTL/lib/Core_FPU'
+# -- Scanning library directory './../RTL/lib/Core_FPU/memory'
+# -- Compiling module memTopo32LittleEndian
+# -- Compiling module byteEnableDecoder
+# -- Compiling module memByteAddressable32WF
+# -- Compiling module memReadManager
+# -- Compiling module memory_write_first
+# 
+# Top level modules:
+# 	top_tb
+# End time: 16:13:45 on Jul 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" "+UVM_TESTNAME=my_test" "+UVM_VERBOSITY=UVM_LOW" work.top_tb 
+# Start time: 16:13:45 on Jul 06,2026
+# Loading C:/Users/Pedro/AppData/Local/Temp\Pedro@DESKTOP-9H434LS_dpi_13876\win32pe_gcc-4.2.1\export_tramp.dll
+# Loading sv_std.std
+# Loading work.dut_if
+# Loading work.uvm_pkg
+# Loading work.my_pkg
+# ** Error (suppressible): (vsim-19) Failed to access library 'mtiUvm' at "mtiUvm".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.top_tb_sv_unit
+# Loading work.top_tb
+# Loading work.pipelined_processor_FPU
+# Loading work.Control_Unit
+# Loading work.Main_Decoder
+# Loading work.ALU_Decoder
+# Loading work.FPU_Decoder
+# Loading work.Fetch
+# Loading work.Instruction_Memory
+# Loading work.PC
+# Loading work.PC_Plus_4
+# Loading work.mux_2x1
+# Loading work.Cflag
+# Loading work.F_D_flipflop
+# Loading work.Decode
+# Loading work.Register_File
+# Loading work.Extend
+# Loading work.InstructionAlign
+# Loading work.Decompressor
+# Loading work.D_E_flipflop
+# Loading work.Hazard_unit
+# Loading work.mux_3x1
+# Loading work.Execute
+# Loading work.ALU
+# Loading work.FPU
+# Loading work.adder
+# Loading work.multiply
+# Loading work.fp2int
+# Loading work.int2fp
+# Loading work.Brancher
+# Loading work.E_M_flipflop
+# Loading work.Memory
+# Loading work.memTopo32LittleEndian
+# Loading work.byteEnableDecoder
+# Loading work.memByteAddressable32WF
+# Loading work.memory_write_first
+# Loading work.memReadManager
+# Loading work.M_W_flipflop
+# Loading work.Writeback
+# Loading work.my_checker
+# ** Warning: (vsim-8311) System Verilog assertions are supported only in Questasim.
+# ** Warning: (vsim-3015) ./../RTL/lib/Core_FPU/memory/memTopo32LittleEndian.v(31): [PCDPC] - Port size (32) does not match connection size (30) for port 'addr'. The port definition is at: ./../RTL/lib/Core_FPU/memory/memByteAddressable32WF.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/dut/M/dmemory/mem_inst File: ./../RTL/lib/Core_FPU/memory/memByteAddressable32WF.v
+# ** Warning: (vsim-3015) ./../RTL/lib/Core_FPU/memory/memByteAddressable32WF.v(31): [PCDPC] - Port size (4) does not match connection size (32) for port 'addr'. The port definition is at: ./../RTL/lib/Core_FPU/memory/memory_write_first.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/dut/M/dmemory/mem_inst/mem_byte0 File: ./../RTL/lib/Core_FPU/memory/memory_write_first.v
+# ** Warning: (vsim-3015) ./../RTL/lib/Core_FPU/memory/memByteAddressable32WF.v(35): [PCDPC] - Port size (4) does not match connection size (32) for port 'addr'. The port definition is at: ./../RTL/lib/Core_FPU/memory/memory_write_first.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/dut/M/dmemory/mem_inst/mem_byte1 File: ./../RTL/lib/Core_FPU/memory/memory_write_first.v
+# ** Warning: (vsim-3015) ./../RTL/lib/Core_FPU/memory/memByteAddressable32WF.v(39): [PCDPC] - Port size (4) does not match connection size (32) for port 'addr'. The port definition is at: ./../RTL/lib/Core_FPU/memory/memory_write_first.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/dut/M/dmemory/mem_inst/mem_byte2 File: ./../RTL/lib/Core_FPU/memory/memory_write_first.v
+# ** Warning: (vsim-3015) ./../RTL/lib/Core_FPU/memory/memByteAddressable32WF.v(43): [PCDPC] - Port size (4) does not match connection size (32) for port 'addr'. The port definition is at: ./../RTL/lib/Core_FPU/memory/memory_write_first.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/dut/M/dmemory/mem_inst/mem_byte3 File: ./../RTL/lib/Core_FPU/memory/memory_write_first.v
+# Compiling C:/Users/Pedro/AppData/Local/Temp\Pedro@DESKTOP-9H434LS_dpi_13876\win32pe_gcc-4.2.1\exportwrapper.c
+# Loading C:/Users/Pedro/AppData/Local/Temp\Pedro@DESKTOP-9H434LS_dpi_13876\win32pe_gcc-4.2.1\vsim_auto_compile.dll
+# ** Error: (vsim-1) Unable to checkout verification license - testbench generation feature (randomize, randcase, randsequence, covergroup) is only supported with QuestaSim.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb File: tb/top_tb.sv
+# Error loading design
+# End time: 16:13:49 on Jul 06,2026, Elapsed time: 0:00:04
+# Errors: 2, Warnings: 6
