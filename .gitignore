@@ -13,5 +13,6 @@
 *.history
 *.tstamp
 
-# UVM teste
+# UVM teste e core sem FPU
 **/tb_/
+**/Core_no_FPU/
