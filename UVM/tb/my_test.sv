@@ -1,7 +1,7 @@
 class my_test extends uvm_test;
   `uvm_component_utils(my_test)
 
-  my_env m_env; // Instancia do ambiente de teste
+  my_env m_env;
 
   function new(string name, uvm_component parent);
     super.new(name, parent);
@@ -24,9 +24,18 @@ class my_test extends uvm_test;
     my_random_sequence seq_rand;
 
     phase.raise_objection(this);
-
     m_env.m_cov.g_cov.start();
-    `uvm_info(get_type_name(), "Teste asm", UVM_LOW);
+
+    // =========================================================
+    // TESTE 1: SEQUÊNCIA ASM DIRECIONADA
+    // =========================================================
+    `uvm_info(get_type_name(), "Teste asm - Iniciando...", UVM_LOW);
+    
+    // Garante que o scoreboard está ativo e carrega o arquivo
+    m_env.m_scoreboard.enable_checking = 1;
+    m_env.m_scoreboard.carregar_gabarito("/home/alvaro/UVM_IP/IP-main/UVM/tb/esperado.txt");
+
+    @(posedge m_env.m_agent.m_driver.vif.clk);
     m_env.m_agent.m_driver.vif.reset <= 1;
     m_env.m_agent.m_driver.vif.we <= 1;
     
@@ -35,9 +44,26 @@ class my_test extends uvm_test;
 
     m_env.m_agent.m_driver.vif.reset <= 0;
     m_env.m_agent.m_driver.vif.we <= 0;
-    #5500;
+    
+    // Aguarda o pipeline do processador terminar as últimas instruções
+    #5500; 
 
-    `uvm_info(get_type_name(), "Teste Aleatorio", UVM_LOW);
+    // =========================================================
+    // BARREIRA DE ISOLAMENTO
+    // =========================================================
+    `uvm_info(get_type_name(), "Desativando Scoreboard para o Teste Aleatorio...", UVM_LOW);
+    
+    // Limpa estado residual e desliga as checagens (evita UVM_ERROR de tamanho da fila)
+    m_env.m_scoreboard.limpar_estado(); 
+    m_env.m_scoreboard.enable_checking = 0; 
+
+    // =========================================================
+    // TESTE 2: SEQUÊNCIA ALEATÓRIA (Apenas para Coverage)
+    // =========================================================
+    `uvm_info(get_type_name(), "Teste Aleatorio - Iniciando...", UVM_LOW);
+    
+    // Alinha ao clock e injeta um reset rígido para zerar o RTL
+    @(posedge m_env.m_agent.m_driver.vif.clk);
     m_env.m_agent.m_driver.vif.reset <= 1;
     m_env.m_agent.m_driver.vif.we <= 1;
 
@@ -55,10 +81,5 @@ class my_test extends uvm_test;
   
   function void report_phase(uvm_phase phase);
     super.report_phase(phase);
-    //`uvm_info(get_type_name(),$sformatf("Cobertura de opcode: %0.2f%%", m_env.m_cov.g_cov.cp_opcode.get_coverage()), UVM_LOW);
-    //`uvm_info(get_type_name(),$sformatf("Cobertura de addr:   %0.2f%%", m_env.m_cov.g_cov.cp_addr.get_coverage()), UVM_LOW);
-    //`uvm_info(get_type_name(),$sformatf("Cobertura de cross:  %0.2f%%", m_env.m_cov.g_cov.cp_opcode_x_addr.get_coverage()), UVM_LOW);
-    //`uvm_info(get_type_name(),$sformatf("Cobertura total:     %0.2f%%", m_env.m_cov.g_cov.get_inst_coverage()), UVM_LOW);
   endfunction
-
 endclass

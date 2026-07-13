@@ -59,5 +59,8 @@ begin
     $sdf_annotate("Sim/sdf/delays_PPA2.sdf", pipelined_processor_FPU.dut,,"../../../SYNTHESIS/Sim/sdf/sdf.log", "MAXIMUM");
 end
 `endif*/
-
+initial begin
+    // Substitua "instancia_do_processador" pelo nome real da instância no seu TB
+    $sdf_annotate("/home/aluno/IP-main/SYNTHESIS/Sim/sdf/delays_PPA1.sdf", dut);
+end
 endmodule
