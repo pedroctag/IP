@@ -16,3 +16,4 @@
 # UVM teste e core sem FPU
 **/tb_/
 **/Core_no_FPU/
+**/SYNTHESIS/fv/
