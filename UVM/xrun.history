@@ -1,0 +1,30 @@
+#e1(11Jul2026:13:32:08): source ./xcelium.d/env.d/env.history.11Jul2026_13_32_08
+s1(11Jul2026:13:32:08):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e2(11Jul2026:13:40:16): source ./xcelium.d/env.d/env.history.11Jul2026_13_40_16
+s2(11Jul2026:13:40:16):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e3(11Jul2026:13:42:57): source ./xcelium.d/env.d/env.history.11Jul2026_13_42_57
+s3(11Jul2026:13:42:57):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e4(11Jul2026:13:45:54): source ./xcelium.d/env.d/env.history.11Jul2026_13_45_54
+s4(11Jul2026:13:45:54):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e5(11Jul2026:13:49:37): source ./xcelium.d/env.d/env.history.11Jul2026_13_49_37
+s5(11Jul2026:13:49:37):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e6(11Jul2026:13:52:50): source ./xcelium.d/env.d/env.history.11Jul2026_13_52_50
+s6(11Jul2026:13:52:50):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e7(11Jul2026:13:58:28): source ./xcelium.d/env.d/env.history.11Jul2026_13_58_28
+s7(11Jul2026:13:58:28):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e8(11Jul2026:14:33:32): source ./xcelium.d/env.d/env.history.11Jul2026_14_33_32
+s8(11Jul2026:14:33:32):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e9(11Jul2026:14:38:53): source ./xcelium.d/env.d/env.history.11Jul2026_14_38_53
+s9(11Jul2026:14:38:53):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e10(11Jul2026:14:51:49): source ./xcelium.d/env.d/env.history.11Jul2026_14_51_49
+s10(11Jul2026:14:51:49):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e11(11Jul2026:15:04:12): source ./xcelium.d/env.d/env.history.11Jul2026_15_04_12
+s11(11Jul2026:15:04:12):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e12(11Jul2026:15:04:53): source ./xcelium.d/env.d/env.history.11Jul2026_15_04_53
+s12(11Jul2026:15:04:53):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e13(11Jul2026:15:07:30): source ./xcelium.d/env.d/env.history.11Jul2026_15_07_30
+s13(11Jul2026:15:07:30):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e14(11Jul2026:15:09:28): source ./xcelium.d/env.d/env.history.11Jul2026_15_09_28
+s14(11Jul2026:15:09:28):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
+#e15(11Jul2026:15:11:04): source ./xcelium.d/env.d/env.history.11Jul2026_15_11_04
+s15(11Jul2026:15:11:04):  xrun -coverage functional -covoverwrite -f files.f -uvm +UVM_TESTNAME=my_test +UVM_VERBOSITY=UVM_LOW -access +rwc 
