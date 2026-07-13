@@ -2,14 +2,16 @@
 ## Configuração Geral (Bibliotecas)
 ###############################################################
 
-set_db init_lib_search_path /LIB/
-set_db init_hdl_search_path ../../RTL/lib/misc
-set_db init_hdl_search_path ../../RTL/lib/common
-set_db init_hdl_search_path ../../RTL/lib/Core_FPU
-set_db init_hdl_search_path ../../RTL/lib/Core_FPU/memory
+set_db init_lib_search_path {./LIB/ ./SYNTHESIS/LIB/}
+set_db init_hdl_search_path {
+  ./../RTL/lib/misc
+  ./../RTL/lib/common
+  ./../RTL/lib/Core_FPU
+  ./../RTL/lib/Core_FPU/memory
+}
 
 # Carrega a biblioteca
-read_libs fast_vdd1v0_basicCells.lib
+read_libs slow_vdd1v0_basicCells.lib
 
 # Lista de arquivos
 set rtl_list {
@@ -26,7 +28,7 @@ set rtl_list {
     adder.v
     Cflag.v
     PC_Plus_4.v
-    Main_Deocder.v
+    Main_Decoder.v
     M_W_flipflop.v
     InstructionAlign.v
     F_D_flipflop.v
@@ -64,18 +66,18 @@ read_hdl -define SYNTHESIS $rtl_list
 
 set_db max_cpus 22
 
-elaborate pipelined_processor_FPU.v
+elaborate pipelined_processor_FPU
 check_design -unresolved
 
 # Constraints Baseline
-read_sdc /constraints/constraints_top.sdc
+read_sdc ./constraints/constraints_top.sdc
 
 set_db syn_generic_effort medium
 set_db syn_map_effort medium
 set_db syn_opt_effort medium
 
-#set_db optimize_constant_0_flops false
-#set_db optimize_constant_feedback_seqs false
+set_db optimize_constant_0_flops false
+set_db optimize_constant_feedback_seqs false
 # --- ETAPA 1: SYN_GENERIC ---
 syn_generic
 puts "--- Gerando Relatórios Baseline (Generic) ---"
@@ -106,18 +108,19 @@ write_hdl > Sim/Netlists/baseline/pipelined_processor_FPU.v
 write_sdc > Sim/sdc/baseline/x_sdc.sdc
 write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge -setuphold split > Sim/sdf/delays_baseline.sdf
 
-###############################################################
-## CENÁRIO 2: PPA 1 (20ns)
-###############################################################
+##############################################################
+# CENÁRIO 2: PPA 1 (20ns)
+##############################################################
 puts "=== Iniciando PPA 1 ==="
 
 delete_obj [get_db designs *]
 
 read_hdl -define SYNTHESIS $rtl_list
 
-elaborate pipelined_processor_FPU.v
+elaborate pipelined_processor_FPU
+check_design -unresolved
 
-read_sdc /constraints/constraints_top_ppa1.sdc
+read_sdc ./constraints/constraints_top_ppa1.sdc
 
 # --- ETAPA 1: SYN_GENERIC ---
 syn_generic
@@ -145,23 +148,23 @@ report_area   > Sim/Area/PPA1/report_area_opt.rpt
 report_qor    > Sim/QoR/PPA1/report_qor_opt.rpt
 
 # Outputs Finais
-write_db pipelined_processor_FPU -to_file Sim/db/design_baseline.db
-write_hdl > Sim/Netlists/baseline/pipelined_processor_FPU.v
-write_sdc > Sim/sdc/baseline/x_sdc_baseline.sdc
-write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge -setuphold split > Sim/sdf/delays_baseline.sdf
+write_db pipelined_processor_FPU -to_file Sim/db/design_PPA1.db
+write_hdl > Sim/Netlists/PPA1/pipelined_processor_FPU.v
+write_sdc > Sim/sdc/PPA1/x_sdc_PPA1.sdc
+write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge -setuphold split > Sim/sdf/delays_PPA1.sdf
 
-###############################################################
-## CENÁRIO 3: PPA 2 (10ns)
-###############################################################
+##############################################################
+# CENÁRIO 3: PPA 2 (10ns)
+##############################################################
 puts "=== Iniciando PPA 2 ==="
 
 delete_obj [get_db designs *]
 
 read_hdl -define SYNTHESIS $rtl_list
 
-elaborate pipelined_processor_FPU.v
+elaborate pipelined_processor_FPU
 
-read_sdc /constraints/constraints_top_ppa2.sdc
+read_sdc ./constraints/constraints_top_ppa2.sdc
 
 # --- ETAPA 1: SYN_GENERIC ---
 syn_generic

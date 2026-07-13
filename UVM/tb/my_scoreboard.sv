@@ -27,7 +27,7 @@ class my_scoreboard extends uvm_scoreboard;
     my_txn tr_esperada;
 
     // Crie este arquivo com o formato: ADDR DATA (em hexa)
-    fd = $fopen("./esperado.txt", "r");
+    fd = $fopen("/home/alvaro/UVM_IP/IP-main/UVM/tb/esperado.txt", "r");
     if (fd == 0) `uvm_fatal("NO_FILE", "Erro ao abrir esperado.txt");
 
     // Lê linha por linha até o fim do arquivo

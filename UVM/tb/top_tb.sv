@@ -19,9 +19,8 @@ pipelined_processor_FPU dut (
     // Sinais de Carga da Memória (UVM Driver -> Hardware)
     .we (inf.we),
     .WA (inf.Instr_WA),
-    .din (inf.Instr_din),      
+    .din (inf.Instr_din),
     .InstrDC (inf.Monitor_Instr), // Para monitorar a instrução atual no estágio D
-    // Sinais de Monitoramento (Hardware -> UVM Monitor)
     .RegWriteW (inf.Monitor_RegWriteW),
     .RegWriteFW (inf.Monitor_RegWriteFW),
     .RdW (inf.Monitor_RdW),
@@ -43,8 +42,8 @@ bind pipelined_processor_FPU my_checker checker_inst (
     .lwStall(lwStall),
     .FlushD(FlushD),
     .FlushE(FlushE),
-    .FlushPF(FlushPF),
-    .PFBStall(PFBStall),
+    //.FlushPF(FlushPF),
+    //.PFBStall(PFBStall),
     .ForwardAE(ForwardAE),
     .ForwardBE(ForwardBE),
     .Instr (InstrDC)
@@ -98,7 +97,7 @@ initial begin
 end
 
 // trecho para debug
-always @(posedge clk) begin
+/*always @(posedge clk) begin
   if (dut.RegWriteW) begin
     //$display("Instrucao: 0x%h", inf.Monitor_Instr);
     //$display("DUMP TOPO TRACE | Valor no RTL: 0x%h | ULA = %h | Instr: %h | AD: %h | BD: %h | Instr e HW: %h %h", dut.W.ResultW, dut.E.Result, dut.D.InstrDC, dut.D.RD1D, dut.D.RD2D, dut.D.InstrD, dut.D.HalfWordD);
@@ -107,6 +106,6 @@ always @(posedge clk) begin
     //$display("DUMP PFB | iC: %h | Instr: %h | next: %h | EN: %h | Flush: %h\n\n", dut.F.PFB.isCompressed, dut.F.PFB.InstructionA, dut.F.PFB.InstructionB, dut.F.PFB.EN, dut.F.PFB.Flush);
     //$display("DUMP MEM | instrucao da memoria %h", dut.F.IM.RD[dut.F.PCF]);
 end
-end
+end*/
 
 endmodule

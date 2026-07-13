@@ -71,6 +71,7 @@ class my_monitor extends uvm_monitor;
       t_cov.isCompressedD = vif.Monitor_isCompressedD;
       t_cov.PC1           = vif.Monitor_PC1;
       
+      t_cov.data = vif.Monitor_Instr;
       // Envia exclusivamente para o componente de Cobertura Functional
       coverage_port.write(t_cov);
 

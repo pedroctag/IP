@@ -6,16 +6,16 @@ class my_coverage extends uvm_subscriber #(my_txn);
 
   // Covergroup embutido de entrada de sinais
    covergroup g_cov;
-    // option.per_instance = 1;        // util quando ha multiplas instancias do mesmo cg
+    option.per_instance = 1;        // util quando ha multiplas instancias do mesmo cg
     // coverpoint no campo opcode
-    cp_reg_det: coverpoint tr.addr {
+    cp_reg_det: coverpoint tr.data[11:7] {
       bins regs_0_a_7  = {[0:7]};
       bins regs_8_a_15  = {[8:15]};
       bins regs_16_a_23 = {[16:23]};
       bins regs_24_a_31 = {[24:31]};
     }
     // coverpoint no campo addr (ex.: ranges de interesse)
-    cp_opcode: coverpoint tr.opcode {
+    cp_opcode: coverpoint tr.data[6:0] {
       bins tipo_r = {7'b0110011};
       bins tipo_i = {7'b0010011};
       bins tipo_s = {7'b0100011};
@@ -136,21 +136,104 @@ class my_coverage extends uvm_subscriber #(my_txn);
     cg_PrefetchSignals.sample();
   endfunction
 
+  // Função auxiliar para calcular a fração de bins por engenharia reversa matemática
+  function int get_hits(real pct, int total_bins);
+    // Adiciona 0.5 para garantir um arredondamento perfeito antes de converter para Inteiro
+    return $rtoi(((pct * total_bins) / 100.0) + 0.5);
+  endfunction
+
   virtual function void report_phase(uvm_phase phase);
+    // Variaveis para capturar as porcentagens individuais
+    real pct_op, pct_reg;
+    real pct_alu, pct_fpu, pct_imm, pct_res, pct_mem, pct_regw;
+    real pct_zero, pct_neg, pct_btaken;
+    real pct_fwA, pct_fwB, pct_stall, pct_fD, pct_fE, pct_cross_duplo, pct_cross_stall, pct_cross_flush;
+    real pct_ic, pct_icA, pct_pc1;
+
+    // Variaveis de medias customizadas
+    real media_inst, media_ctrl, media_branch, media_hazard, media_prefetch, media_total;
+
     super.report_phase(phase);
 
-    `uvm_info("COV_REPORT", "==================================================", UVM_NONE)
-    `uvm_info("COV_REPORT", "        RELATÓRIO FINAL DE COBERTURA FUNCIONAL    ", UVM_NONE)
-    `uvm_info("COV_REPORT", "==================================================", UVM_NONE)
+    // --- 1. CAPTURA DOS DADOS ---
+    pct_op   = g_cov.cp_opcode.get_inst_coverage();
+    pct_reg  = g_cov.cp_reg_det.get_inst_coverage();
     
-    // Acessando os percentuais de cobertura diretamente
-    `uvm_info("COV_REPORT", $sformatf("  -> Opcodes testados:         %0.2f%%", g_cov.cp_opcode.get_inst_coverage()), UVM_NONE)
-    `uvm_info("COV_REPORT", $sformatf("  -> Registradores testados:   %0.2f%%", g_cov.cp_reg_det.get_inst_coverage()), UVM_NONE)
-    `uvm_info("COV_REPORT", $sformatf("  -> Sinais de Controle ativos:%0.2f%%", cg_control.get_inst_coverage()), UVM_NONE)
-    `uvm_info("COV_REPORT", $sformatf("  -> Sinais de Branch ativos:   %0.2f%%", cg_branch.get_inst_coverage()), UVM_NONE)
-    `uvm_info("COV_REPORT", $sformatf("  -> Sinais de Hazard:          %0.2f%%", cg_hazard.cross_stall_fwd.get_inst_coverage()), UVM_NONE)
+    pct_alu  = cg_control.cp_ALUControl.get_inst_coverage();
+    pct_fpu  = cg_control.cp_FPUControl.get_inst_coverage();
+    pct_imm  = cg_control.cp_ImmScr.get_inst_coverage();
+    pct_res  = cg_control.cp_ResultSrc.get_inst_coverage();
+    pct_mem  = cg_control.cp_MemWrite.get_inst_coverage();
+    pct_regw = cg_control.cp_RegWrite.get_inst_coverage();
+
+    pct_zero   = cg_branch.cp_zero.get_inst_coverage();
+    pct_neg    = cg_branch.cp_neg.get_inst_coverage();
+    pct_btaken = cg_branch.cp_branch.get_inst_coverage();
+
+    pct_fwA         = cg_hazard.cp_fwdA.get_inst_coverage();
+    pct_fwB         = cg_hazard.cp_fwdB.get_inst_coverage();
+    pct_stall       = cg_hazard.cp_lwStall.get_inst_coverage();
+    pct_fD          = cg_hazard.cp_FlushD.get_inst_coverage();
+    pct_fE          = cg_hazard.cp_FlushE.get_inst_coverage();
+    pct_cross_duplo = cg_hazard.cross_fwd_duplo.get_inst_coverage();
+    pct_cross_stall = cg_hazard.cross_stall_fwd.get_inst_coverage();
+    pct_cross_flush = cg_hazard.cross_flush_font.get_inst_coverage();
+
+    pct_ic  = cg_PrefetchSignals.cp_isCompressed.get_inst_coverage();
+    pct_icA = cg_PrefetchSignals.cp_isCompressedA.get_inst_coverage();
+    pct_pc1 = cg_PrefetchSignals.cp_Misaligned.get_inst_coverage();
+
+    // --- 2. CÁLCULO DAS MÉDIAS VISUAIS ---
+    media_inst     = (pct_op + pct_reg) / 2.0;
+    media_ctrl     = (pct_alu + pct_fpu + ((pct_imm + pct_res)/2.0) + ((pct_mem + pct_regw)/2.0)) / 4.0;
+    media_branch   = (((pct_zero + pct_neg)/2.0) + pct_btaken) / 2.0;
+    media_hazard   = (((pct_fwA + pct_fwB)/2.0) + ((pct_stall + pct_fD + pct_fE)/3.0) + pct_cross_duplo + pct_cross_stall + pct_cross_flush) / 5.0;
+    media_prefetch = (((pct_ic + pct_icA)/2.0) + pct_pc1) / 2.0;
     
+    media_total = (media_inst + media_ctrl + media_branch + media_hazard + media_prefetch) / 5.0;
+
+
+    // --- 3. IMPRESSÃO DO RELATÓRIO COM FRAÇÕES ---
+    `uvm_info("COV_REPORT", "============================================================", UVM_NONE)
+    `uvm_info("COV_REPORT", "             RELATÓRIO DETALHADO DE COBERTURA               ", UVM_NONE)
+    `uvm_info("COV_REPORT", "============================================================", UVM_NONE)
     
-    `uvm_info("COV_REPORT", "==================================================", UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf(" [OVERALL] COBERTURA TOTAL DO SISTEMA:        %0.2f%%", media_total), UVM_NONE)
+    `uvm_info("COV_REPORT", "------------------------------------------------------------", UVM_NONE)
+
+    // Detalhamento: Instrucoes e Registradores
+    `uvm_info("COV_REPORT", $sformatf(" [1] INSTRUÇÕES E REGISTRADORES:              %0.2f%%", media_inst), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> Opcodes (Tipos R,I,S,B,U,J):          %0.2f%% (%0d/6)", pct_op, get_hits(pct_op, 6)), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> Registradores (Destino 0 a 31):       %0.2f%% (%0d/4)", pct_reg, get_hits(pct_reg, 4)), UVM_NONE)
+    `uvm_info("COV_REPORT", "------------------------------------------------------------", UVM_NONE)
+
+    // Detalhamento: Sinais de Controle
+    `uvm_info("COV_REPORT", $sformatf(" [2] SINAIS DE CONTROLE:                      %0.2f%%", media_ctrl), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> ULA (ALUControl):                     %0.2f%% (%0d/10)", pct_alu, get_hits(pct_alu, 10)), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> FPU (FPUControl):                     %0.2f%% (%0d/12)", pct_fpu, get_hits(pct_fpu, 12)), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> Seletores de Entrada (Imm, Result):   %0.2f%%", (pct_imm + pct_res)/2.0), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> Escrita (MemWrite, RegWrite):         %0.2f%%", (pct_mem + pct_regw)/2.0), UVM_NONE)
+    `uvm_info("COV_REPORT", "------------------------------------------------------------", UVM_NONE)
+
+    // Detalhamento: Branch e Flags
+    `uvm_info("COV_REPORT", $sformatf(" [3] BRANCHES E FLAGS:                        %0.2f%%", media_branch), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> Flags da ULA (Zero, Negativo):        %0.2f%%", (pct_zero + pct_neg)/2.0), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> Tomada de Branch (Branch Taken):      %0.2f%%", pct_btaken), UVM_NONE)
+    `uvm_info("COV_REPORT", "------------------------------------------------------------", UVM_NONE)
+
+    // Detalhamento: Hazard Unit
+    `uvm_info("COV_REPORT", $sformatf(" [4] HAZARD UNIT (STALLS E FLUSHES):          %0.2f%%", media_hazard), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> Forwarding Básico (A e B):            %0.2f%%", (pct_fwA + pct_fwB)/2.0), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> Bolhas (Stalls e Flushes):            %0.2f%%", (pct_stall + pct_fD + pct_fE)/3.0), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> CROSS: Forwarding A x B:              %0.2f%%", pct_cross_duplo), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> CROSS: Stall x Forwarding:            %0.2f%%", pct_cross_stall), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> CROSS: Flush x Stall:                 %0.2f%%", pct_cross_flush), UVM_NONE)
+    `uvm_info("COV_REPORT", "------------------------------------------------------------", UVM_NONE)
+
+    // Detalhamento: Prefetch
+    `uvm_info("COV_REPORT", $sformatf(" [5] PREFETCH E COMPRESSÃO:                   %0.2f%%", media_prefetch), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> Instruções Comprimidas:               %0.2f%%", (pct_ic + pct_icA)/2.0), UVM_NONE)
+    `uvm_info("COV_REPORT", $sformatf("     -> Misaligned Fetch (PC1):               %0.2f%%", pct_pc1), UVM_NONE)
+    `uvm_info("COV_REPORT", "============================================================", UVM_NONE)
   endfunction
 endclass

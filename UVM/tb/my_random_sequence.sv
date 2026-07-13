@@ -7,7 +7,7 @@ class my_random_sequence extends uvm_sequence #(my_txn);
 
   task body();
     my_txn tr;
-    int num_instrucoes = 200; // Quantidade de instruções de lixo a gerar
+    int num_instrucoes = 1000; // Quantidade de instruções de lixo a gerar
 
     `uvm_info(get_type_name(), "Sequence Aleatória Iniciada", UVM_LOW);
 
