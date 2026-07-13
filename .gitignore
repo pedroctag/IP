@@ -12,3 +12,6 @@
 *.pak
 *.history
 *.tstamp
+
+# UVM teste
+**/tb_/
