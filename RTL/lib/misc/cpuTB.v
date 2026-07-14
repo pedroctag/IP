@@ -31,10 +31,10 @@ pipelined_processor_FPU dut (
 
 initial
 begin
-    $readmemh("C:/Users/Pedro/Desktop/IP/RTL/lib/Core_FPU/instruction.txt", instr_file);
+    $readmemh("/home/aluno/IP/RTL/lib/misc/arbinstr.txt", instr_file);
 
     clk = 0;
-    rst = 1;    
+    rst = 1;
     we = 0;
     #10;
 
@@ -49,7 +49,7 @@ begin
     we = 0;
     #10;
     rst = 0;
-    #6000 $finish;
+    #7000 $finish;
 end
 
 always #5 clk = ~clk;
