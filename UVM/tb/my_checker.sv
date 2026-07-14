@@ -6,7 +6,7 @@ module my_checker (
     input branch_taken,
     input branch_signal,
     input jump_signal,
-    input weChecker, 
+    input weChecker,
     input lwStall,
     input FlushD,
     input FlushE,
@@ -30,7 +30,7 @@ module my_checker (
   endproperty
 
   assert_ex_flag : assert property (ALU_EX_FLAG)
-      else `uvm_error("SVA_MUTUAL_EXC", "[ERRO] Flags Zero e Negative ativas simultaneamente");
+      else `uvm_error("SVA_MUTUAL_EXC", "[ERRO] Flags Zero e Negative ativas simultaneamente")
 
   // ---------------------------------------------------------
   // 2. Implicação: Branch Taken -> Sem Escrita (WE = 0)
@@ -42,7 +42,7 @@ module my_checker (
   endproperty
 
   assert_ex_branch : assert property (BRANCH_EX_WE)
-      else `uvm_error("SVA_ILLEGAL_STATE", "[ERRO] WE ativo durante um branch tomado");
+      else `uvm_error("SVA_ILLEGAL_STATE", "[ERRO] WE ativo durante um branch tomado")
 
   // ---------------------------------------------------------
   // 3. Mutuamente Exclusivo: Jump e Branch
@@ -54,6 +54,6 @@ module my_checker (
   endproperty
 
   assert_ex_jump_branch : assert property (EX_JUMP_BRANCH)
-      else `uvm_error("SVA_MUTUAL_EXC", "[ERRO] Sinais de jump e branch ativas simultaneamente");
+      else `uvm_error("SVA_MUTUAL_EXC", "[ERRO] Sinais de jump e branch ativas simultaneamente")
 
 endmodule

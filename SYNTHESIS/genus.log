@@ -1,0 +1,44 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[10:00:29.511842] Configured Lic search path (22.01-s003): 5280@200.131.128.249:27020@10.10.128.107
+
+Version: 22.17-s071_1, built Thu Sep 12 08:37:05 PDT 2024
+Options: -files genus_script.tcl 
+Date:    Tue Jul 14 10:00:29 2026
+Host:    microeletronica-047 (x86_64 w/Linux 4.18.0-553.137.1.el8_10.x86_64) (4cores*8cpus*1physical cpu*Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz 8192KB) (32559424KB)
+PID:     4851
+OS:      Rocky Linux release 8.10 (Green Obsidian)
+
+Checking out license: Genus_Synthesis
+[10:00:29.438777] Periodic Lic check successful
+[10:00:29.438784] Feature usage summary:
+[10:00:29.438784] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (0 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (15 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source genus_script.tcl
+File 'genus_script.tcl' does not exist.
+Encountered problems processing file: genus_script.tcl
+WARNING: This version of the tool is 669 days old.
+@genus:root: 2> exit
+
+Lic Summary:
+[10:02:26.242081] Cdslmd servers: voyager
+[10:02:26.242090] Feature usage summary:
+[10:02:26.242091] Genus_Synthesis
+
+Normal exit.

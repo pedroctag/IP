@@ -14,12 +14,20 @@ xrun -timescale 1ns/1ps \
 
 
 xrun -timescale 1ns/1ps \
-  /home/aluno/IP-main/SYNTHESIS/Sim/Netlists/PPA1/pipelined_processor_FPU.v \
-  /home/aluno/IP-main/RTL/lib/misc/cpuTB.v \
-  -v /home/aluno/IP-main/SYNTHESIS/LIB/slow_vdd1v0_basiccells.v \
+  /home/aluno/IP/SYNTHESIS/Sim/Netlists/PPA1/pipelined_processor_FPU.v \
+  /home/aluno/IP/RTL/lib/misc/cpuTB.v \
+  -v /home/aluno/IP/SYNTHESIS/LIB/slow_vdd1v0_basiccells.v \
   -access +rwc \
-  -sdf_file /home/aluno/IP-main/SYNTHESIS/Sim/sdf/delays_PPA1.sdf \
-  -sdf_instance cpuTB.dut \
   -sdf_verbose \
   -mess \
   -gui
+
+  xrun -timescale 1ns/1ps \
+/home/aluno/IP/SYNTHESIS/Sim/Netlists/PPA1/pipelined_processor_FPU.v \
+/home/aluno/IP/RTL/lib/misc/cpuTB.v \
+-v /home/aluno/IP/SYNTHESIS/LIB/slow_vdd1v0_basicCells.v \
+-access +rwc \
+-sdf_file /home/aluno/IP/SYNTHESIS/Sim/sdf/delays_PPA1.sdf \
+-maxdelays \
+-sdf_verbose \
+-mess

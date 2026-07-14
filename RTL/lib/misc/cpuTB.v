@@ -1,58 +1,67 @@
 module cpuTB();
 
-reg clk, rst;
+reg clk;
+reg rst;
+
 reg we;
 reg [31:0] WA;
 reg [31:0] din;
-reg [31:0] instr_file[0:1024];
+
+reg [31:0] instr_file [0:1023];
+
+wire RegWriteW;
+wire RegWriteFW;
 wire [4:0] RdW;
 wire [31:0] ResultW;
-wire [31:0] ALUResultM;
 wire [31:0] WriteDataM;
+wire [31:0] ALUResultM;
+wire [31:0] InstrDC;
 wire MemWriteM;
-//wire scan_out;
-//reg  scan_in, SE;
 
 integer i;
-reg [31:0] inst_file [0:1024];
 
 pipelined_processor_FPU dut (
-    .clk(clk),
-    .reset(rst),
     .we(we),
     .WA(WA),
     .din(din),
+
+    .RegWriteW(RegWriteW),
+    .RegWriteFW(RegWriteFW),
     .RdW(RdW),
-    .ALUResultM(ALUResultM),
+    .ResultW(ResultW),
     .WriteDataM(WriteDataM),
+    .ALUResultM(ALUResultM),
+    .InstrDC(InstrDC),
     .MemWriteM(MemWriteM),
-    .ResultW(ResultW)
+
+    .clk(clk),
+    .reset(rst)
 );
 
 initial
 begin
-    $readmemh("C:/Users/Pedro/Desktop/IP/RTL/lib/Core_FPU/instruction.txt", instr_file);
+    $readmemh("/home/aluno/IP/RTL/lib/misc/arbinstr.txt", instr_file);
 
     clk = 0;
-    rst = 1;    
+    rst = 1;
     we = 0;
-    #10;
+    #13;
 
     // Load instruction memory through the din interface, one word at a time
     for (i = 0; i < 1024; i = i + 1) begin
         WA = i * 4;     // word-aligned address
         din  = instr_file[i];
-        we   = 1;
-        #10;
+        #17;
+        we = 1;
     end
 
     we = 0;
     #10;
     rst = 0;
-    #6000 $finish;
+    #6000;
 end
 
-always #5 clk = ~clk;
+always #10 clk = ~clk;
 
 /*`ifdef SDF
 begin
@@ -61,6 +70,6 @@ end
 `endif*/
 initial begin
     // Substitua "instancia_do_processador" pelo nome real da instância no seu TB
-    $sdf_annotate("/home/aluno/IP-main/SYNTHESIS/Sim/sdf/delays_PPA1.sdf", dut);
+    $sdf_annotate("/home/aluno/IP/SYNTHESIS/Sim/sdf/delays_PPA1.sdf", dut);
 end
 endmodule
