@@ -13,7 +13,7 @@ class my_sequence extends uvm_sequence #(my_txn);
 
     `uvm_info(get_type_name(), "Sequence iniciada: Abrindo arquivo de instrucoes", UVM_LOW);
 
-    fd = $fopen("/home/alvaro/UVM_IP/IP-main/RTL/lib/Core_FPU/instruction.txt", "r"); // encontrar o caminho correto do arquivo de instrucoes
+    fd = $fopen("/home/aluno/IP/RTL/lib/misc/instruction.txt", "r"); // encontrar o caminho correto do arquivo de instrucoes
     if (fd == 0) begin
       `uvm_fatal(get_type_name(), "Erro ao abrir o arquivo de instrucoes")
     end

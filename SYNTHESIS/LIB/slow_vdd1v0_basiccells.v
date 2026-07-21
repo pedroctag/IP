@@ -1,5140 +1,13943 @@
-//
-// Conformal-LEC: Version 15.10-s220 (27-Aug-2015) (64 bit executable)
-//
-module XOR3XL(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  xor U$1(Y, A, B, C);
-endmodule
-
-module XOR3X1(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  xor U$1(Y, A, B, C);
-endmodule
-
-module XOR2XL(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  xor U$1(Y, A, B);
-endmodule
-
-module XOR2X4(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  xor U$1(Y, A, B);
-endmodule
-
-module XOR2X2(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  xor U$1(Y, A, B);
-endmodule
-
-module XOR2X1(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  xor U$1(Y, A, B);
-endmodule
-
-module XNOR3XL(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  xnor U$1(Y, A, B, C);
-endmodule
-
-module XNOR3X1(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  xnor U$1(Y, A, B, C);
-endmodule
-
-module XNOR2XL(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  xnor U$1(Y, A, B);
-endmodule
-
-module XNOR2X4(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  xnor U$1(Y, A, B);
-endmodule
-
-module XNOR2X2(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  xnor U$1(Y, A, B);
-endmodule
-
-module XNOR2X1(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  xnor U$1(Y, A, B);
-endmodule
-
-module TLATXL(Q, QN, D, G);
-input  D, G;
-output Q, QN;
-wire  Q, QN, D, G;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(G), .D(D));
-endmodule
-
-module TLATX4(Q, QN, D, G);
-input  D, G;
-output Q, QN;
-wire  Q, QN, D, G;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(G), .D(D));
-endmodule
-
-module TLATX2(Q, QN, D, G);
-input  D, G;
-output Q, QN;
-wire  Q, QN, D, G;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(G), .D(D));
-endmodule
-
-module TLATX1(Q, QN, D, G);
-input  D, G;
-output Q, QN;
-wire  Q, QN, D, G;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(G), .D(D));
-endmodule
-
-module TLATSRXL(Q, QN, D, SN, G, RN);
-input  D, SN, G, RN;
-output Q, QN;
-wire  Q, QN, D, SN, G, RN, n$1, n$2;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
-  not U$4(n$1, SN);
-  and U$5(n$2, G, RN);
-endmodule
-
-module TLATSRX4(Q, QN, D, SN, G, RN);
-input  D, SN, G, RN;
-output Q, QN;
-wire  Q, QN, D, SN, G, RN, n$1, n$2;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
-  not U$4(n$1, SN);
-  and U$5(n$2, G, RN);
-endmodule
-
-module TLATSRX2(Q, QN, D, SN, G, RN);
-input  D, SN, G, RN;
-output Q, QN;
-wire  Q, QN, D, SN, G, RN, n$1, n$2;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
-  not U$4(n$1, SN);
-  and U$5(n$2, G, RN);
-endmodule
-
-module TLATSRX1(Q, QN, D, SN, G, RN);
-input  D, SN, G, RN;
-output Q, QN;
-wire  Q, QN, D, SN, G, RN, n$1, n$2;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
-  not U$4(n$1, SN);
-  and U$5(n$2, G, RN);
-endmodule
-
-module TLATNXL(Q, QN, D, GN);
-input  D, GN;
-output Q, QN;
-wire  Q, QN, D, GN, n$1;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(n$1), .D(D));
-  not U$4(n$1, GN);
-endmodule
-
-module TLATNX4(Q, QN, D, GN);
-input  D, GN;
-output Q, QN;
-wire  Q, QN, D, GN, n$1;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(n$1), .D(D));
-  not U$4(n$1, GN);
-endmodule
-
-module TLATNX2(Q, QN, D, GN);
-input  D, GN;
-output Q, QN;
-wire  Q, QN, D, GN, n$1;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(n$1), .D(D));
-  not U$4(n$1, GN);
-endmodule
-
-module TLATNX1(Q, QN, D, GN);
-input  D, GN;
-output Q, QN;
-wire  Q, QN, D, GN, n$1;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(n$1), .D(D));
-  not U$4(n$1, GN);
-endmodule
-
-module TLATNTSCAX8_STATETABLE_UDP1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$2, N$1, CK, E, SE, EINT;
-  or __UU$0(N$2, SE, E);
-  not __UU$1(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-endmodule
-
-module TLATNTSCAX8_STATETABLE1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  or U$1(\udp1/N$2 , SE, E);
-endmodule
-
-module TLATNTSCAX8_STATETABLE_UDP_invout1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, SE, N$3;
-  not __UU$0(N$4, N$3);
-  nor __UU$1(N$2, E, SE);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNTSCAX8_STATETABLE_invout1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  nor U$1(\udp1/N$2 , E, SE);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNTSCAX8(ECK, E, SE, CK);
-input  E, SE, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$2 , \sttb_$U1/udp1/N$1 , EINT, ECK, E, SE, CK;
-  or \sttb_$U1/U$1 (\sttb_$U1/udp1/N$2 , SE, E);
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(\sttb_$U1/udp1/N$2 ));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNTSCAX6_STATETABLE_UDP1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$2, N$1, CK, E, SE, EINT;
-  or __UU$0(N$2, SE, E);
-  not __UU$1(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-endmodule
-
-module TLATNTSCAX6_STATETABLE1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  or U$1(\udp1/N$2 , SE, E);
-endmodule
-
-module TLATNTSCAX6_STATETABLE_UDP_invout1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, SE, N$3;
-  not __UU$0(N$4, N$3);
-  nor __UU$1(N$2, E, SE);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNTSCAX6_STATETABLE_invout1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  nor U$1(\udp1/N$2 , E, SE);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNTSCAX6(ECK, E, SE, CK);
-input  E, SE, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$2 , \sttb_$U1/udp1/N$1 , EINT, ECK, E, SE, CK;
-  or \sttb_$U1/U$1 (\sttb_$U1/udp1/N$2 , SE, E);
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(\sttb_$U1/udp1/N$2 ));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNTSCAX4_STATETABLE_UDP1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$2, N$1, CK, E, SE, EINT;
-  or __UU$0(N$2, SE, E);
-  not __UU$1(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-endmodule
-
-module TLATNTSCAX4_STATETABLE1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  or U$1(\udp1/N$2 , SE, E);
-endmodule
-
-module TLATNTSCAX4_STATETABLE_UDP_invout1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, SE, N$3;
-  not __UU$0(N$4, N$3);
-  nor __UU$1(N$2, E, SE);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNTSCAX4_STATETABLE_invout1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  nor U$1(\udp1/N$2 , E, SE);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNTSCAX4(ECK, E, SE, CK);
-input  E, SE, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$2 , \sttb_$U1/udp1/N$1 , EINT, ECK, E, SE, CK;
-  or \sttb_$U1/U$1 (\sttb_$U1/udp1/N$2 , SE, E);
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(\sttb_$U1/udp1/N$2 ));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNTSCAX3_STATETABLE_UDP1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$2, N$1, CK, E, SE, EINT;
-  or __UU$0(N$2, SE, E);
-  not __UU$1(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-endmodule
-
-module TLATNTSCAX3_STATETABLE1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  or U$1(\udp1/N$2 , SE, E);
-endmodule
-
-module TLATNTSCAX3_STATETABLE_UDP_invout1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, SE, N$3;
-  not __UU$0(N$4, N$3);
-  nor __UU$1(N$2, E, SE);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNTSCAX3_STATETABLE_invout1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  nor U$1(\udp1/N$2 , E, SE);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNTSCAX3(ECK, E, SE, CK);
-input  E, SE, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$2 , \sttb_$U1/udp1/N$1 , EINT, ECK, E, SE, CK;
-  or \sttb_$U1/U$1 (\sttb_$U1/udp1/N$2 , SE, E);
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(\sttb_$U1/udp1/N$2 ));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNTSCAX20_STATETABLE_UDP1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$2, N$1, CK, E, SE, EINT;
-  or __UU$0(N$2, SE, E);
-  not __UU$1(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-endmodule
-
-module TLATNTSCAX20_STATETABLE1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  or U$1(\udp1/N$2 , SE, E);
-endmodule
-
-module TLATNTSCAX20_STATETABLE_UDP_invout1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, SE, N$3;
-  not __UU$0(N$4, N$3);
-  nor __UU$1(N$2, E, SE);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNTSCAX20_STATETABLE_invout1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  nor U$1(\udp1/N$2 , E, SE);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNTSCAX20(ECK, E, SE, CK);
-input  E, SE, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$2 , \sttb_$U1/udp1/N$1 , EINT, ECK, E, SE, CK;
-  or \sttb_$U1/U$1 (\sttb_$U1/udp1/N$2 , SE, E);
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(\sttb_$U1/udp1/N$2 ));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNTSCAX2_STATETABLE_UDP1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$2, N$1, CK, E, SE, EINT;
-  or __UU$0(N$2, SE, E);
-  not __UU$1(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-endmodule
-
-module TLATNTSCAX2_STATETABLE1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  or U$1(\udp1/N$2 , SE, E);
-endmodule
-
-module TLATNTSCAX2_STATETABLE_UDP_invout1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, SE, N$3;
-  not __UU$0(N$4, N$3);
-  nor __UU$1(N$2, E, SE);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNTSCAX2_STATETABLE_invout1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  nor U$1(\udp1/N$2 , E, SE);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNTSCAX2(ECK, E, SE, CK);
-input  E, SE, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$2 , \sttb_$U1/udp1/N$1 , EINT, ECK, E, SE, CK;
-  or \sttb_$U1/U$1 (\sttb_$U1/udp1/N$2 , SE, E);
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(\sttb_$U1/udp1/N$2 ));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNTSCAX16_STATETABLE_UDP1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$2, N$1, CK, E, SE, EINT;
-  or __UU$0(N$2, SE, E);
-  not __UU$1(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-endmodule
-
-module TLATNTSCAX16_STATETABLE1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  or U$1(\udp1/N$2 , SE, E);
-endmodule
-
-module TLATNTSCAX16_STATETABLE_UDP_invout1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, SE, N$3;
-  not __UU$0(N$4, N$3);
-  nor __UU$1(N$2, E, SE);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNTSCAX16_STATETABLE_invout1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  nor U$1(\udp1/N$2 , E, SE);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNTSCAX16(ECK, E, SE, CK);
-input  E, SE, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$2 , \sttb_$U1/udp1/N$1 , EINT, ECK, E, SE, CK;
-  or \sttb_$U1/U$1 (\sttb_$U1/udp1/N$2 , SE, E);
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(\sttb_$U1/udp1/N$2 ));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNTSCAX12_STATETABLE_UDP1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$2, N$1, CK, E, SE, EINT;
-  or __UU$0(N$2, SE, E);
-  not __UU$1(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-endmodule
-
-module TLATNTSCAX12_STATETABLE1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  or U$1(\udp1/N$2 , SE, E);
-endmodule
-
-module TLATNTSCAX12_STATETABLE_UDP_invout1(CK, E, SE, EINT);
-input  CK, E, SE;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, SE, N$3;
-  not __UU$0(N$4, N$3);
-  nor __UU$1(N$2, E, SE);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNTSCAX12_STATETABLE_invout1(EINT, CK, E, SE);
-input  CK, E, SE;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E, SE;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  nor U$1(\udp1/N$2 , E, SE);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNTSCAX12(ECK, E, SE, CK);
-input  E, SE, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$2 , \sttb_$U1/udp1/N$1 , EINT, ECK, E, SE, CK;
-  or \sttb_$U1/U$1 (\sttb_$U1/udp1/N$2 , SE, E);
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(\sttb_$U1/udp1/N$2 ));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNSRXL(Q, QN, D, SN, GN, RN);
-input  D, SN, GN, RN;
-output Q, QN;
-wire  Q, QN, D, SN, GN, RN, n$1, n$2, n$3;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
-  not U$4(n$1, SN);
-  and U$5(n$2, n$3, RN);
-  not U$6(n$3, GN);
-endmodule
-
-module TLATNSRX4(Q, QN, D, SN, GN, RN);
-input  D, SN, GN, RN;
-output Q, QN;
-wire  Q, QN, D, SN, GN, RN, n$1, n$2, n$3;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
-  not U$4(n$1, SN);
-  and U$5(n$2, n$3, RN);
-  not U$6(n$3, GN);
-endmodule
-
-module TLATNSRX2(Q, QN, D, SN, GN, RN);
-input  D, SN, GN, RN;
-output Q, QN;
-wire  Q, QN, D, SN, GN, RN, n$1, n$2, n$3;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
-  not U$4(n$1, SN);
-  and U$5(n$2, n$3, RN);
-  not U$6(n$3, GN);
-endmodule
-
-module TLATNSRX1(Q, QN, D, SN, GN, RN);
-input  D, SN, GN, RN;
-output Q, QN;
-wire  Q, QN, D, SN, GN, RN, n$1, n$2, n$3;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
-  not U$4(n$1, SN);
-  and U$5(n$2, n$3, RN);
-  not U$6(n$3, GN);
-endmodule
-
-module TLATNCAX8_STATETABLE_UDP1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$1, CK, E, EINT;
-  not __UU$0(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(E));
-endmodule
-
-module TLATNCAX8_STATETABLE1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$1 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(E));
-  not U$0(\udp1/N$1 , CK);
-endmodule
-
-module TLATNCAX8_STATETABLE_UDP_invout1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, N$3;
-  not __UU$0(N$4, N$3);
-  not __UU$1(N$2, E);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNCAX8_STATETABLE_invout1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  not U$1(\udp1/N$2 , E);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNCAX8(ECK, E, CK);
-input  E, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$1 , EINT, ECK, E, CK;
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(E));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNCAX6_STATETABLE_UDP1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$1, CK, E, EINT;
-  not __UU$0(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(E));
-endmodule
-
-module TLATNCAX6_STATETABLE1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$1 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(E));
-  not U$0(\udp1/N$1 , CK);
-endmodule
-
-module TLATNCAX6_STATETABLE_UDP_invout1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, N$3;
-  not __UU$0(N$4, N$3);
-  not __UU$1(N$2, E);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNCAX6_STATETABLE_invout1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  not U$1(\udp1/N$2 , E);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNCAX6(ECK, E, CK);
-input  E, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$1 , EINT, ECK, E, CK;
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(E));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNCAX4_STATETABLE_UDP1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$1, CK, E, EINT;
-  not __UU$0(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(E));
-endmodule
-
-module TLATNCAX4_STATETABLE1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$1 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(E));
-  not U$0(\udp1/N$1 , CK);
-endmodule
-
-module TLATNCAX4_STATETABLE_UDP_invout1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, N$3;
-  not __UU$0(N$4, N$3);
-  not __UU$1(N$2, E);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNCAX4_STATETABLE_invout1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  not U$1(\udp1/N$2 , E);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNCAX4(ECK, E, CK);
-input  E, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$1 , EINT, ECK, E, CK;
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(E));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNCAX3_STATETABLE_UDP1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$1, CK, E, EINT;
-  not __UU$0(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(E));
-endmodule
-
-module TLATNCAX3_STATETABLE1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$1 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(E));
-  not U$0(\udp1/N$1 , CK);
-endmodule
-
-module TLATNCAX3_STATETABLE_UDP_invout1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, N$3;
-  not __UU$0(N$4, N$3);
-  not __UU$1(N$2, E);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNCAX3_STATETABLE_invout1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  not U$1(\udp1/N$2 , E);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNCAX3(ECK, E, CK);
-input  E, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$1 , EINT, ECK, E, CK;
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(E));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNCAX20_STATETABLE_UDP1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$1, CK, E, EINT;
-  not __UU$0(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(E));
-endmodule
-
-module TLATNCAX20_STATETABLE1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$1 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(E));
-  not U$0(\udp1/N$1 , CK);
-endmodule
-
-module TLATNCAX20_STATETABLE_UDP_invout1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, N$3;
-  not __UU$0(N$4, N$3);
-  not __UU$1(N$2, E);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNCAX20_STATETABLE_invout1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  not U$1(\udp1/N$2 , E);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNCAX20(ECK, E, CK);
-input  E, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$1 , EINT, ECK, E, CK;
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(E));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNCAX2_STATETABLE_UDP1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$1, CK, E, EINT;
-  not __UU$0(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(E));
-endmodule
-
-module TLATNCAX2_STATETABLE1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$1 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(E));
-  not U$0(\udp1/N$1 , CK);
-endmodule
-
-module TLATNCAX2_STATETABLE_UDP_invout1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, N$3;
-  not __UU$0(N$4, N$3);
-  not __UU$1(N$2, E);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNCAX2_STATETABLE_invout1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  not U$1(\udp1/N$2 , E);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNCAX2(ECK, E, CK);
-input  E, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$1 , EINT, ECK, E, CK;
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(E));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNCAX16_STATETABLE_UDP1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$1, CK, E, EINT;
-  not __UU$0(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(E));
-endmodule
-
-module TLATNCAX16_STATETABLE1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$1 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(E));
-  not U$0(\udp1/N$1 , CK);
-endmodule
-
-module TLATNCAX16_STATETABLE_UDP_invout1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, N$3;
-  not __UU$0(N$4, N$3);
-  not __UU$1(N$2, E);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNCAX16_STATETABLE_invout1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  not U$1(\udp1/N$2 , E);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNCAX16(ECK, E, CK);
-input  E, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$1 , EINT, ECK, E, CK;
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(E));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TLATNCAX12_STATETABLE_UDP1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$1, CK, E, EINT;
-  not __UU$0(N$1, CK);
-  _HDLAT_verplex U$1(.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(E));
-endmodule
-
-module TLATNCAX12_STATETABLE1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$1 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(E));
-  not U$0(\udp1/N$1 , CK);
-endmodule
-
-module TLATNCAX12_STATETABLE_UDP_invout1(CK, E, EINT);
-input  CK, E;
-output EINT;
-wire  N$4, N$2, N$1, CK, E, N$3;
-  not __UU$0(N$4, N$3);
-  not __UU$1(N$2, E);
-  not __UU$2(N$1, CK);
-  _HDLAT_verplex U$1(.Q(N$3), .QN( ), .S(1'b0), .R(1'b0), .CK(N$1), .D(N$2));
-  assign  EINT = N$4;
-endmodule
-
-module TLATNCAX12_STATETABLE_invout1(EINT, CK, E);
-input  CK, E;
-output EINT;
-wire  \udp1/N$3 , \udp1/N$1 , \udp1/N$2 , EINT, CK, E;
-  _HDLAT_verplex \udp1/U$1 (.Q(\udp1/N$3 ), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \udp1/N$1 ), .D(\udp1/N$2 ));
-  not U$0(\udp1/N$1 , CK);
-  not U$1(\udp1/N$2 , E);
-  not U$2(EINT, \udp1/N$3 );
-endmodule
-
-module TLATNCAX12(ECK, E, CK);
-input  E, CK;
-output ECK;
-wire  \sttb_$U1/udp1/N$1 , EINT, ECK, E, CK;
-  not \sttb_$U1/U$0 (\sttb_$U1/udp1/N$1 , CK);
-  _HDLAT_verplex \sttb_$U1/udp1/U$1 (.Q(EINT), .QN( ), .S(1'b0), .R(1'b0), .CK(
-    \sttb_$U1/udp1/N$1 ), .D(E));
-  and U$1(ECK, CK, EINT);
-endmodule
-
-module TIELO(Y);
-output Y;
-wire  Y;
-  assign Y = 1'b0;
-endmodule
-
-module TIEHI(Y);
-output Y;
-wire  Y;
-  assign Y = 1'b1;
-endmodule
-
-module TBUFXL(Y, A, OE);
-input  A, OE;
-output Y;
-wire  Y, A, OE;
-  bufif1 U$1(Y, A, OE);
-endmodule
-
-module TBUFX8(Y, A, OE);
-input  A, OE;
-output Y;
-wire  Y, A, OE;
-  bufif1 U$1(Y, A, OE);
-endmodule
-
-module TBUFX6(Y, A, OE);
-input  A, OE;
-output Y;
-wire  Y, A, OE;
-  bufif1 U$1(Y, A, OE);
-endmodule
-
-module TBUFX4(Y, A, OE);
-input  A, OE;
-output Y;
-wire  Y, A, OE;
-  bufif1 U$1(Y, A, OE);
-endmodule
-
-module TBUFX3(Y, A, OE);
-input  A, OE;
-output Y;
-wire  Y, A, OE;
-  bufif1 U$1(Y, A, OE);
-endmodule
-
-module TBUFX20(Y, A, OE);
-input  A, OE;
-output Y;
-wire  Y, A, OE;
-  bufif1 U$1(Y, A, OE);
-endmodule
-
-module TBUFX2(Y, A, OE);
-input  A, OE;
-output Y;
-wire  Y, A, OE;
-  bufif1 U$1(Y, A, OE);
-endmodule
-
-module TBUFX16(Y, A, OE);
-input  A, OE;
-output Y;
-wire  Y, A, OE;
-  bufif1 U$1(Y, A, OE);
-endmodule
-
-module TBUFX12(Y, A, OE);
-input  A, OE;
-output Y;
-wire  Y, A, OE;
-  bufif1 U$1(Y, A, OE);
-endmodule
-
-module TBUFX1(Y, A, OE);
-input  A, OE;
-output Y;
-wire  Y, A, OE;
-  bufif1 U$1(Y, A, OE);
-endmodule
-
-module SMDFFHQX8(Q, D0, D1, S0, SE, SI, CK);
-input  D0, D1, S0, SE, SI, CK;
-output Q;
-wire  Q, D0, D1, S0, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, n$5);
-  not U$6(n$4, SE);
-  or U$7(n$5, n$6, n$7);
-  and U$8(n$6, S0, D1);
-  and U$9(n$7, n$8, D0);
-  not U$10(n$8, S0);
-endmodule
-
-module SMDFFHQX4(Q, D0, D1, S0, SE, SI, CK);
-input  D0, D1, S0, SE, SI, CK;
-output Q;
-wire  Q, D0, D1, S0, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, n$5);
-  not U$6(n$4, SE);
-  or U$7(n$5, n$6, n$7);
-  and U$8(n$6, S0, D1);
-  and U$9(n$7, n$8, D0);
-  not U$10(n$8, S0);
-endmodule
-
-module SMDFFHQX2(Q, D0, D1, S0, SE, SI, CK);
-input  D0, D1, S0, SE, SI, CK;
-output Q;
-wire  Q, D0, D1, S0, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, n$5);
-  not U$6(n$4, SE);
-  or U$7(n$5, n$6, n$7);
-  and U$8(n$6, S0, D1);
-  and U$9(n$7, n$8, D0);
-  not U$10(n$8, S0);
-endmodule
-
-module SMDFFHQX1(Q, D0, D1, S0, SE, SI, CK);
-input  D0, D1, S0, SE, SI, CK;
-output Q;
-wire  Q, D0, D1, S0, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, n$5);
-  not U$6(n$4, SE);
-  or U$7(n$5, n$6, n$7);
-  and U$8(n$6, S0, D1);
-  and U$9(n$7, n$8, D0);
-  not U$10(n$8, S0);
-endmodule
-
-module SEDFFXL(Q, QN, D, E, SE, SI, CK);
-input  D, E, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, E, SE, SI, CK, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, n$5);
-  not U$7(n$4, SE);
-  or U$8(n$5, n$6, n$7);
-  and U$9(n$6, E, D);
-  and U$10(n$7, n$8, Q);
-  not U$11(n$8, E);
-endmodule
-
-module SEDFFX4(Q, QN, D, E, SE, SI, CK);
-input  D, E, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, E, SE, SI, CK, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, n$5);
-  not U$7(n$4, SE);
-  or U$8(n$5, n$6, n$7);
-  and U$9(n$6, E, D);
-  and U$10(n$7, n$8, Q);
-  not U$11(n$8, E);
-endmodule
-
-module SEDFFX2(Q, QN, D, E, SE, SI, CK);
-input  D, E, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, E, SE, SI, CK, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, n$5);
-  not U$7(n$4, SE);
-  or U$8(n$5, n$6, n$7);
-  and U$9(n$6, E, D);
-  and U$10(n$7, n$8, Q);
-  not U$11(n$8, E);
-endmodule
-
-module SEDFFX1(Q, QN, D, E, SE, SI, CK);
-input  D, E, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, E, SE, SI, CK, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, n$5);
-  not U$7(n$4, SE);
-  or U$8(n$5, n$6, n$7);
-  and U$9(n$6, E, D);
-  and U$10(n$7, n$8, Q);
-  not U$11(n$8, E);
-endmodule
-
-module SEDFFTRXL(Q, QN, D, E, RN, SE, SI, CK);
-input  D, E, RN, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, E, RN, SE, SI, CK, n$1, n$2, n$3, n$4, n$5, n$6, n$7;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, n$5, n$7, RN);
-  not U$7(n$4, SE);
-  or U$8(n$5, D, n$6);
-  not U$9(n$6, E);
-  or U$10(n$7, E, Q);
-endmodule
-
-module SEDFFTRX4(Q, QN, D, E, RN, SE, SI, CK);
-input  D, E, RN, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, E, RN, SE, SI, CK, n$1, n$2, n$3, n$4, n$5, n$6, n$7;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, n$5, n$7, RN);
-  not U$7(n$4, SE);
-  or U$8(n$5, D, n$6);
-  not U$9(n$6, E);
-  or U$10(n$7, E, Q);
-endmodule
-
-module SEDFFTRX2(Q, QN, D, E, RN, SE, SI, CK);
-input  D, E, RN, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, E, RN, SE, SI, CK, n$1, n$2, n$3, n$4, n$5, n$6, n$7;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, n$5, n$7, RN);
-  not U$7(n$4, SE);
-  or U$8(n$5, D, n$6);
-  not U$9(n$6, E);
-  or U$10(n$7, E, Q);
-endmodule
-
-module SEDFFTRX1(Q, QN, D, E, RN, SE, SI, CK);
-input  D, E, RN, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, E, RN, SE, SI, CK, n$1, n$2, n$3, n$4, n$5, n$6, n$7;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, n$5, n$7, RN);
-  not U$7(n$4, SE);
-  or U$8(n$5, D, n$6);
-  not U$9(n$6, E);
-  or U$10(n$7, E, Q);
-endmodule
-
-module SEDFFHQX8(Q, D, E, SE, SI, CK);
-input  D, E, SE, SI, CK;
-output Q;
-wire  Q, D, E, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, n$5);
-  not U$6(n$4, SE);
-  or U$7(n$5, n$6, n$7);
-  and U$8(n$6, E, D);
-  and U$9(n$7, n$8, Q);
-  not U$10(n$8, E);
-endmodule
-
-module SEDFFHQX4(Q, D, E, SE, SI, CK);
-input  D, E, SE, SI, CK;
-output Q;
-wire  Q, D, E, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, n$5);
-  not U$6(n$4, SE);
-  or U$7(n$5, n$6, n$7);
-  and U$8(n$6, E, D);
-  and U$9(n$7, n$8, Q);
-  not U$10(n$8, E);
-endmodule
-
-module SEDFFHQX2(Q, D, E, SE, SI, CK);
-input  D, E, SE, SI, CK;
-output Q;
-wire  Q, D, E, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, n$5);
-  not U$6(n$4, SE);
-  or U$7(n$5, n$6, n$7);
-  and U$8(n$6, E, D);
-  and U$9(n$7, n$8, Q);
-  not U$10(n$8, E);
-endmodule
-
-module SEDFFHQX1(Q, D, E, SE, SI, CK);
-input  D, E, SE, SI, CK;
-output Q;
-wire  Q, D, E, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, n$5);
-  not U$6(n$4, SE);
-  or U$7(n$5, n$6, n$7);
-  and U$8(n$6, E, D);
-  and U$9(n$7, n$8, Q);
-  not U$10(n$8, E);
-endmodule
-
-module SDFFXL(Q, QN, D, SE, SI, CK);
-input  D, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, D);
-  not U$7(n$4, SE);
-endmodule
-
-module SDFFX4(Q, QN, D, SE, SI, CK);
-input  D, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, D);
-  not U$7(n$4, SE);
-endmodule
-
-module SDFFX2(Q, QN, D, SE, SI, CK);
-input  D, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, D);
-  not U$7(n$4, SE);
-endmodule
-
-module SDFFX1(Q, QN, D, SE, SI, CK);
-input  D, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, D);
-  not U$7(n$4, SE);
-endmodule
-
-module SDFFTRXL(Q, QN, D, RN, SE, SI, CK);
-input  D, RN, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, RN, SE, SI, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, D, RN);
-  not U$7(n$4, SE);
-endmodule
-
-module SDFFTRX4(Q, QN, D, RN, SE, SI, CK);
-input  D, RN, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, RN, SE, SI, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, D, RN);
-  not U$7(n$4, SE);
-endmodule
-
-module SDFFTRX2(Q, QN, D, RN, SE, SI, CK);
-input  D, RN, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, RN, SE, SI, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, D, RN);
-  not U$7(n$4, SE);
-endmodule
-
-module SDFFTRX1(Q, QN, D, RN, SE, SI, CK);
-input  D, RN, SE, SI, CK;
-output Q, QN;
-wire  Q, QN, D, RN, SE, SI, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, SE, SI);
-  and U$6(n$3, n$4, D, RN);
-  not U$7(n$4, SE);
-endmodule
-
-module SDFFSXL(Q, QN, D, SE, SI, SN, CK);
-input  D, SE, SI, SN, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, SN, CK, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(CK), .D(n$2));
-  not U$4(n$1, SN);
-  or U$5(n$2, n$3, n$4);
-  and U$6(n$3, SE, SI);
-  and U$7(n$4, n$5, D);
-  not U$8(n$5, SE);
-endmodule
-
-module SDFFSX4(Q, QN, D, SE, SI, SN, CK);
-input  D, SE, SI, SN, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, SN, CK, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(CK), .D(n$2));
-  not U$4(n$1, SN);
-  or U$5(n$2, n$3, n$4);
-  and U$6(n$3, SE, SI);
-  and U$7(n$4, n$5, D);
-  not U$8(n$5, SE);
-endmodule
-
-module SDFFSX2(Q, QN, D, SE, SI, SN, CK);
-input  D, SE, SI, SN, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, SN, CK, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(CK), .D(n$2));
-  not U$4(n$1, SN);
-  or U$5(n$2, n$3, n$4);
-  and U$6(n$3, SE, SI);
-  and U$7(n$4, n$5, D);
-  not U$8(n$5, SE);
-endmodule
-
-module SDFFSX1(Q, QN, D, SE, SI, SN, CK);
-input  D, SE, SI, SN, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, SN, CK, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(CK), .D(n$2));
-  not U$4(n$1, SN);
-  or U$5(n$2, n$3, n$4);
-  and U$6(n$3, SE, SI);
-  and U$7(n$4, n$5, D);
-  not U$8(n$5, SE);
-endmodule
-
-module SDFFSRXL(Q, QN, D, SE, SI, RN, SN, CK);
-input  D, SE, SI, RN, SN, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, RN, SN, CK, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$8), .CK(CK), .D(n$3));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  or U$6(n$3, n$4, n$5);
-  and U$7(n$4, SE, SI);
-  and U$8(n$5, n$6, D);
-  not U$9(n$6, SE);
-  not U$10(n$7, n$1);
-  and U$11(n$8, n$7, n$2);
-endmodule
-
-module SDFFSRX4(Q, QN, D, SE, SI, RN, SN, CK);
-input  D, SE, SI, RN, SN, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, RN, SN, CK, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$8), .CK(CK), .D(n$3));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  or U$6(n$3, n$4, n$5);
-  and U$7(n$4, SE, SI);
-  and U$8(n$5, n$6, D);
-  not U$9(n$6, SE);
-  not U$10(n$7, n$1);
-  and U$11(n$8, n$7, n$2);
-endmodule
-
-module SDFFSRX2(Q, QN, D, SE, SI, RN, SN, CK);
-input  D, SE, SI, RN, SN, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, RN, SN, CK, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$8), .CK(CK), .D(n$3));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  or U$6(n$3, n$4, n$5);
-  and U$7(n$4, SE, SI);
-  and U$8(n$5, n$6, D);
-  not U$9(n$6, SE);
-  not U$10(n$7, n$1);
-  and U$11(n$8, n$7, n$2);
-endmodule
-
-module SDFFSRX1(Q, QN, D, SE, SI, RN, SN, CK);
-input  D, SE, SI, RN, SN, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, RN, SN, CK, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$8), .CK(CK), .D(n$3));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  or U$6(n$3, n$4, n$5);
-  and U$7(n$4, SE, SI);
-  and U$8(n$5, n$6, D);
-  not U$9(n$6, SE);
-  not U$10(n$7, n$1);
-  and U$11(n$8, n$7, n$2);
-endmodule
-
-module SDFFSRHQX8(Q, D, SE, SI, RN, SN, CK);
-input  D, SE, SI, RN, SN, CK;
-output Q;
-wire  Q, D, SE, SI, RN, SN, CK, QBINT, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(n$8), .CK(CK), .D(n$3));
-  not U$3(n$1, SN);
-  not U$4(n$2, RN);
-  or U$5(n$3, n$4, n$5);
-  and U$6(n$4, SE, SI);
-  and U$7(n$5, n$6, D);
-  not U$8(n$6, SE);
-  not U$9(n$7, n$1);
-  and U$10(n$8, n$7, n$2);
-endmodule
-
-module SDFFSRHQX4(Q, D, SE, SI, RN, SN, CK);
-input  D, SE, SI, RN, SN, CK;
-output Q;
-wire  Q, D, SE, SI, RN, SN, CK, QBINT, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(n$8), .CK(CK), .D(n$3));
-  not U$3(n$1, SN);
-  not U$4(n$2, RN);
-  or U$5(n$3, n$4, n$5);
-  and U$6(n$4, SE, SI);
-  and U$7(n$5, n$6, D);
-  not U$8(n$6, SE);
-  not U$9(n$7, n$1);
-  and U$10(n$8, n$7, n$2);
-endmodule
-
-module SDFFSRHQX2(Q, D, SE, SI, RN, SN, CK);
-input  D, SE, SI, RN, SN, CK;
-output Q;
-wire  Q, D, SE, SI, RN, SN, CK, QBINT, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(n$8), .CK(CK), .D(n$3));
-  not U$3(n$1, SN);
-  not U$4(n$2, RN);
-  or U$5(n$3, n$4, n$5);
-  and U$6(n$4, SE, SI);
-  and U$7(n$5, n$6, D);
-  not U$8(n$6, SE);
-  not U$9(n$7, n$1);
-  and U$10(n$8, n$7, n$2);
-endmodule
-
-module SDFFSRHQX1(Q, D, SE, SI, RN, SN, CK);
-input  D, SE, SI, RN, SN, CK;
-output Q;
-wire  Q, D, SE, SI, RN, SN, CK, QBINT, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(n$8), .CK(CK), .D(n$3));
-  not U$3(n$1, SN);
-  not U$4(n$2, RN);
-  or U$5(n$3, n$4, n$5);
-  and U$6(n$4, SE, SI);
-  and U$7(n$5, n$6, D);
-  not U$8(n$6, SE);
-  not U$9(n$7, n$1);
-  and U$10(n$8, n$7, n$2);
-endmodule
-
-module SDFFSHQX8(Q, D, SE, SI, SN, CK);
-input  D, SE, SI, SN, CK;
-output Q;
-wire  Q, D, SE, SI, SN, CK, QBINT, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(1'b0), .CK(CK), .D(n$2));
-  not U$3(n$1, SN);
-  or U$4(n$2, n$3, n$4);
-  and U$5(n$3, SE, SI);
-  and U$6(n$4, n$5, D);
-  not U$7(n$5, SE);
-endmodule
-
-module SDFFSHQX4(Q, D, SE, SI, SN, CK);
-input  D, SE, SI, SN, CK;
-output Q;
-wire  Q, D, SE, SI, SN, CK, QBINT, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(1'b0), .CK(CK), .D(n$2));
-  not U$3(n$1, SN);
-  or U$4(n$2, n$3, n$4);
-  and U$5(n$3, SE, SI);
-  and U$6(n$4, n$5, D);
-  not U$7(n$5, SE);
-endmodule
-
-module SDFFSHQX2(Q, D, SE, SI, SN, CK);
-input  D, SE, SI, SN, CK;
-output Q;
-wire  Q, D, SE, SI, SN, CK, QBINT, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(1'b0), .CK(CK), .D(n$2));
-  not U$3(n$1, SN);
-  or U$4(n$2, n$3, n$4);
-  and U$5(n$3, SE, SI);
-  and U$6(n$4, n$5, D);
-  not U$7(n$5, SE);
-endmodule
-
-module SDFFSHQX1(Q, D, SE, SI, SN, CK);
-input  D, SE, SI, SN, CK;
-output Q;
-wire  Q, D, SE, SI, SN, CK, QBINT, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(1'b0), .CK(CK), .D(n$2));
-  not U$3(n$1, SN);
-  or U$4(n$2, n$3, n$4);
-  and U$5(n$3, SE, SI);
-  and U$6(n$4, n$5, D);
-  not U$7(n$5, SE);
-endmodule
-
-module SDFFRXL(Q, QN, D, SE, SI, RN, CK);
-input  D, SE, SI, RN, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, RN, CK, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(n$1), .CK(CK), .D(n$2));
-  not U$4(n$1, RN);
-  or U$5(n$2, n$3, n$4);
-  and U$6(n$3, SE, SI);
-  and U$7(n$4, n$5, D);
-  not U$8(n$5, SE);
-endmodule
-
-module SDFFRX4(Q, QN, D, SE, SI, RN, CK);
-input  D, SE, SI, RN, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, RN, CK, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(n$1), .CK(CK), .D(n$2));
-  not U$4(n$1, RN);
-  or U$5(n$2, n$3, n$4);
-  and U$6(n$3, SE, SI);
-  and U$7(n$4, n$5, D);
-  not U$8(n$5, SE);
-endmodule
-
-module SDFFRX2(Q, QN, D, SE, SI, RN, CK);
-input  D, SE, SI, RN, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, RN, CK, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(n$1), .CK(CK), .D(n$2));
-  not U$4(n$1, RN);
-  or U$5(n$2, n$3, n$4);
-  and U$6(n$3, SE, SI);
-  and U$7(n$4, n$5, D);
-  not U$8(n$5, SE);
-endmodule
-
-module SDFFRX1(Q, QN, D, SE, SI, RN, CK);
-input  D, SE, SI, RN, CK;
-output Q, QN;
-wire  Q, QN, D, SE, SI, RN, CK, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(n$1), .CK(CK), .D(n$2));
-  not U$4(n$1, RN);
-  or U$5(n$2, n$3, n$4);
-  and U$6(n$3, SE, SI);
-  and U$7(n$4, n$5, D);
-  not U$8(n$5, SE);
-endmodule
-
-module SDFFRHQX8(Q, D, SE, SI, RN, CK);
-input  D, SE, SI, RN, CK;
-output Q;
-wire  Q, D, SE, SI, RN, CK, QBINT, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(n$1), .CK(CK), .D(n$2));
-  not U$3(n$1, RN);
-  or U$4(n$2, n$3, n$4);
-  and U$5(n$3, SE, SI);
-  and U$6(n$4, n$5, D);
-  not U$7(n$5, SE);
-endmodule
-
-module SDFFRHQX4(Q, D, SE, SI, RN, CK);
-input  D, SE, SI, RN, CK;
-output Q;
-wire  Q, D, SE, SI, RN, CK, QBINT, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(n$1), .CK(CK), .D(n$2));
-  not U$3(n$1, RN);
-  or U$4(n$2, n$3, n$4);
-  and U$5(n$3, SE, SI);
-  and U$6(n$4, n$5, D);
-  not U$7(n$5, SE);
-endmodule
-
-module SDFFRHQX2(Q, D, SE, SI, RN, CK);
-input  D, SE, SI, RN, CK;
-output Q;
-wire  Q, D, SE, SI, RN, CK, QBINT, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(n$1), .CK(CK), .D(n$2));
-  not U$3(n$1, RN);
-  or U$4(n$2, n$3, n$4);
-  and U$5(n$3, SE, SI);
-  and U$6(n$4, n$5, D);
-  not U$7(n$5, SE);
-endmodule
-
-module SDFFRHQX1(Q, D, SE, SI, RN, CK);
-input  D, SE, SI, RN, CK;
-output Q;
-wire  Q, D, SE, SI, RN, CK, QBINT, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(n$1), .CK(CK), .D(n$2));
-  not U$3(n$1, RN);
-  or U$4(n$2, n$3, n$4);
-  and U$5(n$3, SE, SI);
-  and U$6(n$4, n$5, D);
-  not U$7(n$5, SE);
-endmodule
-
-module SDFFQXL(Q, D, SE, SI, CK);
-input  D, SE, SI, CK;
-output Q;
-wire  Q, D, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, D);
-  not U$6(n$4, SE);
-endmodule
-
-module SDFFQX4(Q, D, SE, SI, CK);
-input  D, SE, SI, CK;
-output Q;
-wire  Q, D, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, D);
-  not U$6(n$4, SE);
-endmodule
-
-module SDFFQX2(Q, D, SE, SI, CK);
-input  D, SE, SI, CK;
-output Q;
-wire  Q, D, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, D);
-  not U$6(n$4, SE);
-endmodule
-
-module SDFFQX1(Q, D, SE, SI, CK);
-input  D, SE, SI, CK;
-output Q;
-wire  Q, D, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, D);
-  not U$6(n$4, SE);
-endmodule
-
-module SDFFNSRXL(Q, QN, D, SE, SI, RN, SN, CKN);
-input  D, SE, SI, RN, SN, CKN;
-output Q, QN;
-wire  Q, QN, D, SE, SI, RN, SN, CKN, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$9), .CK(n$3), .D(n$4));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  not U$6(n$3, CKN);
-  or U$7(n$4, n$5, n$6);
-  and U$8(n$5, SE, SI);
-  and U$9(n$6, n$7, D);
-  not U$10(n$7, SE);
-  not U$11(n$8, n$1);
-  and U$12(n$9, n$8, n$2);
-endmodule
-
-module SDFFNSRX4(Q, QN, D, SE, SI, RN, SN, CKN);
-input  D, SE, SI, RN, SN, CKN;
-output Q, QN;
-wire  Q, QN, D, SE, SI, RN, SN, CKN, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$9), .CK(n$3), .D(n$4));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  not U$6(n$3, CKN);
-  or U$7(n$4, n$5, n$6);
-  and U$8(n$5, SE, SI);
-  and U$9(n$6, n$7, D);
-  not U$10(n$7, SE);
-  not U$11(n$8, n$1);
-  and U$12(n$9, n$8, n$2);
-endmodule
-
-module SDFFNSRX2(Q, QN, D, SE, SI, RN, SN, CKN);
-input  D, SE, SI, RN, SN, CKN;
-output Q, QN;
-wire  Q, QN, D, SE, SI, RN, SN, CKN, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$9), .CK(n$3), .D(n$4));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  not U$6(n$3, CKN);
-  or U$7(n$4, n$5, n$6);
-  and U$8(n$5, SE, SI);
-  and U$9(n$6, n$7, D);
-  not U$10(n$7, SE);
-  not U$11(n$8, n$1);
-  and U$12(n$9, n$8, n$2);
-endmodule
-
-module SDFFNSRX1(Q, QN, D, SE, SI, RN, SN, CKN);
-input  D, SE, SI, RN, SN, CKN;
-output Q, QN;
-wire  Q, QN, D, SE, SI, RN, SN, CKN, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$9), .CK(n$3), .D(n$4));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  not U$6(n$3, CKN);
-  or U$7(n$4, n$5, n$6);
-  and U$8(n$5, SE, SI);
-  and U$9(n$6, n$7, D);
-  not U$10(n$7, SE);
-  not U$11(n$8, n$1);
-  and U$12(n$9, n$8, n$2);
-endmodule
-
-module SDFFHQX8(Q, D, SE, SI, CK);
-input  D, SE, SI, CK;
-output Q;
-wire  Q, D, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, D);
-  not U$6(n$4, SE);
-endmodule
-
-module SDFFHQX4(Q, D, SE, SI, CK);
-input  D, SE, SI, CK;
-output Q;
-wire  Q, D, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, D);
-  not U$6(n$4, SE);
-endmodule
-
-module SDFFHQX2(Q, D, SE, SI, CK);
-input  D, SE, SI, CK;
-output Q;
-wire  Q, D, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, D);
-  not U$6(n$4, SE);
-endmodule
-
-module SDFFHQX1(Q, D, SE, SI, CK);
-input  D, SE, SI, CK;
-output Q;
-wire  Q, D, SE, SI, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, SE, SI);
-  and U$5(n$3, n$4, D);
-  not U$6(n$4, SE);
-endmodule
-
-module OR4XL(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  or U$1(Y, A, B, C, D);
-endmodule
-
-module OR4X8(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  or U$1(Y, A, B, C, D);
-endmodule
-
-module OR4X6(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  or U$1(Y, A, B, C, D);
-endmodule
-
-module OR4X4(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  or U$1(Y, A, B, C, D);
-endmodule
-
-module OR4X2(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  or U$1(Y, A, B, C, D);
-endmodule
-
-module OR4X1(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  or U$1(Y, A, B, C, D);
-endmodule
-
-module OR3XL(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  or U$1(Y, A, B, C);
-endmodule
-
-module OR3X8(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  or U$1(Y, A, B, C);
-endmodule
-
-module OR3X6(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  or U$1(Y, A, B, C);
-endmodule
-
-module OR3X4(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  or U$1(Y, A, B, C);
-endmodule
-
-module OR3X2(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  or U$1(Y, A, B, C);
-endmodule
-
-module OR3X1(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  or U$1(Y, A, B, C);
-endmodule
-
-module OR2XL(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  or U$1(Y, A, B);
-endmodule
-
-module OR2X8(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  or U$1(Y, A, B);
-endmodule
-
-module OR2X6(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  or U$1(Y, A, B);
-endmodule
-
-module OR2X4(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  or U$1(Y, A, B);
-endmodule
-
-module OR2X2(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  or U$1(Y, A, B);
-endmodule
-
-module OR2X1(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  or U$1(Y, A, B);
-endmodule
-
-module OAI33XL(Y, A0, A1, A2, B0, B1, B2);
-input  B0, B1, B2, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, B2, n$1, n$2;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1, B2);
-  or U$3(n$2, A0, A1, A2);
-endmodule
-
-module OAI33X4(Y, A0, A1, A2, B0, B1, B2);
-input  B0, B1, B2, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, B2, n$1, n$2;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1, B2);
-  or U$3(n$2, A0, A1, A2);
-endmodule
-
-module OAI33X2(Y, A0, A1, A2, B0, B1, B2);
-input  B0, B1, B2, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, B2, n$1, n$2;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1, B2);
-  or U$3(n$2, A0, A1, A2);
-endmodule
-
-module OAI33X1(Y, A0, A1, A2, B0, B1, B2);
-input  B0, B1, B2, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, B2, n$1, n$2;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1, B2);
-  or U$3(n$2, A0, A1, A2);
-endmodule
-
-module OAI32XL(Y, A0, A1, A2, B0, B1);
-input  B0, B1, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, n$1, n$2;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1);
-  or U$3(n$2, A0, A1, A2);
-endmodule
-
-module OAI32X4(Y, A0, A1, A2, B0, B1);
-input  B0, B1, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, n$1, n$2;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1);
-  or U$3(n$2, A0, A1, A2);
-endmodule
-
-module OAI32X2(Y, A0, A1, A2, B0, B1);
-input  B0, B1, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, n$1, n$2;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1);
-  or U$3(n$2, A0, A1, A2);
-endmodule
-
-module OAI32X1(Y, A0, A1, A2, B0, B1);
-input  B0, B1, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, n$1, n$2;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1);
-  or U$3(n$2, A0, A1, A2);
-endmodule
-
-module OAI31XL(Y, A0, A1, A2, B0);
-input  A0, A1, A2, B0;
-output Y;
-wire  Y, A0, A1, A2, B0, n$1;
-  nand U$1(Y, n$1, B0);
-  or U$2(n$1, A0, A1, A2);
-endmodule
-
-module OAI31X4(Y, A0, A1, A2, B0);
-input  A0, A1, A2, B0;
-output Y;
-wire  Y, A0, A1, A2, B0, n$1;
-  nand U$1(Y, n$1, B0);
-  or U$2(n$1, A0, A1, A2);
-endmodule
-
-module OAI31X2(Y, A0, A1, A2, B0);
-input  A0, A1, A2, B0;
-output Y;
-wire  Y, A0, A1, A2, B0, n$1;
-  nand U$1(Y, n$1, B0);
-  or U$2(n$1, A0, A1, A2);
-endmodule
-
-module OAI31X1(Y, A0, A1, A2, B0);
-input  A0, A1, A2, B0;
-output Y;
-wire  Y, A0, A1, A2, B0, n$1;
-  nand U$1(Y, n$1, B0);
-  or U$2(n$1, A0, A1, A2);
-endmodule
-
-module OAI2BB2XL(Y, A0N, A1N, B0, B1);
-input  A0N, A1N, B0, B1;
-output Y;
-wire  Y, A0N, A1N, B0, B1, n$1, n$2, n$3, n$4;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1);
-  or U$3(n$2, n$3, n$4);
-  not U$4(n$3, A0N);
-  not U$5(n$4, A1N);
-endmodule
-
-module OAI2BB2X4(Y, A0N, A1N, B0, B1);
-input  A0N, A1N, B0, B1;
-output Y;
-wire  Y, A0N, A1N, B0, B1, n$1, n$2, n$3, n$4;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1);
-  or U$3(n$2, n$3, n$4);
-  not U$4(n$3, A0N);
-  not U$5(n$4, A1N);
-endmodule
-
-module OAI2BB2X2(Y, A0N, A1N, B0, B1);
-input  A0N, A1N, B0, B1;
-output Y;
-wire  Y, A0N, A1N, B0, B1, n$1, n$2, n$3, n$4;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1);
-  or U$3(n$2, n$3, n$4);
-  not U$4(n$3, A0N);
-  not U$5(n$4, A1N);
-endmodule
-
-module OAI2BB2X1(Y, A0N, A1N, B0, B1);
-input  A0N, A1N, B0, B1;
-output Y;
-wire  Y, A0N, A1N, B0, B1, n$1, n$2, n$3, n$4;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1);
-  or U$3(n$2, n$3, n$4);
-  not U$4(n$3, A0N);
-  not U$5(n$4, A1N);
-endmodule
-
-module OAI2BB1XL(Y, A0N, A1N, B0);
-input  A0N, A1N, B0;
-output Y;
-wire  Y, A0N, A1N, B0, n$1, n$2, n$3;
-  nand U$1(Y, n$1, B0);
-  or U$2(n$1, n$2, n$3);
-  not U$3(n$2, A0N);
-  not U$4(n$3, A1N);
-endmodule
-
-module OAI2BB1X4(Y, A0N, A1N, B0);
-input  A0N, A1N, B0;
-output Y;
-wire  Y, A0N, A1N, B0, n$1, n$2, n$3;
-  nand U$1(Y, n$1, B0);
-  or U$2(n$1, n$2, n$3);
-  not U$3(n$2, A0N);
-  not U$4(n$3, A1N);
-endmodule
-
-module OAI2BB1X2(Y, A0N, A1N, B0);
-input  A0N, A1N, B0;
-output Y;
-wire  Y, A0N, A1N, B0, n$1, n$2, n$3;
-  nand U$1(Y, n$1, B0);
-  or U$2(n$1, n$2, n$3);
-  not U$3(n$2, A0N);
-  not U$4(n$3, A1N);
-endmodule
-
-module OAI2BB1X1(Y, A0N, A1N, B0);
-input  A0N, A1N, B0;
-output Y;
-wire  Y, A0N, A1N, B0, n$1, n$2, n$3;
-  nand U$1(Y, n$1, B0);
-  or U$2(n$1, n$2, n$3);
-  not U$3(n$2, A0N);
-  not U$4(n$3, A1N);
-endmodule
-
-module OAI22XL(Y, A0, A1, B0, B1);
-input  B0, B1, A0, A1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1);
-  or U$3(n$2, A0, A1);
-endmodule
-
-module OAI22X4(Y, A0, A1, B0, B1);
-input  B0, B1, A0, A1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1);
-  or U$3(n$2, A0, A1);
-endmodule
-
-module OAI22X2(Y, A0, A1, B0, B1);
-input  B0, B1, A0, A1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1);
-  or U$3(n$2, A0, A1);
-endmodule
-
-module OAI22X1(Y, A0, A1, B0, B1);
-input  B0, B1, A0, A1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  nand U$1(Y, n$1, n$2);
-  or U$2(n$1, B0, B1);
-  or U$3(n$2, A0, A1);
-endmodule
-
-module OAI222XL(Y, A0, A1, B0, B1, C0, C1);
-input  C0, C1, A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, C1, n$1, n$2, n$3;
-  nand U$1(Y, n$1, n$2, n$3);
-  or U$2(n$1, C0, C1);
-  or U$3(n$2, A0, A1);
-  or U$4(n$3, B0, B1);
-endmodule
-
-module OAI222X4(Y, A0, A1, B0, B1, C0, C1);
-input  C0, C1, A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, C1, n$1, n$2, n$3;
-  nand U$1(Y, n$1, n$2, n$3);
-  or U$2(n$1, C0, C1);
-  or U$3(n$2, A0, A1);
-  or U$4(n$3, B0, B1);
-endmodule
-
-module OAI222X2(Y, A0, A1, B0, B1, C0, C1);
-input  C0, C1, A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, C1, n$1, n$2, n$3;
-  nand U$1(Y, n$1, n$2, n$3);
-  or U$2(n$1, C0, C1);
-  or U$3(n$2, A0, A1);
-  or U$4(n$3, B0, B1);
-endmodule
-
-module OAI222X1(Y, A0, A1, B0, B1, C0, C1);
-input  C0, C1, A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, C1, n$1, n$2, n$3;
-  nand U$1(Y, n$1, n$2, n$3);
-  or U$2(n$1, C0, C1);
-  or U$3(n$2, A0, A1);
-  or U$4(n$3, B0, B1);
-endmodule
-
-module OAI221XL(Y, A0, A1, B0, B1, C0);
-input  A0, A1, B0, B1, C0;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, n$1, n$2;
-  nand U$1(Y, n$1, n$2, C0);
-  or U$2(n$1, A0, A1);
-  or U$3(n$2, B0, B1);
-endmodule
-
-module OAI221X4(Y, A0, A1, B0, B1, C0);
-input  A0, A1, B0, B1, C0;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, n$1, n$2;
-  nand U$1(Y, n$1, n$2, C0);
-  or U$2(n$1, A0, A1);
-  or U$3(n$2, B0, B1);
-endmodule
-
-module OAI221X2(Y, A0, A1, B0, B1, C0);
-input  A0, A1, B0, B1, C0;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, n$1, n$2;
-  nand U$1(Y, n$1, n$2, C0);
-  or U$2(n$1, A0, A1);
-  or U$3(n$2, B0, B1);
-endmodule
-
-module OAI221X1(Y, A0, A1, B0, B1, C0);
-input  A0, A1, B0, B1, C0;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, n$1, n$2;
-  nand U$1(Y, n$1, n$2, C0);
-  or U$2(n$1, A0, A1);
-  or U$3(n$2, B0, B1);
-endmodule
-
-module OAI21XL(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  nand U$1(Y, n$1, B0);
-  or U$2(n$1, A0, A1);
-endmodule
-
-module OAI21X4(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  nand U$1(Y, n$1, B0);
-  or U$2(n$1, A0, A1);
-endmodule
-
-module OAI21X2(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  nand U$1(Y, n$1, B0);
-  or U$2(n$1, A0, A1);
-endmodule
-
-module OAI21X1(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  nand U$1(Y, n$1, B0);
-  or U$2(n$1, A0, A1);
-endmodule
-
-module OAI211XL(Y, A0, A1, B0, C0);
-input  A0, A1, B0, C0;
-output Y;
-wire  Y, A0, A1, B0, C0, n$1;
-  nand U$1(Y, n$1, B0, C0);
-  or U$2(n$1, A0, A1);
-endmodule
-
-module OAI211X4(Y, A0, A1, B0, C0);
-input  A0, A1, B0, C0;
-output Y;
-wire  Y, A0, A1, B0, C0, n$1;
-  nand U$1(Y, n$1, B0, C0);
-  or U$2(n$1, A0, A1);
-endmodule
-
-module OAI211X2(Y, A0, A1, B0, C0);
-input  A0, A1, B0, C0;
-output Y;
-wire  Y, A0, A1, B0, C0, n$1;
-  nand U$1(Y, n$1, B0, C0);
-  or U$2(n$1, A0, A1);
-endmodule
-
-module OAI211X1(Y, A0, A1, B0, C0);
-input  A0, A1, B0, C0;
-output Y;
-wire  Y, A0, A1, B0, C0, n$1;
-  nand U$1(Y, n$1, B0, C0);
-  or U$2(n$1, A0, A1);
-endmodule
-
-module OA22XL(Y, A0, A1, B0, B1);
-input  A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  and U$1(Y, n$1, n$2);
-  or U$2(n$1, A0, A1);
-  or U$3(n$2, B0, B1);
-endmodule
-
-module OA22X4(Y, A0, A1, B0, B1);
-input  A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  and U$1(Y, n$1, n$2);
-  or U$2(n$1, A0, A1);
-  or U$3(n$2, B0, B1);
-endmodule
-
-module OA22X2(Y, A0, A1, B0, B1);
-input  A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  and U$1(Y, n$1, n$2);
-  or U$2(n$1, A0, A1);
-  or U$3(n$2, B0, B1);
-endmodule
-
-module OA22X1(Y, A0, A1, B0, B1);
-input  A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  and U$1(Y, n$1, n$2);
-  or U$2(n$1, A0, A1);
-  or U$3(n$2, B0, B1);
-endmodule
-
-module OA21XL(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  and U$1(Y, n$1, B0);
-  or U$2(n$1, A0, A1);
-endmodule
-
-module OA21X4(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  and U$1(Y, n$1, B0);
-  or U$2(n$1, A0, A1);
-endmodule
-
-module OA21X2(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  and U$1(Y, n$1, B0);
-  or U$2(n$1, A0, A1);
-endmodule
-
-module OA21X1(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  and U$1(Y, n$1, B0);
-  or U$2(n$1, A0, A1);
-endmodule
-
-module NOR4XL(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  nor U$1(Y, A, B, C, D);
-endmodule
-
-module NOR4X8(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  nor U$1(Y, A, B, C, D);
-endmodule
-
-module NOR4X6(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  nor U$1(Y, A, B, C, D);
-endmodule
-
-module NOR4X4(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  nor U$1(Y, A, B, C, D);
-endmodule
-
-module NOR4X2(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  nor U$1(Y, A, B, C, D);
-endmodule
-
-module NOR4X1(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  nor U$1(Y, A, B, C, D);
-endmodule
-
-module NOR4BXL(Y, AN, B, C, D);
-input  AN, B, C, D;
-output Y;
-wire  Y, AN, B, C, D, n$1;
-  nor U$1(Y, n$1, B, C, D);
-  not U$2(n$1, AN);
-endmodule
-
-module NOR4BX4(Y, AN, B, C, D);
-input  AN, B, C, D;
-output Y;
-wire  Y, AN, B, C, D, n$1;
-  nor U$1(Y, n$1, B, C, D);
-  not U$2(n$1, AN);
-endmodule
-
-module NOR4BX2(Y, AN, B, C, D);
-input  AN, B, C, D;
-output Y;
-wire  Y, AN, B, C, D, n$1;
-  nor U$1(Y, n$1, B, C, D);
-  not U$2(n$1, AN);
-endmodule
-
-module NOR4BX1(Y, AN, B, C, D);
-input  AN, B, C, D;
-output Y;
-wire  Y, AN, B, C, D, n$1;
-  nor U$1(Y, n$1, B, C, D);
-  not U$2(n$1, AN);
-endmodule
-
-module NOR4BBXL(Y, AN, BN, C, D);
-input  AN, BN, C, D;
-output Y;
-wire  Y, AN, BN, C, D, n$1, n$2;
-  nor U$1(Y, n$1, n$2, C, D);
-  not U$2(n$1, AN);
-  not U$3(n$2, BN);
-endmodule
-
-module NOR4BBX4(Y, AN, BN, C, D);
-input  AN, BN, C, D;
-output Y;
-wire  Y, AN, BN, C, D, n$1, n$2;
-  nor U$1(Y, n$1, n$2, C, D);
-  not U$2(n$1, BN);
-  not U$3(n$2, AN);
-endmodule
-
-module NOR4BBX2(Y, AN, BN, C, D);
-input  AN, BN, C, D;
-output Y;
-wire  Y, AN, BN, C, D, n$1, n$2;
-  nor U$1(Y, n$1, n$2, C, D);
-  not U$2(n$1, BN);
-  not U$3(n$2, AN);
-endmodule
-
-module NOR4BBX1(Y, AN, BN, C, D);
-input  AN, BN, C, D;
-output Y;
-wire  Y, AN, BN, C, D, n$1, n$2;
-  nor U$1(Y, n$1, n$2, C, D);
-  not U$2(n$1, AN);
-  not U$3(n$2, BN);
-endmodule
-
-module NOR3XL(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  nor U$1(Y, A, B, C);
-endmodule
-
-module NOR3X8(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  nor U$1(Y, A, B, C);
-endmodule
-
-module NOR3X6(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  nor U$1(Y, A, B, C);
-endmodule
-
-module NOR3X4(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  nor U$1(Y, A, B, C);
-endmodule
-
-module NOR3X2(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  nor U$1(Y, A, B, C);
-endmodule
-
-module NOR3X1(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  nor U$1(Y, A, B, C);
-endmodule
-
-module NOR3BXL(Y, AN, B, C);
-input  AN, B, C;
-output Y;
-wire  Y, AN, B, C, n$1;
-  nor U$1(Y, n$1, B, C);
-  not U$2(n$1, AN);
-endmodule
-
-module NOR3BX4(Y, AN, B, C);
-input  AN, B, C;
-output Y;
-wire  Y, AN, B, C, n$1;
-  nor U$1(Y, n$1, B, C);
-  not U$2(n$1, AN);
-endmodule
-
-module NOR3BX2(Y, AN, B, C);
-input  AN, B, C;
-output Y;
-wire  Y, AN, B, C, n$1;
-  nor U$1(Y, n$1, B, C);
-  not U$2(n$1, AN);
-endmodule
-
-module NOR3BX1(Y, AN, B, C);
-input  AN, B, C;
-output Y;
-wire  Y, AN, B, C, n$1;
-  nor U$1(Y, n$1, B, C);
-  not U$2(n$1, AN);
-endmodule
-
-module NOR2XL(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  nor U$1(Y, A, B);
-endmodule
-
-module NOR2X8(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  nor U$1(Y, A, B);
-endmodule
-
-module NOR2X6(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  nor U$1(Y, A, B);
-endmodule
-
-module NOR2X4(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  nor U$1(Y, A, B);
-endmodule
-
-module NOR2X2(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  nor U$1(Y, A, B);
-endmodule
-
-module NOR2X1(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  nor U$1(Y, A, B);
-endmodule
-
-module NOR2BXL(Y, AN, B);
-input  AN, B;
-output Y;
-wire  Y, AN, B, n$1;
-  nor U$1(Y, n$1, B);
-  not U$2(n$1, AN);
-endmodule
-
-module NOR2BX4(Y, AN, B);
-input  AN, B;
-output Y;
-wire  Y, AN, B, n$1;
-  nor U$1(Y, n$1, B);
-  not U$2(n$1, AN);
-endmodule
-
-module NOR2BX2(Y, AN, B);
-input  AN, B;
-output Y;
-wire  Y, AN, B, n$1;
-  nor U$1(Y, n$1, B);
-  not U$2(n$1, AN);
-endmodule
-
-module NOR2BX1(Y, AN, B);
-input  AN, B;
-output Y;
-wire  Y, AN, B, n$1;
-  nor U$1(Y, n$1, B);
-  not U$2(n$1, AN);
-endmodule
-
-module NAND4XL(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  nand U$1(Y, A, B, C, D);
-endmodule
-
-module NAND4X8(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  nand U$1(Y, A, B, C, D);
-endmodule
-
-module NAND4X6(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  nand U$1(Y, A, B, C, D);
-endmodule
-
-module NAND4X4(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  nand U$1(Y, A, B, C, D);
-endmodule
-
-module NAND4X2(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  nand U$1(Y, A, B, C, D);
-endmodule
-
-module NAND4X1(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  nand U$1(Y, A, B, C, D);
-endmodule
-
-module NAND4BXL(Y, AN, B, C, D);
-input  AN, B, C, D;
-output Y;
-wire  Y, AN, B, C, D, n$1;
-  nand U$1(Y, n$1, B, C, D);
-  not U$2(n$1, AN);
-endmodule
-
-module NAND4BX4(Y, AN, B, C, D);
-input  AN, B, C, D;
-output Y;
-wire  Y, AN, B, C, D, n$1;
-  nand U$1(Y, n$1, B, C, D);
-  not U$2(n$1, AN);
-endmodule
-
-module NAND4BX2(Y, AN, B, C, D);
-input  AN, B, C, D;
-output Y;
-wire  Y, AN, B, C, D, n$1;
-  nand U$1(Y, n$1, B, C, D);
-  not U$2(n$1, AN);
-endmodule
-
-module NAND4BX1(Y, AN, B, C, D);
-input  AN, B, C, D;
-output Y;
-wire  Y, AN, B, C, D, n$1;
-  nand U$1(Y, n$1, B, C, D);
-  not U$2(n$1, AN);
-endmodule
-
-module NAND4BBXL(Y, AN, BN, C, D);
-input  AN, BN, C, D;
-output Y;
-wire  Y, AN, BN, C, D, n$1, n$2;
-  nand U$1(Y, n$1, n$2, C, D);
-  not U$2(n$1, AN);
-  not U$3(n$2, BN);
-endmodule
-
-module NAND4BBX4(Y, AN, BN, C, D);
-input  AN, BN, C, D;
-output Y;
-wire  Y, AN, BN, C, D, n$1, n$2;
-  nand U$1(Y, n$1, n$2, C, D);
-  not U$2(n$1, BN);
-  not U$3(n$2, AN);
-endmodule
-
-module NAND4BBX2(Y, AN, BN, C, D);
-input  AN, BN, C, D;
-output Y;
-wire  Y, AN, BN, C, D, n$1, n$2;
-  nand U$1(Y, n$1, n$2, C, D);
-  not U$2(n$1, BN);
-  not U$3(n$2, AN);
-endmodule
-
-module NAND4BBX1(Y, AN, BN, C, D);
-input  AN, BN, C, D;
-output Y;
-wire  Y, AN, BN, C, D, n$1, n$2;
-  nand U$1(Y, n$1, n$2, C, D);
-  not U$2(n$1, BN);
-  not U$3(n$2, AN);
-endmodule
-
-module NAND3XL(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  nand U$1(Y, A, B, C);
-endmodule
-
-module NAND3X8(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  nand U$1(Y, A, B, C);
-endmodule
-
-module NAND3X6(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  nand U$1(Y, A, B, C);
-endmodule
-
-module NAND3X4(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  nand U$1(Y, A, B, C);
-endmodule
-
-module NAND3X2(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  nand U$1(Y, A, B, C);
-endmodule
-
-module NAND3X1(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  nand U$1(Y, A, B, C);
-endmodule
-
-module NAND3BXL(Y, AN, B, C);
-input  AN, B, C;
-output Y;
-wire  Y, AN, B, C, n$1;
-  nand U$1(Y, n$1, B, C);
-  not U$2(n$1, AN);
-endmodule
-
-module NAND3BX4(Y, AN, B, C);
-input  AN, B, C;
-output Y;
-wire  Y, AN, B, C, n$1;
-  nand U$1(Y, n$1, B, C);
-  not U$2(n$1, AN);
-endmodule
-
-module NAND3BX2(Y, AN, B, C);
-input  AN, B, C;
-output Y;
-wire  Y, AN, B, C, n$1;
-  nand U$1(Y, n$1, B, C);
-  not U$2(n$1, AN);
-endmodule
-
-module NAND3BX1(Y, AN, B, C);
-input  AN, B, C;
-output Y;
-wire  Y, AN, B, C, n$1;
-  nand U$1(Y, n$1, B, C);
-  not U$2(n$1, AN);
-endmodule
-
-module NAND2XL(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  nand U$1(Y, A, B);
-endmodule
-
-module NAND2X8(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  nand U$1(Y, A, B);
-endmodule
-
-module NAND2X6(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  nand U$1(Y, A, B);
-endmodule
-
-module NAND2X4(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  nand U$1(Y, A, B);
-endmodule
-
-module NAND2X2(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  nand U$1(Y, A, B);
-endmodule
-
-module NAND2X1(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  nand U$1(Y, A, B);
-endmodule
-
-module NAND2BXL(Y, AN, B);
-input  AN, B;
-output Y;
-wire  Y, AN, B, n$1;
-  nand U$1(Y, n$1, B);
-  not U$2(n$1, AN);
-endmodule
-
-module NAND2BX4(Y, AN, B);
-input  AN, B;
-output Y;
-wire  Y, AN, B, n$1;
-  nand U$1(Y, n$1, B);
-  not U$2(n$1, AN);
-endmodule
-
-module NAND2BX2(Y, AN, B);
-input  AN, B;
-output Y;
-wire  Y, AN, B, n$1;
-  nand U$1(Y, n$1, B);
-  not U$2(n$1, AN);
-endmodule
-
-module NAND2BX1(Y, AN, B);
-input  AN, B;
-output Y;
-wire  Y, AN, B, n$1;
-  nand U$1(Y, n$1, B);
-  not U$2(n$1, AN);
-endmodule
-
-module MXI4XL(Y, A, B, C, D, S0, S1);
-input  A, B, C, D, S0, S1;
-output Y;
-wire  Y, A, B, C, D, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9, n$10, 
-    n$11;
-  nor U$1(Y, n$1, n$6);
-  and U$2(n$1, S1, n$2);
-  or U$3(n$2, n$3, n$4);
-  and U$4(n$3, S0, D);
-  and U$5(n$4, n$5, C);
-  not U$6(n$5, S0);
-  and U$7(n$6, n$7, n$8);
-  not U$8(n$7, S1);
-  or U$9(n$8, n$9, n$10);
-  and U$10(n$9, S0, B);
-  and U$11(n$10, n$11, A);
-  not U$12(n$11, S0);
-endmodule
-
-module MXI4X4(Y, A, B, C, D, S0, S1);
-input  A, B, C, D, S0, S1;
-output Y;
-wire  Y, A, B, C, D, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9, n$10, 
-    n$11;
-  nor U$1(Y, n$1, n$6);
-  and U$2(n$1, S1, n$2);
-  or U$3(n$2, n$3, n$4);
-  and U$4(n$3, S0, D);
-  and U$5(n$4, n$5, C);
-  not U$6(n$5, S0);
-  and U$7(n$6, n$7, n$8);
-  not U$8(n$7, S1);
-  or U$9(n$8, n$9, n$10);
-  and U$10(n$9, S0, B);
-  and U$11(n$10, n$11, A);
-  not U$12(n$11, S0);
-endmodule
-
-module MXI4X2(Y, A, B, C, D, S0, S1);
-input  A, B, C, D, S0, S1;
-output Y;
-wire  Y, A, B, C, D, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9, n$10, 
-    n$11;
-  nor U$1(Y, n$1, n$6);
-  and U$2(n$1, S1, n$2);
-  or U$3(n$2, n$3, n$4);
-  and U$4(n$3, S0, D);
-  and U$5(n$4, n$5, C);
-  not U$6(n$5, S0);
-  and U$7(n$6, n$7, n$8);
-  not U$8(n$7, S1);
-  or U$9(n$8, n$9, n$10);
-  and U$10(n$9, S0, B);
-  and U$11(n$10, n$11, A);
-  not U$12(n$11, S0);
-endmodule
-
-module MXI4X1(Y, A, B, C, D, S0, S1);
-input  A, B, C, D, S0, S1;
-output Y;
-wire  Y, A, B, C, D, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9, n$10, 
-    n$11;
-  nor U$1(Y, n$1, n$6);
-  and U$2(n$1, S1, n$2);
-  or U$3(n$2, n$3, n$4);
-  and U$4(n$3, S0, D);
-  and U$5(n$4, n$5, C);
-  not U$6(n$5, S0);
-  and U$7(n$6, n$7, n$8);
-  not U$8(n$7, S1);
-  or U$9(n$8, n$9, n$10);
-  and U$10(n$9, S0, B);
-  and U$11(n$10, n$11, A);
-  not U$12(n$11, S0);
-endmodule
-
-module MXI3XL(Y, A, B, C, S0, S1);
-input  A, B, C, S0, S1;
-output Y;
-wire  Y, A, B, C, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, S1, C);
-  and U$3(n$2, n$3, n$4);
-  not U$4(n$3, S1);
-  or U$5(n$4, n$5, n$6);
-  and U$6(n$5, S0, B);
-  and U$7(n$6, n$7, A);
-  not U$8(n$7, S0);
-endmodule
-
-module MXI3X4(Y, A, B, C, S0, S1);
-input  A, B, C, S0, S1;
-output Y;
-wire  Y, A, B, C, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, S1, C);
-  and U$3(n$2, n$3, n$4);
-  not U$4(n$3, S1);
-  or U$5(n$4, n$5, n$6);
-  and U$6(n$5, S0, B);
-  and U$7(n$6, n$7, A);
-  not U$8(n$7, S0);
-endmodule
-
-module MXI3X2(Y, A, B, C, S0, S1);
-input  A, B, C, S0, S1;
-output Y;
-wire  Y, A, B, C, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, S1, C);
-  and U$3(n$2, n$3, n$4);
-  not U$4(n$3, S1);
-  or U$5(n$4, n$5, n$6);
-  and U$6(n$5, S0, B);
-  and U$7(n$6, n$7, A);
-  not U$8(n$7, S0);
-endmodule
-
-module MXI3X1(Y, A, B, C, S0, S1);
-input  A, B, C, S0, S1;
-output Y;
-wire  Y, A, B, C, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, S1, C);
-  and U$3(n$2, n$3, n$4);
-  not U$4(n$3, S1);
-  or U$5(n$4, n$5, n$6);
-  and U$6(n$5, S0, B);
-  and U$7(n$6, n$7, A);
-  not U$8(n$7, S0);
-endmodule
-
-module MXI2XL(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module MXI2X8(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module MXI2X6(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module MXI2X4(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module MXI2X2(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module MXI2X1(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module MX4XL(Y, A, B, C, D, S0, S1);
-input  A, B, C, D, S0, S1;
-output Y;
-wire  Y, A, B, C, D, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9, n$10, 
-    n$11;
-  or U$1(Y, n$1, n$6);
-  and U$2(n$1, S1, n$2);
-  or U$3(n$2, n$3, n$4);
-  and U$4(n$3, S0, D);
-  and U$5(n$4, n$5, C);
-  not U$6(n$5, S0);
-  and U$7(n$6, n$7, n$8);
-  not U$8(n$7, S1);
-  or U$9(n$8, n$9, n$10);
-  and U$10(n$9, S0, B);
-  and U$11(n$10, n$11, A);
-  not U$12(n$11, S0);
-endmodule
-
-module MX4X4(Y, A, B, C, D, S0, S1);
-input  A, B, C, D, S0, S1;
-output Y;
-wire  Y, A, B, C, D, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9, n$10, 
-    n$11;
-  or U$1(Y, n$1, n$6);
-  and U$2(n$1, S1, n$2);
-  or U$3(n$2, n$3, n$4);
-  and U$4(n$3, S0, D);
-  and U$5(n$4, n$5, C);
-  not U$6(n$5, S0);
-  and U$7(n$6, n$7, n$8);
-  not U$8(n$7, S1);
-  or U$9(n$8, n$9, n$10);
-  and U$10(n$9, S0, B);
-  and U$11(n$10, n$11, A);
-  not U$12(n$11, S0);
-endmodule
-
-module MX4X2(Y, A, B, C, D, S0, S1);
-input  A, B, C, D, S0, S1;
-output Y;
-wire  Y, A, B, C, D, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9, n$10, 
-    n$11;
-  or U$1(Y, n$1, n$6);
-  and U$2(n$1, S1, n$2);
-  or U$3(n$2, n$3, n$4);
-  and U$4(n$3, S0, D);
-  and U$5(n$4, n$5, C);
-  not U$6(n$5, S0);
-  and U$7(n$6, n$7, n$8);
-  not U$8(n$7, S1);
-  or U$9(n$8, n$9, n$10);
-  and U$10(n$9, S0, B);
-  and U$11(n$10, n$11, A);
-  not U$12(n$11, S0);
-endmodule
-
-module MX4X1(Y, A, B, C, D, S0, S1);
-input  A, B, C, D, S0, S1;
-output Y;
-wire  Y, A, B, C, D, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9, n$10, 
-    n$11;
-  or U$1(Y, n$1, n$6);
-  and U$2(n$1, S1, n$2);
-  or U$3(n$2, n$3, n$4);
-  and U$4(n$3, S0, D);
-  and U$5(n$4, n$5, C);
-  not U$6(n$5, S0);
-  and U$7(n$6, n$7, n$8);
-  not U$8(n$7, S1);
-  or U$9(n$8, n$9, n$10);
-  and U$10(n$9, S0, B);
-  and U$11(n$10, n$11, A);
-  not U$12(n$11, S0);
-endmodule
-
-module MX3XL(Y, A, B, C, S0, S1);
-input  A, B, C, S0, S1;
-output Y;
-wire  Y, A, B, C, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S1, C);
-  and U$3(n$2, n$3, n$4);
-  not U$4(n$3, S1);
-  or U$5(n$4, n$5, n$6);
-  and U$6(n$5, S0, B);
-  and U$7(n$6, n$7, A);
-  not U$8(n$7, S0);
-endmodule
-
-module MX3X4(Y, A, B, C, S0, S1);
-input  A, B, C, S0, S1;
-output Y;
-wire  Y, A, B, C, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S1, C);
-  and U$3(n$2, n$3, n$4);
-  not U$4(n$3, S1);
-  or U$5(n$4, n$5, n$6);
-  and U$6(n$5, S0, B);
-  and U$7(n$6, n$7, A);
-  not U$8(n$7, S0);
-endmodule
-
-module MX3X2(Y, A, B, C, S0, S1);
-input  A, B, C, S0, S1;
-output Y;
-wire  Y, A, B, C, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S1, C);
-  and U$3(n$2, n$3, n$4);
-  not U$4(n$3, S1);
-  or U$5(n$4, n$5, n$6);
-  and U$6(n$5, S0, B);
-  and U$7(n$6, n$7, A);
-  not U$8(n$7, S0);
-endmodule
-
-module MX3X1(Y, A, B, C, S0, S1);
-input  A, B, C, S0, S1;
-output Y;
-wire  Y, A, B, C, S0, S1, n$1, n$2, n$3, n$4, n$5, n$6, n$7;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S1, C);
-  and U$3(n$2, n$3, n$4);
-  not U$4(n$3, S1);
-  or U$5(n$4, n$5, n$6);
-  and U$6(n$5, S0, B);
-  and U$7(n$6, n$7, A);
-  not U$8(n$7, S0);
-endmodule
-
-module MX2XL(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module MX2X8(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module MX2X6(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module MX2X4(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module MX2X2(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module MX2X1(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module MDFFHQX8(Q, D0, D1, S0, CK);
-input  D0, D1, S0, CK;
-output Q;
-wire  Q, D0, D1, S0, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, S0, D1);
-  and U$5(n$3, n$4, D0);
-  not U$6(n$4, S0);
-endmodule
-
-module MDFFHQX4(Q, D0, D1, S0, CK);
-input  D0, D1, S0, CK;
-output Q;
-wire  Q, D0, D1, S0, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, S0, D1);
-  and U$5(n$3, n$4, D0);
-  not U$6(n$4, S0);
-endmodule
-
-module MDFFHQX2(Q, D0, D1, S0, CK);
-input  D0, D1, S0, CK;
-output Q;
-wire  Q, D0, D1, S0, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, S0, D1);
-  and U$5(n$3, n$4, D0);
-  not U$6(n$4, S0);
-endmodule
-
-module MDFFHQX1(Q, D0, D1, S0, CK);
-input  D0, D1, S0, CK;
-output Q;
-wire  Q, D0, D1, S0, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, S0, D1);
-  and U$5(n$3, n$4, D0);
-  not U$6(n$4, S0);
-endmodule
-
-module INVXL(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module INVX8(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module INVX6(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module INVX4(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module INVX3(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module INVX20(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module INVX2(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module INVX16(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module INVX12(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module INVX1(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module HOLDX1(Y);
-// dont_use
-inout  Y;
-trireg   (medium) Y ;
-endmodule
-
-module EDFFXL(Q, QN, D, E, CK);
-input  D, E, CK;
-output Q, QN;
-wire  Q, QN, D, E, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, E, D);
-  and U$6(n$3, n$4, Q);
-  not U$7(n$4, E);
-endmodule
-
-module EDFFX4(Q, QN, D, E, CK);
-input  D, E, CK;
-output Q, QN;
-wire  Q, QN, D, E, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, E, D);
-  and U$6(n$3, n$4, Q);
-  not U$7(n$4, E);
-endmodule
-
-module EDFFX2(Q, QN, D, E, CK);
-input  D, E, CK;
-output Q, QN;
-wire  Q, QN, D, E, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, E, D);
-  and U$6(n$3, n$4, Q);
-  not U$7(n$4, E);
-endmodule
-
-module EDFFX1(Q, QN, D, E, CK);
-input  D, E, CK;
-output Q, QN;
-wire  Q, QN, D, E, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$4(n$1, n$2, n$3);
-  and U$5(n$2, E, D);
-  and U$6(n$3, n$4, Q);
-  not U$7(n$4, E);
-endmodule
-
-module EDFFTRXL(Q, QN, D, E, RN, CK);
-input  D, E, RN, CK;
-output Q, QN;
-wire  Q, QN, D, E, RN, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  and U$4(n$1, n$2, n$4, RN);
-  or U$5(n$2, D, n$3);
-  not U$6(n$3, E);
-  or U$7(n$4, E, Q);
-endmodule
-
-module EDFFTRX4(Q, QN, D, E, RN, CK);
-input  D, E, RN, CK;
-output Q, QN;
-wire  Q, QN, D, E, RN, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  and U$4(n$1, n$2, n$4, RN);
-  or U$5(n$2, D, n$3);
-  not U$6(n$3, E);
-  or U$7(n$4, E, Q);
-endmodule
-
-module EDFFTRX2(Q, QN, D, E, RN, CK);
-input  D, E, RN, CK;
-output Q, QN;
-wire  Q, QN, D, E, RN, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  and U$4(n$1, n$2, n$4, RN);
-  or U$5(n$2, D, n$3);
-  not U$6(n$3, E);
-  or U$7(n$4, E, Q);
-endmodule
-
-module EDFFTRX1(Q, QN, D, E, RN, CK);
-input  D, E, RN, CK;
-output Q, QN;
-wire  Q, QN, D, E, RN, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  and U$4(n$1, n$2, n$4, RN);
-  or U$5(n$2, D, n$3);
-  not U$6(n$3, E);
-  or U$7(n$4, E, Q);
-endmodule
-
-module EDFFHQX8(Q, D, E, CK);
-input  D, E, CK;
-output Q;
-wire  Q, D, E, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, E, D);
-  and U$5(n$3, n$4, Q);
-  not U$6(n$4, E);
-endmodule
-
-module EDFFHQX4(Q, D, E, CK);
-input  D, E, CK;
-output Q;
-wire  Q, D, E, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, E, D);
-  and U$5(n$3, n$4, Q);
-  not U$6(n$4, E);
-endmodule
-
-module EDFFHQX2(Q, D, E, CK);
-input  D, E, CK;
-output Q;
-wire  Q, D, E, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, E, D);
-  and U$5(n$3, n$4, Q);
-  not U$6(n$4, E);
-endmodule
-
-module EDFFHQX1(Q, D, E, CK);
-input  D, E, CK;
-output Q;
-wire  Q, D, E, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  or U$3(n$1, n$2, n$3);
-  and U$4(n$2, E, D);
-  and U$5(n$3, n$4, Q);
-  not U$6(n$4, E);
-endmodule
-
-module DLY4X4(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module DLY4X1(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module DLY3X4(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module DLY3X1(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module DLY2X4(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module DLY2X1(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module DLY1X4(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module DLY1X1(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module DFFXL(Q, QN, D, CK);
-input  D, CK;
-output Q, QN;
-wire  Q, QN, D, CK;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(D));
-endmodule
-
-module DFFX4(Q, QN, D, CK);
-input  D, CK;
-output Q, QN;
-wire  Q, QN, D, CK;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(D));
-endmodule
-
-module DFFX2(Q, QN, D, CK);
-input  D, CK;
-output Q, QN;
-wire  Q, QN, D, CK;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(D));
-endmodule
-
-module DFFX1(Q, QN, D, CK);
-input  D, CK;
-output Q, QN;
-wire  Q, QN, D, CK;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(D));
-endmodule
-
-module DFFTRXL(Q, QN, D, RN, CK);
-input  D, RN, CK;
-output Q, QN;
-wire  Q, QN, D, RN, CK, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  and U$4(n$1, D, RN);
-endmodule
-
-module DFFTRX4(Q, QN, D, RN, CK);
-input  D, RN, CK;
-output Q, QN;
-wire  Q, QN, D, RN, CK, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  and U$4(n$1, D, RN);
-endmodule
-
-module DFFTRX2(Q, QN, D, RN, CK);
-input  D, RN, CK;
-output Q, QN;
-wire  Q, QN, D, RN, CK, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  and U$4(n$1, D, RN);
-endmodule
-
-module DFFTRX1(Q, QN, D, RN, CK);
-input  D, RN, CK;
-output Q, QN;
-wire  Q, QN, D, RN, CK, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(1'b0), .CK(CK), .D(n$1));
-  and U$4(n$1, D, RN);
-endmodule
-
-module DFFSXL(Q, QN, D, SN, CK);
-input  D, SN, CK;
-output Q, QN;
-wire  Q, QN, D, SN, CK, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(CK), .D(D));
-  not U$4(n$1, SN);
-endmodule
-
-module DFFSX4(Q, QN, D, SN, CK);
-input  D, SN, CK;
-output Q, QN;
-wire  Q, QN, D, SN, CK, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(CK), .D(D));
-  not U$4(n$1, SN);
-endmodule
-
-module DFFSX2(Q, QN, D, SN, CK);
-input  D, SN, CK;
-output Q, QN;
-wire  Q, QN, D, SN, CK, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(CK), .D(D));
-  not U$4(n$1, SN);
-endmodule
-
-module DFFSX1(Q, QN, D, SN, CK);
-input  D, SN, CK;
-output Q, QN;
-wire  Q, QN, D, SN, CK, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(CK), .D(D));
-  not U$4(n$1, SN);
-endmodule
-
-module DFFSRXL(Q, QN, D, RN, SN, CK);
-input  D, RN, SN, CK;
-output Q, QN;
-wire  Q, QN, D, RN, SN, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$4), .CK(CK), .D(D));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  not U$6(n$3, n$1);
-  and U$7(n$4, n$3, n$2);
-endmodule
-
-module DFFSRX4(Q, QN, D, RN, SN, CK);
-input  D, RN, SN, CK;
-output Q, QN;
-wire  Q, QN, D, RN, SN, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$4), .CK(CK), .D(D));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  not U$6(n$3, n$1);
-  and U$7(n$4, n$3, n$2);
-endmodule
-
-module DFFSRX2(Q, QN, D, RN, SN, CK);
-input  D, RN, SN, CK;
-output Q, QN;
-wire  Q, QN, D, RN, SN, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$4), .CK(CK), .D(D));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  not U$6(n$3, n$1);
-  and U$7(n$4, n$3, n$2);
-endmodule
-
-module DFFSRX1(Q, QN, D, RN, SN, CK);
-input  D, RN, SN, CK;
-output Q, QN;
-wire  Q, QN, D, RN, SN, CK, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$4), .CK(CK), .D(D));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  not U$6(n$3, n$1);
-  and U$7(n$4, n$3, n$2);
-endmodule
-
-module DFFSRHQX8(Q, D, RN, SN, CK);
-input  D, RN, SN, CK;
-output Q;
-wire  Q, D, RN, SN, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(n$4), .CK(CK), .D(D));
-  not U$3(n$1, SN);
-  not U$4(n$2, RN);
-  not U$5(n$3, n$1);
-  and U$6(n$4, n$3, n$2);
-endmodule
-
-module DFFSRHQX4(Q, D, RN, SN, CK);
-input  D, RN, SN, CK;
-output Q;
-wire  Q, D, RN, SN, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(n$4), .CK(CK), .D(D));
-  not U$3(n$1, SN);
-  not U$4(n$2, RN);
-  not U$5(n$3, n$1);
-  and U$6(n$4, n$3, n$2);
-endmodule
-
-module DFFSRHQX2(Q, D, RN, SN, CK);
-input  D, RN, SN, CK;
-output Q;
-wire  Q, D, RN, SN, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(n$4), .CK(CK), .D(D));
-  not U$3(n$1, SN);
-  not U$4(n$2, RN);
-  not U$5(n$3, n$1);
-  and U$6(n$4, n$3, n$2);
-endmodule
-
-module DFFSRHQX1(Q, D, RN, SN, CK);
-input  D, RN, SN, CK;
-output Q;
-wire  Q, D, RN, SN, CK, QBINT, n$1, n$2, n$3, n$4;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(n$4), .CK(CK), .D(D));
-  not U$3(n$1, SN);
-  not U$4(n$2, RN);
-  not U$5(n$3, n$1);
-  and U$6(n$4, n$3, n$2);
-endmodule
-
-module DFFSHQX8(Q, D, SN, CK);
-input  D, SN, CK;
-output Q;
-wire  Q, D, SN, CK, QBINT, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(1'b0), .CK(CK), .D(D));
-  not U$3(n$1, SN);
-endmodule
-
-module DFFSHQX4(Q, D, SN, CK);
-input  D, SN, CK;
-output Q;
-wire  Q, D, SN, CK, QBINT, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(1'b0), .CK(CK), .D(D));
-  not U$3(n$1, SN);
-endmodule
-
-module DFFSHQX2(Q, D, SN, CK);
-input  D, SN, CK;
-output Q;
-wire  Q, D, SN, CK, QBINT, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(1'b0), .CK(CK), .D(D));
-  not U$3(n$1, SN);
-endmodule
-
-module DFFSHQX1(Q, D, SN, CK);
-input  D, SN, CK;
-output Q;
-wire  Q, D, SN, CK, QBINT, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(n$1), .R(1'b0), .CK(CK), .D(D));
-  not U$3(n$1, SN);
-endmodule
-
-module DFFRXL(Q, QN, D, RN, CK);
-input  D, RN, CK;
-output Q, QN;
-wire  Q, QN, D, RN, CK, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(n$1), .CK(CK), .D(D));
-  not U$4(n$1, RN);
-endmodule
-
-module DFFRX4(Q, QN, D, RN, CK);
-input  D, RN, CK;
-output Q, QN;
-wire  Q, QN, D, RN, CK, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(n$1), .CK(CK), .D(D));
-  not U$4(n$1, RN);
-endmodule
-
-module DFFRX2(Q, QN, D, RN, CK);
-input  D, RN, CK;
-output Q, QN;
-wire  Q, QN, D, RN, CK, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(n$1), .CK(CK), .D(D));
-  not U$4(n$1, RN);
-endmodule
-
-module DFFRX1(Q, QN, D, RN, CK);
-input  D, RN, CK;
-output Q, QN;
-wire  Q, QN, D, RN, CK, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(1'b0), .R(n$1), .CK(CK), .D(D));
-  not U$4(n$1, RN);
-endmodule
-
-module DFFRHQX8(Q, D, RN, CK);
-input  D, RN, CK;
-output Q;
-wire  Q, D, RN, CK, QBINT, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(n$1), .CK(CK), .D(D));
-  not U$3(n$1, RN);
-endmodule
-
-module DFFRHQX4(Q, D, RN, CK);
-input  D, RN, CK;
-output Q;
-wire  Q, D, RN, CK, QBINT, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(n$1), .CK(CK), .D(D));
-  not U$3(n$1, RN);
-endmodule
-
-module DFFRHQX2(Q, D, RN, CK);
-input  D, RN, CK;
-output Q;
-wire  Q, D, RN, CK, QBINT, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(n$1), .CK(CK), .D(D));
-  not U$3(n$1, RN);
-endmodule
-
-module DFFRHQX1(Q, D, RN, CK);
-input  D, RN, CK;
-output Q;
-wire  Q, D, RN, CK, QBINT, n$1;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(n$1), .CK(CK), .D(D));
-  not U$3(n$1, RN);
-endmodule
-
-module DFFQXL(Q, D, CK);
-input  D, CK;
-output Q;
-wire  Q, D, CK, QBINT;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(D));
-endmodule
-
-module DFFQX4(Q, D, CK);
-input  D, CK;
-output Q;
-wire  Q, D, CK, QBINT;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(D));
-endmodule
-
-module DFFQX2(Q, D, CK);
-input  D, CK;
-output Q;
-wire  Q, D, CK, QBINT;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(D));
-endmodule
-
-module DFFQX1(Q, D, CK);
-input  D, CK;
-output Q;
-wire  Q, D, CK, QBINT;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(D));
-endmodule
-
-module DFFNSRXL(Q, QN, D, RN, SN, CKN);
-input  D, RN, SN, CKN;
-output Q, QN;
-wire  Q, QN, D, RN, SN, CKN, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$5), .CK(n$3), .D(D));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  not U$6(n$3, CKN);
-  not U$7(n$4, n$1);
-  and U$8(n$5, n$4, n$2);
-endmodule
-
-module DFFNSRX4(Q, QN, D, RN, SN, CKN);
-input  D, RN, SN, CKN;
-output Q, QN;
-wire  Q, QN, D, RN, SN, CKN, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$5), .CK(n$3), .D(D));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  not U$6(n$3, CKN);
-  not U$7(n$4, n$1);
-  and U$8(n$5, n$4, n$2);
-endmodule
-
-module DFFNSRX2(Q, QN, D, RN, SN, CKN);
-input  D, RN, SN, CKN;
-output Q, QN;
-wire  Q, QN, D, RN, SN, CKN, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$5), .CK(n$3), .D(D));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  not U$6(n$3, CKN);
-  not U$7(n$4, n$1);
-  and U$8(n$5, n$4, n$2);
-endmodule
-
-module DFFNSRX1(Q, QN, D, RN, SN, CKN);
-input  D, RN, SN, CKN;
-output Q, QN;
-wire  Q, QN, D, RN, SN, CKN, n$1, n$2, n$3, n$4, n$5;
-  _HDFF_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$5), .CK(n$3), .D(D));
-  not U$4(n$1, SN);
-  not U$5(n$2, RN);
-  not U$6(n$3, CKN);
-  not U$7(n$4, n$1);
-  and U$8(n$5, n$4, n$2);
-endmodule
-
-module DFFHQX8(Q, D, CK);
-input  D, CK;
-output Q;
-wire  Q, D, CK, QBINT;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(D));
-endmodule
-
-module DFFHQX4(Q, D, CK);
-input  D, CK;
-output Q;
-wire  Q, D, CK, QBINT;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(D));
-endmodule
-
-module DFFHQX2(Q, D, CK);
-input  D, CK;
-output Q;
-wire  Q, D, CK, QBINT;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(D));
-endmodule
-
-module DFFHQX1(Q, D, CK);
-input  D, CK;
-output Q;
-wire  Q, D, CK, QBINT;
-  _HDFF_verplex U$1(.Q(Q), .QN(QBINT), .S(1'b0), .R(1'b0), .CK(CK), .D(D));
-endmodule
-
-module CLKXOR2X8(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  xor U$1(Y, A, B);
-endmodule
-
-module CLKXOR2X4(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  xor U$1(Y, A, B);
-endmodule
-
-module CLKXOR2X2(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  xor U$1(Y, A, B);
-endmodule
-
-module CLKXOR2X1(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  xor U$1(Y, A, B);
-endmodule
-
-module CLKMX2X8(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module CLKMX2X6(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module CLKMX2X4(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module CLKMX2X3(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module CLKMX2X2(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module CLKMX2X12(Y, A, B, S0);
-input  A, B, S0;
-output Y;
-wire  Y, A, B, S0, n$1, n$2, n$3;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, S0, B);
-  and U$3(n$2, n$3, A);
-  not U$4(n$3, S0);
-endmodule
-
-module CLKINVX8(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module CLKINVX6(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module CLKINVX4(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module CLKINVX3(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module CLKINVX20(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module CLKINVX2(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module CLKINVX16(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module CLKINVX12(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module CLKINVX1(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  not U$1(Y, A);
-endmodule
-
-module CLKBUFX8(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module CLKBUFX6(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module CLKBUFX4(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module CLKBUFX3(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module CLKBUFX20(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module CLKBUFX2(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module CLKBUFX16(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module CLKBUFX12(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module CLKAND2X8(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  and U$1(Y, A, B);
-endmodule
-
-module CLKAND2X6(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  and U$1(Y, A, B);
-endmodule
-
-module CLKAND2X4(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  and U$1(Y, A, B);
-endmodule
-
-module CLKAND2X3(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  and U$1(Y, A, B);
-endmodule
-
-module CLKAND2X2(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  and U$1(Y, A, B);
-endmodule
-
-module CLKAND2X12(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  and U$1(Y, A, B);
-endmodule
-
-module BUFX8(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module BUFX6(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module BUFX4(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module BUFX3(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module BUFX20(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module BUFX2(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module BUFX16(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module BUFX12(Y, A);
-input  A;
-output Y;
-wire  Y, A;
-  buf U$1(Y, A);
-endmodule
-
-module BMXIX4(PPN, A, M0, M1, S, X2);
-input  A, M0, M1, S, X2;
-output PPN;
-wire  PPN, A, M0, M1, S, X2, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9, n$10, 
-    n$11;
-  or U$1(PPN, n$1, n$6);
-  and U$2(n$1, X2, n$2);
-  or U$3(n$2, n$3, n$4);
-  and U$4(n$3, M0, A);
-  and U$5(n$4, n$5, S);
-  not U$6(n$5, M0);
-  and U$7(n$6, n$7, n$8);
-  not U$8(n$7, X2);
-  or U$9(n$8, n$9, n$10);
-  and U$10(n$9, M1, A);
-  and U$11(n$10, n$11, S);
-  not U$12(n$11, M1);
-endmodule
-
-module BMXIX2(PPN, A, M0, M1, S, X2);
-input  A, M0, M1, S, X2;
-output PPN;
-wire  PPN, A, M0, M1, S, X2, n$1, n$2, n$3, n$4, n$5, n$6, n$7, n$8, n$9, n$10, 
-    n$11;
-  or U$1(PPN, n$1, n$6);
-  and U$2(n$1, X2, n$2);
-  or U$3(n$2, n$3, n$4);
-  and U$4(n$3, M0, A);
-  and U$5(n$4, n$5, S);
-  not U$6(n$5, M0);
-  and U$7(n$6, n$7, n$8);
-  not U$8(n$7, X2);
-  or U$9(n$8, n$9, n$10);
-  and U$10(n$9, M1, A);
-  and U$11(n$10, n$11, S);
-  not U$12(n$11, M1);
-endmodule
-
-module AOI33XL(Y, A0, A1, A2, B0, B1, B2);
-input  B0, B1, B2, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, B2, n$1, n$2;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1, B2);
-  and U$3(n$2, A0, A1, A2);
-endmodule
-
-module AOI33X4(Y, A0, A1, A2, B0, B1, B2);
-input  B0, B1, B2, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, B2, n$1, n$2;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1, B2);
-  and U$3(n$2, A0, A1, A2);
-endmodule
-
-module AOI33X2(Y, A0, A1, A2, B0, B1, B2);
-input  B0, B1, B2, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, B2, n$1, n$2;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1, B2);
-  and U$3(n$2, A0, A1, A2);
-endmodule
-
-module AOI33X1(Y, A0, A1, A2, B0, B1, B2);
-input  B0, B1, B2, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, B2, n$1, n$2;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1, B2);
-  and U$3(n$2, A0, A1, A2);
-endmodule
-
-module AOI32XL(Y, A0, A1, A2, B0, B1);
-input  B0, B1, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, n$1, n$2;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1);
-  and U$3(n$2, A0, A1, A2);
-endmodule
-
-module AOI32X4(Y, A0, A1, A2, B0, B1);
-input  B0, B1, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, n$1, n$2;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1);
-  and U$3(n$2, A0, A1, A2);
-endmodule
-
-module AOI32X2(Y, A0, A1, A2, B0, B1);
-input  B0, B1, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, n$1, n$2;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1);
-  and U$3(n$2, A0, A1, A2);
-endmodule
-
-module AOI32X1(Y, A0, A1, A2, B0, B1);
-input  B0, B1, A0, A1, A2;
-output Y;
-wire  Y, A0, A1, A2, B0, B1, n$1, n$2;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1);
-  and U$3(n$2, A0, A1, A2);
-endmodule
-
-module AOI31XL(Y, A0, A1, A2, B0);
-input  A0, A1, A2, B0;
-output Y;
-wire  Y, A0, A1, A2, B0, n$1;
-  nor U$1(Y, n$1, B0);
-  and U$2(n$1, A0, A1, A2);
-endmodule
-
-module AOI31X4(Y, A0, A1, A2, B0);
-input  A0, A1, A2, B0;
-output Y;
-wire  Y, A0, A1, A2, B0, n$1;
-  nor U$1(Y, n$1, B0);
-  and U$2(n$1, A0, A1, A2);
-endmodule
-
-module AOI31X2(Y, A0, A1, A2, B0);
-input  A0, A1, A2, B0;
-output Y;
-wire  Y, A0, A1, A2, B0, n$1;
-  nor U$1(Y, n$1, B0);
-  and U$2(n$1, A0, A1, A2);
-endmodule
-
-module AOI31X1(Y, A0, A1, A2, B0);
-input  A0, A1, A2, B0;
-output Y;
-wire  Y, A0, A1, A2, B0, n$1;
-  nor U$1(Y, n$1, B0);
-  and U$2(n$1, A0, A1, A2);
-endmodule
-
-module AOI2BB2XL(Y, A0N, A1N, B0, B1);
-input  A0N, A1N, B0, B1;
-output Y;
-wire  Y, A0N, A1N, B0, B1, n$1, n$2, n$3, n$4;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1);
-  and U$3(n$2, n$3, n$4);
-  not U$4(n$3, A0N);
-  not U$5(n$4, A1N);
-endmodule
-
-module AOI2BB2X4(Y, A0N, A1N, B0, B1);
-input  A0N, A1N, B0, B1;
-output Y;
-wire  Y, A0N, A1N, B0, B1, n$1, n$2, n$3, n$4;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1);
-  and U$3(n$2, n$3, n$4);
-  not U$4(n$3, A0N);
-  not U$5(n$4, A1N);
-endmodule
-
-module AOI2BB2X2(Y, A0N, A1N, B0, B1);
-input  A0N, A1N, B0, B1;
-output Y;
-wire  Y, A0N, A1N, B0, B1, n$1, n$2, n$3, n$4;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1);
-  and U$3(n$2, n$3, n$4);
-  not U$4(n$3, A0N);
-  not U$5(n$4, A1N);
-endmodule
-
-module AOI2BB2X1(Y, A0N, A1N, B0, B1);
-input  A0N, A1N, B0, B1;
-output Y;
-wire  Y, A0N, A1N, B0, B1, n$1, n$2, n$3, n$4;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1);
-  and U$3(n$2, n$3, n$4);
-  not U$4(n$3, A0N);
-  not U$5(n$4, A1N);
-endmodule
-
-module AOI2BB1XL(Y, A0N, A1N, B0);
-input  A0N, A1N, B0;
-output Y;
-wire  Y, A0N, A1N, B0, n$1, n$2, n$3;
-  nor U$1(Y, n$1, B0);
-  and U$2(n$1, n$2, n$3);
-  not U$3(n$2, A0N);
-  not U$4(n$3, A1N);
-endmodule
-
-module AOI2BB1X4(Y, A0N, A1N, B0);
-input  A0N, A1N, B0;
-output Y;
-wire  Y, A0N, A1N, B0, n$1, n$2, n$3;
-  nor U$1(Y, n$1, B0);
-  and U$2(n$1, n$2, n$3);
-  not U$3(n$2, A0N);
-  not U$4(n$3, A1N);
-endmodule
-
-module AOI2BB1X2(Y, A0N, A1N, B0);
-input  A0N, A1N, B0;
-output Y;
-wire  Y, A0N, A1N, B0, n$1, n$2, n$3;
-  nor U$1(Y, n$1, B0);
-  and U$2(n$1, n$2, n$3);
-  not U$3(n$2, A0N);
-  not U$4(n$3, A1N);
-endmodule
-
-module AOI2BB1X1(Y, A0N, A1N, B0);
-input  A0N, A1N, B0;
-output Y;
-wire  Y, A0N, A1N, B0, n$1, n$2, n$3;
-  nor U$1(Y, n$1, B0);
-  and U$2(n$1, n$2, n$3);
-  not U$3(n$2, A0N);
-  not U$4(n$3, A1N);
-endmodule
-
-module AOI22XL(Y, A0, A1, B0, B1);
-input  B0, B1, A0, A1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1);
-  and U$3(n$2, A0, A1);
-endmodule
-
-module AOI22X4(Y, A0, A1, B0, B1);
-input  B0, B1, A0, A1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1);
-  and U$3(n$2, A0, A1);
-endmodule
-
-module AOI22X2(Y, A0, A1, B0, B1);
-input  B0, B1, A0, A1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1);
-  and U$3(n$2, A0, A1);
-endmodule
-
-module AOI22X1(Y, A0, A1, B0, B1);
-input  B0, B1, A0, A1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  nor U$1(Y, n$1, n$2);
-  and U$2(n$1, B0, B1);
-  and U$3(n$2, A0, A1);
-endmodule
-
-module AOI222XL(Y, A0, A1, B0, B1, C0, C1);
-input  C0, C1, A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, C1, n$1, n$2, n$3;
-  nor U$1(Y, n$1, n$2, n$3);
-  and U$2(n$1, C0, C1);
-  and U$3(n$2, A0, A1);
-  and U$4(n$3, B0, B1);
-endmodule
-
-module AOI222X4(Y, A0, A1, B0, B1, C0, C1);
-input  C0, C1, A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, C1, n$1, n$2, n$3;
-  nor U$1(Y, n$1, n$2, n$3);
-  and U$2(n$1, C0, C1);
-  and U$3(n$2, A0, A1);
-  and U$4(n$3, B0, B1);
-endmodule
-
-module AOI222X2(Y, A0, A1, B0, B1, C0, C1);
-input  C0, C1, A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, C1, n$1, n$2, n$3;
-  nor U$1(Y, n$1, n$2, n$3);
-  and U$2(n$1, C0, C1);
-  and U$3(n$2, A0, A1);
-  and U$4(n$3, B0, B1);
-endmodule
-
-module AOI222X1(Y, A0, A1, B0, B1, C0, C1);
-input  C0, C1, A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, C1, n$1, n$2, n$3;
-  nor U$1(Y, n$1, n$2, n$3);
-  and U$2(n$1, C0, C1);
-  and U$3(n$2, A0, A1);
-  and U$4(n$3, B0, B1);
-endmodule
-
-module AOI221XL(Y, A0, A1, B0, B1, C0);
-input  A0, A1, B0, B1, C0;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, n$1, n$2;
-  nor U$1(Y, n$1, n$2, C0);
-  and U$2(n$1, A0, A1);
-  and U$3(n$2, B0, B1);
-endmodule
-
-module AOI221X4(Y, A0, A1, B0, B1, C0);
-input  A0, A1, B0, B1, C0;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, n$1, n$2;
-  nor U$1(Y, n$1, n$2, C0);
-  and U$2(n$1, A0, A1);
-  and U$3(n$2, B0, B1);
-endmodule
-
-module AOI221X2(Y, A0, A1, B0, B1, C0);
-input  A0, A1, B0, B1, C0;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, n$1, n$2;
-  nor U$1(Y, n$1, n$2, C0);
-  and U$2(n$1, A0, A1);
-  and U$3(n$2, B0, B1);
-endmodule
-
-module AOI221X1(Y, A0, A1, B0, B1, C0);
-input  A0, A1, B0, B1, C0;
-output Y;
-wire  Y, A0, A1, B0, B1, C0, n$1, n$2;
-  nor U$1(Y, n$1, n$2, C0);
-  and U$2(n$1, A0, A1);
-  and U$3(n$2, B0, B1);
-endmodule
-
-module AOI21XL(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  nor U$1(Y, n$1, B0);
-  and U$2(n$1, A0, A1);
-endmodule
-
-module AOI21X4(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  nor U$1(Y, n$1, B0);
-  and U$2(n$1, A0, A1);
-endmodule
-
-module AOI21X2(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  nor U$1(Y, n$1, B0);
-  and U$2(n$1, A0, A1);
-endmodule
-
-module AOI21X1(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  nor U$1(Y, n$1, B0);
-  and U$2(n$1, A0, A1);
-endmodule
-
-module AOI211XL(Y, A0, A1, B0, C0);
-input  A0, A1, B0, C0;
-output Y;
-wire  Y, A0, A1, B0, C0, n$1;
-  nor U$1(Y, n$1, B0, C0);
-  and U$2(n$1, A0, A1);
-endmodule
-
-module AOI211X4(Y, A0, A1, B0, C0);
-input  A0, A1, B0, C0;
-output Y;
-wire  Y, A0, A1, B0, C0, n$1;
-  nor U$1(Y, n$1, B0, C0);
-  and U$2(n$1, A0, A1);
-endmodule
-
-module AOI211X2(Y, A0, A1, B0, C0);
-input  A0, A1, B0, C0;
-output Y;
-wire  Y, A0, A1, B0, C0, n$1;
-  nor U$1(Y, n$1, B0, C0);
-  and U$2(n$1, A0, A1);
-endmodule
-
-module AOI211X1(Y, A0, A1, B0, C0);
-input  A0, A1, B0, C0;
-output Y;
-wire  Y, A0, A1, B0, C0, n$1;
-  nor U$1(Y, n$1, B0, C0);
-  and U$2(n$1, A0, A1);
-endmodule
-
-module AO22XL(Y, A0, A1, B0, B1);
-input  A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, A0, A1);
-  and U$3(n$2, B0, B1);
-endmodule
-
-module AO22X4(Y, A0, A1, B0, B1);
-input  A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, A0, A1);
-  and U$3(n$2, B0, B1);
-endmodule
-
-module AO22X2(Y, A0, A1, B0, B1);
-input  A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, A0, A1);
-  and U$3(n$2, B0, B1);
-endmodule
-
-module AO22X1(Y, A0, A1, B0, B1);
-input  A0, A1, B0, B1;
-output Y;
-wire  Y, A0, A1, B0, B1, n$1, n$2;
-  or U$1(Y, n$1, n$2);
-  and U$2(n$1, A0, A1);
-  and U$3(n$2, B0, B1);
-endmodule
-
-module AO21XL(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  or U$1(Y, n$1, B0);
-  and U$2(n$1, A0, A1);
-endmodule
-
-module AO21X4(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  or U$1(Y, n$1, B0);
-  and U$2(n$1, A0, A1);
-endmodule
-
-module AO21X2(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  or U$1(Y, n$1, B0);
-  and U$2(n$1, A0, A1);
-endmodule
-
-module AO21X1(Y, A0, A1, B0);
-input  A0, A1, B0;
-output Y;
-wire  Y, A0, A1, B0, n$1;
-  or U$1(Y, n$1, B0);
-  and U$2(n$1, A0, A1);
-endmodule
-
-module ANTENNA(A);
-input  A;
-  // module is bboxed.
-endmodule
-
-module AND4XL(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  and U$1(Y, A, B, C, D);
-endmodule
-
-module AND4X8(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  and U$1(Y, A, B, C, D);
-endmodule
-
-module AND4X6(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  and U$1(Y, A, B, C, D);
-endmodule
-
-module AND4X4(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  and U$1(Y, A, B, C, D);
-endmodule
-
-module AND4X2(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  and U$1(Y, A, B, C, D);
-endmodule
-
-module AND4X1(Y, A, B, C, D);
-input  A, B, C, D;
-output Y;
-wire  Y, A, B, C, D;
-  and U$1(Y, A, B, C, D);
-endmodule
-
-module AND3XL(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  and U$1(Y, A, B, C);
-endmodule
-
-module AND3X8(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  and U$1(Y, A, B, C);
-endmodule
-
-module AND3X6(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  and U$1(Y, A, B, C);
-endmodule
-
-module AND3X4(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  and U$1(Y, A, B, C);
-endmodule
-
-module AND3X2(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  and U$1(Y, A, B, C);
-endmodule
-
-module AND3X1(Y, A, B, C);
-input  A, B, C;
-output Y;
-wire  Y, A, B, C;
-  and U$1(Y, A, B, C);
-endmodule
-
-module AND2XL(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  and U$1(Y, A, B);
-endmodule
-
-module AND2X8(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  and U$1(Y, A, B);
-endmodule
-
-module AND2X6(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  and U$1(Y, A, B);
-endmodule
-
-module AND2X4(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  and U$1(Y, A, B);
-endmodule
-
-module AND2X2(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  and U$1(Y, A, B);
-endmodule
-
-module AND2X1(Y, A, B);
-input  A, B;
-output Y;
-wire  Y, A, B;
-  and U$1(Y, A, B);
-endmodule
-
-module ADDHXL(CO, S, A, B);
-input  A, B;
-output CO, S;
-wire  CO, S, A, B;
-  and U$1(CO, A, B);
-  xor U$2(S, A, B);
-endmodule
-
-module ADDHX4(CO, S, A, B);
-input  A, B;
-output CO, S;
-wire  CO, S, A, B;
-  and U$1(CO, A, B);
-  xor U$2(S, A, B);
-endmodule
-
-module ADDHX2(CO, S, A, B);
-input  A, B;
-output CO, S;
-wire  CO, S, A, B;
-  and U$1(CO, A, B);
-  xor U$2(S, A, B);
-endmodule
-
-module ADDHX1(CO, S, A, B);
-input  A, B;
-output CO, S;
-wire  CO, S, A, B;
-  and U$1(CO, A, B);
-  xor U$2(S, A, B);
-endmodule
-
-module ADDFXL(CO, S, A, B, CI);
-input  A, B, CI;
-output CO, S;
-wire  CO, S, A, B, CI, n$1, n$2, n$3;
-  or U$1(CO, n$1, n$2, n$3);
-  and U$2(n$1, A, B);
-  and U$3(n$2, B, CI);
-  and U$4(n$3, CI, A);
-  xor U$5(S, A, B, CI);
-endmodule
-
-module ADDFX4(CO, S, A, B, CI);
-input  A, B, CI;
-output CO, S;
-wire  CO, S, A, B, CI, n$1, n$2, n$3;
-  or U$1(CO, n$1, n$2, n$3);
-  and U$2(n$1, A, B);
-  and U$3(n$2, B, CI);
-  and U$4(n$3, CI, A);
-  xor U$5(S, A, B, CI);
-endmodule
-
-module ADDFX2(CO, S, A, B, CI);
-input  A, B, CI;
-output CO, S;
-wire  CO, S, A, B, CI, n$1, n$2, n$3;
-  or U$1(CO, n$1, n$2, n$3);
-  and U$2(n$1, A, B);
-  and U$3(n$2, B, CI);
-  and U$4(n$3, CI, A);
-  xor U$5(S, A, B, CI);
-endmodule
-
-module ADDFX1(CO, S, A, B, CI);
-input  A, B, CI;
-output CO, S;
-wire  CO, S, A, B, CI, n$1, n$2, n$3;
-  or U$1(CO, n$1, n$2, n$3);
-  and U$2(n$1, A, B);
-  and U$3(n$2, B, CI);
-  and U$4(n$3, CI, A);
-  xor U$5(S, A, B, CI);
-endmodule
-
-module ADDFHXL(CO, S, A, B, CI);
-input  A, B, CI;
-output CO, S;
-wire  CO, S, A, B, CI, n$1, n$2, n$3;
-  or U$1(CO, n$1, n$2, n$3);
-  and U$2(n$1, A, B);
-  and U$3(n$2, B, CI);
-  and U$4(n$3, CI, A);
-  xor U$5(S, A, B, CI);
-endmodule
-
-module ADDFHX4(CO, S, A, B, CI);
-input  A, B, CI;
-output CO, S;
-wire  CO, S, A, B, CI, n$1, n$2, n$3;
-  or U$1(CO, n$1, n$2, n$3);
-  and U$2(n$1, A, B);
-  and U$3(n$2, B, CI);
-  and U$4(n$3, CI, A);
-  xor U$5(S, A, B, CI);
-endmodule
-
-module ADDFHX2(CO, S, A, B, CI);
-input  A, B, CI;
-output CO, S;
-wire  CO, S, A, B, CI, n$1, n$2, n$3;
-  or U$1(CO, n$1, n$2, n$3);
-  and U$2(n$1, A, B);
-  and U$3(n$2, B, CI);
-  and U$4(n$3, CI, A);
-  xor U$5(S, A, B, CI);
-endmodule
-
-module ADDFHX1(CO, S, A, B, CI);
-input  A, B, CI;
-output CO, S;
-wire  CO, S, A, B, CI, n$1, n$2, n$3;
-  or U$1(CO, n$1, n$2, n$3);
-  and U$2(n$1, A, B);
-  and U$3(n$2, B, CI);
-  and U$4(n$3, CI, A);
-  xor U$5(S, A, B, CI);
-endmodule
-
-module ACHCONX2(CON, A, B, CI);
-input  A, B, CI;
-output CON;
-wire  CON, A, B, CI, n$1, n$2, n$3;
-  nor U$1(CON, n$1, n$2, n$3);
-  and U$2(n$1, A, B);
-  and U$3(n$2, B, CI);
-  and U$4(n$3, CI, A);
-endmodule
-
-module _HDFF_verplex(Q, QN, S, R, CK, D);
-// verplex DFF
-output  Q, QN;
-input   S, R, CK, D;
-wire   N1;
-  DFF_UDP  i0(N1, S, R, CK, D);
-  buf  (Q, N1);
-  not  (QN, N1);
-endmodule
-
-primitive DFF_UDP(Q, S, R, CK, D);
-output Q;
-input  S, R, CK, D;
-reg    Q;
-  table
-    1  0   ?    ?  :  ?  :  1; // Asserting preset
-    *  0   ?    ?  :  1  :  1; // Changing preset
-    ?  1   ?    ?  :  ?  :  0; // Asserting reset (dominates preset)
-    0  *   ?    ?  :  0  :  0; // Changing reset
-    0  ?   (01) 0  :  ?  :  0; // rising clock
-    ?  0   (01) 1  :  ?  :  1; // rising clock 
-    0  ?   p    0  :  0  :  0; // potential rising clock
-    ?  0   p    1  :  1  :  1; // potential rising clock
-    0  0   n    ?  :  ?  :  -; // Clock falling register output does not change
-    0  0   ?    *  :  ?  :  -; // Changing Data
-  endtable
+// File Version: 130429_1210
+// Verilog for library /lan/flow/cicflow/AMSFF/WA/WA_rayv/AMSFF/WORK/zambezi45/LPMS_WS/basicCells_Char_flows/_v_update/verilog/slow_vdd1v0_basicCells created by Liberate 12.1 on Mon Mar  4 19:16:31 PST 2013 for SDF version 2.1
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ACHCONX2 (CON, A, B, CI);
+	output CON;
+	input A, B, CI;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3;
+
+	and (int_fwire_0, CI, A);
+	and (int_fwire_1, B, CI);
+	and (int_fwire_2, A, B);
+	or (int_fwire_3, int_fwire_2, int_fwire_1, int_fwire_0);
+	not (CON, int_fwire_3);
+
+	// Timing
+	specify
+		(A => CON) = 0;
+		(B => CON) = 0;
+		(CI => CON) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ADDFHX1 (CO, S, A, B, CI);
+	output CO, S;
+	input A, B, CI;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, CI, A);
+	and (int_fwire_1, B, CI);
+	and (int_fwire_2, A, B);
+	or (CO, int_fwire_2, int_fwire_1, int_fwire_0);
+	xor (S, A, B, CI);
+
+	// Timing
+	specify
+		(A => CO) = 0;
+		(B => CO) = 0;
+		(CI => CO) = 0;
+		(posedge A => (S:A)) = 0;
+		(negedge A => (S:A)) = 0;
+		(posedge B => (S:B)) = 0;
+		(negedge B => (S:B)) = 0;
+		(posedge CI => (S:CI)) = 0;
+		(negedge CI => (S:CI)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ADDFHX2 (CO, S, A, B, CI);
+	output CO, S;
+	input A, B, CI;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, CI, A);
+	and (int_fwire_1, B, CI);
+	and (int_fwire_2, A, B);
+	or (CO, int_fwire_2, int_fwire_1, int_fwire_0);
+	xor (S, A, B, CI);
+
+	// Timing
+	specify
+		(A => CO) = 0;
+		(B => CO) = 0;
+		(CI => CO) = 0;
+		(posedge A => (S:A)) = 0;
+		(negedge A => (S:A)) = 0;
+		(posedge B => (S:B)) = 0;
+		(negedge B => (S:B)) = 0;
+		(posedge CI => (S:CI)) = 0;
+		(negedge CI => (S:CI)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ADDFHX4 (CO, S, A, B, CI);
+	output CO, S;
+	input A, B, CI;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, CI, A);
+	and (int_fwire_1, B, CI);
+	and (int_fwire_2, A, B);
+	or (CO, int_fwire_2, int_fwire_1, int_fwire_0);
+	xor (S, A, B, CI);
+
+	// Timing
+	specify
+		(A => CO) = 0;
+		(B => CO) = 0;
+		(CI => CO) = 0;
+		(posedge A => (S:A)) = 0;
+		(negedge A => (S:A)) = 0;
+		(posedge B => (S:B)) = 0;
+		(negedge B => (S:B)) = 0;
+		(posedge CI => (S:CI)) = 0;
+		(negedge CI => (S:CI)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ADDFHXL (CO, S, A, B, CI);
+	output CO, S;
+	input A, B, CI;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, CI, A);
+	and (int_fwire_1, B, CI);
+	and (int_fwire_2, A, B);
+	or (CO, int_fwire_2, int_fwire_1, int_fwire_0);
+	xor (S, A, B, CI);
+
+	// Timing
+	specify
+		(A => CO) = 0;
+		(B => CO) = 0;
+		(CI => CO) = 0;
+		(posedge A => (S:A)) = 0;
+		(negedge A => (S:A)) = 0;
+		(posedge B => (S:B)) = 0;
+		(negedge B => (S:B)) = 0;
+		(posedge CI => (S:CI)) = 0;
+		(negedge CI => (S:CI)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ADDFX1 (CO, S, A, B, CI);
+	output CO, S;
+	input A, B, CI;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, CI, A);
+	and (int_fwire_1, B, CI);
+	and (int_fwire_2, A, B);
+	or (CO, int_fwire_2, int_fwire_1, int_fwire_0);
+	xor (S, A, B, CI);
+
+	// Timing
+	specify
+		(A => CO) = 0;
+		(B => CO) = 0;
+		(CI => CO) = 0;
+		(posedge A => (S:A)) = 0;
+		(negedge A => (S:A)) = 0;
+		(posedge B => (S:B)) = 0;
+		(negedge B => (S:B)) = 0;
+		(posedge CI => (S:CI)) = 0;
+		(negedge CI => (S:CI)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ADDFX2 (CO, S, A, B, CI);
+	output CO, S;
+	input A, B, CI;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, CI, A);
+	and (int_fwire_1, B, CI);
+	and (int_fwire_2, A, B);
+	or (CO, int_fwire_2, int_fwire_1, int_fwire_0);
+	xor (S, A, B, CI);
+
+	// Timing
+	specify
+		(A => CO) = 0;
+		(B => CO) = 0;
+		(CI => CO) = 0;
+		(posedge A => (S:A)) = 0;
+		(negedge A => (S:A)) = 0;
+		(posedge B => (S:B)) = 0;
+		(negedge B => (S:B)) = 0;
+		(posedge CI => (S:CI)) = 0;
+		(negedge CI => (S:CI)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ADDFX4 (CO, S, A, B, CI);
+	output CO, S;
+	input A, B, CI;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, CI, A);
+	and (int_fwire_1, B, CI);
+	and (int_fwire_2, A, B);
+	or (CO, int_fwire_2, int_fwire_1, int_fwire_0);
+	xor (S, A, B, CI);
+
+	// Timing
+	specify
+		(A => CO) = 0;
+		(B => CO) = 0;
+		(CI => CO) = 0;
+		(posedge A => (S:A)) = 0;
+		(negedge A => (S:A)) = 0;
+		(posedge B => (S:B)) = 0;
+		(negedge B => (S:B)) = 0;
+		(posedge CI => (S:CI)) = 0;
+		(negedge CI => (S:CI)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ADDFXL (CO, S, A, B, CI);
+	output CO, S;
+	input A, B, CI;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, CI, A);
+	and (int_fwire_1, B, CI);
+	and (int_fwire_2, A, B);
+	or (CO, int_fwire_2, int_fwire_1, int_fwire_0);
+	xor (S, A, B, CI);
+
+	// Timing
+	specify
+		(A => CO) = 0;
+		(B => CO) = 0;
+		(CI => CO) = 0;
+		(posedge A => (S:A)) = 0;
+		(negedge A => (S:A)) = 0;
+		(posedge B => (S:B)) = 0;
+		(negedge B => (S:B)) = 0;
+		(posedge CI => (S:CI)) = 0;
+		(negedge CI => (S:CI)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ADDHX1 (CO, S, A, B);
+	output CO, S;
+	input A, B;
+
+	// Function
+	and (CO, A, B);
+	xor (S, A, B);
+
+	// Timing
+	specify
+		(A => CO) = 0;
+		(B => CO) = 0;
+		(posedge A => (S:A)) = 0;
+		(negedge A => (S:A)) = 0;
+		(posedge B => (S:B)) = 0;
+		(negedge B => (S:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ADDHX2 (CO, S, A, B);
+	output CO, S;
+	input A, B;
+
+	// Function
+	and (CO, A, B);
+	xor (S, A, B);
+
+	// Timing
+	specify
+		(A => CO) = 0;
+		(B => CO) = 0;
+		(posedge A => (S:A)) = 0;
+		(negedge A => (S:A)) = 0;
+		(posedge B => (S:B)) = 0;
+		(negedge B => (S:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ADDHX4 (CO, S, A, B);
+	output CO, S;
+	input A, B;
+
+	// Function
+	and (CO, A, B);
+	xor (S, A, B);
+
+	// Timing
+	specify
+		(A => CO) = 0;
+		(B => CO) = 0;
+		(posedge A => (S:A)) = 0;
+		(negedge A => (S:A)) = 0;
+		(posedge B => (S:B)) = 0;
+		(negedge B => (S:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ADDHXL (CO, S, A, B);
+	output CO, S;
+	input A, B;
+
+	// Function
+	and (CO, A, B);
+	xor (S, A, B);
+
+	// Timing
+	specify
+		(A => CO) = 0;
+		(B => CO) = 0;
+		(posedge A => (S:A)) = 0;
+		(negedge A => (S:A)) = 0;
+		(posedge B => (S:B)) = 0;
+		(negedge B => (S:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND2X1 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	and (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND2X2 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	and (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND2X4 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	and (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND2X6 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	and (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND2X8 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	and (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND2XL (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	and (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND3X1 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	and (Y, A, B, C);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND3X2 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	and (Y, A, B, C);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND3X4 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	and (Y, A, B, C);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND3X6 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	and (Y, A, B, C);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND3X8 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	and (Y, A, B, C);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND3XL (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	and (Y, A, B, C);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND4X1 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	and (Y, A, B, C, D);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND4X2 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	and (Y, A, B, C, D);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND4X4 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	and (Y, A, B, C, D);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND4X6 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	and (Y, A, B, C, D);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND4X8 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	and (Y, A, B, C, D);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AND4XL (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	and (Y, A, B, C, D);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module ANTENNA (A);
+	input A;
+	// Timing
+	specify
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AO21X1 (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A0, A1);
+	or (Y, int_fwire_0, B0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AO21X2 (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A0, A1);
+	or (Y, int_fwire_0, B0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AO21X4 (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A0, A1);
+	or (Y, int_fwire_0, B0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AO21XL (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A0, A1);
+	or (Y, int_fwire_0, B0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AO22X1 (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, B0, B1);
+	and (int_fwire_1, A0, A1);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AO22X2 (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, B0, B1);
+	and (int_fwire_1, A0, A1);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AO22X4 (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, B0, B1);
+	and (int_fwire_1, A0, A1);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AO22XL (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, B0, B1);
+	and (int_fwire_1, A0, A1);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI211X1 (Y, A0, A1, B0, C0);
+	output Y;
+	input A0, A1, B0, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, A0, A1);
+	or (int_fwire_1, int_fwire_0, B0, C0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI211X2 (Y, A0, A1, B0, C0);
+	output Y;
+	input A0, A1, B0, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, A0, A1);
+	or (int_fwire_1, int_fwire_0, B0, C0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI211X4 (Y, A0, A1, B0, C0);
+	output Y;
+	input A0, A1, B0, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, A0, A1);
+	or (int_fwire_1, int_fwire_0, B0, C0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI211XL (Y, A0, A1, B0, C0);
+	output Y;
+	input A0, A1, B0, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, A0, A1);
+	or (int_fwire_1, int_fwire_0, B0, C0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI21X1 (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, A0, A1);
+	or (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI21X2 (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, A0, A1);
+	or (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI21X4 (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, A0, A1);
+	or (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI21XL (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, A0, A1);
+	or (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI221X1 (Y, A0, A1, B0, B1, C0);
+	output Y;
+	input A0, A1, B0, B1, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, B0, B1);
+	and (int_fwire_1, A0, A1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0, C0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI221X2 (Y, A0, A1, B0, B1, C0);
+	output Y;
+	input A0, A1, B0, B1, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, B0, B1);
+	and (int_fwire_1, A0, A1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0, C0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI221X4 (Y, A0, A1, B0, B1, C0);
+	output Y;
+	input A0, A1, B0, B1, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, B0, B1);
+	and (int_fwire_1, A0, A1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0, C0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI221XL (Y, A0, A1, B0, B1, C0);
+	output Y;
+	input A0, A1, B0, B1, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, B0, B1);
+	and (int_fwire_1, A0, A1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0, C0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI222X1 (Y, A0, A1, B0, B1, C0, C1);
+	output Y;
+	input A0, A1, B0, B1, C0, C1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3;
+
+	and (int_fwire_0, B0, B1);
+	and (int_fwire_1, A0, A1);
+	and (int_fwire_2, C0, C1);
+	or (int_fwire_3, int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_3);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+		(C1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI222X2 (Y, A0, A1, B0, B1, C0, C1);
+	output Y;
+	input A0, A1, B0, B1, C0, C1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3;
+
+	and (int_fwire_0, B0, B1);
+	and (int_fwire_1, A0, A1);
+	and (int_fwire_2, C0, C1);
+	or (int_fwire_3, int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_3);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+		(C1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI222X4 (Y, A0, A1, B0, B1, C0, C1);
+	output Y;
+	input A0, A1, B0, B1, C0, C1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3;
+
+	and (int_fwire_0, B0, B1);
+	and (int_fwire_1, A0, A1);
+	and (int_fwire_2, C0, C1);
+	or (int_fwire_3, int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_3);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+		(C1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI222XL (Y, A0, A1, B0, B1, C0, C1);
+	output Y;
+	input A0, A1, B0, B1, C0, C1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3;
+
+	and (int_fwire_0, B0, B1);
+	and (int_fwire_1, A0, A1);
+	and (int_fwire_2, C0, C1);
+	or (int_fwire_3, int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_3);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+		(C1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI22X1 (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, A0, A1);
+	and (int_fwire_1, B0, B1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI22X2 (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, A0, A1);
+	and (int_fwire_1, B0, B1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI22X4 (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, A0, A1);
+	and (int_fwire_1, B0, B1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI22XL (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, A0, A1);
+	and (int_fwire_1, B0, B1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI2BB1X1 (Y, A0N, A1N, B0);
+	output Y;
+	input A0N, A1N, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+
+	or (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	or (int_fwire_1, int_fwire_0__bar, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI2BB1X2 (Y, A0N, A1N, B0);
+	output Y;
+	input A0N, A1N, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+
+	or (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	or (int_fwire_1, int_fwire_0__bar, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI2BB1X4 (Y, A0N, A1N, B0);
+	output Y;
+	input A0N, A1N, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+
+	or (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	or (int_fwire_1, int_fwire_0__bar, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI2BB1XL (Y, A0N, A1N, B0);
+	output Y;
+	input A0N, A1N, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+
+	or (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	or (int_fwire_1, int_fwire_0__bar, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI2BB2X1 (Y, A0N, A1N, B0, B1);
+	output Y;
+	input A0N, A1N, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+	wire int_fwire_2;
+
+	or (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	and (int_fwire_1, B0, B1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0__bar);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI2BB2X2 (Y, A0N, A1N, B0, B1);
+	output Y;
+	input A0N, A1N, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+	wire int_fwire_2;
+
+	or (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	and (int_fwire_1, B0, B1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0__bar);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI2BB2X4 (Y, A0N, A1N, B0, B1);
+	output Y;
+	input A0N, A1N, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+	wire int_fwire_2;
+
+	or (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	and (int_fwire_1, B0, B1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0__bar);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI2BB2XL (Y, A0N, A1N, B0, B1);
+	output Y;
+	input A0N, A1N, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+	wire int_fwire_2;
+
+	or (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	and (int_fwire_1, B0, B1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0__bar);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI31X1 (Y, A0, A1, A2, B0);
+	output Y;
+	input A0, A1, A2, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, A0, A1, A2);
+	or (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI31X2 (Y, A0, A1, A2, B0);
+	output Y;
+	input A0, A1, A2, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, A0, A1, A2);
+	or (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI31X4 (Y, A0, A1, A2, B0);
+	output Y;
+	input A0, A1, A2, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, A0, A1, A2);
+	or (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI31XL (Y, A0, A1, A2, B0);
+	output Y;
+	input A0, A1, A2, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	and (int_fwire_0, A0, A1, A2);
+	or (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI32X1 (Y, A0, A1, A2, B0, B1);
+	output Y;
+	input A0, A1, A2, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, A0, A1, A2);
+	and (int_fwire_1, B0, B1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI32X2 (Y, A0, A1, A2, B0, B1);
+	output Y;
+	input A0, A1, A2, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, A0, A1, A2);
+	and (int_fwire_1, B0, B1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI32X4 (Y, A0, A1, A2, B0, B1);
+	output Y;
+	input A0, A1, A2, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, A0, A1, A2);
+	and (int_fwire_1, B0, B1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI32XL (Y, A0, A1, A2, B0, B1);
+	output Y;
+	input A0, A1, A2, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, A0, A1, A2);
+	and (int_fwire_1, B0, B1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI33X1 (Y, A0, A1, A2, B0, B1, B2);
+	output Y;
+	input A0, A1, A2, B0, B1, B2;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, A0, A1, A2);
+	and (int_fwire_1, B0, B1, B2);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(B2 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI33X2 (Y, A0, A1, A2, B0, B1, B2);
+	output Y;
+	input A0, A1, A2, B0, B1, B2;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, A0, A1, A2);
+	and (int_fwire_1, B0, B1, B2);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(B2 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI33X4 (Y, A0, A1, A2, B0, B1, B2);
+	output Y;
+	input A0, A1, A2, B0, B1, B2;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, A0, A1, A2);
+	and (int_fwire_1, B0, B1, B2);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(B2 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module AOI33XL (Y, A0, A1, A2, B0, B1, B2);
+	output Y;
+	input A0, A1, A2, B0, B1, B2;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	and (int_fwire_0, A0, A1, A2);
+	and (int_fwire_1, B0, B1, B2);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(B2 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module BMXIX2 (PPN, A, M0, M1, S, X2);
+	output PPN;
+	input A, M0, M1, S, X2;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire int_fwire_6, int_fwire_7, M0__bar;
+	wire M1__bar, X2__bar;
+
+	not (M1__bar, M1);
+	and (int_fwire_0, M1__bar, S);
+	and (int_fwire_1, M1, A);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (X2__bar, X2);
+	and (int_fwire_3, X2__bar, int_fwire_2);
+	not (M0__bar, M0);
+	and (int_fwire_4, M0__bar, S);
+	and (int_fwire_5, M0, A);
+	or (int_fwire_6, int_fwire_5, int_fwire_4);
+	and (int_fwire_7, X2, int_fwire_6);
+	or (PPN, int_fwire_7, int_fwire_3);
+
+	// Timing
+	specify
+		(A => PPN) = 0;
+		(posedge M0 => (PPN:M0)) = 0;
+		(negedge M0 => (PPN:M0)) = 0;
+		(posedge M1 => (PPN:M1)) = 0;
+		(negedge M1 => (PPN:M1)) = 0;
+		(S => PPN) = 0;
+		(posedge X2 => (PPN:X2)) = 0;
+		(negedge X2 => (PPN:X2)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module BMXIX4 (PPN, A, M0, M1, S, X2);
+	output PPN;
+	input A, M0, M1, S, X2;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire int_fwire_6, int_fwire_7, M0__bar;
+	wire M1__bar, X2__bar;
+
+	not (M1__bar, M1);
+	and (int_fwire_0, M1__bar, S);
+	and (int_fwire_1, M1, A);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (X2__bar, X2);
+	and (int_fwire_3, X2__bar, int_fwire_2);
+	not (M0__bar, M0);
+	and (int_fwire_4, M0__bar, S);
+	and (int_fwire_5, M0, A);
+	or (int_fwire_6, int_fwire_5, int_fwire_4);
+	and (int_fwire_7, X2, int_fwire_6);
+	or (PPN, int_fwire_7, int_fwire_3);
+
+	// Timing
+	specify
+		(A => PPN) = 0;
+		(posedge M0 => (PPN:M0)) = 0;
+		(negedge M0 => (PPN:M0)) = 0;
+		(posedge M1 => (PPN:M1)) = 0;
+		(negedge M1 => (PPN:M1)) = 0;
+		(S => PPN) = 0;
+		(posedge X2 => (PPN:X2)) = 0;
+		(negedge X2 => (PPN:X2)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module BUFX12 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module BUFX16 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module BUFX2 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module BUFX20 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module BUFX3 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module BUFX4 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module BUFX6 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module BUFX8 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKAND2X12 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	and (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKAND2X2 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	and (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKAND2X3 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	and (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKAND2X4 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	and (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKAND2X6 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	and (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKAND2X8 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	and (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKBUFX12 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKBUFX16 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKBUFX2 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKBUFX20 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKBUFX3 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKBUFX4 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKBUFX6 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKBUFX8 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKINVX1 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKINVX12 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKINVX16 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKINVX2 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKINVX20 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKINVX3 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKINVX4 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKINVX6 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKINVX8 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKMX2X12 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKMX2X2 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKMX2X3 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKMX2X4 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKMX2X6 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKMX2X8 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKXOR2X1 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	xor (Y, A, B);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKXOR2X2 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	xor (Y, A, B);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKXOR2X4 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	xor (Y, A, B);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module CLKXOR2X8 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	xor (Y, A, B);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFHQX1 (Q, D, CK);
+	output Q;
+	input D, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, xcr_0;
+
+	altos_dff_err (xcr_0, delayed_CK, delayed_D);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, delayed_D, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFHQX2 (Q, D, CK);
+	output Q;
+	input D, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, xcr_0;
+
+	altos_dff_err (xcr_0, delayed_CK, delayed_D);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, delayed_D, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFHQX4 (Q, D, CK);
+	output Q;
+	input D, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, xcr_0;
+
+	altos_dff_err (xcr_0, delayed_CK, delayed_D);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, delayed_D, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFHQX8 (Q, D, CK);
+	output Q;
+	input D, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, xcr_0;
+
+	altos_dff_err (xcr_0, delayed_CK, delayed_D);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, delayed_D, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFNSRX1 (Q, QN, D, RN, SN, CKN);
+	output Q, QN;
+	input D, RN, SN, CKN;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SN, delayed_CKN;
+
+	// Function
+	wire int_fwire_clk, int_fwire_N35, int_fwire_QBINT;
+	wire int_fwire_r, int_fwire_s, xcr_0;
+
+	not (int_fwire_clk, delayed_CKN);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, int_fwire_clk, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, int_fwire_clk, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(negedge CKN => (Q+:D)) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(negedge CKN => (QN-:D)) = 0;
+		$setuphold (negedge CKN, posedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (negedge CKN, negedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge RN, 0, notifier);
+		$recovery (posedge SN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CKN, 0, 0, notifier);
+		$width (negedge CKN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFNSRX2 (Q, QN, D, RN, SN, CKN);
+	output Q, QN;
+	input D, RN, SN, CKN;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SN, delayed_CKN;
+
+	// Function
+	wire int_fwire_clk, int_fwire_N35, int_fwire_QBINT;
+	wire int_fwire_r, int_fwire_s, xcr_0;
+
+	not (int_fwire_clk, delayed_CKN);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, int_fwire_clk, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, int_fwire_clk, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(negedge CKN => (Q+:D)) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(negedge CKN => (QN-:D)) = 0;
+		$setuphold (negedge CKN, posedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (negedge CKN, negedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge RN, 0, notifier);
+		$recovery (posedge SN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CKN, 0, 0, notifier);
+		$width (negedge CKN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFNSRX4 (Q, QN, D, RN, SN, CKN);
+	output Q, QN;
+	input D, RN, SN, CKN;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SN, delayed_CKN;
+
+	// Function
+	wire int_fwire_clk, int_fwire_IQ, int_fwire_IQN;
+	wire int_fwire_r, int_fwire_s, xcr_0;
+
+	not (int_fwire_clk, delayed_CKN);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, int_fwire_clk, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_IQ, notifier, int_fwire_clk, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_IQ);
+	not (int_fwire_IQN, int_fwire_IQ);
+	buf (QN, int_fwire_IQN);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(negedge CKN => (Q+:D)) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(negedge CKN => (QN-:D)) = 0;
+		$setuphold (negedge CKN, posedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (negedge CKN, negedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge RN, 0, notifier);
+		$recovery (posedge SN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CKN, 0, 0, notifier);
+		$width (negedge CKN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFNSRXL (Q, QN, D, RN, SN, CKN);
+	output Q, QN;
+	input D, RN, SN, CKN;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SN, delayed_CKN;
+
+	// Function
+	wire int_fwire_clk, int_fwire_N35, int_fwire_QBINT;
+	wire int_fwire_r, int_fwire_s, xcr_0;
+
+	not (int_fwire_clk, delayed_CKN);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, int_fwire_clk, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, int_fwire_clk, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(negedge CKN => (Q+:D)) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(negedge CKN => (QN-:D)) = 0;
+		$setuphold (negedge CKN, posedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (negedge CKN, negedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge RN, 0, notifier);
+		$recovery (posedge SN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CKN, 0, 0, notifier);
+		$width (negedge CKN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFQX1 (Q, D, CK);
+	output Q;
+	input D, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, xcr_0;
+
+	altos_dff_err (xcr_0, delayed_CK, delayed_D);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, delayed_D, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFQX2 (Q, D, CK);
+	output Q;
+	input D, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, xcr_0;
+
+	altos_dff_err (xcr_0, delayed_CK, delayed_D);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, delayed_D, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFQX4 (Q, D, CK);
+	output Q;
+	input D, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, xcr_0;
+
+	altos_dff_err (xcr_0, delayed_CK, delayed_D);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, delayed_D, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFQXL (Q, D, CK);
+	output Q;
+	input D, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, xcr_0;
+
+	altos_dff_err (xcr_0, delayed_CK, delayed_D);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, delayed_D, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFRHQX1 (Q, D, RN, CK);
+	output Q;
+	input D, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, int_fwire_r, xcr_0;
+
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, delayed_D, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, delayed_D, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$removal (posedge RN, posedge CK, 0, notifier);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFRHQX2 (Q, D, RN, CK);
+	output Q;
+	input D, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, int_fwire_r, xcr_0;
+
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, delayed_D, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, delayed_D, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFRHQX4 (Q, D, RN, CK);
+	output Q;
+	input D, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, int_fwire_r, xcr_0;
+
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, delayed_D, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, delayed_D, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFRHQX8 (Q, D, RN, CK);
+	output Q;
+	input D, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, int_fwire_r, xcr_0;
+
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, delayed_D, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, delayed_D, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFRX1 (Q, QN, D, RN, CK);
+	output Q, QN;
+	input D, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, int_fwire_QBINT, int_fwire_r;
+	wire xcr_0;
+
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, delayed_D, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, delayed_D, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$removal (posedge RN, posedge CK, 0, notifier);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFRX2 (Q, QN, D, RN, CK);
+	output Q, QN;
+	input D, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, int_fwire_QBINT, int_fwire_r;
+	wire xcr_0;
+
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, delayed_D, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, delayed_D, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFRX4 (Q, QN, D, RN, CK);
+	output Q, QN;
+	input D, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, int_fwire_QBINT, int_fwire_r;
+	wire xcr_0;
+
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, delayed_D, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, delayed_D, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFRXL (Q, QN, D, RN, CK);
+	output Q, QN;
+	input D, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, int_fwire_QBINT, int_fwire_r;
+	wire xcr_0;
+
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, delayed_D, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, delayed_D, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSHQX1 (Q, D, SN, CK);
+	output Q;
+	input D, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_s, xcr_0;
+
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, delayed_D, int_fwire_s);
+	altos_dff_s (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N35);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSHQX2 (Q, D, SN, CK);
+	output Q;
+	input D, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_s, xcr_0;
+
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, delayed_D, int_fwire_s);
+	altos_dff_s (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N35);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSHQX4 (Q, D, SN, CK);
+	output Q;
+	input D, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_s, xcr_0;
+
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, delayed_D, int_fwire_s);
+	altos_dff_s (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N35);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSHQX8 (Q, D, SN, CK);
+	output Q;
+	input D, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_s, xcr_0;
+
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, delayed_D, int_fwire_s);
+	altos_dff_s (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N35);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSRHQX1 (Q, D, RN, SN, CK);
+	output Q;
+	input D, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_r, int_fwire_s;
+	wire xcr_0;
+
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSRHQX2 (Q, D, RN, SN, CK);
+	output Q;
+	input D, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_r, int_fwire_s;
+	wire xcr_0;
+
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSRHQX4 (Q, D, RN, SN, CK);
+	output Q;
+	input D, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_r, int_fwire_s;
+	wire xcr_0;
+
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSRHQX8 (Q, D, RN, SN, CK);
+	output Q;
+	input D, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_r, int_fwire_s;
+	wire xcr_0;
+
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSRX1 (Q, QN, D, RN, SN, CK);
+	output Q, QN;
+	input D, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_QBINT, int_fwire_r;
+	wire int_fwire_s, xcr_0;
+
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSRX2 (Q, QN, D, RN, SN, CK);
+	output Q, QN;
+	input D, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_QBINT, int_fwire_r;
+	wire int_fwire_s, xcr_0;
+
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSRX4 (Q, QN, D, RN, SN, CK);
+	output Q, QN;
+	input D, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_QBINT, int_fwire_r;
+	wire int_fwire_s, xcr_0;
+
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSRXL (Q, QN, D, RN, SN, CK);
+	output Q, QN;
+	input D, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_QBINT, int_fwire_r;
+	wire int_fwire_s, xcr_0;
+
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, delayed_D, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSX1 (Q, QN, D, SN, CK);
+	output Q, QN;
+	input D, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_QBINT, int_fwire_s;
+	wire xcr_0;
+
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, delayed_D, int_fwire_s);
+	altos_dff_s (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSX2 (Q, QN, D, SN, CK);
+	output Q, QN;
+	input D, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_IQ, int_fwire_IQN, int_fwire_s;
+	wire xcr_0;
+
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, delayed_D, int_fwire_s);
+	altos_dff_s (int_fwire_IQ, notifier, delayed_CK, delayed_D, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_IQ);
+	not (int_fwire_IQN, int_fwire_IQ);
+	buf (QN, int_fwire_IQN);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSX4 (Q, QN, D, SN, CK);
+	output Q, QN;
+	input D, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_QBINT, int_fwire_s;
+	wire xcr_0;
+
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, delayed_D, int_fwire_s);
+	altos_dff_s (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFSXL (Q, QN, D, SN, CK);
+	output Q, QN;
+	input D, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N35, int_fwire_QBINT, int_fwire_s;
+	wire xcr_0;
+
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, delayed_D, int_fwire_s);
+	altos_dff_s (int_fwire_N35, notifier, delayed_CK, delayed_D, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:D)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFTRX1 (Q, QN, D, RN, CK);
+	output Q, QN;
+	input D, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_CK;
+
+	// Function
+	wire int_fwire_d, int_fwire_N30, int_fwire_QBINT;
+	wire xcr_0;
+
+	and (int_fwire_d, delayed_D, delayed_RN);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((D && RN)))) = 0;
+		(posedge CK => (QN-:((D && RN)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFTRX2 (Q, QN, D, RN, CK);
+	output Q, QN;
+	input D, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_CK;
+
+	// Function
+	wire int_fwire_d, int_fwire_N30, int_fwire_QBINT;
+	wire xcr_0;
+
+	and (int_fwire_d, delayed_D, delayed_RN);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((D && RN)))) = 0;
+		(posedge CK => (QN-:((D && RN)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFTRX4 (Q, QN, D, RN, CK);
+	output Q, QN;
+	input D, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_CK;
+
+	// Function
+	wire int_fwire_d, int_fwire_N30, int_fwire_QBINT;
+	wire xcr_0;
+
+	and (int_fwire_d, delayed_D, delayed_RN);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((D && RN)))) = 0;
+		(posedge CK => (QN-:((D && RN)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFTRXL (Q, QN, D, RN, CK);
+	output Q, QN;
+	input D, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_CK;
+
+	// Function
+	wire int_fwire_d, int_fwire_N30, int_fwire_QBINT;
+	wire xcr_0;
+
+	and (int_fwire_d, delayed_D, delayed_RN);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((D && RN)))) = 0;
+		(posedge CK => (QN-:((D && RN)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFX1 (Q, QN, D, CK);
+	output Q, QN;
+	input D, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, int_fwire_QBINT, xcr_0;
+
+	altos_dff_err (xcr_0, delayed_CK, delayed_D);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, delayed_D, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:D)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFX2 (Q, QN, D, CK);
+	output Q, QN;
+	input D, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, int_fwire_QBINT, xcr_0;
+
+	altos_dff_err (xcr_0, delayed_CK, delayed_D);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, delayed_D, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:D)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFX4 (Q, QN, D, CK);
+	output Q, QN;
+	input D, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, int_fwire_QBINT, xcr_0;
+
+	altos_dff_err (xcr_0, delayed_CK, delayed_D);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, delayed_D, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:D)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DFFXL (Q, QN, D, CK);
+	output Q, QN;
+	input D, CK;
+	reg notifier;
+	wire delayed_D, delayed_CK;
+
+	// Function
+	wire int_fwire_N30, int_fwire_QBINT, xcr_0;
+
+	altos_dff_err (xcr_0, delayed_CK, delayed_D);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, delayed_D, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:D)) = 0;
+		(posedge CK => (QN-:D)) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DLY1X1 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DLY1X4 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DLY2X1 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DLY2X4 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DLY3X1 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DLY3X4 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DLY4X1 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module DLY4X4 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	buf (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module EDFFHQX1 (Q, D, E, CK);
+	output Q;
+	input D, E, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_N30__bar;
+	wire int_fwire_N30__bar__bar, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (int_fwire_N30__bar__bar, int_fwire_N30__bar);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar__bar);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((E && D) || (!E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module EDFFHQX2 (Q, D, E, CK);
+	output Q;
+	input D, E, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_N30__bar;
+	wire int_fwire_N30__bar__bar, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (int_fwire_N30__bar__bar, int_fwire_N30__bar);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar__bar);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((E && D) || (!E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module EDFFHQX4 (Q, D, E, CK);
+	output Q;
+	input D, E, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_N30__bar;
+	wire int_fwire_N30__bar__bar, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (int_fwire_N30__bar__bar, int_fwire_N30__bar);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar__bar);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((E && D) || (!E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module EDFFHQX8 (Q, D, E, CK);
+	output Q;
+	input D, E, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_N30__bar;
+	wire int_fwire_N30__bar__bar, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (int_fwire_N30__bar__bar, int_fwire_N30__bar);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar__bar);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((E && D) || (!E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module EDFFTRX1 (Q, QN, D, E, RN, CK);
+	output Q, QN;
+	input D, E, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_RN, delayed_CK;
+
+	// Function
+	wire delayed_D__bar, delayed_E__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2__bar, int_fwire_5__bar;
+	wire int_fwire_d, int_fwire_N30, int_fwire_N30__bar;
+	wire int_fwire_QBINT, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar);
+	not (int_fwire_2__bar, int_fwire_0);
+	not (delayed_D__bar, delayed_D);
+	and (int_fwire_1, delayed_D__bar, delayed_E);
+	not (int_fwire_5__bar, int_fwire_1);
+	and (int_fwire_d, int_fwire_5__bar, int_fwire_2__bar, delayed_RN);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((E && D && RN) || (!E && int_fwire_N30 && RN)))) = 0;
+		(posedge CK => (QN-:((E && D && RN) || (!E && int_fwire_N30 && RN)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module EDFFTRX2 (Q, QN, D, E, RN, CK);
+	output Q, QN;
+	input D, E, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_RN, delayed_CK;
+
+	// Function
+	wire delayed_D__bar, delayed_E__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2__bar, int_fwire_5__bar;
+	wire int_fwire_d, int_fwire_N30, int_fwire_N30__bar;
+	wire int_fwire_QBINT, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar);
+	not (int_fwire_2__bar, int_fwire_0);
+	not (delayed_D__bar, delayed_D);
+	and (int_fwire_1, delayed_D__bar, delayed_E);
+	not (int_fwire_5__bar, int_fwire_1);
+	and (int_fwire_d, int_fwire_5__bar, int_fwire_2__bar, delayed_RN);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((E && D && RN) || (!E && int_fwire_N30 && RN)))) = 0;
+		(posedge CK => (QN-:((E && D && RN) || (!E && int_fwire_N30 && RN)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module EDFFTRX4 (Q, QN, D, E, RN, CK);
+	output Q, QN;
+	input D, E, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_RN, delayed_CK;
+
+	// Function
+	wire delayed_D__bar, delayed_E__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2__bar, int_fwire_5__bar;
+	wire int_fwire_d, int_fwire_N30, int_fwire_N30__bar;
+	wire int_fwire_QBINT, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar);
+	not (int_fwire_2__bar, int_fwire_0);
+	not (delayed_D__bar, delayed_D);
+	and (int_fwire_1, delayed_D__bar, delayed_E);
+	not (int_fwire_5__bar, int_fwire_1);
+	and (int_fwire_d, int_fwire_5__bar, int_fwire_2__bar, delayed_RN);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((E && D && RN) || (!E && int_fwire_N30 && RN)))) = 0;
+		(posedge CK => (QN-:((E && D && RN) || (!E && int_fwire_N30 && RN)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module EDFFTRXL (Q, QN, D, E, RN, CK);
+	output Q, QN;
+	input D, E, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_RN, delayed_CK;
+
+	// Function
+	wire delayed_D__bar, delayed_E__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2__bar, int_fwire_5__bar;
+	wire int_fwire_d, int_fwire_N30, int_fwire_N30__bar;
+	wire int_fwire_QBINT, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar);
+	not (int_fwire_2__bar, int_fwire_0);
+	not (delayed_D__bar, delayed_D);
+	and (int_fwire_1, delayed_D__bar, delayed_E);
+	not (int_fwire_5__bar, int_fwire_1);
+	and (int_fwire_d, int_fwire_5__bar, int_fwire_2__bar, delayed_RN);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((E && D && RN) || (!E && int_fwire_N30 && RN)))) = 0;
+		(posedge CK => (QN-:((E && D && RN) || (!E && int_fwire_N30 && RN)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module EDFFX1 (Q, QN, D, E, CK);
+	output Q, QN;
+	input D, E, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_N30__bar;
+	wire int_fwire_N30__bar__bar, int_fwire_QBINT, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (int_fwire_N30__bar__bar, int_fwire_N30__bar);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar__bar);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((E && D) || (!E && int_fwire_N30)))) = 0;
+		(posedge CK => (QN-:((E && D) || (!E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module EDFFX2 (Q, QN, D, E, CK);
+	output Q, QN;
+	input D, E, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_N30__bar;
+	wire int_fwire_N30__bar__bar, int_fwire_QBINT, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (int_fwire_N30__bar__bar, int_fwire_N30__bar);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar__bar);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((E && D) || (!E && int_fwire_N30)))) = 0;
+		(posedge CK => (QN-:((E && D) || (!E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module EDFFX4 (Q, QN, D, E, CK);
+	output Q, QN;
+	input D, E, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_N30__bar;
+	wire int_fwire_N30__bar__bar, int_fwire_QBINT, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (int_fwire_N30__bar__bar, int_fwire_N30__bar);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar__bar);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((E && D) || (!E && int_fwire_N30)))) = 0;
+		(posedge CK => (QN-:((E && D) || (!E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module EDFFXL (Q, QN, D, E, CK);
+	output Q, QN;
+	input D, E, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_N30__bar;
+	wire int_fwire_N30__bar__bar, int_fwire_QBINT, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (int_fwire_N30__bar__bar, int_fwire_N30__bar);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar__bar);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((E && D) || (!E && int_fwire_N30)))) = 0;
+		(posedge CK => (QN-:((E && D) || (!E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module HOLDX1 (Y);
+	inout Y;
+	// Missing function for pin Y
+	// Timing
+	specify
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module INVX1 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module INVX12 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module INVX16 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module INVX2 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module INVX20 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module INVX3 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module INVX4 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module INVX6 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module INVX8 (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module INVXL (Y, A);
+	output Y;
+	input A;
+
+	// Function
+	not (Y, A);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MDFFHQX1 (Q, D0, D1, S0, CK);
+	output Q;
+	input D0, D1, S0, CK;
+	reg notifier;
+	wire delayed_D0, delayed_D1, delayed_S0, delayed_CK;
+
+	// Function
+	wire delayed_S0__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, xcr_0;
+
+	not (delayed_S0__bar, delayed_S0);
+	and (int_fwire_0, delayed_S0__bar, delayed_D0);
+	and (int_fwire_1, delayed_S0, delayed_D1);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((D0 && D1) || (D0 && !D1 && !S0) || (!D0 && D1 && S0)))) = 0;
+		$setuphold (posedge CK, posedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, negedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, posedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, negedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, posedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$setuphold (posedge CK, negedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MDFFHQX2 (Q, D0, D1, S0, CK);
+	output Q;
+	input D0, D1, S0, CK;
+	reg notifier;
+	wire delayed_D0, delayed_D1, delayed_S0, delayed_CK;
+
+	// Function
+	wire delayed_S0__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, xcr_0;
+
+	not (delayed_S0__bar, delayed_S0);
+	and (int_fwire_0, delayed_S0__bar, delayed_D0);
+	and (int_fwire_1, delayed_S0, delayed_D1);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((D0 && D1) || (D0 && !D1 && !S0) || (!D0 && D1 && S0)))) = 0;
+		$setuphold (posedge CK, posedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, negedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, posedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, negedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, posedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$setuphold (posedge CK, negedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MDFFHQX4 (Q, D0, D1, S0, CK);
+	output Q;
+	input D0, D1, S0, CK;
+	reg notifier;
+	wire delayed_D0, delayed_D1, delayed_S0, delayed_CK;
+
+	// Function
+	wire delayed_S0__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, xcr_0;
+
+	not (delayed_S0__bar, delayed_S0);
+	and (int_fwire_0, delayed_S0__bar, delayed_D0);
+	and (int_fwire_1, delayed_S0, delayed_D1);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((D0 && D1) || (D0 && !D1 && !S0) || (!D0 && D1 && S0)))) = 0;
+		$setuphold (posedge CK, posedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, negedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, posedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, negedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, posedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$setuphold (posedge CK, negedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MDFFHQX8 (Q, D0, D1, S0, CK);
+	output Q;
+	input D0, D1, S0, CK;
+	reg notifier;
+	wire delayed_D0, delayed_D1, delayed_S0, delayed_CK;
+
+	// Function
+	wire delayed_S0__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, xcr_0;
+
+	not (delayed_S0__bar, delayed_S0);
+	and (int_fwire_0, delayed_S0__bar, delayed_D0);
+	and (int_fwire_1, delayed_S0, delayed_D1);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((D0 && D1) || (D0 && !D1 && !S0) || (!D0 && D1 && S0)))) = 0;
+		$setuphold (posedge CK, posedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, negedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, posedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, negedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, posedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$setuphold (posedge CK, negedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX2X1 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX2X2 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX2X4 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX2X6 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX2X8 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX2XL (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX3X1 (Y, A, B, C, S0, S1);
+	output Y;
+	input A, B, C, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, S0__bar;
+	wire S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S1, C);
+	or (Y, int_fwire_4, int_fwire_3);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX3X2 (Y, A, B, C, S0, S1);
+	output Y;
+	input A, B, C, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, S0__bar;
+	wire S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S1, C);
+	or (Y, int_fwire_4, int_fwire_3);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX3X4 (Y, A, B, C, S0, S1);
+	output Y;
+	input A, B, C, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, S0__bar;
+	wire S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S1, C);
+	or (Y, int_fwire_4, int_fwire_3);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX3XL (Y, A, B, C, S0, S1);
+	output Y;
+	input A, B, C, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, S0__bar;
+	wire S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S1, C);
+	or (Y, int_fwire_4, int_fwire_3);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX4X1 (Y, A, B, C, D, S0, S1);
+	output Y;
+	input A, B, C, D, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire int_fwire_6, int_fwire_7, S0__bar;
+	wire S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S0__bar, C);
+	and (int_fwire_5, S0, D);
+	or (int_fwire_6, int_fwire_5, int_fwire_4);
+	and (int_fwire_7, S1, int_fwire_6);
+	or (Y, int_fwire_7, int_fwire_3);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX4X2 (Y, A, B, C, D, S0, S1);
+	output Y;
+	input A, B, C, D, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire int_fwire_6, int_fwire_7, S0__bar;
+	wire S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S0__bar, C);
+	and (int_fwire_5, S0, D);
+	or (int_fwire_6, int_fwire_5, int_fwire_4);
+	and (int_fwire_7, S1, int_fwire_6);
+	or (Y, int_fwire_7, int_fwire_3);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX4X4 (Y, A, B, C, D, S0, S1);
+	output Y;
+	input A, B, C, D, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire int_fwire_6, int_fwire_7, S0__bar;
+	wire S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S0__bar, C);
+	and (int_fwire_5, S0, D);
+	or (int_fwire_6, int_fwire_5, int_fwire_4);
+	and (int_fwire_7, S1, int_fwire_6);
+	or (Y, int_fwire_7, int_fwire_3);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MX4XL (Y, A, B, C, D, S0, S1);
+	output Y;
+	input A, B, C, D, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire int_fwire_6, int_fwire_7, S0__bar;
+	wire S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S0__bar, C);
+	and (int_fwire_5, S0, D);
+	or (int_fwire_6, int_fwire_5, int_fwire_4);
+	and (int_fwire_7, S1, int_fwire_6);
+	or (Y, int_fwire_7, int_fwire_3);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI2X1 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI2X2 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI2X4 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI2X6 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI2X8 (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI2XL (Y, A, B, S0);
+	output Y;
+	input A, B, S0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire S0__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI3X1 (Y, A, B, C, S0, S1);
+	output Y;
+	input A, B, C, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire S0__bar, S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S1, C);
+	or (int_fwire_5, int_fwire_4, int_fwire_3);
+	not (Y, int_fwire_5);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI3X2 (Y, A, B, C, S0, S1);
+	output Y;
+	input A, B, C, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire S0__bar, S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S1, C);
+	or (int_fwire_5, int_fwire_4, int_fwire_3);
+	not (Y, int_fwire_5);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI3X4 (Y, A, B, C, S0, S1);
+	output Y;
+	input A, B, C, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire S0__bar, S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S1, C);
+	or (int_fwire_5, int_fwire_4, int_fwire_3);
+	not (Y, int_fwire_5);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI3XL (Y, A, B, C, S0, S1);
+	output Y;
+	input A, B, C, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire S0__bar, S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S1, C);
+	or (int_fwire_5, int_fwire_4, int_fwire_3);
+	not (Y, int_fwire_5);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI4X1 (Y, A, B, C, D, S0, S1);
+	output Y;
+	input A, B, C, D, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire int_fwire_6, int_fwire_7, int_fwire_8;
+	wire S0__bar, S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S0__bar, C);
+	and (int_fwire_5, S0, D);
+	or (int_fwire_6, int_fwire_5, int_fwire_4);
+	and (int_fwire_7, S1, int_fwire_6);
+	or (int_fwire_8, int_fwire_7, int_fwire_3);
+	not (Y, int_fwire_8);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI4X2 (Y, A, B, C, D, S0, S1);
+	output Y;
+	input A, B, C, D, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire int_fwire_6, int_fwire_7, int_fwire_8;
+	wire S0__bar, S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S0__bar, C);
+	and (int_fwire_5, S0, D);
+	or (int_fwire_6, int_fwire_5, int_fwire_4);
+	and (int_fwire_7, S1, int_fwire_6);
+	or (int_fwire_8, int_fwire_7, int_fwire_3);
+	not (Y, int_fwire_8);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI4X4 (Y, A, B, C, D, S0, S1);
+	output Y;
+	input A, B, C, D, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire int_fwire_6, int_fwire_7, int_fwire_8;
+	wire S0__bar, S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S0__bar, C);
+	and (int_fwire_5, S0, D);
+	or (int_fwire_6, int_fwire_5, int_fwire_4);
+	and (int_fwire_7, S1, int_fwire_6);
+	or (int_fwire_8, int_fwire_7, int_fwire_3);
+	not (Y, int_fwire_8);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module MXI4XL (Y, A, B, C, D, S0, S1);
+	output Y;
+	input A, B, C, D, S0, S1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3, int_fwire_4, int_fwire_5;
+	wire int_fwire_6, int_fwire_7, int_fwire_8;
+	wire S0__bar, S1__bar;
+
+	not (S0__bar, S0);
+	and (int_fwire_0, S0__bar, A);
+	and (int_fwire_1, S0, B);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (S1__bar, S1);
+	and (int_fwire_3, S1__bar, int_fwire_2);
+	and (int_fwire_4, S0__bar, C);
+	and (int_fwire_5, S0, D);
+	or (int_fwire_6, int_fwire_5, int_fwire_4);
+	and (int_fwire_7, S1, int_fwire_6);
+	or (int_fwire_8, int_fwire_7, int_fwire_3);
+	not (Y, int_fwire_8);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+		(posedge S0 => (Y:S0)) = 0;
+		(negedge S0 => (Y:S0)) = 0;
+		(posedge S1 => (Y:S1)) = 0;
+		(negedge S1 => (Y:S1)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND2BX1 (Y, AN, B);
+	output Y;
+	input AN, B;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	and (int_fwire_0, AN__bar, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND2BX2 (Y, AN, B);
+	output Y;
+	input AN, B;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	and (int_fwire_0, AN__bar, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND2BX4 (Y, AN, B);
+	output Y;
+	input AN, B;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	and (int_fwire_0, AN__bar, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND2BXL (Y, AN, B);
+	output Y;
+	input AN, B;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	and (int_fwire_0, AN__bar, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND2X1 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND2X2 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND2X4 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND2X6 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND2X8 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND2XL (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND3BX1 (Y, AN, B, C);
+	output Y;
+	input AN, B, C;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	and (int_fwire_0, AN__bar, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND3BX2 (Y, AN, B, C);
+	output Y;
+	input AN, B, C;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	and (int_fwire_0, AN__bar, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND3BX4 (Y, AN, B, C);
+	output Y;
+	input AN, B, C;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	and (int_fwire_0, AN__bar, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND3BXL (Y, AN, B, C);
+	output Y;
+	input AN, B, C;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	and (int_fwire_0, AN__bar, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND3X1 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND3X2 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND3X4 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND3X6 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND3X8 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND3XL (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4BBX1 (Y, AN, BN, C, D);
+	output Y;
+	input AN, BN, C, D;
+
+	// Function
+	wire AN__bar, BN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	not (BN__bar, BN);
+	and (int_fwire_0, BN__bar, AN__bar, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(BN => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4BBX2 (Y, AN, BN, C, D);
+	output Y;
+	input AN, BN, C, D;
+
+	// Function
+	wire AN__bar, BN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	not (BN__bar, BN);
+	and (int_fwire_0, BN__bar, AN__bar, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(BN => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4BBX4 (Y, AN, BN, C, D);
+	output Y;
+	input AN, BN, C, D;
+
+	// Function
+	wire AN__bar, BN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	not (BN__bar, BN);
+	and (int_fwire_0, BN__bar, AN__bar, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(BN => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4BBXL (Y, AN, BN, C, D);
+	output Y;
+	input AN, BN, C, D;
+
+	// Function
+	wire AN__bar, BN__bar, int_fwire_0;
+
+	not (BN__bar, BN);
+	not (AN__bar, AN);
+	and (int_fwire_0, AN__bar, BN__bar, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(BN => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4BX1 (Y, AN, B, C, D);
+	output Y;
+	input AN, B, C, D;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	and (int_fwire_0, AN__bar, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4BX2 (Y, AN, B, C, D);
+	output Y;
+	input AN, B, C, D;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	and (int_fwire_0, AN__bar, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4BX4 (Y, AN, B, C, D);
+	output Y;
+	input AN, B, C, D;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	and (int_fwire_0, AN__bar, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4BXL (Y, AN, B, C, D);
+	output Y;
+	input AN, B, C, D;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	and (int_fwire_0, AN__bar, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4X1 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4X2 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4X4 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4X6 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4X8 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NAND4XL (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	wire int_fwire_0;
+
+	and (int_fwire_0, A, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR2BX1 (Y, AN, B);
+	output Y;
+	input AN, B;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR2BX2 (Y, AN, B);
+	output Y;
+	input AN, B;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR2BX4 (Y, AN, B);
+	output Y;
+	input AN, B;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR2BXL (Y, AN, B);
+	output Y;
+	input AN, B;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR2X1 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR2X2 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR2X4 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR2X6 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR2X8 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR2XL (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR3BX1 (Y, AN, B, C);
+	output Y;
+	input AN, B, C;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR3BX2 (Y, AN, B, C);
+	output Y;
+	input AN, B, C;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR3BX4 (Y, AN, B, C);
+	output Y;
+	input AN, B, C;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR3BXL (Y, AN, B, C);
+	output Y;
+	input AN, B, C;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR3X1 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR3X2 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR3X4 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR3X6 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR3X8 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR3XL (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4BBX1 (Y, AN, BN, C, D);
+	output Y;
+	input AN, BN, C, D;
+
+	// Function
+	wire AN__bar, BN__bar, int_fwire_0;
+
+	not (BN__bar, BN);
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, BN__bar, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(BN => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4BBX2 (Y, AN, BN, C, D);
+	output Y;
+	input AN, BN, C, D;
+
+	// Function
+	wire AN__bar, BN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	not (BN__bar, BN);
+	or (int_fwire_0, BN__bar, AN__bar, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(BN => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4BBX4 (Y, AN, BN, C, D);
+	output Y;
+	input AN, BN, C, D;
+
+	// Function
+	wire AN__bar, BN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	not (BN__bar, BN);
+	or (int_fwire_0, BN__bar, AN__bar, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(BN => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4BBXL (Y, AN, BN, C, D);
+	output Y;
+	input AN, BN, C, D;
+
+	// Function
+	wire AN__bar, BN__bar, int_fwire_0;
+
+	not (BN__bar, BN);
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, BN__bar, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(BN => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4BX1 (Y, AN, B, C, D);
+	output Y;
+	input AN, B, C, D;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4BX2 (Y, AN, B, C, D);
+	output Y;
+	input AN, B, C, D;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4BX4 (Y, AN, B, C, D);
+	output Y;
+	input AN, B, C, D;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4BXL (Y, AN, B, C, D);
+	output Y;
+	input AN, B, C, D;
+
+	// Function
+	wire AN__bar, int_fwire_0;
+
+	not (AN__bar, AN);
+	or (int_fwire_0, AN__bar, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(AN => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4X1 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4X2 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4X4 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4X6 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4X8 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module NOR4XL (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A, B, C, D);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OA21X1 (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A0, A1);
+	and (Y, int_fwire_0, B0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OA21X2 (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A0, A1);
+	and (Y, int_fwire_0, B0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OA21X4 (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A0, A1);
+	and (Y, int_fwire_0, B0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OA21XL (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0;
+
+	or (int_fwire_0, A0, A1);
+	and (Y, int_fwire_0, B0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OA22X1 (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, B0, B1);
+	or (int_fwire_1, A0, A1);
+	and (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OA22X2 (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, B0, B1);
+	or (int_fwire_1, A0, A1);
+	and (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OA22X4 (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, B0, B1);
+	or (int_fwire_1, A0, A1);
+	and (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OA22XL (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, B0, B1);
+	or (int_fwire_1, A0, A1);
+	and (Y, int_fwire_1, int_fwire_0);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI211X1 (Y, A0, A1, B0, C0);
+	output Y;
+	input A0, A1, B0, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, A0, A1);
+	and (int_fwire_1, int_fwire_0, B0, C0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI211X2 (Y, A0, A1, B0, C0);
+	output Y;
+	input A0, A1, B0, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, A0, A1);
+	and (int_fwire_1, int_fwire_0, B0, C0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI211X4 (Y, A0, A1, B0, C0);
+	output Y;
+	input A0, A1, B0, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, A0, A1);
+	and (int_fwire_1, int_fwire_0, B0, C0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI211XL (Y, A0, A1, B0, C0);
+	output Y;
+	input A0, A1, B0, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, A0, A1);
+	and (int_fwire_1, int_fwire_0, B0, C0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI21X1 (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, A0, A1);
+	and (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI21X2 (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, A0, A1);
+	and (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI21X4 (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, A0, A1);
+	and (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI21XL (Y, A0, A1, B0);
+	output Y;
+	input A0, A1, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, A0, A1);
+	and (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI221X1 (Y, A0, A1, B0, B1, C0);
+	output Y;
+	input A0, A1, B0, B1, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, B0, B1);
+	or (int_fwire_1, A0, A1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0, C0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI221X2 (Y, A0, A1, B0, B1, C0);
+	output Y;
+	input A0, A1, B0, B1, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, B0, B1);
+	or (int_fwire_1, A0, A1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0, C0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI221X4 (Y, A0, A1, B0, B1, C0);
+	output Y;
+	input A0, A1, B0, B1, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, B0, B1);
+	or (int_fwire_1, A0, A1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0, C0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI221XL (Y, A0, A1, B0, B1, C0);
+	output Y;
+	input A0, A1, B0, B1, C0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, B0, B1);
+	or (int_fwire_1, A0, A1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0, C0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI222X1 (Y, A0, A1, B0, B1, C0, C1);
+	output Y;
+	input A0, A1, B0, B1, C0, C1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3;
+
+	or (int_fwire_0, B0, B1);
+	or (int_fwire_1, A0, A1);
+	or (int_fwire_2, C0, C1);
+	and (int_fwire_3, int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_3);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+		(C1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI222X2 (Y, A0, A1, B0, B1, C0, C1);
+	output Y;
+	input A0, A1, B0, B1, C0, C1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3;
+
+	or (int_fwire_0, B0, B1);
+	or (int_fwire_1, A0, A1);
+	or (int_fwire_2, C0, C1);
+	and (int_fwire_3, int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_3);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+		(C1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI222X4 (Y, A0, A1, B0, B1, C0, C1);
+	output Y;
+	input A0, A1, B0, B1, C0, C1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3;
+
+	or (int_fwire_0, B0, B1);
+	or (int_fwire_1, A0, A1);
+	or (int_fwire_2, C0, C1);
+	and (int_fwire_3, int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_3);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+		(C1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI222XL (Y, A0, A1, B0, B1, C0, C1);
+	output Y;
+	input A0, A1, B0, B1, C0, C1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_3;
+
+	or (int_fwire_0, B0, B1);
+	or (int_fwire_1, A0, A1);
+	or (int_fwire_2, C0, C1);
+	and (int_fwire_3, int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_3);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(C0 => Y) = 0;
+		(C1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI22X1 (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, A0, A1);
+	or (int_fwire_1, B0, B1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI22X2 (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, A0, A1);
+	or (int_fwire_1, B0, B1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI22X4 (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, A0, A1);
+	or (int_fwire_1, B0, B1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI22XL (Y, A0, A1, B0, B1);
+	output Y;
+	input A0, A1, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, A0, A1);
+	or (int_fwire_1, B0, B1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI2BB1X1 (Y, A0N, A1N, B0);
+	output Y;
+	input A0N, A1N, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+
+	and (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	and (int_fwire_1, int_fwire_0__bar, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI2BB1X2 (Y, A0N, A1N, B0);
+	output Y;
+	input A0N, A1N, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+
+	and (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	and (int_fwire_1, int_fwire_0__bar, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI2BB1X4 (Y, A0N, A1N, B0);
+	output Y;
+	input A0N, A1N, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+
+	and (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	and (int_fwire_1, int_fwire_0__bar, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI2BB1XL (Y, A0N, A1N, B0);
+	output Y;
+	input A0N, A1N, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+
+	and (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	and (int_fwire_1, int_fwire_0__bar, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI2BB2X1 (Y, A0N, A1N, B0, B1);
+	output Y;
+	input A0N, A1N, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+	wire int_fwire_2;
+
+	and (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	or (int_fwire_1, B0, B1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0__bar);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI2BB2X2 (Y, A0N, A1N, B0, B1);
+	output Y;
+	input A0N, A1N, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+	wire int_fwire_2;
+
+	and (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	or (int_fwire_1, B0, B1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0__bar);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI2BB2X4 (Y, A0N, A1N, B0, B1);
+	output Y;
+	input A0N, A1N, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+	wire int_fwire_2;
+
+	and (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	or (int_fwire_1, B0, B1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0__bar);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI2BB2XL (Y, A0N, A1N, B0, B1);
+	output Y;
+	input A0N, A1N, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_0__bar, int_fwire_1;
+	wire int_fwire_2;
+
+	and (int_fwire_0, A0N, A1N);
+	not (int_fwire_0__bar, int_fwire_0);
+	or (int_fwire_1, B0, B1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0__bar);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0N => Y) = 0;
+		(A1N => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI31X1 (Y, A0, A1, A2, B0);
+	output Y;
+	input A0, A1, A2, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, A0, A1, A2);
+	and (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI31X2 (Y, A0, A1, A2, B0);
+	output Y;
+	input A0, A1, A2, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, A0, A1, A2);
+	and (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI31X4 (Y, A0, A1, A2, B0);
+	output Y;
+	input A0, A1, A2, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, A0, A1, A2);
+	and (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI31XL (Y, A0, A1, A2, B0);
+	output Y;
+	input A0, A1, A2, B0;
+
+	// Function
+	wire int_fwire_0, int_fwire_1;
+
+	or (int_fwire_0, A0, A1, A2);
+	and (int_fwire_1, int_fwire_0, B0);
+	not (Y, int_fwire_1);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI32X1 (Y, A0, A1, A2, B0, B1);
+	output Y;
+	input A0, A1, A2, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, A0, A1, A2);
+	or (int_fwire_1, B0, B1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI32X2 (Y, A0, A1, A2, B0, B1);
+	output Y;
+	input A0, A1, A2, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, A0, A1, A2);
+	or (int_fwire_1, B0, B1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI32X4 (Y, A0, A1, A2, B0, B1);
+	output Y;
+	input A0, A1, A2, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, A0, A1, A2);
+	or (int_fwire_1, B0, B1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI32XL (Y, A0, A1, A2, B0, B1);
+	output Y;
+	input A0, A1, A2, B0, B1;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, A0, A1, A2);
+	or (int_fwire_1, B0, B1);
+	and (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI33X1 (Y, A0, A1, A2, B0, B1, B2);
+	output Y;
+	input A0, A1, A2, B0, B1, B2;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, A0, A1, A2);
+	or (int_fwire_1, B0, B1, B2);
+	and (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(B2 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI33X2 (Y, A0, A1, A2, B0, B1, B2);
+	output Y;
+	input A0, A1, A2, B0, B1, B2;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, A0, A1, A2);
+	or (int_fwire_1, B0, B1, B2);
+	and (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(B2 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI33X4 (Y, A0, A1, A2, B0, B1, B2);
+	output Y;
+	input A0, A1, A2, B0, B1, B2;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, A0, A1, A2);
+	or (int_fwire_1, B0, B1, B2);
+	and (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(B2 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OAI33XL (Y, A0, A1, A2, B0, B1, B2);
+	output Y;
+	input A0, A1, A2, B0, B1, B2;
+
+	// Function
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+
+	or (int_fwire_0, A0, A1, A2);
+	or (int_fwire_1, B0, B1, B2);
+	and (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (Y, int_fwire_2);
+
+	// Timing
+	specify
+		(A0 => Y) = 0;
+		(A1 => Y) = 0;
+		(A2 => Y) = 0;
+		(B0 => Y) = 0;
+		(B1 => Y) = 0;
+		(B2 => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR2X1 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	or (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR2X2 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	or (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR2X4 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	or (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR2X6 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	or (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR2X8 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	or (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR2XL (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	or (Y, A, B);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR3X1 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	or (Y, A, B, C);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR3X2 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	or (Y, A, B, C);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR3X4 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	or (Y, A, B, C);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR3X6 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	or (Y, A, B, C);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR3X8 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	or (Y, A, B, C);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR3XL (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	or (Y, A, B, C);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR4X1 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	or (Y, A, B, C, D);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR4X2 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	or (Y, A, B, C, D);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR4X4 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	or (Y, A, B, C, D);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR4X6 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	or (Y, A, B, C, D);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR4X8 (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	or (Y, A, B, C, D);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module OR4XL (Y, A, B, C, D);
+	output Y;
+	input A, B, C, D;
+
+	// Function
+	or (Y, A, B, C, D);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(B => Y) = 0;
+		(C => Y) = 0;
+		(D => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFHQX1 (Q, D, SE, SI, CK);
+	output Q;
+	input D, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$removal (posedge RN, posedge CK, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFHQX2 (Q, D, SE, SI, CK);
+	output Q;
+	input D, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFHQX4 (Q, D, SE, SI, CK);
+	output Q;
+	input D, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFHQX8 (Q, D, SE, SI, CK);
+	output Q;
+	input D, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFNSRX1 (Q, QN, D, SE, SI, RN, SN, CKN);
+	output Q, QN;
+	input D, SE, SI, RN, SN, CKN;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_RN, delayed_SN, delayed_CKN;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_clk, int_fwire_d, int_fwire_N35;
+	wire int_fwire_QBINT, int_fwire_r, int_fwire_s;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_clk, delayed_CKN);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, int_fwire_clk, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, int_fwire_clk, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(negedge CKN => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(negedge CKN => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (negedge CKN, posedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (negedge CKN, negedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (negedge CKN, posedge SE, 0, 0, notifier,,, delayed_CKN, delayed_SE);
+		$setuphold (negedge CKN, negedge SE, 0, 0, notifier,,, delayed_CKN, delayed_SE);
+		$setuphold (negedge CKN, posedge SI, 0, 0, notifier,,, delayed_CKN, delayed_SI);
+		$setuphold (negedge CKN, negedge SI, 0, 0, notifier,,, delayed_CKN, delayed_SI);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge RN, 0, notifier);
+		$recovery (posedge SN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CKN, 0, 0, notifier);
+		$width (negedge CKN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFNSRX2 (Q, QN, D, SE, SI, RN, SN, CKN);
+	output Q, QN;
+	input D, SE, SI, RN, SN, CKN;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_RN, delayed_SN, delayed_CKN;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_clk, int_fwire_d, int_fwire_N35;
+	wire int_fwire_QBINT, int_fwire_r, int_fwire_s;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_clk, delayed_CKN);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, int_fwire_clk, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, int_fwire_clk, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(negedge CKN => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(negedge CKN => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (negedge CKN, posedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (negedge CKN, negedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (negedge CKN, posedge SE, 0, 0, notifier,,, delayed_CKN, delayed_SE);
+		$setuphold (negedge CKN, negedge SE, 0, 0, notifier,,, delayed_CKN, delayed_SE);
+		$setuphold (negedge CKN, posedge SI, 0, 0, notifier,,, delayed_CKN, delayed_SI);
+		$setuphold (negedge CKN, negedge SI, 0, 0, notifier,,, delayed_CKN, delayed_SI);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge RN, 0, notifier);
+		$recovery (posedge SN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CKN, 0, 0, notifier);
+		$width (negedge CKN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFNSRX4 (Q, QN, D, SE, SI, RN, SN, CKN);
+	output Q, QN;
+	input D, SE, SI, RN, SN, CKN;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_RN, delayed_SN, delayed_CKN;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_clk, int_fwire_d, int_fwire_N35;
+	wire int_fwire_QBINT, int_fwire_r, int_fwire_s;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_clk, delayed_CKN);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, int_fwire_clk, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, int_fwire_clk, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(negedge CKN => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(negedge CKN => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (negedge CKN, posedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (negedge CKN, negedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (negedge CKN, posedge SE, 0, 0, notifier,,, delayed_CKN, delayed_SE);
+		$setuphold (negedge CKN, negedge SE, 0, 0, notifier,,, delayed_CKN, delayed_SE);
+		$setuphold (negedge CKN, posedge SI, 0, 0, notifier,,, delayed_CKN, delayed_SI);
+		$setuphold (negedge CKN, negedge SI, 0, 0, notifier,,, delayed_CKN, delayed_SI);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge RN, 0, notifier);
+		$recovery (posedge SN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CKN, 0, 0, notifier);
+		$width (negedge CKN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFNSRXL (Q, QN, D, SE, SI, RN, SN, CKN);
+	output Q, QN;
+	input D, SE, SI, RN, SN, CKN;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_RN, delayed_SN, delayed_CKN;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_clk, int_fwire_d, int_fwire_N35;
+	wire int_fwire_QBINT, int_fwire_r, int_fwire_s;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_clk, delayed_CKN);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, int_fwire_clk, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, int_fwire_clk, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(negedge CKN => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(negedge CKN => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (negedge CKN, posedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (negedge CKN, negedge D, 0, 0, notifier,,, delayed_CKN, delayed_D);
+		$setuphold (negedge CKN, posedge SE, 0, 0, notifier,,, delayed_CKN, delayed_SE);
+		$setuphold (negedge CKN, negedge SE, 0, 0, notifier,,, delayed_CKN, delayed_SE);
+		$setuphold (negedge CKN, posedge SI, 0, 0, notifier,,, delayed_CKN, delayed_SI);
+		$setuphold (negedge CKN, negedge SI, 0, 0, notifier,,, delayed_CKN, delayed_SI);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge RN, 0, notifier);
+		$recovery (posedge SN, negedge CKN, 0, notifier);
+		$hold (negedge CKN, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CKN, 0, 0, notifier);
+		$width (negedge CKN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFQX1 (Q, D, SE, SI, CK);
+	output Q;
+	input D, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFQX2 (Q, D, SE, SI, CK);
+	output Q;
+	input D, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFQX4 (Q, D, SE, SI, CK);
+	output Q;
+	input D, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFQXL (Q, D, SE, SI, CK);
+	output Q;
+	input D, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFRHQX1 (Q, D, SE, SI, RN, CK);
+	output Q;
+	input D, SE, SI, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_r;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, int_fwire_d, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$removal (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFRHQX2 (Q, D, SE, SI, RN, CK);
+	output Q;
+	input D, SE, SI, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_r;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, int_fwire_d, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFRHQX4 (Q, D, SE, SI, RN, CK);
+	output Q;
+	input D, SE, SI, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_r;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, int_fwire_d, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFRHQX8 (Q, D, SE, SI, RN, CK);
+	output Q;
+	input D, SE, SI, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_r;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, int_fwire_d, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFRX1 (Q, QN, D, SE, SI, RN, CK);
+	output Q, QN;
+	input D, SE, SI, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_QBINT;
+	wire int_fwire_r, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, int_fwire_d, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFRX2 (Q, QN, D, SE, SI, RN, CK);
+	output Q, QN;
+	input D, SE, SI, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_QBINT;
+	wire int_fwire_r, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, int_fwire_d, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFRX4 (Q, QN, D, SE, SI, RN, CK);
+	output Q, QN;
+	input D, SE, SI, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_QBINT;
+	wire int_fwire_r, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, int_fwire_d, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFRXL (Q, QN, D, SE, SI, RN, CK);
+	output Q, QN;
+	input D, SE, SI, RN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_QBINT;
+	wire int_fwire_r, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_r, RN);
+	altos_dff_r_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_r);
+	altos_dff_r (int_fwire_N30, notifier, delayed_CK, int_fwire_d, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSHQX1 (Q, D, SE, SI, SN, CK);
+	output Q;
+	input D, SE, SI, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_s;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s);
+	altos_dff_s (int_fwire_N30, notifier, delayed_CK, int_fwire_d, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSHQX2 (Q, D, SE, SI, SN, CK);
+	output Q;
+	input D, SE, SI, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_s;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s);
+	altos_dff_s (int_fwire_N30, notifier, delayed_CK, int_fwire_d, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSHQX4 (Q, D, SE, SI, SN, CK);
+	output Q;
+	input D, SE, SI, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_s;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s);
+	altos_dff_s (int_fwire_N30, notifier, delayed_CK, int_fwire_d, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSHQX8 (Q, D, SE, SI, SN, CK);
+	output Q;
+	input D, SE, SI, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_s;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s);
+	altos_dff_s (int_fwire_N30, notifier, delayed_CK, int_fwire_d, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSRHQX1 (Q, D, SE, SI, RN, SN, CK);
+	output Q;
+	input D, SE, SI, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N35, int_fwire_r;
+	wire int_fwire_s, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSRHQX2 (Q, D, SE, SI, RN, SN, CK);
+	output Q;
+	input D, SE, SI, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N35, int_fwire_r;
+	wire int_fwire_s, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSRHQX4 (Q, D, SE, SI, RN, SN, CK);
+	output Q;
+	input D, SE, SI, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N35, int_fwire_r;
+	wire int_fwire_s, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSRHQX8 (Q, D, SE, SI, RN, SN, CK);
+	output Q;
+	input D, SE, SI, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N35, int_fwire_r;
+	wire int_fwire_s, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSRX1 (Q, QN, D, SE, SI, RN, SN, CK);
+	output Q, QN;
+	input D, SE, SI, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N35, int_fwire_QBINT;
+	wire int_fwire_r, int_fwire_s, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSRX2 (Q, QN, D, SE, SI, RN, SN, CK);
+	output Q, QN;
+	input D, SE, SI, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N35, int_fwire_QBINT;
+	wire int_fwire_r, int_fwire_s, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSRX4 (Q, QN, D, SE, SI, RN, SN, CK);
+	output Q, QN;
+	input D, SE, SI, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N35, int_fwire_QBINT;
+	wire int_fwire_r, int_fwire_s, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSRXL (Q, QN, D, SE, SI, RN, SN, CK);
+	output Q, QN;
+	input D, SE, SI, RN, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_RN, delayed_SN, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N35, int_fwire_QBINT;
+	wire int_fwire_r, int_fwire_s, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, delayed_SN);
+	not (int_fwire_r, delayed_RN);
+	altos_dff_sr_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r);
+	altos_dff_sr_1 (int_fwire_N35, notifier, delayed_CK, int_fwire_d, int_fwire_s, int_fwire_r, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge RN => (Q+:1'b0)) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge RN => (QN-:1'b0)) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge RN, posedge SN, 0, 0, notifier,,, delayed_RN, delayed_SN);
+		$recovery (posedge RN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge RN, 0, notifier);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSX1 (Q, QN, D, SE, SI, SN, CK);
+	output Q, QN;
+	input D, SE, SI, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N35, int_fwire_QBINT;
+	wire int_fwire_s, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s);
+	altos_dff_s (int_fwire_N35, notifier, delayed_CK, int_fwire_d, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSX2 (Q, QN, D, SE, SI, SN, CK);
+	output Q, QN;
+	input D, SE, SI, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N35, int_fwire_QBINT;
+	wire int_fwire_s, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s);
+	altos_dff_s (int_fwire_N35, notifier, delayed_CK, int_fwire_d, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSX4 (Q, QN, D, SE, SI, SN, CK);
+	output Q, QN;
+	input D, SE, SI, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N35, int_fwire_QBINT;
+	wire int_fwire_s, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s);
+	altos_dff_s (int_fwire_N35, notifier, delayed_CK, int_fwire_d, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFSXL (Q, QN, D, SE, SI, SN, CK);
+	output Q, QN;
+	input D, SE, SI, SN, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N35, int_fwire_QBINT;
+	wire int_fwire_s, xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	not (int_fwire_s, SN);
+	altos_dff_s_err (xcr_0, delayed_CK, int_fwire_d, int_fwire_s);
+	altos_dff_s (int_fwire_N35, notifier, delayed_CK, int_fwire_d, int_fwire_s, xcr_0);
+	buf (Q, int_fwire_N35);
+	not (int_fwire_QBINT, int_fwire_N35);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$recovery (posedge SN, posedge CK, 0, notifier);
+		$hold (posedge CK, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFTRX1 (Q, QN, D, RN, SE, SI, CK);
+	output Q, QN;
+	input D, RN, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_2, int_fwire_d, int_fwire_N30;
+	wire int_fwire_QBINT, xcr_0;
+
+	and (int_fwire_0, delayed_D, delayed_RN);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_1, delayed_SE__bar, int_fwire_0);
+	and (int_fwire_2, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_2, int_fwire_1);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && RN && D)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && RN && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFTRX2 (Q, QN, D, RN, SE, SI, CK);
+	output Q, QN;
+	input D, RN, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_2, int_fwire_d, int_fwire_N30;
+	wire int_fwire_QBINT, xcr_0;
+
+	and (int_fwire_0, delayed_D, delayed_RN);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_1, delayed_SE__bar, int_fwire_0);
+	and (int_fwire_2, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_2, int_fwire_1);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && RN && D)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && RN && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFTRX4 (Q, QN, D, RN, SE, SI, CK);
+	output Q, QN;
+	input D, RN, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_2, int_fwire_d, int_fwire_N30;
+	wire int_fwire_QBINT, xcr_0;
+
+	and (int_fwire_0, delayed_D, delayed_RN);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_1, delayed_SE__bar, int_fwire_0);
+	and (int_fwire_2, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_2, int_fwire_1);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && RN && D)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && RN && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFTRXL (Q, QN, D, RN, SE, SI, CK);
+	output Q, QN;
+	input D, RN, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_RN, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_2, int_fwire_d, int_fwire_N30;
+	wire int_fwire_QBINT, xcr_0;
+
+	and (int_fwire_0, delayed_D, delayed_RN);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_1, delayed_SE__bar, int_fwire_0);
+	and (int_fwire_2, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_2, int_fwire_1);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && RN && D)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && RN && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFX1 (Q, QN, D, SE, SI, CK);
+	output Q, QN;
+	input D, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_QBINT;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFX2 (Q, QN, D, SE, SI, CK);
+	output Q, QN;
+	input D, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_QBINT;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFX4 (Q, QN, D, SE, SI, CK);
+	output Q, QN;
+	input D, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_QBINT;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SDFFXL (Q, QN, D, SE, SI, CK);
+	output Q, QN;
+	input D, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_SE__bar, int_fwire_0, int_fwire_1;
+	wire int_fwire_d, int_fwire_N30, int_fwire_QBINT;
+	wire xcr_0;
+
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_0, delayed_SE__bar, delayed_D);
+	and (int_fwire_1, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_1, int_fwire_0);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && D)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && D)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SEDFFHQX1 (Q, D, E, SE, SI, CK);
+	output Q;
+	input D, E, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, delayed_SE__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2, int_fwire_3;
+	wire int_fwire_4, int_fwire_d, int_fwire_N30;
+	wire int_fwire_N30__bar, int_fwire_N30__bar__bar, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (int_fwire_N30__bar__bar, int_fwire_N30__bar);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar__bar);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && E && D) || (!SE && !E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SEDFFHQX2 (Q, D, E, SE, SI, CK);
+	output Q;
+	input D, E, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, delayed_SE__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2, int_fwire_3;
+	wire int_fwire_4, int_fwire_d, int_fwire_N30;
+	wire int_fwire_N30__bar, int_fwire_N30__bar__bar, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (int_fwire_N30__bar__bar, int_fwire_N30__bar);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar__bar);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && E && D) || (!SE && !E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SEDFFHQX4 (Q, D, E, SE, SI, CK);
+	output Q;
+	input D, E, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, delayed_SE__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2, int_fwire_3;
+	wire int_fwire_4, int_fwire_d, int_fwire_N30;
+	wire int_fwire_N30__bar, int_fwire_N30__bar__bar, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (int_fwire_N30__bar__bar, int_fwire_N30__bar);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar__bar);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && E && D) || (!SE && !E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SEDFFHQX8 (Q, D, E, SE, SI, CK);
+	output Q;
+	input D, E, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, delayed_SE__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2, int_fwire_3;
+	wire int_fwire_4, int_fwire_d, int_fwire_N30;
+	wire int_fwire_N30__bar, int_fwire_N30__bar__bar, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (int_fwire_N30__bar__bar, int_fwire_N30__bar);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar__bar);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && E && D) || (!SE && !E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SEDFFTRX1 (Q, QN, D, E, RN, SE, SI, CK);
+	output Q, QN;
+	input D, E, RN, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_RN, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_D__bar, delayed_E__bar, delayed_SE__bar;
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_2__bar, int_fwire_3, int_fwire_4;
+	wire int_fwire_5__bar, int_fwire_d, int_fwire_N30;
+	wire int_fwire_N30__bar, int_fwire_QBINT, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar);
+	not (int_fwire_2__bar, int_fwire_0);
+	not (delayed_D__bar, delayed_D);
+	and (int_fwire_1, delayed_D__bar, delayed_E);
+	not (int_fwire_5__bar, int_fwire_1);
+	and (int_fwire_2, int_fwire_5__bar, int_fwire_2__bar, delayed_RN);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && E && D && RN) || (!SE && !E && int_fwire_N30 && RN)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && E && D && RN) || (!SE && !E && int_fwire_N30 && RN)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SEDFFTRX2 (Q, QN, D, E, RN, SE, SI, CK);
+	output Q, QN;
+	input D, E, RN, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_RN, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_D__bar, delayed_E__bar, delayed_SE__bar;
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_2__bar, int_fwire_3, int_fwire_4;
+	wire int_fwire_5__bar, int_fwire_d, int_fwire_N30;
+	wire int_fwire_N30__bar, int_fwire_QBINT, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar);
+	not (int_fwire_2__bar, int_fwire_0);
+	not (delayed_D__bar, delayed_D);
+	and (int_fwire_1, delayed_D__bar, delayed_E);
+	not (int_fwire_5__bar, int_fwire_1);
+	and (int_fwire_2, int_fwire_5__bar, int_fwire_2__bar, delayed_RN);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && E && D && RN) || (!SE && !E && int_fwire_N30 && RN)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && E && D && RN) || (!SE && !E && int_fwire_N30 && RN)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SEDFFTRX4 (Q, QN, D, E, RN, SE, SI, CK);
+	output Q, QN;
+	input D, E, RN, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_RN, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_D__bar, delayed_E__bar, delayed_SE__bar;
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_2__bar, int_fwire_3, int_fwire_4;
+	wire int_fwire_5__bar, int_fwire_d, int_fwire_N30;
+	wire int_fwire_N30__bar, int_fwire_QBINT, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar);
+	not (int_fwire_2__bar, int_fwire_0);
+	not (delayed_D__bar, delayed_D);
+	and (int_fwire_1, delayed_D__bar, delayed_E);
+	not (int_fwire_5__bar, int_fwire_1);
+	and (int_fwire_2, int_fwire_5__bar, int_fwire_2__bar, delayed_RN);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && E && D && RN) || (!SE && !E && int_fwire_N30 && RN)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && E && D && RN) || (!SE && !E && int_fwire_N30 && RN)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SEDFFTRXL (Q, QN, D, E, RN, SE, SI, CK);
+	output Q, QN;
+	input D, E, RN, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_RN, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_D__bar, delayed_E__bar, delayed_SE__bar;
+	wire int_fwire_0, int_fwire_1, int_fwire_2;
+	wire int_fwire_2__bar, int_fwire_3, int_fwire_4;
+	wire int_fwire_5__bar, int_fwire_d, int_fwire_N30;
+	wire int_fwire_N30__bar, int_fwire_QBINT, xcr_0;
+
+	not (int_fwire_N30__bar, int_fwire_N30);
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30__bar);
+	not (int_fwire_2__bar, int_fwire_0);
+	not (delayed_D__bar, delayed_D);
+	and (int_fwire_1, delayed_D__bar, delayed_E);
+	not (int_fwire_5__bar, int_fwire_1);
+	and (int_fwire_2, int_fwire_5__bar, int_fwire_2__bar, delayed_RN);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_QBINT, int_fwire_N30);
+	buf (QN, int_fwire_QBINT);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && E && D && RN) || (!SE && !E && int_fwire_N30 && RN)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && E && D && RN) || (!SE && !E && int_fwire_N30 && RN)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, negedge RN, 0, 0, notifier,,, delayed_CK, delayed_RN);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SEDFFX1 (Q, QN, D, E, SE, SI, CK);
+	output Q, QN;
+	input D, E, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, delayed_SE__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2, int_fwire_3;
+	wire int_fwire_4, int_fwire_d, int_fwire_N30;
+	wire int_fwire_NET536, xcr_0;
+
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_NET536, int_fwire_N30);
+	buf (QN, int_fwire_NET536);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && E && D) || (!SE && !E && int_fwire_N30)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && E && D) || (!SE && !E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SEDFFX2 (Q, QN, D, E, SE, SI, CK);
+	output Q, QN;
+	input D, E, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, delayed_SE__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2, int_fwire_3;
+	wire int_fwire_4, int_fwire_d, int_fwire_N30;
+	wire int_fwire_NET536, xcr_0;
+
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_NET536, int_fwire_N30);
+	buf (QN, int_fwire_NET536);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && E && D) || (!SE && !E && int_fwire_N30)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && E && D) || (!SE && !E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SEDFFX4 (Q, QN, D, E, SE, SI, CK);
+	output Q, QN;
+	input D, E, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, delayed_SE__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2, int_fwire_3;
+	wire int_fwire_4, int_fwire_d, int_fwire_N30;
+	wire int_fwire_NET536, xcr_0;
+
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_NET536, int_fwire_N30);
+	buf (QN, int_fwire_NET536);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && E && D) || (!SE && !E && int_fwire_N30)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && E && D) || (!SE && !E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SEDFFXL (Q, QN, D, E, SE, SI, CK);
+	output Q, QN;
+	input D, E, SE, SI, CK;
+	reg notifier;
+	wire delayed_D, delayed_E, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_E__bar, delayed_SE__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2, int_fwire_3;
+	wire int_fwire_4, int_fwire_d, int_fwire_N30;
+	wire int_fwire_NET536, xcr_0;
+
+	not (delayed_E__bar, delayed_E);
+	and (int_fwire_0, delayed_E__bar, int_fwire_N30);
+	and (int_fwire_1, delayed_E, delayed_D);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+	not (int_fwire_NET536, int_fwire_N30);
+	buf (QN, int_fwire_NET536);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && E && D) || (!SE && !E && int_fwire_N30)))) = 0;
+		(posedge CK => (QN-:((SE && SI) || (!SE && E && D) || (!SE && !E && int_fwire_N30)))) = 0;
+		$setuphold (posedge CK, posedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, negedge D, 0, 0, notifier,,, delayed_CK, delayed_D);
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SMDFFHQX1 (Q, D0, D1, S0, SE, SI, CK);
+	output Q;
+	input D0, D1, S0, SE, SI, CK;
+	reg notifier;
+	wire delayed_D0, delayed_D1, delayed_S0, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_S0__bar, delayed_SE__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2, int_fwire_3;
+	wire int_fwire_4, int_fwire_d, int_fwire_N30;
+	wire xcr_0;
+
+	not (delayed_S0__bar, delayed_S0);
+	and (int_fwire_0, delayed_S0__bar, delayed_D0);
+	and (int_fwire_1, delayed_S0, delayed_D1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && S0 && D1) || (!SE && !S0 && D0)))) = 0;
+		$setuphold (posedge CK, posedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, negedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, posedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, negedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, posedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$setuphold (posedge CK, negedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SMDFFHQX2 (Q, D0, D1, S0, SE, SI, CK);
+	output Q;
+	input D0, D1, S0, SE, SI, CK;
+	reg notifier;
+	wire delayed_D0, delayed_D1, delayed_S0, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_S0__bar, delayed_SE__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2, int_fwire_3;
+	wire int_fwire_4, int_fwire_d, int_fwire_N30;
+	wire xcr_0;
+
+	not (delayed_S0__bar, delayed_S0);
+	and (int_fwire_0, delayed_S0__bar, delayed_D0);
+	and (int_fwire_1, delayed_S0, delayed_D1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && S0 && D1) || (!SE && !S0 && D0)))) = 0;
+		$setuphold (posedge CK, posedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, negedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, posedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, negedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, posedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$setuphold (posedge CK, negedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SMDFFHQX4 (Q, D0, D1, S0, SE, SI, CK);
+	output Q;
+	input D0, D1, S0, SE, SI, CK;
+	reg notifier;
+	wire delayed_D0, delayed_D1, delayed_S0, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_S0__bar, delayed_SE__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2, int_fwire_3;
+	wire int_fwire_4, int_fwire_d, int_fwire_N30;
+	wire xcr_0;
+
+	not (delayed_S0__bar, delayed_S0);
+	and (int_fwire_0, delayed_S0__bar, delayed_D0);
+	and (int_fwire_1, delayed_S0, delayed_D1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && S0 && D1) || (!SE && !S0 && D0)))) = 0;
+		$setuphold (posedge CK, posedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, negedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, posedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, negedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, posedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$setuphold (posedge CK, negedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module SMDFFHQX8 (Q, D0, D1, S0, SE, SI, CK);
+	output Q;
+	input D0, D1, S0, SE, SI, CK;
+	reg notifier;
+	wire delayed_D0, delayed_D1, delayed_S0, delayed_SE, delayed_SI, delayed_CK;
+
+	// Function
+	wire delayed_S0__bar, delayed_SE__bar, int_fwire_0;
+	wire int_fwire_1, int_fwire_2, int_fwire_3;
+	wire int_fwire_4, int_fwire_d, int_fwire_N30;
+	wire xcr_0;
+
+	not (delayed_S0__bar, delayed_S0);
+	and (int_fwire_0, delayed_S0__bar, delayed_D0);
+	and (int_fwire_1, delayed_S0, delayed_D1);
+	or (int_fwire_2, int_fwire_1, int_fwire_0);
+	not (delayed_SE__bar, delayed_SE);
+	and (int_fwire_3, delayed_SE__bar, int_fwire_2);
+	and (int_fwire_4, delayed_SE, delayed_SI);
+	or (int_fwire_d, int_fwire_4, int_fwire_3);
+	altos_dff_err (xcr_0, delayed_CK, int_fwire_d);
+	altos_dff (int_fwire_N30, notifier, delayed_CK, int_fwire_d, xcr_0);
+	buf (Q, int_fwire_N30);
+
+	// Timing
+	specify
+		(posedge CK => (Q+:((SE && SI) || (!SE && S0 && D1) || (!SE && !S0 && D0)))) = 0;
+		$setuphold (posedge CK, posedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, negedge D0, 0, 0, notifier,,, delayed_CK, delayed_D0);
+		$setuphold (posedge CK, posedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, negedge D1, 0, 0, notifier,,, delayed_CK, delayed_D1);
+		$setuphold (posedge CK, posedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$setuphold (posedge CK, negedge S0, 0, 0, notifier,,, delayed_CK, delayed_S0);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, posedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$setuphold (posedge CK, negedge SI, 0, 0, notifier,,, delayed_CK, delayed_SI);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TBUFX1 (Y, A, OE);
+	output Y;
+	input A, OE;
+
+	// Function
+	bufif1 (Y, A, OE);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(OE => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TBUFX12 (Y, A, OE);
+	output Y;
+	input A, OE;
+
+	// Function
+	bufif1 (Y, A, OE);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(OE => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TBUFX16 (Y, A, OE);
+	output Y;
+	input A, OE;
+
+	// Function
+	bufif1 (Y, A, OE);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(OE => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TBUFX2 (Y, A, OE);
+	output Y;
+	input A, OE;
+
+	// Function
+	bufif1 (Y, A, OE);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(OE => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TBUFX20 (Y, A, OE);
+	output Y;
+	input A, OE;
+
+	// Function
+	bufif1 (Y, A, OE);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(OE => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TBUFX3 (Y, A, OE);
+	output Y;
+	input A, OE;
+
+	// Function
+	bufif1 (Y, A, OE);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(OE => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TBUFX4 (Y, A, OE);
+	output Y;
+	input A, OE;
+
+	// Function
+	bufif1 (Y, A, OE);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(OE => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TBUFX6 (Y, A, OE);
+	output Y;
+	input A, OE;
+
+	// Function
+	bufif1 (Y, A, OE);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(OE => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TBUFX8 (Y, A, OE);
+	output Y;
+	input A, OE;
+
+	// Function
+	bufif1 (Y, A, OE);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(OE => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TBUFXL (Y, A, OE);
+	output Y;
+	input A, OE;
+
+	// Function
+	bufif1 (Y, A, OE);
+
+	// Timing
+	specify
+		(A => Y) = 0;
+		(OE => Y) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TIEHI (Y);
+	output Y;
+
+	// Function
+	buf (Y, 1'b1);
+
+	// Timing
+	specify
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TIELO (Y);
+	output Y;
+
+	// Function
+	buf (Y, 1'b0);
+
+	// Timing
+	specify
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNCAX12 (ECK, E, CK);
+	output ECK;
+	input E, CK;
+	reg notifier;
+	wire delayed_E, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT;
+
+	not (int_fwire_clk, delayed_CK);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, delayed_E);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNCAX16 (ECK, E, CK);
+	output ECK;
+	input E, CK;
+	reg notifier;
+	wire delayed_E, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT;
+
+	not (int_fwire_clk, delayed_CK);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, delayed_E);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNCAX2 (ECK, E, CK);
+	output ECK;
+	input E, CK;
+	reg notifier;
+	wire delayed_E, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT;
+
+	not (int_fwire_clk, delayed_CK);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, delayed_E);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNCAX20 (ECK, E, CK);
+	output ECK;
+	input E, CK;
+	reg notifier;
+	wire delayed_E, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT;
+
+	not (int_fwire_clk, delayed_CK);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, delayed_E);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNCAX3 (ECK, E, CK);
+	output ECK;
+	input E, CK;
+	reg notifier;
+	wire delayed_E, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT;
+
+	not (int_fwire_clk, delayed_CK);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, delayed_E);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNCAX4 (ECK, E, CK);
+	output ECK;
+	input E, CK;
+	reg notifier;
+	wire delayed_E, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT;
+
+	not (int_fwire_clk, delayed_CK);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, delayed_E);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNCAX6 (ECK, E, CK);
+	output ECK;
+	input E, CK;
+	reg notifier;
+	wire delayed_E, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT;
+
+	not (int_fwire_clk, delayed_CK);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, delayed_E);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNCAX8 (ECK, E, CK);
+	output ECK;
+	input E, CK;
+	reg notifier;
+	wire delayed_E, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT;
+
+	not (int_fwire_clk, delayed_CK);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, delayed_E);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNSRX1 (Q, QN, D, SN, GN, RN);
+	output Q, QN;
+	input D, SN, GN, RN;
+	reg notifier;
+	wire delayed_D, delayed_GN;
+
+	// Function
+	wire delayed_GN__bar, int_fwire_clk, int_fwire_N5;
+	wire int_fwire_QINT, int_fwire_s;
+
+	not (delayed_GN__bar, delayed_GN);
+	and (int_fwire_clk, delayed_GN__bar, RN);
+	not (int_fwire_s, SN);
+	altos_latch_s (int_fwire_QINT, notifier, int_fwire_clk, delayed_D, int_fwire_s);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N5, int_fwire_QINT);
+	buf (QN, int_fwire_N5);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(negedge GN => (Q+:D)) = 0;
+		(RN => Q) = 0;
+		(D => QN) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(negedge GN => (QN-:D)) = 0;
+		(RN => QN) = 0;
+		$setuphold (posedge GN, posedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$setuphold (posedge GN, negedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$recovery (posedge SN, posedge GN, 0, notifier);
+		$hold (posedge GN, posedge SN, 0, notifier);
+		$recovery (posedge SN, posedge RN, 0, notifier);
+		$hold (posedge RN, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (negedge GN, 0, 0, notifier);
+		$width (posedge RN, 0, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNSRX2 (Q, QN, D, SN, GN, RN);
+	output Q, QN;
+	input D, SN, GN, RN;
+	reg notifier;
+	wire delayed_D, delayed_GN;
+
+	// Function
+	wire delayed_GN__bar, int_fwire_clk, int_fwire_N5;
+	wire int_fwire_QINT, int_fwire_s;
+
+	not (delayed_GN__bar, delayed_GN);
+	and (int_fwire_clk, delayed_GN__bar, RN);
+	not (int_fwire_s, SN);
+	altos_latch_s (int_fwire_QINT, notifier, int_fwire_clk, delayed_D, int_fwire_s);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N5, int_fwire_QINT);
+	buf (QN, int_fwire_N5);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(negedge GN => (Q+:D)) = 0;
+		(RN => Q) = 0;
+		(D => QN) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(negedge GN => (QN-:D)) = 0;
+		(RN => QN) = 0;
+		$setuphold (posedge GN, posedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$setuphold (posedge GN, negedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$recovery (posedge SN, posedge GN, 0, notifier);
+		$hold (posedge GN, posedge SN, 0, notifier);
+		$recovery (posedge SN, posedge RN, 0, notifier);
+		$hold (posedge RN, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (negedge GN, 0, 0, notifier);
+		$width (posedge RN, 0, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNSRX4 (Q, QN, D, SN, GN, RN);
+	output Q, QN;
+	input D, SN, GN, RN;
+	reg notifier;
+	wire delayed_D, delayed_GN;
+
+	// Function
+	wire delayed_GN__bar, int_fwire_clk, int_fwire_N5;
+	wire int_fwire_QINT, int_fwire_s;
+
+	not (delayed_GN__bar, delayed_GN);
+	and (int_fwire_clk, delayed_GN__bar, RN);
+	not (int_fwire_s, SN);
+	altos_latch_s (int_fwire_QINT, notifier, int_fwire_clk, delayed_D, int_fwire_s);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N5, int_fwire_QINT);
+	buf (QN, int_fwire_N5);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(negedge GN => (Q+:D)) = 0;
+		(RN => Q) = 0;
+		(D => QN) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(negedge GN => (QN-:D)) = 0;
+		(RN => QN) = 0;
+		$setuphold (posedge GN, posedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$setuphold (posedge GN, negedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$recovery (posedge SN, posedge GN, 0, notifier);
+		$hold (posedge GN, posedge SN, 0, notifier);
+		$recovery (posedge SN, posedge RN, 0, notifier);
+		$hold (posedge RN, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (negedge GN, 0, 0, notifier);
+		$width (posedge RN, 0, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNSRXL (Q, QN, D, SN, GN, RN);
+	output Q, QN;
+	input D, SN, GN, RN;
+	reg notifier;
+	wire delayed_D, delayed_GN;
+
+	// Function
+	wire delayed_GN__bar, int_fwire_clk, int_fwire_N5;
+	wire int_fwire_QINT, int_fwire_s;
+
+	not (delayed_GN__bar, delayed_GN);
+	and (int_fwire_clk, delayed_GN__bar, RN);
+	not (int_fwire_s, SN);
+	altos_latch_s (int_fwire_QINT, notifier, int_fwire_clk, delayed_D, int_fwire_s);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N5, int_fwire_QINT);
+	buf (QN, int_fwire_N5);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(negedge GN => (Q+:D)) = 0;
+		(RN => Q) = 0;
+		(D => QN) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(negedge GN => (QN-:D)) = 0;
+		(RN => QN) = 0;
+		$setuphold (posedge GN, posedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$setuphold (posedge GN, negedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$recovery (posedge SN, posedge GN, 0, notifier);
+		$hold (posedge GN, posedge SN, 0, notifier);
+		$recovery (posedge SN, posedge RN, 0, notifier);
+		$hold (posedge RN, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (negedge GN, 0, 0, notifier);
+		$width (posedge RN, 0, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNTSCAX12 (ECK, E, SE, CK);
+	output ECK;
+	input E, SE, CK;
+	reg notifier;
+	wire delayed_E, delayed_SE, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT, int_fwire_test;
+
+	not (int_fwire_clk, delayed_CK);
+	or (int_fwire_test, delayed_E, delayed_SE);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, int_fwire_test);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNTSCAX16 (ECK, E, SE, CK);
+	output ECK;
+	input E, SE, CK;
+	reg notifier;
+	wire delayed_E, delayed_SE, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT, int_fwire_test;
+
+	not (int_fwire_clk, delayed_CK);
+	or (int_fwire_test, delayed_E, delayed_SE);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, int_fwire_test);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNTSCAX2 (ECK, E, SE, CK);
+	output ECK;
+	input E, SE, CK;
+	reg notifier;
+	wire delayed_E, delayed_SE, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT, int_fwire_test;
+
+	not (int_fwire_clk, delayed_CK);
+	or (int_fwire_test, delayed_E, delayed_SE);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, int_fwire_test);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNTSCAX20 (ECK, E, SE, CK);
+	output ECK;
+	input E, SE, CK;
+	reg notifier;
+	wire delayed_E, delayed_SE, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT, int_fwire_test;
+
+	not (int_fwire_clk, delayed_CK);
+	or (int_fwire_test, delayed_E, delayed_SE);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, int_fwire_test);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNTSCAX3 (ECK, E, SE, CK);
+	output ECK;
+	input E, SE, CK;
+	reg notifier;
+	wire delayed_E, delayed_SE, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT, int_fwire_test;
+
+	not (int_fwire_clk, delayed_CK);
+	or (int_fwire_test, delayed_E, delayed_SE);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, int_fwire_test);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNTSCAX4 (ECK, E, SE, CK);
+	output ECK;
+	input E, SE, CK;
+	reg notifier;
+	wire delayed_E, delayed_SE, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT, int_fwire_test;
+
+	not (int_fwire_clk, delayed_CK);
+	or (int_fwire_test, delayed_E, delayed_SE);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, int_fwire_test);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNTSCAX6 (ECK, E, SE, CK);
+	output ECK;
+	input E, SE, CK;
+	reg notifier;
+	wire delayed_E, delayed_SE, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT, int_fwire_test;
+
+	not (int_fwire_clk, delayed_CK);
+	or (int_fwire_test, delayed_E, delayed_SE);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, int_fwire_test);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNTSCAX8 (ECK, E, SE, CK);
+	output ECK;
+	input E, SE, CK;
+	reg notifier;
+	wire delayed_E, delayed_SE, delayed_CK;
+
+	// Function
+	wire int_fwire_clk, int_fwire_EINT, int_fwire_test;
+
+	not (int_fwire_clk, delayed_CK);
+	or (int_fwire_test, delayed_E, delayed_SE);
+	altos_latch (int_fwire_EINT, notifier, int_fwire_clk, int_fwire_test);
+	and (ECK, delayed_CK, int_fwire_EINT);
+
+	// Timing
+	specify
+		(CK => ECK) = 0;
+		$setuphold (posedge CK, posedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, negedge E, 0, 0, notifier,,, delayed_CK, delayed_E);
+		$setuphold (posedge CK, posedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$setuphold (posedge CK, negedge SE, 0, 0, notifier,,, delayed_CK, delayed_SE);
+		$width (posedge CK, 0, 0, notifier);
+		$width (negedge CK, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNX1 (Q, QN, D, GN);
+	output Q, QN;
+	input D, GN;
+	reg notifier;
+	wire delayed_D, delayed_GN;
+
+	// Function
+	wire int_fwire_clk, int_fwire_N0, int_fwire_QINT;
+
+	not (int_fwire_clk, delayed_GN);
+	altos_latch (int_fwire_QINT, notifier, int_fwire_clk, delayed_D);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N0, int_fwire_QINT);
+	buf (QN, int_fwire_N0);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(negedge GN => (Q+:D)) = 0;
+		(D => QN) = 0;
+		(negedge GN => (QN-:D)) = 0;
+		$setuphold (posedge GN, posedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$setuphold (posedge GN, negedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$width (negedge GN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNX2 (Q, QN, D, GN);
+	output Q, QN;
+	input D, GN;
+	reg notifier;
+	wire delayed_D, delayed_GN;
+
+	// Function
+	wire int_fwire_clk, int_fwire_N0, int_fwire_QINT;
+
+	not (int_fwire_clk, delayed_GN);
+	altos_latch (int_fwire_QINT, notifier, int_fwire_clk, delayed_D);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N0, int_fwire_QINT);
+	buf (QN, int_fwire_N0);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(negedge GN => (Q+:D)) = 0;
+		(D => QN) = 0;
+		(negedge GN => (QN-:D)) = 0;
+		$setuphold (posedge GN, posedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$setuphold (posedge GN, negedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$width (negedge GN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNX4 (Q, QN, D, GN);
+	output Q, QN;
+	input D, GN;
+	reg notifier;
+	wire delayed_D, delayed_GN;
+
+	// Function
+	wire int_fwire_clk, int_fwire_N0, int_fwire_QINT;
+
+	not (int_fwire_clk, delayed_GN);
+	altos_latch (int_fwire_QINT, notifier, int_fwire_clk, delayed_D);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N0, int_fwire_QINT);
+	buf (QN, int_fwire_N0);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(negedge GN => (Q+:D)) = 0;
+		(D => QN) = 0;
+		(negedge GN => (QN-:D)) = 0;
+		$setuphold (posedge GN, posedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$setuphold (posedge GN, negedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$width (negedge GN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATNXL (Q, QN, D, GN);
+	output Q, QN;
+	input D, GN;
+	reg notifier;
+	wire delayed_D, delayed_GN;
+
+	// Function
+	wire int_fwire_clk, int_fwire_N0, int_fwire_QINT;
+
+	not (int_fwire_clk, delayed_GN);
+	altos_latch (int_fwire_QINT, notifier, int_fwire_clk, delayed_D);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N0, int_fwire_QINT);
+	buf (QN, int_fwire_N0);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(negedge GN => (Q+:D)) = 0;
+		(D => QN) = 0;
+		(negedge GN => (QN-:D)) = 0;
+		$setuphold (posedge GN, posedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$setuphold (posedge GN, negedge D, 0, 0, notifier,,, delayed_GN, delayed_D);
+		$width (negedge GN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATSRX1 (Q, QN, D, SN, G, RN);
+	output Q, QN;
+	input D, SN, G, RN;
+	reg notifier;
+	wire delayed_D, delayed_G;
+
+	// Function
+	wire int_fwire_clk, int_fwire_N5, int_fwire_QINT;
+	wire int_fwire_s;
+
+	and (int_fwire_clk, delayed_G, RN);
+	not (int_fwire_s, SN);
+	altos_latch_s (int_fwire_QINT, notifier, int_fwire_clk, delayed_D, int_fwire_s);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N5, int_fwire_QINT);
+	buf (QN, int_fwire_N5);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge G => (Q+:D)) = 0;
+		(RN => Q) = 0;
+		(D => QN) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(posedge G => (QN-:D)) = 0;
+		(RN => QN) = 0;
+		$setuphold (negedge G, posedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$setuphold (negedge G, negedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$recovery (posedge SN, negedge G, 0, notifier);
+		$hold (negedge G, posedge SN, 0, notifier);
+		$recovery (posedge SN, posedge RN, 0, notifier);
+		$hold (posedge RN, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge G, 0, 0, notifier);
+		$width (posedge RN, 0, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATSRX2 (Q, QN, D, SN, G, RN);
+	output Q, QN;
+	input D, SN, G, RN;
+	reg notifier;
+	wire delayed_D, delayed_G;
+
+	// Function
+	wire int_fwire_clk, int_fwire_N5, int_fwire_QINT;
+	wire int_fwire_s;
+
+	and (int_fwire_clk, delayed_G, RN);
+	not (int_fwire_s, SN);
+	altos_latch_s (int_fwire_QINT, notifier, int_fwire_clk, delayed_D, int_fwire_s);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N5, int_fwire_QINT);
+	buf (QN, int_fwire_N5);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge G => (Q+:D)) = 0;
+		(RN => Q) = 0;
+		(D => QN) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(posedge G => (QN-:D)) = 0;
+		(RN => QN) = 0;
+		$setuphold (negedge G, posedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$setuphold (negedge G, negedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$recovery (posedge SN, negedge G, 0, notifier);
+		$hold (negedge G, posedge SN, 0, notifier);
+		$recovery (posedge SN, posedge RN, 0, notifier);
+		$hold (posedge RN, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge G, 0, 0, notifier);
+		$width (posedge RN, 0, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATSRX4 (Q, QN, D, SN, G, RN);
+	output Q, QN;
+	input D, SN, G, RN;
+	reg notifier;
+	wire delayed_D, delayed_G;
+
+	// Function
+	wire int_fwire_clk, int_fwire_N5, int_fwire_QINT;
+	wire int_fwire_s;
+
+	and (int_fwire_clk, delayed_G, RN);
+	not (int_fwire_s, SN);
+	altos_latch_s (int_fwire_QINT, notifier, int_fwire_clk, delayed_D, int_fwire_s);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N5, int_fwire_QINT);
+	buf (QN, int_fwire_N5);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge G => (Q+:D)) = 0;
+		(RN => Q) = 0;
+		(D => QN) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(posedge G => (QN-:D)) = 0;
+		(RN => QN) = 0;
+		$setuphold (negedge G, posedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$setuphold (negedge G, negedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$recovery (posedge SN, negedge G, 0, notifier);
+		$hold (negedge G, posedge SN, 0, notifier);
+		$recovery (posedge SN, posedge RN, 0, notifier);
+		$hold (posedge RN, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge G, 0, 0, notifier);
+		$width (posedge RN, 0, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATSRXL (Q, QN, D, SN, G, RN);
+	output Q, QN;
+	input D, SN, G, RN;
+	reg notifier;
+	wire delayed_D, delayed_G;
+
+	// Function
+	wire int_fwire_clk, int_fwire_N5, int_fwire_QINT;
+	wire int_fwire_s;
+
+	and (int_fwire_clk, delayed_G, RN);
+	not (int_fwire_s, SN);
+	altos_latch_s (int_fwire_QINT, notifier, int_fwire_clk, delayed_D, int_fwire_s);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N5, int_fwire_QINT);
+	buf (QN, int_fwire_N5);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(posedge SN => (Q+:1'b0)) = 0;
+		(negedge SN => (Q+:1'b1)) = 0;
+		(posedge G => (Q+:D)) = 0;
+		(RN => Q) = 0;
+		(D => QN) = 0;
+		(negedge SN => (QN-:1'b1)) = 0;
+		(posedge SN => (QN-:1'b0)) = 0;
+		(posedge G => (QN-:D)) = 0;
+		(RN => QN) = 0;
+		$setuphold (negedge G, posedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$setuphold (negedge G, negedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$recovery (posedge SN, negedge G, 0, notifier);
+		$hold (negedge G, posedge SN, 0, notifier);
+		$recovery (posedge SN, posedge RN, 0, notifier);
+		$hold (posedge RN, posedge SN, 0, notifier);
+		$width (negedge SN, 0, 0, notifier);
+		$width (posedge G, 0, 0, notifier);
+		$width (posedge RN, 0, 0, notifier);
+		$width (negedge RN, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATX1 (Q, QN, D, G);
+	output Q, QN;
+	input D, G;
+	reg notifier;
+	wire delayed_D, delayed_G;
+
+	// Function
+	wire int_fwire_N0, int_fwire_QINT;
+
+	altos_latch (int_fwire_QINT, notifier, delayed_G, delayed_D);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N0, int_fwire_QINT);
+	buf (QN, int_fwire_N0);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(posedge G => (Q+:D)) = 0;
+		(D => QN) = 0;
+		(posedge G => (QN-:D)) = 0;
+		$setuphold (negedge G, posedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$setuphold (negedge G, negedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$width (posedge G, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATX2 (Q, QN, D, G);
+	output Q, QN;
+	input D, G;
+	reg notifier;
+	wire delayed_D, delayed_G;
+
+	// Function
+	wire int_fwire_N0, int_fwire_QINT;
+
+	altos_latch (int_fwire_QINT, notifier, delayed_G, delayed_D);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N0, int_fwire_QINT);
+	buf (QN, int_fwire_N0);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(posedge G => (Q+:D)) = 0;
+		(D => QN) = 0;
+		(posedge G => (QN-:D)) = 0;
+		$setuphold (negedge G, posedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$setuphold (negedge G, negedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$width (posedge G, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATX4 (Q, QN, D, G);
+	output Q, QN;
+	input D, G;
+	reg notifier;
+	wire delayed_D, delayed_G;
+
+	// Function
+	wire int_fwire_N0, int_fwire_QINT;
+
+	altos_latch (int_fwire_QINT, notifier, delayed_G, delayed_D);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N0, int_fwire_QINT);
+	buf (QN, int_fwire_N0);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(posedge G => (Q+:D)) = 0;
+		(D => QN) = 0;
+		(posedge G => (QN-:D)) = 0;
+		$setuphold (negedge G, posedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$setuphold (negedge G, negedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$width (posedge G, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module TLATXL (Q, QN, D, G);
+	output Q, QN;
+	input D, G;
+	reg notifier;
+	wire delayed_D, delayed_G;
+
+	// Function
+	wire int_fwire_N0, int_fwire_QINT;
+
+	altos_latch (int_fwire_QINT, notifier, delayed_G, delayed_D);
+	buf (Q, int_fwire_QINT);
+	not (int_fwire_N0, int_fwire_QINT);
+	buf (QN, int_fwire_N0);
+
+	// Timing
+	specify
+		(D => Q) = 0;
+		(posedge G => (Q+:D)) = 0;
+		(D => QN) = 0;
+		(posedge G => (QN-:D)) = 0;
+		$setuphold (negedge G, posedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$setuphold (negedge G, negedge D, 0, 0, notifier,,, delayed_G, delayed_D);
+		$width (posedge G, 0, 0, notifier);
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module XNOR2X1 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	xor (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module XNOR2X2 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	xor (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module XNOR2X4 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	xor (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module XNOR2XL (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	wire int_fwire_0;
+
+	xor (int_fwire_0, A, B);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module XNOR3X1 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	xor (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+		(posedge C => (Y:C)) = 0;
+		(negedge C => (Y:C)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module XNOR3XL (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	wire int_fwire_0;
+
+	xor (int_fwire_0, A, B, C);
+	not (Y, int_fwire_0);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+		(posedge C => (Y:C)) = 0;
+		(negedge C => (Y:C)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module XOR2X1 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	xor (Y, A, B);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module XOR2X2 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	xor (Y, A, B);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module XOR2X4 (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	xor (Y, A, B);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module XOR2XL (Y, A, B);
+	output Y;
+	input A, B;
+
+	// Function
+	xor (Y, A, B);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module XOR3X1 (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	xor (Y, A, B, C);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+		(posedge C => (Y:C)) = 0;
+		(negedge C => (Y:C)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+
+// type:  
+`timescale 1ns/10ps
+`celldefine
+module XOR3XL (Y, A, B, C);
+	output Y;
+	input A, B, C;
+
+	// Function
+	xor (Y, A, B, C);
+
+	// Timing
+	specify
+		(posedge A => (Y:A)) = 0;
+		(negedge A => (Y:A)) = 0;
+		(posedge B => (Y:B)) = 0;
+		(negedge B => (Y:B)) = 0;
+		(posedge C => (Y:C)) = 0;
+		(negedge C => (Y:C)) = 0;
+	endspecify
+endmodule
+`endcelldefine
+`ifdef _udp_def_altos_latch_
+`else
+`define _udp_def_altos_latch_
+primitive altos_latch (q, v, clk, d);
+	output q;
+	reg q;
+	input v, clk, d;
+
+	table
+		* ? ? : ? : x;
+		? 1 0 : ? : 0;
+		? 1 1 : ? : 1;
+		? x 0 : 0 : -;
+		? x 1 : 1 : -;
+		? 0 ? : ? : -;
+	endtable
 endprimitive
+`endif
 
-module _HDLAT_verplex(Q, QN, S, R, CK, D);
-// verplex DLAT
-output  Q, QN;
-input   S, R, CK, D;
-wire   N1;
-  DLAT_UDP i0(N1, S, R, CK, D);
-  buf  (Q, N1);
-  not  (QN, N1);
-endmodule
+`ifdef _udp_def_altos_dff_err_
+`else
+`define _udp_def_altos_dff_err_
+primitive altos_dff_err (q, clk, d);
+	output q;
+	reg q;
+	input clk, d;
 
-primitive DLAT_UDP(Q, S, R, CK, D);
-output Q;
-input  S, R, CK, D;
-reg    Q;
-  table
-    1  0   ?    ?  :  ?  :  1; // Asserting preset
-    ?  1   ?    ?  :  ?  :  0; // Asserting reset (dominates preset)
-    0  0   1    0  :  ?  :  0; // Data clocked
-    0  ?   *    0  :  0  :  0; // Clock transitions
-    0  *   0    ?  :  0  :  0; // Changing reset
-    0  *   ?    0  :  0  :  0;
-    0  0   1    1  :  ?  :  1; // Data clocked
-    *  0   0    ?  :  1  :  1; // Changing preset
-    *  0   ?    1  :  1  :  1;
-    ?  0   *    1  :  1  :  1; // Clock transitions
-    0  0   0    ?  :  ?  :  -; // Hold
-  endtable
+	table
+		(0x) ? : ? : 0;
+		(1x) ? : ? : 1;
+	endtable
 endprimitive
+`endif
 
+`ifdef _udp_def_altos_dff_
+`else
+`define _udp_def_altos_dff_
+primitive altos_dff (q, v, clk, d, xcr);
+	output q;
+	reg q;
+	input v, clk, d, xcr;
+
+	table
+		*  ?   ? ? : ? : x;
+		? (x1) 0 0 : ? : 0;
+		? (x1) 1 0 : ? : 1;
+		? (x1) 0 1 : 0 : 0;
+		? (x1) 1 1 : 1 : 1;
+		? (x1) ? x : ? : -;
+		? (bx) 0 ? : 0 : -;
+		? (bx) 1 ? : 1 : -;
+		? (x0) b ? : ? : -;
+		? (x0) ? x : ? : -;
+		? (01) 0 ? : ? : 0;
+		? (01) 1 ? : ? : 1;
+		? (10) ? ? : ? : -;
+		?  b   * ? : ? : -;
+		?  ?   ? * : ? : -;
+	endtable
+endprimitive
+`endif
+
+`ifdef _udp_def_altos_dff_r_err_
+`else
+`define _udp_def_altos_dff_r_err_
+primitive altos_dff_r_err (q, clk, d, r);
+	output q;
+	reg q;
+	input clk, d, r;
+
+	table
+		 ?   0 (0x) : ? : -;
+		 ?   0 (x0) : ? : -;
+		(0x) ?  0   : ? : 0;
+		(0x) 0  x   : ? : 0;
+		(1x) ?  0   : ? : 1;
+		(1x) 0  x   : ? : 1;
+	endtable
+endprimitive
+`endif
+
+`ifdef _udp_def_altos_dff_r_
+`else
+`define _udp_def_altos_dff_r_
+primitive altos_dff_r (q, v, clk, d, r, xcr);
+	output q;
+	reg q;
+	input v, clk, d, r, xcr;
+
+	table
+		*  ?   ?  ?   ? : ? : x;
+		?  ?   ?  1   ? : ? : 0;
+		?  b   ? (1?) ? : 0 : -;
+		?  x   0 (1?) ? : 0 : -;
+		?  ?   ? (10) ? : ? : -;
+		?  ?   ? (x0) ? : ? : -;
+		?  ?   ? (0x) ? : 0 : -;
+		? (x1) 0  ?   0 : ? : 0;
+		? (x1) 1  0   0 : ? : 1;
+		? (x1) 0  ?   1 : 0 : 0;
+		? (x1) 1  0   1 : 1 : 1;
+		? (x1) ?  ?   x : ? : -;
+		? (bx) 0  ?   ? : 0 : -;
+		? (bx) 1  0   ? : 1 : -;
+		? (x0) 0  ?   ? : ? : -;
+		? (x0) 1  0   ? : ? : -;
+		? (x0) ?  0   x : ? : -;
+		? (01) 0  ?   ? : ? : 0;
+		? (01) 1  0   ? : ? : 1;
+		? (10) ?  ?   ? : ? : -;
+		?  b   *  ?   ? : ? : -;
+		?  ?   ?  ?   * : ? : -;
+	endtable
+endprimitive
+`endif
+
+`ifdef _udp_def_altos_dff_s_err_
+`else
+`define _udp_def_altos_dff_s_err_
+primitive altos_dff_s_err (q, clk, d, s);
+	output q;
+	reg q;
+	input clk, d, s;
+
+	table
+		 ?   1 (0x) : ? : -;
+		 ?   1 (x0) : ? : -;
+		(0x) ?  0   : ? : 0;
+		(0x) 1  x   : ? : 0;
+		(1x) ?  0   : ? : 1;
+		(1x) 1  x   : ? : 1;
+	endtable
+endprimitive
+`endif
+
+`ifdef _udp_def_altos_dff_s_
+`else
+`define _udp_def_altos_dff_s_
+primitive altos_dff_s (q, v, clk, d, s, xcr);
+	output q;
+	reg q;
+	input v, clk, d, s, xcr;
+
+	table
+		*  ?   ?  ?   ? : ? : x;
+		?  ?   ?  1   ? : ? : 1;
+		?  b   ? (1?) ? : 1 : -;
+		?  x   1 (1?) ? : 1 : -;
+		?  ?   ? (10) ? : ? : -;
+		?  ?   ? (x0) ? : ? : -;
+		?  ?   ? (0x) ? : 1 : -;
+		? (x1) 0  0   0 : ? : 0;
+		? (x1) 1  ?   0 : ? : 1;
+		? (x1) 1  ?   1 : 1 : 1;
+		? (x1) 0  0   1 : 0 : 0;
+		? (x1) ?  ?   x : ? : -;
+		? (bx) 1  ?   ? : 1 : -;
+		? (bx) 0  0   ? : 0 : -;
+		? (x0) 1  ?   ? : ? : -;
+		? (x0) 0  0   ? : ? : -;
+		? (x0) ?  0   x : ? : -;
+		? (01) 1  ?   ? : ? : 1;
+		? (01) 0  0   ? : ? : 0;
+		? (10) ?  ?   ? : ? : -;
+		?  b   *  ?   ? : ? : -;
+		?  ?   ?  ?   * : ? : -;
+	endtable
+endprimitive
+`endif
+
+`ifdef _udp_def_altos_dff_sr_err_
+`else
+`define _udp_def_altos_dff_sr_err_
+primitive altos_dff_sr_err (q, clk, d, s, r);
+	output q;
+	reg q;
+	input clk, d, s, r;
+
+	table
+		 ?   1 (0x)  ?   : ? : -;
+		 ?   0  ?   (0x) : ? : -;
+		 ?   0  ?   (x0) : ? : -;
+		(0x) ?  0    0   : ? : 0;
+		(0x) 1  x    0   : ? : 0;
+		(0x) 0  0    x   : ? : 0;
+		(1x) ?  0    0   : ? : 1;
+		(1x) 1  x    0   : ? : 1;
+		(1x) 0  0    x   : ? : 1;
+	endtable
+endprimitive
+`endif
+
+`ifdef _udp_def_altos_dff_sr_0
+`else
+`define _udp_def_altos_dff_sr_0
+primitive altos_dff_sr_0 (q, v, clk, d, s, r, xcr);
+	output q;
+	reg q;
+	input v, clk, d, s, r, xcr;
+
+	table
+	//	v,  clk, d, s, r : q' : q;
+
+		*  ?   ?   ?   ?   ? : ? : x;
+		?  ?   ?   ?   1   ? : ? : 0;
+		?  ?   ?   1   0   ? : ? : 1;
+		?  b   ? (1?)  0   ? : 1 : -;
+		?  x   1 (1?)  0   ? : 1 : -;
+		?  ?   ? (10)  0   ? : ? : -;
+		?  ?   ? (x0)  0   ? : ? : -;
+		?  ?   ? (0x)  0   ? : 1 : -;
+		?  b   ?  0   (1?) ? : 0 : -;
+		?  x   0  0   (1?) ? : 0 : -;
+		?  ?   ?  0   (10) ? : ? : -;
+		?  ?   ?  0   (x0) ? : ? : -;
+		?  ?   ?  0   (0x) ? : 0 : -;
+		? (x1) 0  0    ?   0 : ? : 0;
+		? (x1) 1  ?    0   0 : ? : 1;
+		? (x1) 0  0    ?   1 : 0 : 0;
+		? (x1) 1  ?    0   1 : 1 : 1;
+		? (x1) ?  ?    0   x : ? : -;
+		? (x1) ?  0    ?   x : ? : -;
+		? (1x) 0  0    ?   ? : 0 : -;
+		? (1x) 1  ?    0   ? : 1 : -;
+		? (x0) 0  0    ?   ? : ? : -;
+		? (x0) 1  ?    0   ? : ? : -;
+		? (x0) ?  0    0   x : ? : -;
+		? (0x) 0  0    ?   ? : 0 : -;
+		? (0x) 1  ?    0   ? : 1 : -;
+		? (01) 0  0    ?   ? : ? : 0;
+		? (01) 1  ?    0   ? : ? : 1;
+		? (10) ?  0    ?   ? : ? : -;
+		? (10) ?  ?    0   ? : ? : -;
+		?  b   *  0    ?   ? : ? : -;
+		?  b   *  ?    0   ? : ? : -;
+		?  ?   ?  ?    ?   * : ? : -;
+	endtable
+endprimitive
+`endif
+
+`ifdef _udp_def_altos_dff_sr_1
+`else
+`define _udp_def_altos_dff_sr_1
+primitive altos_dff_sr_1 (q, v, clk, d, s, r, xcr);
+	output q;
+	reg q;
+	input v, clk, d, s, r, xcr;
+
+	table
+	//	v,  clk, d, s, r : q' : q;
+
+		*  ?   ?   ?   ?   ? : ? : x;
+		?  ?   ?   0   1   ? : ? : 0;
+		?  ?   ?   1   ?   ? : ? : 1;
+		?  b   ? (1?)  0   ? : 1 : -;
+		?  x   1 (1?)  0   ? : 1 : -;
+		?  ?   ? (10)  0   ? : ? : -;
+		?  ?   ? (x0)  0   ? : ? : -;
+		?  ?   ? (0x)  0   ? : 1 : -;
+		?  b   ?  0   (1?) ? : 0 : -;
+		?  x   0  0   (1?) ? : 0 : -;
+		?  ?   ?  0   (10) ? : ? : -;
+		?  ?   ?  0   (x0) ? : ? : -;
+		?  ?   ?  0   (0x) ? : 0 : -;
+		? (x1) 0  0    ?   0 : ? : 0;
+		? (x1) 1  ?    0   0 : ? : 1;
+		? (x1) 0  0    ?   1 : 0 : 0;
+		? (x1) 1  ?    0   1 : 1 : 1;
+		? (x1) ?  ?    0   x : ? : -;
+		? (x1) ?  0    ?   x : ? : -;
+		? (1x) 0  0    ?   ? : 0 : -;
+		? (1x) 1  ?    0   ? : 1 : -;
+		? (x0) 0  0    ?   ? : ? : -;
+		? (x0) 1  ?    0   ? : ? : -;
+		? (x0) ?  0    0   x : ? : -;
+		? (0x) 0  0    ?   ? : 0 : -;
+		? (0x) 1  ?    0   ? : 1 : -;
+		? (01) 0  0    ?   ? : ? : 0;
+		? (01) 1  ?    0   ? : ? : 1;
+		? (10) ?  0    ?   ? : ? : -;
+		? (10) ?  ?    0   ? : ? : -;
+		?  b   *  0    ?   ? : ? : -;
+		?  b   *  ?    0   ? : ? : -;
+		?  ?   ?  ?    ?   * : ? : -;
+	endtable
+endprimitive
+`endif
+
+`ifdef _udp_def_altos_latch_r_
+`else
+`define _udp_def_altos_latch_r_
+primitive altos_latch_r (q, v, clk, d, r);
+	output q;
+	reg q;
+	input v, clk, d, r;
+
+	table
+		* ? ? ? : ? : x;
+		? ? ? 1 : ? : 0;
+		? 0 ? 0 : ? : -;
+		? 0 ? x : 0 : -;
+		? 1 0 0 : ? : 0;
+		? 1 0 x : ? : 0;
+		? 1 1 0 : ? : 1;
+		? x 0 0 : 0 : -;
+		? x 0 x : 0 : -;
+		? x 1 0 : 1 : -;
+	endtable
+endprimitive
+`endif
+
+`ifdef _udp_def_altos_latch_s_
+`else
+`define _udp_def_altos_latch_s_
+primitive altos_latch_s (q, v, clk, d, s);
+	output q;
+	reg q;
+	input v, clk, d, s;
+
+	table
+		* ? ? ? : ? : x;
+		? ? ? 1 : ? : 1;
+		? 0 ? 0 : ? : -;
+		? 0 ? x : 1 : -;
+		? 1 1 0 : ? : 1;
+		? 1 1 x : ? : 1;
+		? 1 0 0 : ? : 0;
+		? x 1 0 : 1 : -;
+		? x 1 x : 1 : -;
+		? x 0 0 : 0 : -;
+	endtable
+endprimitive
+`endif
+
+`ifdef _udp_def_altos_latch_sr_0
+`else
+`define _udp_def_altos_latch_sr_0
+primitive altos_latch_sr_0 (q, v, clk, d, s, r);
+	output q;
+	reg q;
+	input v, clk, d, s, r;
+
+	table
+		* ? ? ? ? : ? : x;
+		? 1 1 ? 0 : ? : 1;
+		? 1 0 0 ? : ? : 0;
+		? ? ? 1 0 : ? : 1;
+		? ? ? ? 1 : ? : 0;
+		? 0 * ? ? : ? : -;
+		? 0 ? * 0 : 1 : 1;
+		? 0 ? 0 * : 0 : 0;
+		? * 1 ? 0 : 1 : 1;
+		? * 0 0 ? : 0 : 0;
+		? ? 1 * 0 : 1 : 1;
+		? ? 0 0 * : 0 : 0;
+	endtable
+endprimitive
+`endif
+
+`ifdef _udp_def_altos_latch_sr_1
+`else
+`define _udp_def_altos_latch_sr_1
+primitive altos_latch_sr_1 (q, v, clk, d, s, r);
+	output q;
+	reg q;
+	input v, clk, d, s, r;
+
+	table
+		* ? ? ? ? : ? : x;
+		? 1 1 ? 0 : ? : 1;
+		? 1 0 0 ? : ? : 0;
+		? ? ? 1 ? : ? : 1;
+		? ? ? 0 1 : ? : 0;
+		? 0 * ? ? : ? : -;
+		? 0 ? * 0 : 1 : 1;
+		? 0 ? 0 * : 0 : 0;
+		? * 1 ? 0 : 1 : 1;
+		? * 0 0 ? : 0 : 0;
+		? ? 1 * 0 : 1 : 1;
+		? ? 0 0 * : 0 : 0;
+	endtable
+endprimitive
+`endif

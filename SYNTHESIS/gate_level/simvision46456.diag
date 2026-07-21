@@ -1,0 +1,96 @@
+*** Message Type: info ***
+When: ter jul 14 13:58:23 -03 2026
+SimVision started.
+Version: TOOL:  simvision(64)   24.09-s001
+User: aluno
+Host: microeletronica-047
+Platform: Linux/x86_64/4.18.0-553.137.1.el8_10.x86_64
+Started: ter jul 14 13:58:23 -03 2026
+Command: /apps/cds/XCELIUM2409/tools.lnx86/simvision/bin/64bit/simvision.exe -connect dc:microeletronica-047:42467 -64BIT -nocopyright
+Work Directory: /home/aluno/IP
+ 
+*** Message Type: info ***
+When: ter jul 14 13:58:23 -03 2026
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: ter jul 14 13:58:35 -03 2026
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: ter jul 14 13:58:41 -03 2026
+Connect to Simulator
+      Design: worklib.cpuTB:v
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:    xmsim(64)       24.09-s001
+        User: aluno
+        Host: microeletronica-047
+Time Started: ter jul 14 13:58:22 -03 2026
+  Process ID: 46416
+   Directory: /home/aluno/IP
+     Command: xrun -timescale 1ns/1ps /home/aluno/IP/SYNTHESIS/Sim/Netlists/PPA1/pipelined_processor_FPU_teste1.v /home/aluno/IP/RTL/lib/misc/cpuTB.v -v /home/aluno/IP/SYNTHESIS/LIB/slow_vdd1v0_basicCells.v -access +rwc -sdf_file /home/aluno/IP/SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf -sdf_verbose -mess -gui
+
+ 
+*** Message Type: info ***
+When: ter jul 14 13:58:41 -03 2026
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: ter jul 14 13:59:01 -03 2026
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: ter jul 14 13:59:48 -03 2026
+Delete waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: ter jul 14 14:00:08 -03 2026
+Delete browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: ter jul 14 14:00:08 -03 2026
+Exit XM-Sim: user
+      Design: worklib.cpuTB:v
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:    xmsim(64)       24.09-s001
+        User: aluno
+        Host: microeletronica-047
+Time Started: ter jul 14 13:58:22 -03 2026
+  Process ID: 46416
+   Directory: /home/aluno/IP
+     Command: xrun -timescale 1ns/1ps /home/aluno/IP/SYNTHESIS/Sim/Netlists/PPA1/pipelined_processor_FPU_teste1.v /home/aluno/IP/RTL/lib/misc/cpuTB.v -v /home/aluno/IP/SYNTHESIS/LIB/slow_vdd1v0_basicCells.v -access +rwc -sdf_file /home/aluno/IP/SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf -sdf_verbose -mess -gui
+
+ 
+*** Message Type: error ***
+When: ter jul 14 14:00:23 -03 2026
+XM-Sim Crashed:
+      Design: worklib.cpuTB:v
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:    xmsim(64)       24.09-s001
+        User: aluno
+        Host: microeletronica-047
+Time Started: ter jul 14 13:58:22 -03 2026
+  Process ID: 46416
+   Directory: /home/aluno/IP
+     Command: xrun -timescale 1ns/1ps /home/aluno/IP/SYNTHESIS/Sim/Netlists/PPA1/pipelined_processor_FPU_teste1.v /home/aluno/IP/RTL/lib/misc/cpuTB.v -v /home/aluno/IP/SYNTHESIS/LIB/slow_vdd1v0_basicCells.v -access +rwc -sdf_file /home/aluno/IP/SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf -sdf_verbose -mess -gui
+      Design: worklib.cpuTB:v
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL: xmsim(64)       24.09-s001
+        User: aluno
+        Host: microeletronica-047
+Time Started: ter jul 14 13:58:22 -03 2026
+  Process ID: 46416
+   Directory: /home/aluno/IP
+     Command: xrun -timescale 1ns/1ps /home/aluno/IP/SYNTHESIS/Sim/Netlists/PPA1/pipelined_processor_FPU_teste1.v /home/aluno/IP/RTL/lib/misc/cpuTB.v -v /home/aluno/IP/SYNTHESIS/LIB/slow_vdd1v0_basicCells.v -access +rwc -sdf_file /home/aluno/IP/SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf -sdf_verbose -mess -gui
+
+Outstanding STRAP Requests:
+        strap::report enable out
+ 
+*** Message Type: info ***
+When: ter jul 14 14:00:26 -03 2026
+SimVision Exit.
+ 

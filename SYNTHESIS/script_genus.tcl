@@ -72,9 +72,9 @@ check_design -unresolved
 # Constraints Baseline
 read_sdc ./constraints/constraints_top.sdc
 
-set_db syn_generic_effort medium
+set_db syn_generic_effort low
 set_db syn_map_effort medium
-set_db syn_opt_effort medium
+set_db syn_opt_effort high
 
 set_db optimize_constant_0_flops false
 set_db optimize_constant_feedback_seqs false

@@ -1,0 +1,133 @@
+xrun(64): 24.09-s001: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s001: Started on Jul 14, 2026 at 15:34:15 -03
+xrun
+	-timescale 1ns/1ps
+	/home/aluno/IP/SYNTHESIS/Sim/Netlists/PPA1/pipelined_processor_FPU_teste1.v
+	/home/aluno/IP/RTL/lib/misc/cpuTB.v
+	-v /home/aluno/IP/SYNTHESIS/LIB/slow_vdd1v0_basicCells.v
+	-access +rwc
+	-sdf_file /home/aluno/IP/SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf
+	-sdf_verbose
+	-mess
+	-gui
+Recompiling... reason: file './RTL/lib/misc/cpuTB.v' is newer than expected.
+	expected: Tue Jul 14 15:32:24 2026
+	actual:   Tue Jul 14 15:34:00 2026
+file: /home/aluno/IP/RTL/lib/misc/cpuTB.v
+	module worklib.cpuTB:v
+		errors: 0, warnings: 0
+		Caching library 'slow_vdd1v0_basicCells' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		cpuTB
+	Reading SDF file from location "/home/aluno/IP/SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf"
+	Annotating SDF timing data:
+		Compiled SDF file:     delays_PPA1_teste1.sdf.X
+		Log file:              delays_PPA1_teste1.sdf.X_sdf_annotation.log
+		Backannotation scope:  cpuTB.dut
+		Configuration file:    
+		MTM control:           
+		Scale factors:         
+		Scale type:            
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.MW_REG_RegWriteFW_reg of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 2670>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.MW_REG_RegWriteW_reg of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 2693>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.DE_REG_JumpRE_reg of module DFFRX2 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 20344>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.EM_REG_MemWriteM_reg of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 22908>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[0]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23643>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[2]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23664>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[8]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23685>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[9]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23706>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[10]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23727>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[11]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23748>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[13]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23769>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[14]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23790>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[16]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23813>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[17]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23836>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[18]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23859>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[19]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23882>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[20]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23905>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[21]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23928>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[22]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23951>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[24]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23974>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[25]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 23997>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[26]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 24020>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[27]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 24043>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[28]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 24066>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[29]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 24089>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[30]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 24112>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_WriteDataM_reg[31]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 24135>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.DE_REG_ALUSrcE_reg of module DFFRX2 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 44445>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[2]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 86792>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[3]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 86813>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[5]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 86855>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[7]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 86897>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[8]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 86918>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[10]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 86960>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[11]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 86981>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[12]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87002>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[13]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87023>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[14]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87044>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[15]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87065>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[16]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87086>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[18]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87128>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[19]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87149>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[20]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87170>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[21]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87191>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[22]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87212>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[23]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87233>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[24]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87254>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[25]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87275>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[26]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87296>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[27]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87317>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[28]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87338>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[29]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87359>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[30]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87380>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_ALUResultM_reg[31]  of module DFFRHQX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 87401>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\EM_REG_funct3M_reg[1]  of module DFFRX2 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 808114>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\MW_REG_RdW_reg[1]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 1603636>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) ()) of instance cpuTB.dut.\MW_REG_RdW_reg[4]  of module DFFRX4 <./SYNTHESIS/Sim/sdf/delays_PPA1_teste1.sdf, line 1603659>.
+	Annotation completed with 0 Errors and 57 Warnings
+	SDF statistics: 
+		 No. of Pathdelays = 369250  	 No. of Disabled Pathdelays = 0        Annotated = 96.78% (357343/369250) 
+		 No. of Tchecks    = 125059  	 No. of Disabled Tchecks    = 0        Annotated = 0.00% (0.00/125059) 
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.cpuTB:v <0x195465f1>
+			streams:   8, words:  3490
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                  93,269     117
+		UDPs:                     37,942       5
+		Primitives:              319,794       5
+		Timing outputs:          128,469      16
+		Registers:                35,362      21
+		Scalar wires:            185,915       -
+		Expanded wires:               64       2
+		Always blocks:                 1       1
+		Initial blocks:                2       2
+		Pseudo assignments:            6       -
+		Timing checks:           197,917       -
+		Interconnect:            291,093       -
+		Delayed tcheck signals:   74,760   7,687
+		Simulation timescale:        1ps
+	Writing initial simulation snapshot: worklib.cpuTB:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /apps/cds/XCELIUM2409/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm cpuTB.ALUResultM cpuTB.InstrDC cpuTB.RdW cpuTB.RegWriteFW cpuTB.RegWriteW cpuTB.clk
+Created probe 1
+xcelium> run
+Simulation interrupted at 6928300 NS + 1
+xcelium> ^C
+xcelium> exit
+...Regained control from SimVision
+-------------------------------------
+TOOL:	xrun(64)	24.09-s001: Exiting on Jul 14, 2026 at 15:36:08 -03  (total: 00:01:53)
