@@ -23,7 +23,7 @@ Most of the RTL was written in Verilog using VS Code with the TerosHDL extension
 > [!NOTE]
 > To set up TerosHDL, follow the official documentation: https://terostechnology.github.io/terosHDLdoc/docs/category/installation-checklist.
 
-The UVM environment requires additional setup, mainly for the golden sequence generation. Since the primary development environment was Windows, the first requirement was to install Windows Subsystem fo Linux. After that, install RISC-V GNU Toolchain and Spike
+The UVM environment requires additional setup, mainly for the golden sequence generation. Since the primary development environment was Windows, the first requirement was to install Windows Subsystem for Linux. After that, install RISC-V GNU Toolchain and Spike
 
 >[!NOTE]
 > To set up both tools, follow the installation guides:
@@ -42,22 +42,22 @@ The data memory is a 32-bit, byte addressable memory, while the instruction memo
 ### Fetch
 This stage fetches the next instruction to be executed. The muxes and adders are used to handle branches, jumps and compressed instructions. The Cflag module reads the two least significant bits of the instruction and sets the isCompressed flag if those bits are different from 2'b11.
 ### Decode
-This stage generates the control signals for the rest for the pipeline, making sure that the data follows the correct path, it also contains the register files for integer and floating-point source and destination registers. The Instruction Align and Decompressor handle the compressed instructions, the Instruction Align module aligns the instruction, if it is not aligned (compressed instructions may not be 32-bit aligned), while the decompressor decodes the compressed instruction to an equivalent 32-bit RISC-V instruction.
+This stage generates the control signals for the rest of the pipeline, making sure that the data follows the correct path, it also contains the register files for integer and floating-point source and destination registers. The Instruction Align and Decompressor handle the compressed instructions, the Instruction Align module aligns the instruction, if it is not aligned (compressed instructions may not be 32-bit aligned), while the decompressor decodes the compressed instruction to an equivalent 32-bit RISC-V instruction.
 ### Execute
 This stage executes the instruction, it contains the ALU and FPU, that can perform operations with values from the register files or immediate values encoded in the instruction. This stage also contains the branch unit, that handles the branch flag based on the instruction being executed and the result of the ALU.
 ### Memory
 This stage performs data memory access for the store and load operations.
 ### Writeback
-This stage uses one mux and the control signals for the writeback in the register files, which marks the end of the pipeline and, therefore the end of the instruction.
+This stage uses one mux and the control signals for the writeback in the register files, which marks the end of the pipeline and, therefore, the end of the instruction.
 
 In addition to the pipeline stages, the processor includes a Hazard Unit for Read After Write (RAW) hazards. It monitors the destination register (Rd), both source registers (Rs) and Write Enable signals between stages. When a hazard is detected, the unit makes the appropriate correction, being a stall, a forwarding or a flush.
 
 ## Synthesis and STA
 
 The design was synthesized using Cadence Genus under three different scenarios:
-- Baseline: 33 kHz;
-- PPA1: 100 kHz;
-- PPA2: 150 kHz.
+- Baseline: 33 MHz;
+- PPA1: 50 MHz;
+- PPA2: 100 MHz.
   
 The timing constraints used during synthesis are:
 
@@ -82,9 +82,69 @@ The critical path starts at the RdM signal, which is an input to the Hazard Unit
 
 ## UVM and Testing
 
-The UVM was developed in two stages, one using ModelSim, the other, Cadence Xcelium. Each simulator was used for a different purpose.
+> [!IMPORTANT]
+> All the scripts and files use paths relative to the development machines, to use the tools provided in this project, all paths must be updated.
+
+The UVM was developed in two stages, one using ModelSim, the other, Cadence Xcelium. Each simulator was used for a different pourpose.
 The free version of ModelSim does not support randomization, coverage and assertions, as a result, the functional coverage was collected using Cadence Xcelium (which was available to me) and the ModelSim stage was responsible for comparing the design against the Spike simulator.
-The Spike simulator was installed in Ubuntu running under WSL on Windows, to run the test, the assembly code is compiled into an .elf executable with the RISC-V GNU toolchain and then this ELF is hexdumped into a .txt. The .elf is then loaded into the Spike simulator, logging the results of the run. This log is simplified, and it is used as one of the inputs to the UVM environment. The other input is the .txt created with the hexdump.
+
+The Spike simulator was installed in Ubuntu running under WSL on Windows, to run the test, the assembly code is compiled into a .elf executable with the RISC-V GNU toolchain and then this ELF is hexdumped into a .txt. The .elf is then loaded into the Spike simulator, logging the results of the run. This log is simplified, and it is used as one of the inputs to the UVM environment. The other input is the .txt created with the hexdump.
 This text file contains the instructions executed in the simulator that are loaded, line by line into the instruction memory of the design. After that, the run phase releases the reset signal and the processor core executes the loaded program. Every time a Write Enable (from memory or register file) is asserted, the UVM scoreboard compares the values produced by the design against the values produced by the Spike simulator. At the end, the matches and mismatches are counted and a result is shown.
+
+For the functional coverage analysis, all instructions from the assembly program, together with 1,023 randomly generated instructions with valid opcodes, were loaded and executed. Covergroups were used to measure the coverage of control signals, hazard logic, branch logic, registers, and opcodes.
+
+> [!NOTE]
+> The Bash script to run the compilation process, the hexdump, the Spike simulation and the Python script to simplify the Spike log can be found in the Script directory. These files were originally on Ubuntu.
+
+> [!IMPORTANT]
+> There are two tb directories (tb and tb_). Each one is used with a different simulation software, the tb (without the underscore) is used in Cadence Xcelium and won't work with the free version of ModelSim. The tb_ (with the underscore) works with the free version of ModelSim, but, the coverage test is not included. Originally the porject is set to work with Cadence Xcelium, to use the free version of ModelSim the directory must be renamed (the tb_ needs to be changed to tb) and the line containing the checker.sv in the file files.f must be commented.
+
+### Results
+**Golden Model**
+|Executed Instructions | Matches | Mismatches | Success Rate |
+|-|-|-|-|
+|363|356|7|98.07%|
+
+The mismatches here were caused by the difference between the design and the simulator addresses. The RTL data memory is truncated in 16 address bits, while the simulator uses 32, with the data starting in 0x80000000, which is a problem with instructions like JAL (the loaded memory address does not match the simulator). This can be verified with the following lines from the transcript file:
+```
+scoreboard [FAIL] 347 Expected: Reg x30=0x800004ea | Returned: Reg x30=0x4ea
+scoreboard [FAIL] 349 Expected: Reg x30=0x800004ee | Returned: Reg x30=0x4ee
+scoreboard [FAIL] 351 Expected: Reg x31=0x80000508 | Returned: Reg x31=0x508
+scoreboard [FAIL] 352 Expected: Reg x31=0x800004f2 | Returned: Reg x31=0x4f2
+scoreboard [FAIL] 359 Expected: Reg x7=0x8000052a  | Returned: Reg x7=0x52a
+```
+Another source of mismatch is from the F.ADD instruction. The floating-point adder does not use the last three bits during the rounding stage in order to run synthesis. As a result, a rounding difference occurs in some cases, as shown below. Note that this issue generates two mismatches because the incorrect result is subsequently stored in memory
+```
+scoreboard [FAIL] 306 Expected: Reg f7=0x407e6767          | Returned: Reg f7=0x407e6768
+scoreboard [FAIL] 307 Expected: RAM[0x80010000]=0x407e6767 | Returned: RAM[0x80010000]=0x407e6768
+```
+
+**Functional Coverage**
+
+Functional coverage was obtained by executing a total of 1,386 instructions: the 363 instructions from the golden model test program and an additional 1,023 randomly generated valid RISC-V instructions. Covergroups were used to measure the coverage of opcodes, register accesses, control signals, hazard logic, branch logic, and compressed instruction support.
+
+| Category | Coverage |
+|----------|---------:|
+| **OVERALL SYSTEM COVERAGE** | **92.83%** |
+| **INSTRUCTIONS AND REGISTERS** | **100.00%** |
+| -Opcodes (R, I, S, B, U, J) | 100.00% |
+| - Destination Registers (0–31) | 100.00% |
+| **CONTROL SIGNALS** | **69.17%** |
+| - ALU Control | 80.00% |
+| - FPU Control | 16.67% |
+| - Input Selectors (Imm, Result) | 80.00% |
+| - Write Signals (MemWrite, RegWrite) | 100.00% |
+| **BRANCHES AND FLAGS** | **100.00%** |
+| - ALU Flags (Zero, Negative) | 100.00% |
+| - Branch Taken | 100.00% |
+| **HAZARD UNIT** | **95.00%** |
+| - Basic Forwarding (A and B) | 100.00% |
+| - Stalls and Flushes | 100.00% |
+| - Cross Coverage: Forwarding A × B | 100.00% |
+| - Cross Coverage: Stall × Forwarding | 100.00% |
+| - Cross Coverage: Flush × Stall | 75.00% |
+| **PREFETCH AND COMPRESSED INSTRUCTIONS** | **100.00%** |
+| - Compressed Instructions | 100.00% |
+| - Misaligned Fetch (PC1) | 100.00% |
 
 This is the final project for CI-Digital, a specialization course coordinated by Softex and executed by Inatel, UNIFEI, Institute HBR, UEMA and CEPEDI.
