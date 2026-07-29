@@ -16,6 +16,35 @@ The UVM environment was developed using:
 - Cadence Xcelium;
 - ModelSim.
 
+## Repository structure
+<details>
+<summary><b>Repository Structure</b></summary>
+
+```text
+.
+├── RTL/                    # RTL implementation
+│   ├── lib/
+│   │   ├── Common/         # Common modules
+│   │   ├── Core_FPU/       # Floating-point unit
+│   │   └── misc/           # Main RTL sources
+│   └── tb/                 # RTL testbenches
+│
+├── Scripts/                # Bash and Python automation scripts
+│
+├── SYNTHESIS/              # Cadence Genus synthesis
+│   ├── constraints/        # SDC constraints
+│   ├── gate_level/         # Gate-level simulation files
+│   ├── LEF/                # Technology LEF files
+│   ├── LIB/                # Standard-cell libraries
+│   └── Sim/                # Reports, netlists, SDF and SDC
+│
+└── UVM/                    # UVM verification environment
+    ├── tb/                 # Xcelium testbench
+    └── tb_/                # ModelSim-compatible testbench
+
+```
+</details>
+
 ## General environment configuration
 
 Most of the RTL was written in Verilog using VS Code with the TerosHDL extension configured to work with ModelSim or Cadence Xcelium. One of the development machines had access to the Cadence toolchain, while the other did not. Nevertheless, most of the project can be verified using the free version of ModelSim. This setup made it easy to test the individual modules with an integrated environment using common testbenches.
