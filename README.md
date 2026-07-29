@@ -189,4 +189,10 @@ Functional coverage was obtained by executing a total of 1,353 instructions: 330
 | - Compressed Instructions | 100.00% |
 | - Misaligned Fetch (PC1) | 100.00% |
 
-This is the final project for CI-Digital, a specialization course coordinated by Softex and executed by Inatel, UNIFEI, Institute HBR, UEMA and CEPEDI.
+## Acknowledgements
+
+This project was developed as the final project for CI-Digital, a specialization program coordinated by Softex and delivered by Inatel, UNIFEI, Institute HBR, UEMA, and CEPEDI.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
