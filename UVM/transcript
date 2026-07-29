@@ -1,0 +1,1283 @@
+# do simular.do
+# C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:36:40 on Jul 10,2026
+# vlog -work work "+acc" "+define+UVM_NO_DPI" "+incdir+C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src" C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/uvm.sv 
+# -- Compiling package uvm_pkg (uvm-1.2 Built-in)
+# ** Warning: ** while parsing file included at C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/uvm.sv(23)
+# ** at C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/seq/uvm_sequencer_base.svh(1499): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: ** while parsing file included at C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/uvm.sv(23)
+# ** at C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/seq/uvm_sequencer_base.svh(1662): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: ** while parsing file included at C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/uvm.sv(23)
+# ** at C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/seq/uvm_sequence_base.svh(1333): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# 
+# Top level modules:
+# 	--none--
+# End time: 13:36:43 on Jul 10,2026, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:36:43 on Jul 10,2026
+# vlog -work work "+acc" "+define+UVM_NO_DPI" "+incdir+C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src" -f files.f 
+# -- Compiling package my_pkg
+# -- Importing package uvm_pkg (uvm-1.2 Built-in)
+# -- Compiling package top_tb_sv_unit
+# -- Importing package uvm_pkg (uvm-1.2 Built-in)
+# -- Importing package my_pkg
+# -- Compiling module top_tb
+# -- Scanning library directory './../RTL/lib/Common'
+# -- Scanning library directory './../RTL/lib/Core_FPU'
+# -- Compiling interface dut_if
+# -- Compiling module pipelined_processor_FPU
+# -- Compiling module Control_Unit
+# -- Compiling module Fetch
+# -- Compiling module F_D_flipflop
+# -- Compiling module Decode
+# -- Compiling module D_E_flipflop
+# -- Compiling module Execute
+# -- Compiling module Brancher
+# -- Compiling module E_M_flipflop
+# -- Compiling module M_W_flipflop
+# -- Compiling module Main_Decoder
+# -- Compiling module FPU_Decoder
+# -- Compiling module PC_Plus_4
+# -- Compiling module Cflag
+# -- Compiling module InstructionAlign
+# -- Compiling module Decompressor
+# -- Compiling module FPU
+# -- Compiling module adder
+# -- Compiling module multiply
+# -- Compiling module fp2int
+# -- Compiling module int2fp
+# -- Scanning library directory './../RTL/lib/Core_FPU/memory'
+# -- Scanning library directory './../RTL/lib/Common'
+# -- Compiling module mux_2x1
+# -- Compiling module Hazard_unit
+# -- Compiling module mux_3x1
+# -- Compiling module Memory
+# -- Compiling module Writeback
+# -- Compiling module ALU_Decoder
+# -- Compiling module Instruction_Memory
+# -- Compiling module PC
+# -- Compiling module Register_File
+# -- Compiling module Extend
+# -- Compiling module ALU
+# -- Scanning library directory './../RTL/lib/Core_FPU'
+# -- Scanning library directory './../RTL/lib/Core_FPU/memory'
+# -- Compiling module memTopo32LittleEndian
+# -- Compiling module byteEnableDecoder
+# -- Compiling module memByteAddressable32WF
+# -- Compiling module memReadManager
+# -- Compiling module memory_write_first
+# 
+# Top level modules:
+# 	top_tb
+# End time: 13:36:45 on Jul 10,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" "+UVM_TESTNAME=my_test" "+UVM_VERBOSITY=UVM_LOW" work.top_tb 
+# Start time: 13:36:46 on Jul 10,2026
+# Loading C:/Users/Pedro/AppData/Local/Temp\Pedro@DESKTOP-9H434LS_dpi_13172\win32pe_gcc-4.2.1\export_tramp.dll
+# Loading sv_std.std
+# Loading work.dut_if
+# Loading work.uvm_pkg
+# Loading work.my_pkg
+# ** Error (suppressible): (vsim-19) Failed to access library 'mtiUvm' at "mtiUvm".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.top_tb_sv_unit
+# Loading work.top_tb
+# Loading work.pipelined_processor_FPU
+# Loading work.Control_Unit
+# Loading work.Main_Decoder
+# Loading work.ALU_Decoder
+# Loading work.FPU_Decoder
+# Loading work.Fetch
+# Loading work.Instruction_Memory
+# Loading work.PC
+# Loading work.PC_Plus_4
+# Loading work.mux_2x1
+# Loading work.Cflag
+# Loading work.F_D_flipflop
+# Loading work.Decode
+# Loading work.Register_File
+# Loading work.Extend
+# Loading work.InstructionAlign
+# Loading work.Decompressor
+# Loading work.D_E_flipflop
+# Loading work.Hazard_unit
+# Loading work.mux_3x1
+# Loading work.Execute
+# Loading work.ALU
+# Loading work.FPU
+# Loading work.adder
+# Loading work.multiply
+# Loading work.fp2int
+# Loading work.int2fp
+# Loading work.Brancher
+# Loading work.E_M_flipflop
+# Loading work.Memory
+# Loading work.memTopo32LittleEndian
+# Loading work.byteEnableDecoder
+# Loading work.memByteAddressable32WF
+# Loading work.memory_write_first
+# Loading work.memReadManager
+# Loading work.M_W_flipflop
+# Loading work.Writeback
+# ** Warning: (vsim-3015) ./../RTL/lib/Core_FPU/memory/memTopo32LittleEndian.v(31): [PCDPC] - Port size (32) does not match connection size (30) for port 'addr'. The port definition is at: ./../RTL/lib/Core_FPU/memory/memByteAddressable32WF.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/dut/M/dmemory/mem_inst File: ./../RTL/lib/Core_FPU/memory/memByteAddressable32WF.v
+# ** Warning: (vsim-3015) ./../RTL/lib/Core_FPU/memory/memByteAddressable32WF.v(31): [PCDPC] - Port size (4) does not match connection size (32) for port 'addr'. The port definition is at: ./../RTL/lib/Core_FPU/memory/memory_write_first.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/dut/M/dmemory/mem_inst/mem_byte0 File: ./../RTL/lib/Core_FPU/memory/memory_write_first.v
+# ** Warning: (vsim-3015) ./../RTL/lib/Core_FPU/memory/memByteAddressable32WF.v(35): [PCDPC] - Port size (4) does not match connection size (32) for port 'addr'. The port definition is at: ./../RTL/lib/Core_FPU/memory/memory_write_first.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/dut/M/dmemory/mem_inst/mem_byte1 File: ./../RTL/lib/Core_FPU/memory/memory_write_first.v
+# ** Warning: (vsim-3015) ./../RTL/lib/Core_FPU/memory/memByteAddressable32WF.v(39): [PCDPC] - Port size (4) does not match connection size (32) for port 'addr'. The port definition is at: ./../RTL/lib/Core_FPU/memory/memory_write_first.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/dut/M/dmemory/mem_inst/mem_byte2 File: ./../RTL/lib/Core_FPU/memory/memory_write_first.v
+# ** Warning: (vsim-3015) ./../RTL/lib/Core_FPU/memory/memByteAddressable32WF.v(43): [PCDPC] - Port size (4) does not match connection size (32) for port 'addr'. The port definition is at: ./../RTL/lib/Core_FPU/memory/memory_write_first.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/dut/M/dmemory/mem_inst/mem_byte3 File: ./../RTL/lib/Core_FPU/memory/memory_write_first.v
+# Compiling C:/Users/Pedro/AppData/Local/Temp\Pedro@DESKTOP-9H434LS_dpi_13172\win32pe_gcc-4.2.1\exportwrapper.c
+# Loading C:/Users/Pedro/AppData/Local/Temp\Pedro@DESKTOP-9H434LS_dpi_13172\win32pe_gcc-4.2.1\vsim_auto_compile.dll
+# ** Warning: Design size of 54221 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# UVM_INFO C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/base/uvm_root.svh(453) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+# UVM_INFO @ 0: reporter [RNTST] Running test my_test...
+# UVM_INFO tb/my_test.sv(13) @ 0: uvm_test_top [my_test] Construido com sucesso
+# UVM_INFO tb/my_env.sv(17) @ 0: uvm_test_top.m_env [my_env] Construido com sucesso
+# UVM_INFO tb/my_agent.sv(17) @ 0: uvm_test_top.m_env.m_agent [my_agent] Construido com sucesso
+# UVM_INFO tb/my_driver.sv(14) @ 0: uvm_test_top.m_env.m_agent.m_driver [my_driver] Construido com sucesso
+# UVM_INFO tb/my_monitor.sv(17) @ 0: uvm_test_top.m_env.m_agent.m_monitor [my_monitor] Construido com sucesso
+# UVM_INFO tb/my_scoreboard.sv(18) @ 0: uvm_test_top.m_env.m_scoreboard [my_scoreboard] Scoreboard construido e gabarito carregado
+# UVM_INFO tb/my_agent.sv(23) @ 0: uvm_test_top.m_env.m_agent [my_agent] Conexoes realizadas
+# UVM_INFO tb/my_env.sv(24) @ 0: uvm_test_top.m_env [my_env] Conexoes realizadas
+# UVM_INFO C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+# UVM_INFO tb/my_test.sv(18) @ 0: uvm_test_top [my_test] Simulacao iniciando...
+# UVM_INFO C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/base/uvm_root.svh(579) @ 0: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------------
+# Name                         Type                    Size  Value
+# ----------------------------------------------------------------
+# uvm_test_top                 my_test                 -     @341 
+#   m_env                      my_env                  -     @354 
+#     m_agent                  my_agent                -     @365 
+#       m_driver               my_driver               -     @385 
+#         rsp_port             uvm_analysis_port       -     @404 
+#         seq_item_port        uvm_seq_item_pull_port  -     @394 
+#       m_monitor              my_monitor              -     @414 
+#         analysis_port        uvm_analysis_port       -     @565 
+#       m_seq                  my_sequencer            -     @423 
+#         rsp_export           uvm_analysis_export     -     @432 
+#         seq_item_export      uvm_seq_item_pull_imp   -     @550 
+#         arbitration_queue    array                   0     -    
+#         lock_queue           array                   0     -    
+#         num_last_reqs        integral                32    'd1  
+#         num_last_rsps        integral                32    'd1  
+#     m_scoreboard             my_scoreboard           -     @374 
+#       item_collected_export  uvm_analysis_imp        -     @583 
+# ----------------------------------------------------------------
+# 
+# UVM_INFO tb/my_test.sv(25) @ 0: uvm_test_top [my_test] Test em run_phase....
+# UVM_INFO tb/my_monitor.sv(23) @ 0: uvm_test_top.m_env.m_agent.m_monitor [my_monitor] Monitor ativo e escutando o Writeback do RISC-V...
+# UVM_INFO tb/my_driver.sv(24) @ 0: uvm_test_top.m_env.m_agent.m_driver [my_driver] Driver ativo
+# UVM_INFO tb/my_sequence.sv(14) @ 0: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence iniciada: Abrindo arquivo de instrucoes
+# UVM_INFO tb/my_sequence.sv(28) @ 0: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=0 Data=a0736299
+# UVM_INFO tb/my_driver.sv(33) @ 5: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x0 | Instrucao: 0xa0736299
+# UVM_INFO tb/my_sequence.sv(28) @ 5: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=4 Data=fb73002
+# UVM_INFO tb/my_driver.sv(33) @ 15: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4 | Instrucao: 0xfb73002
+# UVM_INFO tb/my_sequence.sv(28) @ 15: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=8 Data=40a98001
+# UVM_INFO tb/my_driver.sv(33) @ 25: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x8 | Instrucao: 0x40a98001
+# UVM_INFO tb/my_sequence.sv(28) @ 25: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=12 Data=41954151
+# UVM_INFO tb/my_driver.sv(33) @ 35: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xc | Instrucao: 0x41954151
+# UVM_INFO tb/my_sequence.sv(28) @ 35: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=16 Data=208233
+# UVM_INFO tb/my_driver.sv(33) @ 45: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x10 | Instrucao: 0x208233
+# UVM_INFO tb/my_sequence.sv(28) @ 45: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=20 Data=403202b3
+# UVM_INFO tb/my_driver.sv(33) @ 55: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x14 | Instrucao: 0x403202b3
+# UVM_INFO tb/my_sequence.sv(28) @ 55: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=24 Data=d001f1d3
+# UVM_INFO tb/my_driver.sv(33) @ 65: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x18 | Instrucao: 0xd001f1d3
+# UVM_INFO tb/my_sequence.sv(28) @ 65: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=28 Data=d002f2d3
+# UVM_INFO tb/my_driver.sv(33) @ 75: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1c | Instrucao: 0xd002f2d3
+# UVM_INFO tb/my_sequence.sv(28) @ 75: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=32 Data=1051f353
+# UVM_INFO tb/my_driver.sv(33) @ 85: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x20 | Instrucao: 0x1051f353
+# UVM_INFO tb/my_sequence.sv(28) @ 85: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=36 Data=e0030353
+# UVM_INFO tb/my_driver.sv(33) @ 95: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x24 | Instrucao: 0xe0030353
+# UVM_INFO tb/my_sequence.sv(28) @ 95: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=40 Data=1fa023
+# UVM_INFO tb/my_driver.sv(33) @ 105: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x28 | Instrucao: 0x1fa023
+# UVM_INFO tb/my_sequence.sv(28) @ 105: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=44 Data=2fa223
+# UVM_INFO tb/my_driver.sv(33) @ 115: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2c | Instrucao: 0x2fa223
+# UVM_INFO tb/my_sequence.sv(28) @ 115: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=48 Data=3fa423
+# UVM_INFO tb/my_driver.sv(33) @ 125: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x30 | Instrucao: 0x3fa423
+# UVM_INFO tb/my_sequence.sv(28) @ 125: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=52 Data=4fa623
+# UVM_INFO tb/my_driver.sv(33) @ 135: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x34 | Instrucao: 0x4fa623
+# UVM_INFO tb/my_sequence.sv(28) @ 135: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=56 Data=5fa823
+# UVM_INFO tb/my_driver.sv(33) @ 145: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x38 | Instrucao: 0x5fa823
+# UVM_INFO tb/my_sequence.sv(28) @ 145: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=60 Data=6faa23
+# UVM_INFO tb/my_driver.sv(33) @ 155: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3c | Instrucao: 0x6faa23
+# UVM_INFO tb/my_sequence.sv(28) @ 155: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=64 Data=1090085
+# UVM_INFO tb/my_driver.sv(33) @ 165: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x40 | Instrucao: 0x1090085
+# UVM_INFO tb/my_sequence.sv(28) @ 165: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=68 Data=40a90185
+# UVM_INFO tb/my_driver.sv(33) @ 175: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x44 | Instrucao: 0x40a90185
+# UVM_INFO tb/my_sequence.sv(28) @ 175: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=72 Data=41954151
+# UVM_INFO tb/my_driver.sv(33) @ 185: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x48 | Instrucao: 0x41954151
+# UVM_INFO tb/my_sequence.sv(28) @ 185: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=76 Data=208233
+# UVM_INFO tb/my_driver.sv(33) @ 195: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4c | Instrucao: 0x208233
+# UVM_INFO tb/my_sequence.sv(28) @ 195: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=80 Data=403202b3
+# UVM_INFO tb/my_driver.sv(33) @ 205: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x50 | Instrucao: 0x403202b3
+# UVM_INFO tb/my_sequence.sv(28) @ 205: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=84 Data=20f333
+# UVM_INFO tb/my_driver.sv(33) @ 215: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x54 | Instrucao: 0x20f333
+# UVM_INFO tb/my_sequence.sv(28) @ 215: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=88 Data=20e3b3
+# UVM_INFO tb/my_driver.sv(33) @ 225: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x58 | Instrucao: 0x20e3b3
+# UVM_INFO tb/my_sequence.sv(28) @ 225: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=92 Data=20c433
+# UVM_INFO tb/my_driver.sv(33) @ 235: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x5c | Instrucao: 0x20c433
+# UVM_INFO tb/my_sequence.sv(28) @ 235: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=96 Data=209493
+# UVM_INFO tb/my_driver.sv(33) @ 245: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x60 | Instrucao: 0x209493
+# UVM_INFO tb/my_sequence.sv(28) @ 245: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=100 Data=115513
+# UVM_INFO tb/my_driver.sv(33) @ 255: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x64 | Instrucao: 0x115513
+# UVM_INFO tb/my_sequence.sv(28) @ 255: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=104 Data=4012d593
+# UVM_INFO tb/my_driver.sv(33) @ 265: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x68 | Instrucao: 0x4012d593
+# UVM_INFO tb/my_sequence.sv(28) @ 265: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=108 Data=20a633
+# UVM_INFO tb/my_driver.sv(33) @ 275: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x6c | Instrucao: 0x20a633
+# UVM_INFO tb/my_sequence.sv(28) @ 275: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=112 Data=1126b3
+# UVM_INFO tb/my_driver.sv(33) @ 285: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x70 | Instrucao: 0x1126b3
+# UVM_INFO tb/my_sequence.sv(28) @ 285: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=116 Data=d000f0d3
+# UVM_INFO tb/my_driver.sv(33) @ 295: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x74 | Instrucao: 0xd000f0d3
+# UVM_INFO tb/my_sequence.sv(28) @ 295: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=120 Data=d0017153
+# UVM_INFO tb/my_driver.sv(33) @ 305: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x78 | Instrucao: 0xd0017153
+# UVM_INFO tb/my_sequence.sv(28) @ 305: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=124 Data=d001f1d3
+# UVM_INFO tb/my_driver.sv(33) @ 315: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x7c | Instrucao: 0xd001f1d3
+# UVM_INFO tb/my_sequence.sv(28) @ 315: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=128 Data=20f253
+# UVM_INFO tb/my_driver.sv(33) @ 325: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x80 | Instrucao: 0x20f253
+# UVM_INFO tb/my_sequence.sv(28) @ 325: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=132 Data=83172d3
+# UVM_INFO tb/my_driver.sv(33) @ 335: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x84 | Instrucao: 0x83172d3
+# UVM_INFO tb/my_sequence.sv(28) @ 335: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=136 Data=1051f353
+# UVM_INFO tb/my_driver.sv(33) @ 345: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x88 | Instrucao: 0x1051f353
+# UVM_INFO tb/my_sequence.sv(28) @ 345: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=140 Data=3173d3
+# UVM_INFO tb/my_driver.sv(33) @ 355: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x8c | Instrucao: 0x3173d3
+# UVM_INFO tb/my_sequence.sv(28) @ 355: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=144 Data=e00208d3
+# UVM_INFO tb/my_driver.sv(33) @ 365: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x90 | Instrucao: 0xe00208d3
+# UVM_INFO tb/my_sequence.sv(28) @ 365: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=148 Data=e0028953
+# UVM_INFO tb/my_driver.sv(33) @ 375: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x94 | Instrucao: 0xe0028953
+# UVM_INFO tb/my_sequence.sv(28) @ 375: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=152 Data=e00309d3
+# UVM_INFO tb/my_driver.sv(33) @ 385: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x98 | Instrucao: 0xe00309d3
+# UVM_INFO tb/my_sequence.sv(28) @ 385: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=156 Data=e0038a53
+# UVM_INFO tb/my_driver.sv(33) @ 395: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x9c | Instrucao: 0xe0038a53
+# UVM_INFO tb/my_sequence.sv(28) @ 395: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=160 Data=4fa023
+# UVM_INFO tb/my_driver.sv(33) @ 405: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xa0 | Instrucao: 0x4fa023
+# UVM_INFO tb/my_sequence.sv(28) @ 405: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=164 Data=5fa223
+# UVM_INFO tb/my_driver.sv(33) @ 415: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xa4 | Instrucao: 0x5fa223
+# UVM_INFO tb/my_sequence.sv(28) @ 415: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=168 Data=6fa423
+# UVM_INFO tb/my_driver.sv(33) @ 425: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xa8 | Instrucao: 0x6fa423
+# UVM_INFO tb/my_sequence.sv(28) @ 425: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=172 Data=7fa623
+# UVM_INFO tb/my_driver.sv(33) @ 435: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xac | Instrucao: 0x7fa623
+# UVM_INFO tb/my_sequence.sv(28) @ 435: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=176 Data=8fa823
+# UVM_INFO tb/my_driver.sv(33) @ 445: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xb0 | Instrucao: 0x8fa823
+# UVM_INFO tb/my_sequence.sv(28) @ 445: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=180 Data=9faa23
+# UVM_INFO tb/my_driver.sv(33) @ 455: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xb4 | Instrucao: 0x9faa23
+# UVM_INFO tb/my_sequence.sv(28) @ 455: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=184 Data=afac23
+# UVM_INFO tb/my_driver.sv(33) @ 465: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xb8 | Instrucao: 0xafac23
+# UVM_INFO tb/my_sequence.sv(28) @ 465: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=188 Data=bfae23
+# UVM_INFO tb/my_driver.sv(33) @ 475: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xbc | Instrucao: 0xbfae23
+# UVM_INFO tb/my_sequence.sv(28) @ 475: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=192 Data=2cfa023
+# UVM_INFO tb/my_driver.sv(33) @ 485: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xc0 | Instrucao: 0x2cfa023
+# UVM_INFO tb/my_sequence.sv(28) @ 485: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=196 Data=2dfa223
+# UVM_INFO tb/my_driver.sv(33) @ 495: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xc4 | Instrucao: 0x2dfa223
+# UVM_INFO tb/my_sequence.sv(28) @ 495: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=200 Data=2efa423
+# UVM_INFO tb/my_driver.sv(33) @ 505: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xc8 | Instrucao: 0x2efa423
+# UVM_INFO tb/my_sequence.sv(28) @ 505: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=204 Data=2ffa623
+# UVM_INFO tb/my_driver.sv(33) @ 515: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xcc | Instrucao: 0x2ffa623
+# UVM_INFO tb/my_sequence.sv(28) @ 515: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=208 Data=30fa823
+# UVM_INFO tb/my_driver.sv(33) @ 525: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xd0 | Instrucao: 0x30fa823
+# UVM_INFO tb/my_sequence.sv(28) @ 525: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=212 Data=31faa23
+# UVM_INFO tb/my_driver.sv(33) @ 535: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xd4 | Instrucao: 0x31faa23
+# UVM_INFO tb/my_sequence.sv(28) @ 535: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=216 Data=32fac23
+# UVM_INFO tb/my_driver.sv(33) @ 545: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xd8 | Instrucao: 0x32fac23
+# UVM_INFO tb/my_sequence.sv(28) @ 545: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=220 Data=33fae23
+# UVM_INFO tb/my_driver.sv(33) @ 555: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xdc | Instrucao: 0x33fae23
+# UVM_INFO tb/my_sequence.sv(28) @ 555: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=224 Data=faa83
+# UVM_INFO tb/my_driver.sv(33) @ 565: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xe0 | Instrucao: 0xfaa83
+# UVM_INFO tb/my_sequence.sv(28) @ 565: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=228 Data=4fab03
+# UVM_INFO tb/my_driver.sv(33) @ 575: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xe4 | Instrucao: 0x4fab03
+# UVM_INFO tb/my_sequence.sv(28) @ 575: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=232 Data=28fab83
+# UVM_INFO tb/my_driver.sv(33) @ 585: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xe8 | Instrucao: 0x28fab83
+# UVM_INFO tb/my_sequence.sv(28) @ 585: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=236 Data=4ca94c01
+# UVM_INFO tb/my_driver.sv(33) @ 595: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xec | Instrucao: 0x4ca94c01
+# UVM_INFO tb/my_sequence.sv(28) @ 595: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=240 Data=4fe30c05
+# UVM_INFO tb/my_driver.sv(33) @ 605: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xf0 | Instrucao: 0x4fe30c05
+# UVM_INFO tb/my_sequence.sv(28) @ 605: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=244 Data=463ff9c
+# UVM_INFO tb/my_driver.sv(33) @ 615: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xf4 | Instrucao: 0x463ff9c
+# UVM_INFO tb/my_sequence.sv(28) @ 615: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=248 Data=d13019c
+# UVM_INFO tb/my_driver.sv(33) @ 625: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xf8 | Instrucao: 0xd13019c
+# UVM_INFO tb/my_sequence.sv(28) @ 625: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=252 Data=d1306f0
+# UVM_INFO tb/my_driver.sv(33) @ 635: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0xfc | Instrucao: 0xd1306f0
+# UVM_INFO tb/my_sequence.sv(28) @ 635: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=256 Data=40950de0
+# UVM_INFO tb/my_driver.sv(33) @ 645: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x100 | Instrucao: 0x40950de0
+# UVM_INFO tb/my_sequence.sv(28) @ 645: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=260 Data=108113
+# UVM_INFO tb/my_driver.sv(33) @ 655: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x104 | Instrucao: 0x108113
+# UVM_INFO tb/my_sequence.sv(28) @ 655: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=264 Data=110193
+# UVM_INFO tb/my_driver.sv(33) @ 665: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x108 | Instrucao: 0x110193
+# UVM_INFO tb/my_sequence.sv(28) @ 665: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=268 Data=118213
+# UVM_INFO tb/my_driver.sv(33) @ 675: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x10c | Instrucao: 0x118213
+# UVM_INFO tb/my_sequence.sv(28) @ 675: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=272 Data=120293
+# UVM_INFO tb/my_driver.sv(33) @ 685: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x110 | Instrucao: 0x120293
+# UVM_INFO tb/my_sequence.sv(28) @ 685: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=276 Data=128313
+# UVM_INFO tb/my_driver.sv(33) @ 695: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x114 | Instrucao: 0x128313
+# UVM_INFO tb/my_sequence.sv(28) @ 695: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=280 Data=6fa023
+# UVM_INFO tb/my_driver.sv(33) @ 705: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x118 | Instrucao: 0x6fa023
+# UVM_INFO tb/my_sequence.sv(28) @ 705: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=284 Data=843343d1
+# UVM_INFO tb/my_driver.sv(33) @ 715: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x11c | Instrucao: 0x843343d1
+# UVM_INFO tb/my_sequence.sv(28) @ 715: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=288 Data=4b30073
+# UVM_INFO tb/my_driver.sv(33) @ 725: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x120 | Instrucao: 0x4b30073
+# UVM_INFO tb/my_sequence.sv(28) @ 725: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=292 Data=85334074
+# UVM_INFO tb/my_driver.sv(33) @ 735: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x124 | Instrucao: 0x85334074
+# UVM_INFO tb/my_sequence.sv(28) @ 735: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=296 Data=a2230084
+# UVM_INFO tb/my_driver.sv(33) @ 745: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x128 | Instrucao: 0xa2230084
+# UVM_INFO tb/my_sequence.sv(28) @ 745: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=300 Data=a58300af
+# UVM_INFO tb/my_driver.sv(33) @ 755: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x12c | Instrucao: 0xa58300af
+# UVM_INFO tb/my_sequence.sv(28) @ 755: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=304 Data=8633000f
+# UVM_INFO tb/my_driver.sv(33) @ 765: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x130 | Instrucao: 0x8633000f
+# UVM_INFO tb/my_sequence.sv(28) @ 765: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=308 Data=a42300b5
+# UVM_INFO tb/my_driver.sv(33) @ 775: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x134 | Instrucao: 0xa42300b5
+# UVM_INFO tb/my_sequence.sv(28) @ 775: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=312 Data=468500cf
+# UVM_INFO tb/my_driver.sv(33) @ 785: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x138 | Instrucao: 0x468500cf
+# UVM_INFO tb/my_sequence.sv(28) @ 785: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=316 Data=dfa623
+# UVM_INFO tb/my_driver.sv(33) @ 795: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x13c | Instrucao: 0xdfa623
+# UVM_INFO tb/my_sequence.sv(28) @ 795: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=320 Data=57935741
+# UVM_INFO tb/my_driver.sv(33) @ 805: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x140 | Instrucao: 0x57935741
+# UVM_INFO tb/my_sequence.sv(28) @ 805: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=324 Data=a8234027
+# UVM_INFO tb/my_driver.sv(33) @ 815: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x144 | Instrucao: 0xa8234027
+# UVM_INFO tb/my_sequence.sv(28) @ 815: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=328 Data=587d00ff
+# UVM_INFO tb/my_driver.sv(33) @ 825: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x148 | Instrucao: 0x587d00ff
+# UVM_INFO tb/my_sequence.sv(28) @ 825: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=332 Data=29334885
+# UVM_INFO tb/my_driver.sv(33) @ 835: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x14c | Instrucao: 0x29334885
+# UVM_INFO tb/my_sequence.sv(28) @ 835: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=336 Data=aa230118
+# UVM_INFO tb/my_driver.sv(33) @ 845: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x150 | Instrucao: 0xaa230118
+# UVM_INFO tb/my_sequence.sv(28) @ 845: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=340 Data=4995012f
+# UVM_INFO tb/my_driver.sv(33) @ 855: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x154 | Instrucao: 0x4995012f
+# UVM_INFO tb/my_sequence.sv(28) @ 855: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=344 Data=8ab34a15
+# UVM_INFO tb/my_driver.sv(33) @ 865: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x158 | Instrucao: 0x8ab34a15
+# UVM_INFO tb/my_sequence.sv(28) @ 865: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=348 Data=84634149
+# UVM_INFO tb/my_driver.sv(33) @ 875: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x15c | Instrucao: 0x84634149
+# UVM_INFO tb/my_sequence.sv(28) @ 875: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=352 Data=b13000a
+# UVM_INFO tb/my_driver.sv(33) @ 885: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x160 | Instrucao: 0xb13000a
+# UVM_INFO tb/my_sequence.sv(28) @ 885: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=356 Data=b1306f0
+# UVM_INFO tb/my_driver.sv(33) @ 895: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x164 | Instrucao: 0xb1306f0
+# UVM_INFO tb/my_sequence.sv(28) @ 895: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=360 Data=ac230de0
+# UVM_INFO tb/my_driver.sv(33) @ 905: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x168 | Instrucao: 0xac230de0
+# UVM_INFO tb/my_sequence.sv(28) @ 905: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=364 Data=663016f
+# UVM_INFO tb/my_driver.sv(33) @ 915: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x16c | Instrucao: 0x663016f
+# UVM_INFO tb/my_sequence.sv(28) @ 915: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=368 Data=b930000
+# UVM_INFO tb/my_driver.sv(33) @ 925: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x170 | Instrucao: 0xb930000
+# UVM_INFO tb/my_sequence.sv(28) @ 925: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=372 Data=c133e70
+# UVM_INFO tb/my_driver.sv(33) @ 935: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x174 | Instrucao: 0xc133e70
+# UVM_INFO tb/my_sequence.sv(28) @ 935: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=376 Data=b933e70
+# UVM_INFO tb/my_driver.sv(33) @ 945: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x178 | Instrucao: 0xb933e70
+# UVM_INFO tb/my_sequence.sv(28) @ 945: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=380 Data=ae2314d0
+# UVM_INFO tb/my_driver.sv(33) @ 955: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x17c | Instrucao: 0xae2314d0
+# UVM_INFO tb/my_sequence.sv(28) @ 955: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=384 Data=f0d3017f
+# UVM_INFO tb/my_driver.sv(33) @ 965: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x180 | Instrucao: 0xf0d3017f
+# UVM_INFO tb/my_sequence.sv(28) @ 965: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=388 Data=7153d000
+# UVM_INFO tb/my_driver.sv(33) @ 975: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x184 | Instrucao: 0x7153d000
+# UVM_INFO tb/my_sequence.sv(28) @ 975: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=392 Data=f1d3d001
+# UVM_INFO tb/my_driver.sv(33) @ 985: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x188 | Instrucao: 0xf1d3d001
+# UVM_INFO tb/my_sequence.sv(28) @ 985: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=396 Data=f2530020
+# UVM_INFO tb/my_driver.sv(33) @ 995: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x18c | Instrucao: 0xf2530020
+# UVM_INFO tb/my_sequence.sv(28) @ 995: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=400 Data=d531011
+# UVM_INFO tb/my_driver.sv(33) @ 1005: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x190 | Instrucao: 0xd531011
+# UVM_INFO tb/my_sequence.sv(28) @ 1005: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=404 Data=a023e002
+# UVM_INFO tb/my_driver.sv(33) @ 1015: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x194 | Instrucao: 0xa023e002
+# UVM_INFO tb/my_sequence.sv(28) @ 1015: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=408 Data=408103af
+# UVM_INFO tb/my_driver.sv(33) @ 1025: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x198 | Instrucao: 0x408103af
+# UVM_INFO tb/my_sequence.sv(28) @ 1025: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=412 Data=41814101
+# UVM_INFO tb/my_driver.sv(33) @ 1035: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x19c | Instrucao: 0x41814101
+# UVM_INFO tb/my_sequence.sv(28) @ 1035: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=416 Data=a0234201
+# UVM_INFO tb/my_driver.sv(33) @ 1045: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1a0 | Instrucao: 0xa0234201
+# UVM_INFO tb/my_sequence.sv(28) @ 1045: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=420 Data=a223000f
+# UVM_INFO tb/my_driver.sv(33) @ 1055: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1a4 | Instrucao: 0xa223000f
+# UVM_INFO tb/my_sequence.sv(28) @ 1055: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=424 Data=a423000f
+# UVM_INFO tb/my_driver.sv(33) @ 1065: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1a8 | Instrucao: 0xa423000f
+# UVM_INFO tb/my_sequence.sv(28) @ 1065: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=428 Data=a623000f
+# UVM_INFO tb/my_driver.sv(33) @ 1075: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1ac | Instrucao: 0xa623000f
+# UVM_INFO tb/my_sequence.sv(28) @ 1075: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=432 Data=40c5000f
+# UVM_INFO tb/my_driver.sv(33) @ 1085: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1b0 | Instrucao: 0x40c5000f
+# UVM_INFO tb/my_sequence.sv(28) @ 1085: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=436 Data=1f8023
+# UVM_INFO tb/my_driver.sv(33) @ 1095: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1b4 | Instrucao: 0x1f8023
+# UVM_INFO tb/my_sequence.sv(28) @ 1095: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=440 Data=2200113
+# UVM_INFO tb/my_driver.sv(33) @ 1105: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1b8 | Instrucao: 0x2200113
+# UVM_INFO tb/my_sequence.sv(28) @ 1105: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=444 Data=2f80a3
+# UVM_INFO tb/my_driver.sv(33) @ 1115: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1bc | Instrucao: 0x2f80a3
+# UVM_INFO tb/my_sequence.sv(28) @ 1115: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=448 Data=3300193
+# UVM_INFO tb/my_driver.sv(33) @ 1125: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1c0 | Instrucao: 0x3300193
+# UVM_INFO tb/my_sequence.sv(28) @ 1125: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=452 Data=3f8123
+# UVM_INFO tb/my_driver.sv(33) @ 1135: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1c4 | Instrucao: 0x3f8123
+# UVM_INFO tb/my_sequence.sv(28) @ 1135: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=456 Data=4400213
+# UVM_INFO tb/my_driver.sv(33) @ 1145: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1c8 | Instrucao: 0x4400213
+# UVM_INFO tb/my_sequence.sv(28) @ 1145: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=460 Data=4f81a3
+# UVM_INFO tb/my_driver.sv(33) @ 1155: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1cc | Instrucao: 0x4f81a3
+# UVM_INFO tb/my_sequence.sv(28) @ 1155: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=464 Data=fa283
+# UVM_INFO tb/my_driver.sv(33) @ 1165: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1d0 | Instrucao: 0xfa283
+# UVM_INFO tb/my_sequence.sv(28) @ 1165: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=468 Data=aabbc337
+# UVM_INFO tb/my_driver.sv(33) @ 1175: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1d4 | Instrucao: 0xaabbc337
+# UVM_INFO tb/my_sequence.sv(28) @ 1175: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=472 Data=cd30313
+# UVM_INFO tb/my_driver.sv(33) @ 1185: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1d8 | Instrucao: 0xcd30313
+# UVM_INFO tb/my_sequence.sv(28) @ 1185: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=476 Data=6f9223
+# UVM_INFO tb/my_driver.sv(33) @ 1195: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1dc | Instrucao: 0x6f9223
+# UVM_INFO tb/my_sequence.sv(28) @ 1195: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=480 Data=4f9383
+# UVM_INFO tb/my_driver.sv(33) @ 1205: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1e0 | Instrucao: 0x4f9383
+# UVM_INFO tb/my_sequence.sv(28) @ 1205: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=484 Data=4fd403
+# UVM_INFO tb/my_driver.sv(33) @ 1215: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1e4 | Instrucao: 0x4fd403
+# UVM_INFO tb/my_sequence.sv(28) @ 1215: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=488 Data=4a244c9
+# UVM_INFO tb/my_driver.sv(33) @ 1225: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1e8 | Instrucao: 0x4a244c9
+# UVM_INFO tb/my_sequence.sv(28) @ 1225: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=492 Data=3448493
+# UVM_INFO tb/my_driver.sv(33) @ 1235: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1ec | Instrucao: 0x3448493
+# UVM_INFO tb/my_sequence.sv(28) @ 1235: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=496 Data=9f9323
+# UVM_INFO tb/my_driver.sv(33) @ 1245: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1f0 | Instrucao: 0x9f9323
+# UVM_INFO tb/my_sequence.sv(28) @ 1245: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=500 Data=4fa503
+# UVM_INFO tb/my_driver.sv(33) @ 1255: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1f4 | Instrucao: 0x4fa503
+# UVM_INFO tb/my_sequence.sv(28) @ 1255: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=504 Data=842355fd
+# UVM_INFO tb/my_driver.sv(33) @ 1265: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1f8 | Instrucao: 0x842355fd
+# UVM_INFO tb/my_sequence.sv(28) @ 1265: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=508 Data=860300bf
+# UVM_INFO tb/my_driver.sv(33) @ 1275: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x1fc | Instrucao: 0x860300bf
+# UVM_INFO tb/my_sequence.sv(28) @ 1275: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=512 Data=c683008f
+# UVM_INFO tb/my_driver.sv(33) @ 1285: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x200 | Instrucao: 0xc683008f
+# UVM_INFO tb/my_sequence.sv(28) @ 1285: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=516 Data=5741008f
+# UVM_INFO tb/my_driver.sv(33) @ 1295: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x204 | Instrucao: 0x5741008f
+# UVM_INFO tb/my_sequence.sv(28) @ 1295: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=520 Data=ef9523
+# UVM_INFO tb/my_driver.sv(33) @ 1305: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x208 | Instrucao: 0xef9523
+# UVM_INFO tb/my_sequence.sv(28) @ 1305: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=524 Data=af9783
+# UVM_INFO tb/my_driver.sv(33) @ 1315: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x20c | Instrucao: 0xaf9783
+# UVM_INFO tb/my_sequence.sv(28) @ 1315: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=528 Data=afd803
+# UVM_INFO tb/my_driver.sv(33) @ 1325: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x210 | Instrucao: 0xafd803
+# UVM_INFO tb/my_sequence.sv(28) @ 1325: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=532 Data=1f8883
+# UVM_INFO tb/my_driver.sv(33) @ 1335: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x214 | Instrucao: 0x1f8883
+# UVM_INFO tb/my_sequence.sv(28) @ 1335: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=536 Data=1188933
+# UVM_INFO tb/my_driver.sv(33) @ 1345: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x218 | Instrucao: 0x1188933
+# UVM_INFO tb/my_sequence.sv(28) @ 1345: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=540 Data=af9983
+# UVM_INFO tb/my_driver.sv(33) @ 1355: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x21c | Instrucao: 0xaf9983
+# UVM_INFO tb/my_sequence.sv(28) @ 1355: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=544 Data=198a13
+# UVM_INFO tb/my_driver.sv(33) @ 1365: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x220 | Instrucao: 0x198a13
+# UVM_INFO tb/my_sequence.sv(28) @ 1365: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=548 Data=faa83
+# UVM_INFO tb/my_driver.sv(33) @ 1375: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x224 | Instrucao: 0xfaa83
+# UVM_INFO tb/my_sequence.sv(28) @ 1375: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=552 Data=4fab03
+# UVM_INFO tb/my_driver.sv(33) @ 1385: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x228 | Instrucao: 0x4fab03
+# UVM_INFO tb/my_sequence.sv(28) @ 1385: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=556 Data=8fab83
+# UVM_INFO tb/my_driver.sv(33) @ 1395: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x22c | Instrucao: 0x8fab83
+# UVM_INFO tb/my_sequence.sv(28) @ 1395: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=560 Data=5fa823
+# UVM_INFO tb/my_driver.sv(33) @ 1405: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x230 | Instrucao: 0x5fa823
+# UVM_INFO tb/my_sequence.sv(28) @ 1405: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=564 Data=7faa23
+# UVM_INFO tb/my_driver.sv(33) @ 1415: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x234 | Instrucao: 0x7faa23
+# UVM_INFO tb/my_sequence.sv(28) @ 1415: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=568 Data=8fac23
+# UVM_INFO tb/my_driver.sv(33) @ 1425: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x238 | Instrucao: 0x8fac23
+# UVM_INFO tb/my_sequence.sv(28) @ 1425: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=572 Data=afae23
+# UVM_INFO tb/my_driver.sv(33) @ 1435: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x23c | Instrucao: 0xafae23
+# UVM_INFO tb/my_sequence.sv(28) @ 1435: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=576 Data=2cfa023
+# UVM_INFO tb/my_driver.sv(33) @ 1445: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x240 | Instrucao: 0x2cfa023
+# UVM_INFO tb/my_sequence.sv(28) @ 1445: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=580 Data=2dfa223
+# UVM_INFO tb/my_driver.sv(33) @ 1455: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x244 | Instrucao: 0x2dfa223
+# UVM_INFO tb/my_sequence.sv(28) @ 1455: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=584 Data=2ffa423
+# UVM_INFO tb/my_driver.sv(33) @ 1465: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x248 | Instrucao: 0x2ffa423
+# UVM_INFO tb/my_sequence.sv(28) @ 1465: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=588 Data=30fa623
+# UVM_INFO tb/my_driver.sv(33) @ 1475: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x24c | Instrucao: 0x30fa623
+# UVM_INFO tb/my_sequence.sv(28) @ 1475: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=592 Data=32fa823
+# UVM_INFO tb/my_driver.sv(33) @ 1485: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x250 | Instrucao: 0x32fa823
+# UVM_INFO tb/my_sequence.sv(28) @ 1485: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=596 Data=34faa23
+# UVM_INFO tb/my_driver.sv(33) @ 1495: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x254 | Instrucao: 0x34faa23
+# UVM_INFO tb/my_sequence.sv(28) @ 1495: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=600 Data=35fac23
+# UVM_INFO tb/my_driver.sv(33) @ 1505: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x258 | Instrucao: 0x35fac23
+# UVM_INFO tb/my_sequence.sv(28) @ 1505: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=604 Data=36fae23
+# UVM_INFO tb/my_driver.sv(33) @ 1515: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x25c | Instrucao: 0x36fae23
+# UVM_INFO tb/my_sequence.sv(28) @ 1515: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=608 Data=80010fb7
+# UVM_INFO tb/my_driver.sv(33) @ 1525: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x260 | Instrucao: 0x80010fb7
+# UVM_INFO tb/my_sequence.sv(28) @ 1525: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=612 Data=802350fd
+# UVM_INFO tb/my_driver.sv(33) @ 1535: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x264 | Instrucao: 0x802350fd
+# UVM_INFO tb/my_sequence.sv(28) @ 1535: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=616 Data=8103001f
+# UVM_INFO tb/my_driver.sv(33) @ 1545: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x268 | Instrucao: 0x8103001f
+# UVM_INFO tb/my_sequence.sv(28) @ 1545: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=620 Data=c183000f
+# UVM_INFO tb/my_driver.sv(33) @ 1555: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x26c | Instrucao: 0xc183000f
+# UVM_INFO tb/my_sequence.sv(28) @ 1555: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=624 Data=6205000f
+# UVM_INFO tb/my_driver.sv(33) @ 1565: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x270 | Instrucao: 0x6205000f
+# UVM_INFO tb/my_sequence.sv(28) @ 1565: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=628 Data=23420213
+# UVM_INFO tb/my_driver.sv(33) @ 1575: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x274 | Instrucao: 0x23420213
+# UVM_INFO tb/my_sequence.sv(28) @ 1575: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=632 Data=4f9223
+# UVM_INFO tb/my_driver.sv(33) @ 1585: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x278 | Instrucao: 0x4f9223
+# UVM_INFO tb/my_sequence.sv(28) @ 1585: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=636 Data=4f9283
+# UVM_INFO tb/my_driver.sv(33) @ 1595: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x27c | Instrucao: 0x4f9283
+# UVM_INFO tb/my_sequence.sv(28) @ 1595: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=640 Data=4fd303
+# UVM_INFO tb/my_driver.sv(33) @ 1605: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x280 | Instrucao: 0x4fd303
+# UVM_INFO tb/my_sequence.sv(28) @ 1605: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=644 Data=942353c1
+# UVM_INFO tb/my_driver.sv(33) @ 1615: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x284 | Instrucao: 0x942353c1
+# UVM_INFO tb/my_sequence.sv(28) @ 1615: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=648 Data=9403007f
+# UVM_INFO tb/my_driver.sv(33) @ 1625: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x288 | Instrucao: 0x9403007f
+# UVM_INFO tb/my_sequence.sv(28) @ 1625: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=652 Data=d483008f
+# UVM_INFO tb/my_driver.sv(33) @ 1635: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x28c | Instrucao: 0xd483008f
+# UVM_INFO tb/my_sequence.sv(28) @ 1635: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=656 Data=5537008f
+# UVM_INFO tb/my_driver.sv(33) @ 1645: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x290 | Instrucao: 0x5537008f
+# UVM_INFO tb/my_sequence.sv(28) @ 1645: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=660 Data=5131234
+# UVM_INFO tb/my_driver.sv(33) @ 1655: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x294 | Instrucao: 0x5131234
+# UVM_INFO tb/my_sequence.sv(28) @ 1655: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=664 Data=a6236785
+# UVM_INFO tb/my_driver.sv(33) @ 1665: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x298 | Instrucao: 0xa6236785
+# UVM_INFO tb/my_sequence.sv(28) @ 1665: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=668 Data=858300af
+# UVM_INFO tb/my_driver.sv(33) @ 1675: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x29c | Instrucao: 0x858300af
+# UVM_INFO tb/my_sequence.sv(28) @ 1675: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=672 Data=860300cf
+# UVM_INFO tb/my_driver.sv(33) @ 1685: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2a0 | Instrucao: 0x860300cf
+# UVM_INFO tb/my_sequence.sv(28) @ 1685: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=676 Data=868300df
+# UVM_INFO tb/my_driver.sv(33) @ 1695: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2a4 | Instrucao: 0x868300df
+# UVM_INFO tb/my_sequence.sv(28) @ 1695: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=680 Data=870300ef
+# UVM_INFO tb/my_driver.sv(33) @ 1705: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2a8 | Instrucao: 0x870300ef
+# UVM_INFO tb/my_sequence.sv(28) @ 1705: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=684 Data=79300ff
+# UVM_INFO tb/my_driver.sv(33) @ 1715: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2ac | Instrucao: 0x79300ff
+# UVM_INFO tb/my_sequence.sv(28) @ 1715: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=688 Data=86a30630
+# UVM_INFO tb/my_driver.sv(33) @ 1725: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2b0 | Instrucao: 0x86a30630
+# UVM_INFO tb/my_sequence.sv(28) @ 1725: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=692 Data=a80300ff
+# UVM_INFO tb/my_driver.sv(33) @ 1735: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2b4 | Instrucao: 0xa80300ff
+# UVM_INFO tb/my_sequence.sv(28) @ 1735: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=696 Data=888300cf
+# UVM_INFO tb/my_driver.sv(33) @ 1745: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2b8 | Instrucao: 0x888300cf
+# UVM_INFO tb/my_sequence.sv(28) @ 1745: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=700 Data=893300df
+# UVM_INFO tb/my_driver.sv(33) @ 1755: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2bc | Instrucao: 0x893300df
+# UVM_INFO tb/my_sequence.sv(28) @ 1755: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=704 Data=9930118
+# UVM_INFO tb/my_driver.sv(33) @ 1765: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2c0 | Instrucao: 0x9930118
+# UVM_INFO tb/my_sequence.sv(28) @ 1765: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=708 Data=97233090
+# UVM_INFO tb/my_driver.sv(33) @ 1775: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2c4 | Instrucao: 0x97233090
+# UVM_INFO tb/my_sequence.sv(28) @ 1775: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=712 Data=aa03013f
+# UVM_INFO tb/my_driver.sv(33) @ 1785: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2c8 | Instrucao: 0xaa03013f
+# UVM_INFO tb/my_sequence.sv(28) @ 1785: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=716 Data=a02300cf
+# UVM_INFO tb/my_driver.sv(33) @ 1795: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2cc | Instrucao: 0xa02300cf
+# UVM_INFO tb/my_sequence.sv(28) @ 1795: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=720 Data=a223022f
+# UVM_INFO tb/my_driver.sv(33) @ 1805: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2d0 | Instrucao: 0xa223022f
+# UVM_INFO tb/my_sequence.sv(28) @ 1805: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=724 Data=a423023f
+# UVM_INFO tb/my_driver.sv(33) @ 1815: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2d4 | Instrucao: 0xa423023f
+# UVM_INFO tb/my_sequence.sv(28) @ 1815: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=728 Data=a623025f
+# UVM_INFO tb/my_driver.sv(33) @ 1825: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2d8 | Instrucao: 0xa623025f
+# UVM_INFO tb/my_sequence.sv(28) @ 1825: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=732 Data=a823026f
+# UVM_INFO tb/my_driver.sv(33) @ 1835: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2dc | Instrucao: 0xa823026f
+# UVM_INFO tb/my_sequence.sv(28) @ 1835: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=736 Data=aa23028f
+# UVM_INFO tb/my_driver.sv(33) @ 1845: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2e0 | Instrucao: 0xaa23028f
+# UVM_INFO tb/my_sequence.sv(28) @ 1845: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=740 Data=ac23029f
+# UVM_INFO tb/my_driver.sv(33) @ 1855: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2e4 | Instrucao: 0xac23029f
+# UVM_INFO tb/my_sequence.sv(28) @ 1855: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=744 Data=ae2302bf
+# UVM_INFO tb/my_driver.sv(33) @ 1865: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2e8 | Instrucao: 0xae2302bf
+# UVM_INFO tb/my_sequence.sv(28) @ 1865: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=748 Data=40a902cf
+# UVM_INFO tb/my_driver.sv(33) @ 1875: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2ec | Instrucao: 0x40a902cf
+# UVM_INFO tb/my_sequence.sv(28) @ 1875: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=752 Data=bd0095
+# UVM_INFO tb/my_driver.sv(33) @ 1885: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2f0 | Instrucao: 0xbd0095
+# UVM_INFO tb/my_sequence.sv(28) @ 1885: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=756 Data=84b3
+# UVM_INFO tb/my_driver.sv(33) @ 1895: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2f4 | Instrucao: 0x84b3
+# UVM_INFO tb/my_sequence.sv(28) @ 1895: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=760 Data=80010437
+# UVM_INFO tb/my_driver.sv(33) @ 1905: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2f8 | Instrucao: 0x80010437
+# UVM_INFO tb/my_sequence.sv(28) @ 1905: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=764 Data=4040c044
+# UVM_INFO tb/my_driver.sv(33) @ 1915: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x2fc | Instrucao: 0x4040c044
+# UVM_INFO tb/my_sequence.sv(28) @ 1915: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=768 Data=40940533
+# UVM_INFO tb/my_driver.sv(33) @ 1925: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x300 | Instrucao: 0x40940533
+# UVM_INFO tb/my_sequence.sv(28) @ 1925: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=772 Data=1fa023
+# UVM_INFO tb/my_driver.sv(33) @ 1935: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x304 | Instrucao: 0x1fa023
+# UVM_INFO tb/my_sequence.sv(28) @ 1935: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=776 Data=8fa223
+# UVM_INFO tb/my_driver.sv(33) @ 1945: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x308 | Instrucao: 0x8fa223
+# UVM_INFO tb/my_sequence.sv(28) @ 1945: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=780 Data=afa423
+# UVM_INFO tb/my_driver.sv(33) @ 1955: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x30c | Instrucao: 0xafa423
+# UVM_INFO tb/my_sequence.sv(28) @ 1955: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=784 Data=894085
+# UVM_INFO tb/my_driver.sv(33) @ 1965: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x310 | Instrucao: 0x894085
+# UVM_INFO tb/my_sequence.sv(28) @ 1965: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=788 Data=108133
+# UVM_INFO tb/my_driver.sv(33) @ 1975: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x314 | Instrucao: 0x108133
+# UVM_INFO tb/my_sequence.sv(28) @ 1975: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=792 Data=1914195
+# UVM_INFO tb/my_driver.sv(33) @ 1985: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x318 | Instrucao: 0x1914195
+# UVM_INFO tb/my_sequence.sv(28) @ 1985: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=796 Data=2330195
+# UVM_INFO tb/my_driver.sv(33) @ 1995: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x31c | Instrucao: 0x2330195
+# UVM_INFO tb/my_sequence.sv(28) @ 1995: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=800 Data=a0234031
+# UVM_INFO tb/my_driver.sv(33) @ 2005: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x320 | Instrucao: 0xa0234031
+# UVM_INFO tb/my_sequence.sv(28) @ 2005: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=804 Data=a223001f
+# UVM_INFO tb/my_driver.sv(33) @ 2015: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x324 | Instrucao: 0xa223001f
+# UVM_INFO tb/my_sequence.sv(28) @ 2015: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=808 Data=a423002f
+# UVM_INFO tb/my_driver.sv(33) @ 2025: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x328 | Instrucao: 0xa423002f
+# UVM_INFO tb/my_sequence.sv(28) @ 2025: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=812 Data=a623003f
+# UVM_INFO tb/my_driver.sv(33) @ 2035: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x32c | Instrucao: 0xa623003f
+# UVM_INFO tb/my_sequence.sv(28) @ 2035: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=816 Data=4085004f
+# UVM_INFO tb/my_driver.sv(33) @ 2045: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x330 | Instrucao: 0x4085004f
+# UVM_INFO tb/my_sequence.sv(28) @ 2045: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=820 Data=108133
+# UVM_INFO tb/my_driver.sv(33) @ 2055: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x334 | Instrucao: 0x108133
+# UVM_INFO tb/my_sequence.sv(28) @ 2055: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=824 Data=1854185
+# UVM_INFO tb/my_driver.sv(33) @ 2065: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x338 | Instrucao: 0x1854185
+# UVM_INFO tb/my_sequence.sv(28) @ 2065: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=828 Data=40310233
+# UVM_INFO tb/my_driver.sv(33) @ 2075: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x33c | Instrucao: 0x40310233
+# UVM_INFO tb/my_sequence.sv(28) @ 2075: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=832 Data=4fa023
+# UVM_INFO tb/my_driver.sv(33) @ 2085: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x340 | Instrucao: 0x4fa023
+# UVM_INFO tb/my_sequence.sv(28) @ 2085: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=836 Data=42954081
+# UVM_INFO tb/my_driver.sv(33) @ 2095: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x344 | Instrucao: 0x42954081
+# UVM_INFO tb/my_sequence.sv(28) @ 2095: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=840 Data=cfe30085
+# UVM_INFO tb/my_driver.sv(33) @ 2105: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x348 | Instrucao: 0xcfe30085
+# UVM_INFO tb/my_sequence.sv(28) @ 2105: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=844 Data=a023fe50
+# UVM_INFO tb/my_driver.sv(33) @ 2115: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x34c | Instrucao: 0xa023fe50
+# UVM_INFO tb/my_sequence.sv(28) @ 2115: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=848 Data=5485001f
+# UVM_INFO tb/my_driver.sv(33) @ 2125: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x350 | Instrucao: 0x5485001f
+# UVM_INFO tb/my_sequence.sv(28) @ 2125: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=852 Data=5379426
+# UVM_INFO tb/my_driver.sv(33) @ 2135: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x354 | Instrucao: 0x5379426
+# UVM_INFO tb/my_sequence.sv(28) @ 2135: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=856 Data=5218001
+# UVM_INFO tb/my_driver.sv(33) @ 2145: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x358 | Instrucao: 0x5218001
+# UVM_INFO tb/my_sequence.sv(28) @ 2145: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=860 Data=410cc100
+# UVM_INFO tb/my_driver.sv(33) @ 2155: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x35c | Instrucao: 0x410cc100
+# UVM_INFO tb/my_sequence.sv(28) @ 2155: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=864 Data=8d818d65
+# UVM_INFO tb/my_driver.sv(33) @ 2165: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x360 | Instrucao: 0x8d818d65
+# UVM_INFO tb/my_sequence.sv(28) @ 2165: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=868 Data=41194095
+# UVM_INFO tb/my_driver.sv(33) @ 2175: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x364 | Instrucao: 0x41194095
+# UVM_INFO tb/my_sequence.sv(28) @ 2175: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=872 Data=4221419d
+# UVM_INFO tb/my_driver.sv(33) @ 2185: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x368 | Instrucao: 0x4221419d
+# UVM_INFO tb/my_sequence.sv(28) @ 2185: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=876 Data=432942a5
+# UVM_INFO tb/my_driver.sv(33) @ 2195: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x36c | Instrucao: 0x432942a5
+# UVM_INFO tb/my_sequence.sv(28) @ 2195: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=880 Data=6fa023
+# UVM_INFO tb/my_driver.sv(33) @ 2205: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x370 | Instrucao: 0x6fa023
+# UVM_INFO tb/my_sequence.sv(28) @ 2205: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=884 Data=843343d1
+# UVM_INFO tb/my_driver.sv(33) @ 2215: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x374 | Instrucao: 0x843343d1
+# UVM_INFO tb/my_sequence.sv(28) @ 2215: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=888 Data=4b30073
+# UVM_INFO tb/my_driver.sv(33) @ 2225: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x378 | Instrucao: 0x4b30073
+# UVM_INFO tb/my_sequence.sv(28) @ 2225: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=892 Data=85334074
+# UVM_INFO tb/my_driver.sv(33) @ 2235: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x37c | Instrucao: 0x85334074
+# UVM_INFO tb/my_sequence.sv(28) @ 2235: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=896 Data=a2230084
+# UVM_INFO tb/my_driver.sv(33) @ 2245: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x380 | Instrucao: 0xa2230084
+# UVM_INFO tb/my_sequence.sv(28) @ 2245: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=900 Data=a58300af
+# UVM_INFO tb/my_driver.sv(33) @ 2255: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x384 | Instrucao: 0xa58300af
+# UVM_INFO tb/my_sequence.sv(28) @ 2255: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=904 Data=8633000f
+# UVM_INFO tb/my_driver.sv(33) @ 2265: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x388 | Instrucao: 0x8633000f
+# UVM_INFO tb/my_sequence.sv(28) @ 2265: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=908 Data=a42300b5
+# UVM_INFO tb/my_driver.sv(33) @ 2275: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x38c | Instrucao: 0xa42300b5
+# UVM_INFO tb/my_sequence.sv(28) @ 2275: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=912 Data=468500cf
+# UVM_INFO tb/my_driver.sv(33) @ 2285: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x390 | Instrucao: 0x468500cf
+# UVM_INFO tb/my_sequence.sv(28) @ 2285: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=916 Data=dfa623
+# UVM_INFO tb/my_driver.sv(33) @ 2295: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x394 | Instrucao: 0xdfa623
+# UVM_INFO tb/my_sequence.sv(28) @ 2295: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=920 Data=57935741
+# UVM_INFO tb/my_driver.sv(33) @ 2305: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x398 | Instrucao: 0x57935741
+# UVM_INFO tb/my_sequence.sv(28) @ 2305: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=924 Data=a8234027
+# UVM_INFO tb/my_driver.sv(33) @ 2315: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x39c | Instrucao: 0xa8234027
+# UVM_INFO tb/my_sequence.sv(28) @ 2315: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=928 Data=587d00ff
+# UVM_INFO tb/my_driver.sv(33) @ 2325: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3a0 | Instrucao: 0x587d00ff
+# UVM_INFO tb/my_sequence.sv(28) @ 2325: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=932 Data=29334885
+# UVM_INFO tb/my_driver.sv(33) @ 2335: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3a4 | Instrucao: 0x29334885
+# UVM_INFO tb/my_sequence.sv(28) @ 2335: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=936 Data=aa230118
+# UVM_INFO tb/my_driver.sv(33) @ 2345: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3a8 | Instrucao: 0xaa230118
+# UVM_INFO tb/my_sequence.sv(28) @ 2345: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=940 Data=4995012f
+# UVM_INFO tb/my_driver.sv(33) @ 2355: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3ac | Instrucao: 0x4995012f
+# UVM_INFO tb/my_sequence.sv(28) @ 2355: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=944 Data=8ab34a15
+# UVM_INFO tb/my_driver.sv(33) @ 2365: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3b0 | Instrucao: 0x8ab34a15
+# UVM_INFO tb/my_sequence.sv(28) @ 2365: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=948 Data=84634149
+# UVM_INFO tb/my_driver.sv(33) @ 2375: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3b4 | Instrucao: 0x84634149
+# UVM_INFO tb/my_sequence.sv(28) @ 2375: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=952 Data=b13000a
+# UVM_INFO tb/my_driver.sv(33) @ 2385: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3b8 | Instrucao: 0xb13000a
+# UVM_INFO tb/my_sequence.sv(28) @ 2385: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=956 Data=b1306f0
+# UVM_INFO tb/my_driver.sv(33) @ 2395: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3bc | Instrucao: 0xb1306f0
+# UVM_INFO tb/my_sequence.sv(28) @ 2395: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=960 Data=ac230de0
+# UVM_INFO tb/my_driver.sv(33) @ 2405: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3c0 | Instrucao: 0xac230de0
+# UVM_INFO tb/my_sequence.sv(28) @ 2405: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=964 Data=663016f
+# UVM_INFO tb/my_driver.sv(33) @ 2415: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3c4 | Instrucao: 0x663016f
+# UVM_INFO tb/my_sequence.sv(28) @ 2415: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=968 Data=b930000
+# UVM_INFO tb/my_driver.sv(33) @ 2425: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3c8 | Instrucao: 0xb930000
+# UVM_INFO tb/my_sequence.sv(28) @ 2425: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=972 Data=c133e70
+# UVM_INFO tb/my_driver.sv(33) @ 2435: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3cc | Instrucao: 0xc133e70
+# UVM_INFO tb/my_sequence.sv(28) @ 2435: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=976 Data=b933e70
+# UVM_INFO tb/my_driver.sv(33) @ 2445: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3d0 | Instrucao: 0xb933e70
+# UVM_INFO tb/my_sequence.sv(28) @ 2445: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=980 Data=ae2314d0
+# UVM_INFO tb/my_driver.sv(33) @ 2455: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3d4 | Instrucao: 0xae2314d0
+# UVM_INFO tb/my_sequence.sv(28) @ 2455: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=984 Data=f0d3017f
+# UVM_INFO tb/my_driver.sv(33) @ 2465: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3d8 | Instrucao: 0xf0d3017f
+# UVM_INFO tb/my_sequence.sv(28) @ 2465: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=988 Data=7153d000
+# UVM_INFO tb/my_driver.sv(33) @ 2475: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3dc | Instrucao: 0x7153d000
+# UVM_INFO tb/my_sequence.sv(28) @ 2475: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=992 Data=f1d3d001
+# UVM_INFO tb/my_driver.sv(33) @ 2485: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3e0 | Instrucao: 0xf1d3d001
+# UVM_INFO tb/my_sequence.sv(28) @ 2485: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=996 Data=f2530020
+# UVM_INFO tb/my_driver.sv(33) @ 2495: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3e4 | Instrucao: 0xf2530020
+# UVM_INFO tb/my_sequence.sv(28) @ 2495: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1000 Data=d531011
+# UVM_INFO tb/my_driver.sv(33) @ 2505: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3e8 | Instrucao: 0xd531011
+# UVM_INFO tb/my_sequence.sv(28) @ 2505: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1004 Data=a023e002
+# UVM_INFO tb/my_driver.sv(33) @ 2515: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3ec | Instrucao: 0xa023e002
+# UVM_INFO tb/my_sequence.sv(28) @ 2515: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1008 Data=42c503af
+# UVM_INFO tb/my_driver.sv(33) @ 2525: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3f0 | Instrucao: 0x42c503af
+# UVM_INFO tb/my_sequence.sv(28) @ 2525: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1012 Data=829302b2
+# UVM_INFO tb/my_driver.sv(33) @ 2535: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3f4 | Instrucao: 0x829302b2
+# UVM_INFO tb/my_sequence.sv(28) @ 2535: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1016 Data=82937d02
+# UVM_INFO tb/my_driver.sv(33) @ 2545: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3f8 | Instrucao: 0x82937d02
+# UVM_INFO tb/my_sequence.sv(28) @ 2545: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1020 Data=43151ca2
+# UVM_INFO tb/my_driver.sv(33) @ 2555: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x3fc | Instrucao: 0x43151ca2
+# UVM_INFO tb/my_sequence.sv(28) @ 2555: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1024 Data=43b7033e
+# UVM_INFO tb/my_driver.sv(33) @ 2565: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x400 | Instrucao: 0x43b7033e
+# UVM_INFO tb/my_sequence.sv(28) @ 2565: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1028 Data=2437fffc
+# UVM_INFO tb/my_driver.sv(33) @ 2575: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x404 | Instrucao: 0x2437fffc
+# UVM_INFO tb/my_sequence.sv(28) @ 2575: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1032 Data=f0d30004
+# UVM_INFO tb/my_driver.sv(33) @ 2585: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x408 | Instrucao: 0xf0d30004
+# UVM_INFO tb/my_sequence.sv(28) @ 2585: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1036 Data=7153d002
+# UVM_INFO tb/my_driver.sv(33) @ 2595: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x40c | Instrucao: 0x7153d002
+# UVM_INFO tb/my_sequence.sv(28) @ 2595: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1040 Data=f1d3d003
+# UVM_INFO tb/my_driver.sv(33) @ 2605: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x410 | Instrucao: 0xf1d3d003
+# UVM_INFO tb/my_sequence.sv(28) @ 2605: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1044 Data=7253d003
+# UVM_INFO tb/my_driver.sv(33) @ 2615: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x414 | Instrucao: 0x7253d003
+# UVM_INFO tb/my_sequence.sv(28) @ 2615: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1048 Data=537d004
+# UVM_INFO tb/my_driver.sv(33) @ 2625: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x418 | Instrucao: 0x537d004
+# UVM_INFO tb/my_sequence.sv(28) @ 2625: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1052 Data=5133780
+# UVM_INFO tb/my_driver.sv(33) @ 2635: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x41c | Instrucao: 0x5133780
+# UVM_INFO tb/my_sequence.sv(28) @ 2635: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1056 Data=4d30745
+# UVM_INFO tb/my_driver.sv(33) @ 2645: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x420 | Instrucao: 0x4d30745
+# UVM_INFO tb/my_sequence.sv(28) @ 2645: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1060 Data=f0d3f005
+# UVM_INFO tb/my_driver.sv(33) @ 2655: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x424 | Instrucao: 0xf0d3f005
+# UVM_INFO tb/my_sequence.sv(28) @ 2655: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1064 Data=71531090
+# UVM_INFO tb/my_driver.sv(33) @ 2665: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x428 | Instrucao: 0x71531090
+# UVM_INFO tb/my_sequence.sv(28) @ 2665: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1068 Data=f1d31091
+# UVM_INFO tb/my_driver.sv(33) @ 2675: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x42c | Instrucao: 0xf1d31091
+# UVM_INFO tb/my_sequence.sv(28) @ 2675: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1072 Data=72531091
+# UVM_INFO tb/my_driver.sv(33) @ 2685: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x430 | Instrucao: 0x72531091
+# UVM_INFO tb/my_sequence.sv(28) @ 2685: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1076 Data=f2d31092
+# UVM_INFO tb/my_driver.sv(33) @ 2695: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x434 | Instrucao: 0xf2d31092
+# UVM_INFO tb/my_sequence.sv(28) @ 2695: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1080 Data=f3530020
+# UVM_INFO tb/my_driver.sv(33) @ 2705: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x438 | Instrucao: 0xf3530020
+# UVM_INFO tb/my_sequence.sv(28) @ 2705: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1084 Data=73d30032
+# UVM_INFO tb/my_driver.sv(33) @ 2715: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x43c | Instrucao: 0x73d30032
+# UVM_INFO tb/my_sequence.sv(28) @ 2715: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1088 Data=a0270043
+# UVM_INFO tb/my_driver.sv(33) @ 2725: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x440 | Instrucao: 0xa0270043
+# UVM_INFO tb/my_sequence.sv(28) @ 2725: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1092 Data=f4d3007f
+# UVM_INFO tb/my_driver.sv(33) @ 2735: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x444 | Instrucao: 0xf4d3007f
+# UVM_INFO tb/my_sequence.sv(28) @ 2735: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1096 Data=a223c003
+# UVM_INFO tb/my_driver.sv(33) @ 2745: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x448 | Instrucao: 0xa223c003
+# UVM_INFO tb/my_sequence.sv(28) @ 2745: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1100 Data=4095009f
+# UVM_INFO tb/my_driver.sv(33) @ 2755: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x44c | Instrucao: 0x4095009f
+# UVM_INFO tb/my_sequence.sv(28) @ 2755: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1104 Data=108113
+# UVM_INFO tb/my_driver.sv(33) @ 2765: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x450 | Instrucao: 0x108113
+# UVM_INFO tb/my_sequence.sv(28) @ 2765: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1108 Data=110193
+# UVM_INFO tb/my_driver.sv(33) @ 2775: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x454 | Instrucao: 0x110193
+# UVM_INFO tb/my_sequence.sv(28) @ 2775: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1112 Data=118213
+# UVM_INFO tb/my_driver.sv(33) @ 2785: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x458 | Instrucao: 0x118213
+# UVM_INFO tb/my_sequence.sv(28) @ 2785: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1116 Data=120293
+# UVM_INFO tb/my_driver.sv(33) @ 2795: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x45c | Instrucao: 0x120293
+# UVM_INFO tb/my_sequence.sv(28) @ 2795: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1120 Data=128313
+# UVM_INFO tb/my_driver.sv(33) @ 2805: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x460 | Instrucao: 0x128313
+# UVM_INFO tb/my_sequence.sv(28) @ 2805: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1124 Data=6fa023
+# UVM_INFO tb/my_driver.sv(33) @ 2815: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x464 | Instrucao: 0x6fa023
+# UVM_INFO tb/my_sequence.sv(28) @ 2815: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1128 Data=843343d1
+# UVM_INFO tb/my_driver.sv(33) @ 2825: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x468 | Instrucao: 0x843343d1
+# UVM_INFO tb/my_sequence.sv(28) @ 2825: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1132 Data=4b30073
+# UVM_INFO tb/my_driver.sv(33) @ 2835: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x46c | Instrucao: 0x4b30073
+# UVM_INFO tb/my_sequence.sv(28) @ 2835: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1136 Data=85334074
+# UVM_INFO tb/my_driver.sv(33) @ 2845: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x470 | Instrucao: 0x85334074
+# UVM_INFO tb/my_sequence.sv(28) @ 2845: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1140 Data=a2230084
+# UVM_INFO tb/my_driver.sv(33) @ 2855: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x474 | Instrucao: 0xa2230084
+# UVM_INFO tb/my_sequence.sv(28) @ 2855: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1144 Data=a58300af
+# UVM_INFO tb/my_driver.sv(33) @ 2865: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x478 | Instrucao: 0xa58300af
+# UVM_INFO tb/my_sequence.sv(28) @ 2865: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1148 Data=8633000f
+# UVM_INFO tb/my_driver.sv(33) @ 2875: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x47c | Instrucao: 0x8633000f
+# UVM_INFO tb/my_sequence.sv(28) @ 2875: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1152 Data=a42300b5
+# UVM_INFO tb/my_driver.sv(33) @ 2885: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x480 | Instrucao: 0xa42300b5
+# UVM_INFO tb/my_sequence.sv(28) @ 2885: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1156 Data=468500cf
+# UVM_INFO tb/my_driver.sv(33) @ 2895: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x484 | Instrucao: 0x468500cf
+# UVM_INFO tb/my_sequence.sv(28) @ 2895: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1160 Data=dfa623
+# UVM_INFO tb/my_driver.sv(33) @ 2905: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x488 | Instrucao: 0xdfa623
+# UVM_INFO tb/my_sequence.sv(28) @ 2905: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1164 Data=57935741
+# UVM_INFO tb/my_driver.sv(33) @ 2915: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x48c | Instrucao: 0x57935741
+# UVM_INFO tb/my_sequence.sv(28) @ 2915: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1168 Data=a8234027
+# UVM_INFO tb/my_driver.sv(33) @ 2925: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x490 | Instrucao: 0xa8234027
+# UVM_INFO tb/my_sequence.sv(28) @ 2925: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1172 Data=587d00ff
+# UVM_INFO tb/my_driver.sv(33) @ 2935: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x494 | Instrucao: 0x587d00ff
+# UVM_INFO tb/my_sequence.sv(28) @ 2935: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1176 Data=29334885
+# UVM_INFO tb/my_driver.sv(33) @ 2945: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x498 | Instrucao: 0x29334885
+# UVM_INFO tb/my_sequence.sv(28) @ 2945: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1180 Data=aa230118
+# UVM_INFO tb/my_driver.sv(33) @ 2955: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x49c | Instrucao: 0xaa230118
+# UVM_INFO tb/my_sequence.sv(28) @ 2955: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1184 Data=4995012f
+# UVM_INFO tb/my_driver.sv(33) @ 2965: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4a0 | Instrucao: 0x4995012f
+# UVM_INFO tb/my_sequence.sv(28) @ 2965: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1188 Data=8ab34a15
+# UVM_INFO tb/my_driver.sv(33) @ 2975: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4a4 | Instrucao: 0x8ab34a15
+# UVM_INFO tb/my_sequence.sv(28) @ 2975: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1192 Data=84634149
+# UVM_INFO tb/my_driver.sv(33) @ 2985: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4a8 | Instrucao: 0x84634149
+# UVM_INFO tb/my_sequence.sv(28) @ 2985: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1196 Data=b13000a
+# UVM_INFO tb/my_driver.sv(33) @ 2995: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4ac | Instrucao: 0xb13000a
+# UVM_INFO tb/my_sequence.sv(28) @ 2995: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1200 Data=b1306f0
+# UVM_INFO tb/my_driver.sv(33) @ 3005: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4b0 | Instrucao: 0xb1306f0
+# UVM_INFO tb/my_sequence.sv(28) @ 3005: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1204 Data=ac230de0
+# UVM_INFO tb/my_driver.sv(33) @ 3015: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4b4 | Instrucao: 0xac230de0
+# UVM_INFO tb/my_sequence.sv(28) @ 3015: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1208 Data=663016f
+# UVM_INFO tb/my_driver.sv(33) @ 3025: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4b8 | Instrucao: 0x663016f
+# UVM_INFO tb/my_sequence.sv(28) @ 3025: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1212 Data=b930000
+# UVM_INFO tb/my_driver.sv(33) @ 3035: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4bc | Instrucao: 0xb930000
+# UVM_INFO tb/my_sequence.sv(28) @ 3035: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1216 Data=c133e70
+# UVM_INFO tb/my_driver.sv(33) @ 3045: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4c0 | Instrucao: 0xc133e70
+# UVM_INFO tb/my_sequence.sv(28) @ 3045: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1220 Data=b933e70
+# UVM_INFO tb/my_driver.sv(33) @ 3055: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4c4 | Instrucao: 0xb933e70
+# UVM_INFO tb/my_sequence.sv(28) @ 3055: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1224 Data=ae2314d0
+# UVM_INFO tb/my_driver.sv(33) @ 3065: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4c8 | Instrucao: 0xae2314d0
+# UVM_INFO tb/my_sequence.sv(28) @ 3065: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1228 Data=f0d3017f
+# UVM_INFO tb/my_driver.sv(33) @ 3075: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4cc | Instrucao: 0xf0d3017f
+# UVM_INFO tb/my_sequence.sv(28) @ 3075: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1232 Data=7153d000
+# UVM_INFO tb/my_driver.sv(33) @ 3085: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4d0 | Instrucao: 0x7153d000
+# UVM_INFO tb/my_sequence.sv(28) @ 3085: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1236 Data=f1d3d001
+# UVM_INFO tb/my_driver.sv(33) @ 3095: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4d4 | Instrucao: 0xf1d3d001
+# UVM_INFO tb/my_sequence.sv(28) @ 3095: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1240 Data=f2530020
+# UVM_INFO tb/my_driver.sv(33) @ 3105: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4d8 | Instrucao: 0xf2530020
+# UVM_INFO tb/my_sequence.sv(28) @ 3105: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1244 Data=d531011
+# UVM_INFO tb/my_driver.sv(33) @ 3115: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4dc | Instrucao: 0xd531011
+# UVM_INFO tb/my_sequence.sv(28) @ 3115: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1248 Data=a023e002
+# UVM_INFO tb/my_driver.sv(33) @ 3125: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4e0 | Instrucao: 0xa023e002
+# UVM_INFO tb/my_sequence.sv(28) @ 3125: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1252 Data=f6f03af
+# UVM_INFO tb/my_driver.sv(33) @ 3135: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4e4 | Instrucao: 0xf6f03af
+# UVM_INFO tb/my_sequence.sv(28) @ 3135: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1256 Data=f6f00c0
+# UVM_INFO tb/my_driver.sv(33) @ 3145: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4e8 | Instrucao: 0xf6f00c0
+# UVM_INFO tb/my_sequence.sv(28) @ 3145: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1260 Data=fef0160
+# UVM_INFO tb/my_driver.sv(33) @ 3155: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4ec | Instrucao: 0xfef0160
+# UVM_INFO tb/my_sequence.sv(28) @ 3155: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1264 Data=4c8501a0
+# UVM_INFO tb/my_driver.sv(33) @ 3165: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4f0 | Instrucao: 0x4c8501a0
+# UVM_INFO tb/my_sequence.sv(28) @ 3165: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1268 Data=f0067
+# UVM_INFO tb/my_driver.sv(33) @ 3175: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4f4 | Instrucao: 0xf0067
+# UVM_INFO tb/my_sequence.sv(28) @ 3175: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1272 Data=de00c13
+# UVM_INFO tb/my_driver.sv(33) @ 3185: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4f8 | Instrucao: 0xde00c13
+# UVM_INFO tb/my_sequence.sv(28) @ 3185: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1276 Data=f0067
+# UVM_INFO tb/my_driver.sv(33) @ 3195: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x4fc | Instrucao: 0xf0067
+# UVM_INFO tb/my_sequence.sv(28) @ 3195: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1280 Data=14d00b93
+# UVM_INFO tb/my_driver.sv(33) @ 3205: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x500 | Instrucao: 0x14d00b93
+# UVM_INFO tb/my_sequence.sv(28) @ 3205: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1284 Data=febfffef
+# UVM_INFO tb/my_driver.sv(33) @ 3215: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x504 | Instrucao: 0xfebfffef
+# UVM_INFO tb/my_sequence.sv(28) @ 3215: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1288 Data=41294095
+# UVM_INFO tb/my_driver.sv(33) @ 3225: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x508 | Instrucao: 0x41294095
+# UVM_INFO tb/my_sequence.sv(28) @ 3225: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1292 Data=c3634195
+# UVM_INFO tb/my_driver.sv(33) @ 3235: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x50c | Instrucao: 0xc3634195
+# UVM_INFO tb/my_sequence.sv(28) @ 3235: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1296 Data=42010020
+# UVM_INFO tb/my_driver.sv(33) @ 3245: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x510 | Instrucao: 0x42010020
+# UVM_INFO tb/my_sequence.sv(28) @ 3245: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1300 Data=83634205
+# UVM_INFO tb/my_driver.sv(33) @ 3255: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x514 | Instrucao: 0x83634205
+# UVM_INFO tb/my_sequence.sv(28) @ 3255: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1304 Data=42810030
+# UVM_INFO tb/my_driver.sv(33) @ 3265: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x518 | Instrucao: 0x42810030
+# UVM_INFO tb/my_sequence.sv(28) @ 3265: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1308 Data=93634285
+# UVM_INFO tb/my_driver.sv(33) @ 3275: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x51c | Instrucao: 0x93634285
+# UVM_INFO tb/my_sequence.sv(28) @ 3275: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1312 Data=43010020
+# UVM_INFO tb/my_driver.sv(33) @ 3285: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x520 | Instrucao: 0x43010020
+# UVM_INFO tb/my_sequence.sv(28) @ 3285: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1316 Data=3ef4305
+# UVM_INFO tb/my_driver.sv(33) @ 3295: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x524 | Instrucao: 0x3ef4305
+# UVM_INFO tb/my_sequence.sv(28) @ 3295: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1320 Data=4c0500e0
+# UVM_INFO tb/my_driver.sv(33) @ 3305: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x528 | Instrucao: 0x4c0500e0
+# UVM_INFO tb/my_sequence.sv(28) @ 3305: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1324 Data=7b00413
+# UVM_INFO tb/my_driver.sv(33) @ 3315: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x52c | Instrucao: 0x7b00413
+# UVM_INFO tb/my_sequence.sv(28) @ 3315: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1328 Data=63
+# UVM_INFO tb/my_driver.sv(33) @ 3325: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x530 | Instrucao: 0x63
+# UVM_INFO tb/my_sequence.sv(28) @ 3325: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1332 Data=2a00493
+# UVM_INFO tb/my_driver.sv(33) @ 3335: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x534 | Instrucao: 0x2a00493
+# UVM_INFO tb/my_sequence.sv(28) @ 3335: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence leu do arquivo: Addr=1336 Data=38067
+# UVM_INFO tb/my_driver.sv(33) @ 3345: uvm_test_top.m_env.m_agent.m_driver [my_driver] Carga Memoria -> Endereco: 0x538 | Instrucao: 0x38067
+# UVM_INFO tb/my_sequence.sv(34) @ 3345: uvm_test_top.m_env.m_agent.m_seq@@seq [my_sequence] Sequence finalizada: 335 instrucoes enviadas ao driver
+# 
+# 
+# 
+# 
+# Iniciando comparacao com gabarito
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3545: uvm_test_top.m_env.m_scoreboard [PASS]           0 Reg x5 | Valor: 0x6000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3565: uvm_test_top.m_env.m_scoreboard [PASS]           1 Reg x31 | Valor: 0x80010000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3575: uvm_test_top.m_env.m_scoreboard [PASS]           2 Reg x1 | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3585: uvm_test_top.m_env.m_scoreboard [PASS]           3 Reg x2 | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3595: uvm_test_top.m_env.m_scoreboard [PASS]           4 Reg x3 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3605: uvm_test_top.m_env.m_scoreboard [PASS]           5 Reg x4 | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3615: uvm_test_top.m_env.m_scoreboard [PASS]           6 Reg x5 | Valor: 0x19
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3625: uvm_test_top.m_env.m_scoreboard [PASS]           7 Reg x3 | Valor: 0x40a00000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3635: uvm_test_top.m_env.m_scoreboard [PASS]           8 Reg x5 | Valor: 0x41c80000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3645: uvm_test_top.m_env.m_scoreboard [PASS]           9 Reg x6 | Valor: 0x42fa0000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3655: uvm_test_top.m_env.m_scoreboard [PASS]          10 Reg x6 | Valor: 0x42fa0000
+# UVM_INFO tb/my_scoreboard.sv(77) @ 3655: uvm_test_top.m_env.m_scoreboard [PASS]          11 RAM[0x80010000] | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(77) @ 3665: uvm_test_top.m_env.m_scoreboard [PASS]          12 RAM[0x80010004] | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(77) @ 3675: uvm_test_top.m_env.m_scoreboard [PASS]          13 RAM[0x80010008] | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(77) @ 3685: uvm_test_top.m_env.m_scoreboard [PASS]          14 RAM[0x8001000c] | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(77) @ 3695: uvm_test_top.m_env.m_scoreboard [PASS]          15 RAM[0x80010010] | Valor: 0x19
+# UVM_INFO tb/my_scoreboard.sv(77) @ 3705: uvm_test_top.m_env.m_scoreboard [PASS]          16 RAM[0x80010014] | Valor: 0x42fa0000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3725: uvm_test_top.m_env.m_scoreboard [PASS]          17 Reg x1 | Valor: 0xb
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3735: uvm_test_top.m_env.m_scoreboard [PASS]          18 Reg x2 | Valor: 0x16
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3745: uvm_test_top.m_env.m_scoreboard [PASS]          19 Reg x3 | Valor: 0x6
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3755: uvm_test_top.m_env.m_scoreboard [PASS]          20 Reg x1 | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3765: uvm_test_top.m_env.m_scoreboard [PASS]          21 Reg x2 | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3775: uvm_test_top.m_env.m_scoreboard [PASS]          22 Reg x3 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3785: uvm_test_top.m_env.m_scoreboard [PASS]          23 Reg x4 | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3795: uvm_test_top.m_env.m_scoreboard [PASS]          24 Reg x5 | Valor: 0x19
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3805: uvm_test_top.m_env.m_scoreboard [PASS]          25 Reg x6 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3815: uvm_test_top.m_env.m_scoreboard [PASS]          26 Reg x7 | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3825: uvm_test_top.m_env.m_scoreboard [PASS]          27 Reg x8 | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3835: uvm_test_top.m_env.m_scoreboard [PASS]          28 Reg x9 | Valor: 0x28
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3845: uvm_test_top.m_env.m_scoreboard [PASS]          29 Reg x10 | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3855: uvm_test_top.m_env.m_scoreboard [PASS]          30 Reg x11 | Valor: 0xc
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3865: uvm_test_top.m_env.m_scoreboard [PASS]          31 Reg x12 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3875: uvm_test_top.m_env.m_scoreboard [PASS]          32 Reg x13 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3885: uvm_test_top.m_env.m_scoreboard [PASS]          33 Reg x1 | Valor: 0x41200000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3895: uvm_test_top.m_env.m_scoreboard [PASS]          34 Reg x2 | Valor: 0x41a00000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3905: uvm_test_top.m_env.m_scoreboard [PASS]          35 Reg x3 | Valor: 0x40a00000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3915: uvm_test_top.m_env.m_scoreboard [PASS]          36 Reg x4 | Valor: 0x41f00000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3925: uvm_test_top.m_env.m_scoreboard [PASS]          37 Reg x5 | Valor: 0x41700000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3935: uvm_test_top.m_env.m_scoreboard [PASS]          38 Reg x6 | Valor: 0x42960000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3945: uvm_test_top.m_env.m_scoreboard [PASS]          39 Reg x7 | Valor: 0x41c80000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3955: uvm_test_top.m_env.m_scoreboard [PASS]          40 Reg x17 | Valor: 0x41f00000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3965: uvm_test_top.m_env.m_scoreboard [PASS]          41 Reg x18 | Valor: 0x41700000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3975: uvm_test_top.m_env.m_scoreboard [PASS]          42 Reg x19 | Valor: 0x42960000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 3985: uvm_test_top.m_env.m_scoreboard [PASS]          43 Reg x20 | Valor: 0x41c80000
+# UVM_INFO tb/my_scoreboard.sv(77) @ 3985: uvm_test_top.m_env.m_scoreboard [PASS]          44 RAM[0x80010000] | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(77) @ 3995: uvm_test_top.m_env.m_scoreboard [PASS]          45 RAM[0x80010004] | Valor: 0x19
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4005: uvm_test_top.m_env.m_scoreboard [PASS]          46 RAM[0x80010008] | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4015: uvm_test_top.m_env.m_scoreboard [PASS]          47 RAM[0x8001000c] | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4025: uvm_test_top.m_env.m_scoreboard [PASS]          48 RAM[0x80010010] | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4035: uvm_test_top.m_env.m_scoreboard [PASS]          49 RAM[0x80010014] | Valor: 0x28
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4045: uvm_test_top.m_env.m_scoreboard [PASS]          50 RAM[0x80010018] | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4055: uvm_test_top.m_env.m_scoreboard [PASS]          51 RAM[0x8001001c] | Valor: 0xc
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4065: uvm_test_top.m_env.m_scoreboard [PASS]          52 RAM[0x80010020] | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4075: uvm_test_top.m_env.m_scoreboard [PASS]          53 RAM[0x80010024] | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4085: uvm_test_top.m_env.m_scoreboard [PASS]          54 RAM[0x80010028] | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4095: uvm_test_top.m_env.m_scoreboard [PASS]          55 RAM[0x8001002c] | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4105: uvm_test_top.m_env.m_scoreboard [PASS]          56 RAM[0x80010030] | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4115: uvm_test_top.m_env.m_scoreboard [PASS]          57 RAM[0x80010034] | Valor: 0x41f00000
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4125: uvm_test_top.m_env.m_scoreboard [PASS]          58 RAM[0x80010038] | Valor: 0x41700000
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4135: uvm_test_top.m_env.m_scoreboard [PASS]          59 RAM[0x8001003c] | Valor: 0x42960000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4155: uvm_test_top.m_env.m_scoreboard [PASS]          60 Reg x21 | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4165: uvm_test_top.m_env.m_scoreboard [PASS]          61 Reg x22 | Valor: 0x19
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4175: uvm_test_top.m_env.m_scoreboard [PASS]          62 Reg x23 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4185: uvm_test_top.m_env.m_scoreboard [PASS]          63 Reg x24 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4195: uvm_test_top.m_env.m_scoreboard [PASS]          64 Reg x25 | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4205: uvm_test_top.m_env.m_scoreboard [PASS]          65 Reg x24 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4245: uvm_test_top.m_env.m_scoreboard [PASS]          66 Reg x24 | Valor: 0x2
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4285: uvm_test_top.m_env.m_scoreboard [PASS]          67 Reg x24 | Valor: 0x3
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4325: uvm_test_top.m_env.m_scoreboard [PASS]          68 Reg x24 | Valor: 0x4
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4365: uvm_test_top.m_env.m_scoreboard [PASS]          69 Reg x24 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4405: uvm_test_top.m_env.m_scoreboard [PASS]          70 Reg x24 | Valor: 0x6
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4445: uvm_test_top.m_env.m_scoreboard [PASS]          71 Reg x24 | Valor: 0x7
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4485: uvm_test_top.m_env.m_scoreboard [PASS]          72 Reg x24 | Valor: 0x8
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4525: uvm_test_top.m_env.m_scoreboard [PASS]          73 Reg x24 | Valor: 0x9
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4565: uvm_test_top.m_env.m_scoreboard [PASS]          74 Reg x24 | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4615: uvm_test_top.m_env.m_scoreboard [PASS]          75 Reg x26 | Valor: 0xde
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4625: uvm_test_top.m_env.m_scoreboard [PASS]          76 Reg x1 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4635: uvm_test_top.m_env.m_scoreboard [PASS]          77 Reg x2 | Valor: 0x6
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4645: uvm_test_top.m_env.m_scoreboard [PASS]          78 Reg x3 | Valor: 0x7
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4655: uvm_test_top.m_env.m_scoreboard [PASS]          79 Reg x4 | Valor: 0x8
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4665: uvm_test_top.m_env.m_scoreboard [PASS]          80 Reg x5 | Valor: 0x9
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4675: uvm_test_top.m_env.m_scoreboard [PASS]          81 Reg x6 | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4675: uvm_test_top.m_env.m_scoreboard [PASS]          82 RAM[0x80010000] | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4705: uvm_test_top.m_env.m_scoreboard [PASS]          83 Reg x7 | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4715: uvm_test_top.m_env.m_scoreboard [PASS]          84 Reg x8 | Valor: 0x28
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4725: uvm_test_top.m_env.m_scoreboard [PASS]          85 Reg x9 | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4735: uvm_test_top.m_env.m_scoreboard [PASS]          86 Reg x10 | Valor: 0x3c
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4735: uvm_test_top.m_env.m_scoreboard [PASS]          87 RAM[0x80010004] | Valor: 0x3c
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4755: uvm_test_top.m_env.m_scoreboard [PASS]          88 Reg x11 | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4775: uvm_test_top.m_env.m_scoreboard [PASS]          89 Reg x12 | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4775: uvm_test_top.m_env.m_scoreboard [PASS]          90 RAM[0x80010008] | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4795: uvm_test_top.m_env.m_scoreboard [PASS]          91 Reg x13 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4795: uvm_test_top.m_env.m_scoreboard [PASS]          92 RAM[0x8001000c] | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4815: uvm_test_top.m_env.m_scoreboard [PASS]          93 Reg x14 | Valor: 0xfffffff0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4825: uvm_test_top.m_env.m_scoreboard [PASS]          94 Reg x15 | Valor: 0xfffffffc
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4825: uvm_test_top.m_env.m_scoreboard [PASS]          95 RAM[0x80010010] | Valor: 0xfffffffc
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4845: uvm_test_top.m_env.m_scoreboard [PASS]          96 Reg x16 | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4855: uvm_test_top.m_env.m_scoreboard [PASS]          97 Reg x17 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4865: uvm_test_top.m_env.m_scoreboard [PASS]          98 Reg x18 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4865: uvm_test_top.m_env.m_scoreboard [PASS]          99 RAM[0x80010014] | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4885: uvm_test_top.m_env.m_scoreboard [PASS]         100 Reg x19 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4895: uvm_test_top.m_env.m_scoreboard [PASS]         101 Reg x20 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4905: uvm_test_top.m_env.m_scoreboard [PASS]         102 Reg x21 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4945: uvm_test_top.m_env.m_scoreboard [PASS]         103 Reg x22 | Valor: 0xde
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4945: uvm_test_top.m_env.m_scoreboard [PASS]         104 RAM[0x80010018] | Valor: 0xde
+# UVM_INFO tb/my_scoreboard.sv(79) @ 4995: uvm_test_top.m_env.m_scoreboard [PASS]         105 Reg x23 | Valor: 0x14d
+# UVM_INFO tb/my_scoreboard.sv(77) @ 4995: uvm_test_top.m_env.m_scoreboard [PASS]         106 RAM[0x8001001c] | Valor: 0x14d
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5015: uvm_test_top.m_env.m_scoreboard [PASS]         107 Reg x1 | Valor: 0x40a00000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5025: uvm_test_top.m_env.m_scoreboard [PASS]         108 Reg x2 | Valor: 0x40c00000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5035: uvm_test_top.m_env.m_scoreboard [PASS]         109 Reg x3 | Valor: 0x41300000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5045: uvm_test_top.m_env.m_scoreboard [PASS]         110 Reg x4 | Valor: 0x425c0000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5055: uvm_test_top.m_env.m_scoreboard [PASS]         111 Reg x26 | Valor: 0x425c0000
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5055: uvm_test_top.m_env.m_scoreboard [PASS]         112 RAM[0x80010020] | Valor: 0x425c0000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5085: uvm_test_top.m_env.m_scoreboard [PASS]         113 Reg x1 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5095: uvm_test_top.m_env.m_scoreboard [PASS]         114 Reg x2 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5105: uvm_test_top.m_env.m_scoreboard [PASS]         115 Reg x3 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5115: uvm_test_top.m_env.m_scoreboard [PASS]         116 Reg x4 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5115: uvm_test_top.m_env.m_scoreboard [PASS]         117 RAM[0x80010000] | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5135: uvm_test_top.m_env.m_scoreboard [PASS]         118 RAM[0x80010004] | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5145: uvm_test_top.m_env.m_scoreboard [PASS]         119 RAM[0x80010008] | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5155: uvm_test_top.m_env.m_scoreboard [PASS]         120 RAM[0x8001000c] | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5175: uvm_test_top.m_env.m_scoreboard [PASS]         121 Reg x1 | Valor: 0x11
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5175: uvm_test_top.m_env.m_scoreboard [PASS]         122 RAM[0x80010000] | Valor: 0x11
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5205: uvm_test_top.m_env.m_scoreboard [PASS]         123 Reg x2 | Valor: 0x22
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5205: uvm_test_top.m_env.m_scoreboard [PASS]         124 RAM[0x80010001] | Valor: 0x22
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5225: uvm_test_top.m_env.m_scoreboard [PASS]         125 Reg x3 | Valor: 0x33
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5225: uvm_test_top.m_env.m_scoreboard [PASS]         126 RAM[0x80010002] | Valor: 0x33
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5245: uvm_test_top.m_env.m_scoreboard [PASS]         127 Reg x4 | Valor: 0x44
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5245: uvm_test_top.m_env.m_scoreboard [PASS]         128 RAM[0x80010003] | Valor: 0x44
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5265: uvm_test_top.m_env.m_scoreboard [PASS]         129 Reg x5 | Valor: 0x44332211
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5275: uvm_test_top.m_env.m_scoreboard [PASS]         130 Reg x6 | Valor: 0xaabbc000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5285: uvm_test_top.m_env.m_scoreboard [PASS]         131 Reg x6 | Valor: 0xaabbc0cd
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5285: uvm_test_top.m_env.m_scoreboard [PASS]         132 RAM[0x80010004] | Valor: 0xaabbc0cd
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5315: uvm_test_top.m_env.m_scoreboard [PASS]         133 Reg x7 | Valor: 0xffffc0cd
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5325: uvm_test_top.m_env.m_scoreboard [PASS]         134 Reg x8 | Valor: 0xc0cd
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5335: uvm_test_top.m_env.m_scoreboard [PASS]         135 Reg x9 | Valor: 0x12
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5345: uvm_test_top.m_env.m_scoreboard [PASS]         136 Reg x9 | Valor: 0x1200
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5355: uvm_test_top.m_env.m_scoreboard [PASS]         137 Reg x9 | Valor: 0x1234
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5355: uvm_test_top.m_env.m_scoreboard [PASS]         138 RAM[0x80010006] | Valor: 0x1234
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5375: uvm_test_top.m_env.m_scoreboard [PASS]         139 Reg x10 | Valor: 0x1234c0cd
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5385: uvm_test_top.m_env.m_scoreboard [PASS]         140 Reg x11 | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5385: uvm_test_top.m_env.m_scoreboard [PASS]         141 RAM[0x80010008] | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5415: uvm_test_top.m_env.m_scoreboard [PASS]         142 Reg x12 | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5425: uvm_test_top.m_env.m_scoreboard [PASS]         143 Reg x13 | Valor: 0xff
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5435: uvm_test_top.m_env.m_scoreboard [PASS]         144 Reg x14 | Valor: 0xfffffff0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5435: uvm_test_top.m_env.m_scoreboard [PASS]         145 RAM[0x8001000a] | Valor: 0xfffffff0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5465: uvm_test_top.m_env.m_scoreboard [PASS]         146 Reg x15 | Valor: 0xfffffff0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5475: uvm_test_top.m_env.m_scoreboard [PASS]         147 Reg x16 | Valor: 0xfff0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5485: uvm_test_top.m_env.m_scoreboard [PASS]         148 Reg x17 | Valor: 0x22
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5505: uvm_test_top.m_env.m_scoreboard [PASS]         149 Reg x18 | Valor: 0x44
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5515: uvm_test_top.m_env.m_scoreboard [PASS]         150 Reg x19 | Valor: 0xfffffff0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5535: uvm_test_top.m_env.m_scoreboard [PASS]         151 Reg x20 | Valor: 0xfffffff1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5545: uvm_test_top.m_env.m_scoreboard [PASS]         152 Reg x21 | Valor: 0x44332211
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5555: uvm_test_top.m_env.m_scoreboard [PASS]         153 Reg x22 | Valor: 0x1234c0cd
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5565: uvm_test_top.m_env.m_scoreboard [PASS]         154 Reg x23 | Valor: 0xfff000ff
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5565: uvm_test_top.m_env.m_scoreboard [PASS]         155 RAM[0x80010010] | Valor: 0x44332211
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5575: uvm_test_top.m_env.m_scoreboard [PASS]         156 RAM[0x80010014] | Valor: 0xffffc0cd
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5585: uvm_test_top.m_env.m_scoreboard [PASS]         157 RAM[0x80010018] | Valor: 0xc0cd
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5595: uvm_test_top.m_env.m_scoreboard [PASS]         158 RAM[0x8001001c] | Valor: 0x1234c0cd
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5605: uvm_test_top.m_env.m_scoreboard [PASS]         159 RAM[0x80010020] | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5615: uvm_test_top.m_env.m_scoreboard [PASS]         160 RAM[0x80010024] | Valor: 0xff
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5625: uvm_test_top.m_env.m_scoreboard [PASS]         161 RAM[0x80010028] | Valor: 0xfffffff0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5635: uvm_test_top.m_env.m_scoreboard [PASS]         162 RAM[0x8001002c] | Valor: 0xfff0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5645: uvm_test_top.m_env.m_scoreboard [PASS]         163 RAM[0x80010030] | Valor: 0x44
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5655: uvm_test_top.m_env.m_scoreboard [PASS]         164 RAM[0x80010034] | Valor: 0xfffffff1
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5665: uvm_test_top.m_env.m_scoreboard [PASS]         165 RAM[0x80010038] | Valor: 0x44332211
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5675: uvm_test_top.m_env.m_scoreboard [PASS]         166 RAM[0x8001003c] | Valor: 0x1234c0cd
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5695: uvm_test_top.m_env.m_scoreboard [PASS]         167 Reg x31 | Valor: 0x80010000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5705: uvm_test_top.m_env.m_scoreboard [PASS]         168 Reg x1 | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5705: uvm_test_top.m_env.m_scoreboard [PASS]         169 RAM[0x80010000] | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5735: uvm_test_top.m_env.m_scoreboard [PASS]         170 Reg x2 | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5745: uvm_test_top.m_env.m_scoreboard [PASS]         171 Reg x3 | Valor: 0xff
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5755: uvm_test_top.m_env.m_scoreboard [PASS]         172 Reg x4 | Valor: 0x1000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5765: uvm_test_top.m_env.m_scoreboard [PASS]         173 Reg x4 | Valor: 0x1234
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5765: uvm_test_top.m_env.m_scoreboard [PASS]         174 RAM[0x80010004] | Valor: 0x1234
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5795: uvm_test_top.m_env.m_scoreboard [PASS]         175 Reg x5 | Valor: 0x1234
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5805: uvm_test_top.m_env.m_scoreboard [PASS]         176 Reg x6 | Valor: 0x1234
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5815: uvm_test_top.m_env.m_scoreboard [PASS]         177 Reg x7 | Valor: 0xfffffff0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5815: uvm_test_top.m_env.m_scoreboard [PASS]         178 RAM[0x80010008] | Valor: 0xfffffff0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5845: uvm_test_top.m_env.m_scoreboard [PASS]         179 Reg x8 | Valor: 0xfffffff0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5865: uvm_test_top.m_env.m_scoreboard [PASS]         180 Reg x9 | Valor: 0xfff0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5875: uvm_test_top.m_env.m_scoreboard [PASS]         181 Reg x10 | Valor: 0x12345000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5885: uvm_test_top.m_env.m_scoreboard [PASS]         182 Reg x10 | Valor: 0x12345678
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5885: uvm_test_top.m_env.m_scoreboard [PASS]         183 RAM[0x8001000c] | Valor: 0x12345678
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5915: uvm_test_top.m_env.m_scoreboard [PASS]         184 Reg x11 | Valor: 0x78
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5925: uvm_test_top.m_env.m_scoreboard [PASS]         185 Reg x12 | Valor: 0x56
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5935: uvm_test_top.m_env.m_scoreboard [PASS]         186 Reg x13 | Valor: 0x34
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5945: uvm_test_top.m_env.m_scoreboard [PASS]         187 Reg x14 | Valor: 0x12
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5955: uvm_test_top.m_env.m_scoreboard [PASS]         188 Reg x15 | Valor: 0x63
+# UVM_INFO tb/my_scoreboard.sv(77) @ 5955: uvm_test_top.m_env.m_scoreboard [PASS]         189 RAM[0x8001000d] | Valor: 0x63
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5975: uvm_test_top.m_env.m_scoreboard [PASS]         190 Reg x16 | Valor: 0x12346378
+# UVM_INFO tb/my_scoreboard.sv(79) @ 5985: uvm_test_top.m_env.m_scoreboard [PASS]         191 Reg x17 | Valor: 0x63
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6005: uvm_test_top.m_env.m_scoreboard [PASS]         192 Reg x18 | Valor: 0xc6
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6015: uvm_test_top.m_env.m_scoreboard [PASS]         193 Reg x19 | Valor: 0x309
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6015: uvm_test_top.m_env.m_scoreboard [PASS]         194 RAM[0x8001000e] | Valor: 0x309
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6035: uvm_test_top.m_env.m_scoreboard [PASS]         195 Reg x20 | Valor: 0x3096378
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6035: uvm_test_top.m_env.m_scoreboard [PASS]         196 RAM[0x80010020] | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6045: uvm_test_top.m_env.m_scoreboard [PASS]         197 RAM[0x80010024] | Valor: 0xff
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6055: uvm_test_top.m_env.m_scoreboard [PASS]         198 RAM[0x80010028] | Valor: 0x1234
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6065: uvm_test_top.m_env.m_scoreboard [PASS]         199 RAM[0x8001002c] | Valor: 0x1234
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6075: uvm_test_top.m_env.m_scoreboard [PASS]         200 RAM[0x80010030] | Valor: 0xfffffff0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6085: uvm_test_top.m_env.m_scoreboard [PASS]         201 RAM[0x80010034] | Valor: 0xfff0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6095: uvm_test_top.m_env.m_scoreboard [PASS]         202 RAM[0x80010038] | Valor: 0x78
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6105: uvm_test_top.m_env.m_scoreboard [PASS]         203 RAM[0x8001003c] | Valor: 0x56
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6125: uvm_test_top.m_env.m_scoreboard [PASS]         204 Reg x1 | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6135: uvm_test_top.m_env.m_scoreboard [PASS]         205 Reg x1 | Valor: 0xf
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6145: uvm_test_top.m_env.m_scoreboard [PASS]         206 Reg x1 | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6155: uvm_test_top.m_env.m_scoreboard [PASS]         207 Reg x9 | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6165: uvm_test_top.m_env.m_scoreboard [PASS]         208 Reg x8 | Valor: 0x80010000
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6165: uvm_test_top.m_env.m_scoreboard [PASS]         209 RAM[0x80010004] | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6195: uvm_test_top.m_env.m_scoreboard [PASS]         210 Reg x8 | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6215: uvm_test_top.m_env.m_scoreboard [PASS]         211 Reg x10 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6215: uvm_test_top.m_env.m_scoreboard [PASS]         212 RAM[0x80010000] | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6225: uvm_test_top.m_env.m_scoreboard [PASS]         213 RAM[0x80010004] | Valor: 0x1e
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6235: uvm_test_top.m_env.m_scoreboard [PASS]         214 RAM[0x80010008] | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6255: uvm_test_top.m_env.m_scoreboard [PASS]         215 Reg x1 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6265: uvm_test_top.m_env.m_scoreboard [PASS]         216 Reg x1 | Valor: 0x3
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6275: uvm_test_top.m_env.m_scoreboard [PASS]         217 Reg x2 | Valor: 0x6
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6285: uvm_test_top.m_env.m_scoreboard [PASS]         218 Reg x3 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6295: uvm_test_top.m_env.m_scoreboard [PASS]         219 Reg x3 | Valor: 0x9
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6305: uvm_test_top.m_env.m_scoreboard [PASS]         220 Reg x3 | Valor: 0xe
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6315: uvm_test_top.m_env.m_scoreboard [PASS]         221 Reg x4 | Valor: 0xfffffff8
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6315: uvm_test_top.m_env.m_scoreboard [PASS]         222 RAM[0x80010000] | Valor: 0x3
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6325: uvm_test_top.m_env.m_scoreboard [PASS]         223 RAM[0x80010004] | Valor: 0x6
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6335: uvm_test_top.m_env.m_scoreboard [PASS]         224 RAM[0x80010008] | Valor: 0xe
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6345: uvm_test_top.m_env.m_scoreboard [PASS]         225 RAM[0x8001000c] | Valor: 0xfffffff8
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6365: uvm_test_top.m_env.m_scoreboard [PASS]         226 Reg x1 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6375: uvm_test_top.m_env.m_scoreboard [PASS]         227 Reg x2 | Valor: 0x2
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6385: uvm_test_top.m_env.m_scoreboard [PASS]         228 Reg x3 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6395: uvm_test_top.m_env.m_scoreboard [PASS]         229 Reg x3 | Valor: 0x2
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6405: uvm_test_top.m_env.m_scoreboard [PASS]         230 Reg x4 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6405: uvm_test_top.m_env.m_scoreboard [PASS]         231 RAM[0x80010000] | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6435: uvm_test_top.m_env.m_scoreboard [PASS]         232 Reg x1 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6445: uvm_test_top.m_env.m_scoreboard [PASS]         233 Reg x5 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6455: uvm_test_top.m_env.m_scoreboard [PASS]         234 Reg x1 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6495: uvm_test_top.m_env.m_scoreboard [PASS]         235 Reg x1 | Valor: 0x2
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6535: uvm_test_top.m_env.m_scoreboard [PASS]         236 Reg x1 | Valor: 0x3
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6575: uvm_test_top.m_env.m_scoreboard [PASS]         237 Reg x1 | Valor: 0x4
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6615: uvm_test_top.m_env.m_scoreboard [PASS]         238 Reg x1 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6625: uvm_test_top.m_env.m_scoreboard [PASS]         239 RAM[0x80010000] | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6655: uvm_test_top.m_env.m_scoreboard [PASS]         240 Reg x9 | Valor: 0xffffffe1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6665: uvm_test_top.m_env.m_scoreboard [PASS]         241 Reg x8 | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6675: uvm_test_top.m_env.m_scoreboard [PASS]         242 Reg x10 | Valor: 0x80010000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6685: uvm_test_top.m_env.m_scoreboard [PASS]         243 Reg x10 | Valor: 0x80010008
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6685: uvm_test_top.m_env.m_scoreboard [PASS]         244 RAM[0x80010008] | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6715: uvm_test_top.m_env.m_scoreboard [PASS]         245 Reg x11 | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6725: uvm_test_top.m_env.m_scoreboard [PASS]         246 Reg x10 | Valor: 0x80010000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6735: uvm_test_top.m_env.m_scoreboard [PASS]         247 Reg x11 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6745: uvm_test_top.m_env.m_scoreboard [PASS]         248 Reg x1 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6755: uvm_test_top.m_env.m_scoreboard [PASS]         249 Reg x2 | Valor: 0x6
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6765: uvm_test_top.m_env.m_scoreboard [PASS]         250 Reg x3 | Valor: 0x7
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6775: uvm_test_top.m_env.m_scoreboard [PASS]         251 Reg x4 | Valor: 0x8
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6785: uvm_test_top.m_env.m_scoreboard [PASS]         252 Reg x5 | Valor: 0x9
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6795: uvm_test_top.m_env.m_scoreboard [PASS]         253 Reg x6 | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6795: uvm_test_top.m_env.m_scoreboard [PASS]         254 RAM[0x80010000] | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6825: uvm_test_top.m_env.m_scoreboard [PASS]         255 Reg x7 | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6835: uvm_test_top.m_env.m_scoreboard [PASS]         256 Reg x8 | Valor: 0x28
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6845: uvm_test_top.m_env.m_scoreboard [PASS]         257 Reg x9 | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6855: uvm_test_top.m_env.m_scoreboard [PASS]         258 Reg x10 | Valor: 0x3c
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6855: uvm_test_top.m_env.m_scoreboard [PASS]         259 RAM[0x80010004] | Valor: 0x3c
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6875: uvm_test_top.m_env.m_scoreboard [PASS]         260 Reg x11 | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6895: uvm_test_top.m_env.m_scoreboard [PASS]         261 Reg x12 | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6895: uvm_test_top.m_env.m_scoreboard [PASS]         262 RAM[0x80010008] | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6915: uvm_test_top.m_env.m_scoreboard [PASS]         263 Reg x13 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6915: uvm_test_top.m_env.m_scoreboard [PASS]         264 RAM[0x8001000c] | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6935: uvm_test_top.m_env.m_scoreboard [PASS]         265 Reg x14 | Valor: 0xfffffff0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6945: uvm_test_top.m_env.m_scoreboard [PASS]         266 Reg x15 | Valor: 0xfffffffc
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6945: uvm_test_top.m_env.m_scoreboard [PASS]         267 RAM[0x80010010] | Valor: 0xfffffffc
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6965: uvm_test_top.m_env.m_scoreboard [PASS]         268 Reg x16 | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6975: uvm_test_top.m_env.m_scoreboard [PASS]         269 Reg x17 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 6985: uvm_test_top.m_env.m_scoreboard [PASS]         270 Reg x18 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(77) @ 6985: uvm_test_top.m_env.m_scoreboard [PASS]         271 RAM[0x80010014] | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7005: uvm_test_top.m_env.m_scoreboard [PASS]         272 Reg x19 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7015: uvm_test_top.m_env.m_scoreboard [PASS]         273 Reg x20 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7025: uvm_test_top.m_env.m_scoreboard [PASS]         274 Reg x21 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7065: uvm_test_top.m_env.m_scoreboard [PASS]         275 Reg x22 | Valor: 0xde
+# UVM_INFO tb/my_scoreboard.sv(77) @ 7065: uvm_test_top.m_env.m_scoreboard [PASS]         276 RAM[0x80010018] | Valor: 0xde
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7115: uvm_test_top.m_env.m_scoreboard [PASS]         277 Reg x23 | Valor: 0x14d
+# UVM_INFO tb/my_scoreboard.sv(77) @ 7115: uvm_test_top.m_env.m_scoreboard [PASS]         278 RAM[0x8001001c] | Valor: 0x14d
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7135: uvm_test_top.m_env.m_scoreboard [PASS]         279 Reg x1 | Valor: 0x40a00000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7145: uvm_test_top.m_env.m_scoreboard [PASS]         280 Reg x2 | Valor: 0x40c00000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7155: uvm_test_top.m_env.m_scoreboard [PASS]         281 Reg x3 | Valor: 0x41300000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7165: uvm_test_top.m_env.m_scoreboard [PASS]         282 Reg x4 | Valor: 0x425c0000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7175: uvm_test_top.m_env.m_scoreboard [PASS]         283 Reg x26 | Valor: 0x425c0000
+# UVM_INFO tb/my_scoreboard.sv(77) @ 7175: uvm_test_top.m_env.m_scoreboard [PASS]         284 RAM[0x80010020] | Valor: 0x425c0000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7205: uvm_test_top.m_env.m_scoreboard [PASS]         285 Reg x5 | Valor: 0x11
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7215: uvm_test_top.m_env.m_scoreboard [PASS]         286 Reg x5 | Valor: 0x11000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7225: uvm_test_top.m_env.m_scoreboard [PASS]         287 Reg x5 | Valor: 0x117d0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7235: uvm_test_top.m_env.m_scoreboard [PASS]         288 Reg x5 | Valor: 0x1199a
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7245: uvm_test_top.m_env.m_scoreboard [PASS]         289 Reg x6 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7255: uvm_test_top.m_env.m_scoreboard [PASS]         290 Reg x6 | Valor: 0x28000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7265: uvm_test_top.m_env.m_scoreboard [PASS]         291 Reg x7 | Valor: 0xfffc4000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7275: uvm_test_top.m_env.m_scoreboard [PASS]         292 Reg x8 | Valor: 0x42000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7285: uvm_test_top.m_env.m_scoreboard [PASS]         293 Reg x1 | Valor: 0x478ccd00
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7295: uvm_test_top.m_env.m_scoreboard [PASS]         294 Reg x2 | Valor: 0x48200000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7305: uvm_test_top.m_env.m_scoreboard [PASS]         295 Reg x3 | Valor: 0xc8700000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7315: uvm_test_top.m_env.m_scoreboard [PASS]         296 Reg x4 | Valor: 0x48840000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7325: uvm_test_top.m_env.m_scoreboard [PASS]         297 Reg x10 | Valor: 0x37800000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7335: uvm_test_top.m_env.m_scoreboard [PASS]         298 Reg x10 | Valor: 0x37800074
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7345: uvm_test_top.m_env.m_scoreboard [PASS]         299 Reg x9 | Valor: 0x37800074
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7355: uvm_test_top.m_env.m_scoreboard [PASS]         300 Reg x1 | Valor: 0x3f8ccd80
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7365: uvm_test_top.m_env.m_scoreboard [PASS]         301 Reg x2 | Valor: 0x40200091
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7375: uvm_test_top.m_env.m_scoreboard [PASS]         302 Reg x3 | Valor: 0xc07000da
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7385: uvm_test_top.m_env.m_scoreboard [PASS]         303 Reg x4 | Valor: 0x40840078
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7395: uvm_test_top.m_env.m_scoreboard [PASS]         304 Reg x5 | Valor: 0x40666751
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7405: uvm_test_top.m_env.m_scoreboard [PASS]         305 Reg x6 | Valor: 0xbe199890
+# UVM_ERROR tb/my_scoreboard.sv(87) @ 7415: uvm_test_top.m_env.m_scoreboard [FAIL]         306 Esp: Reg x7=0x407e6767 | Rec: Reg x7=0x407e6768
+# UVM_ERROR tb/my_scoreboard.sv(84) @ 7415: uvm_test_top.m_env.m_scoreboard [FAIL]         307 Esp: RAM[0x80010000]=0x407e6767 | Rec: RAM[0x80010000]=0x407e6768
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7445: uvm_test_top.m_env.m_scoreboard [PASS]         308 Reg x9 | Valor: 0x4
+# UVM_INFO tb/my_scoreboard.sv(77) @ 7445: uvm_test_top.m_env.m_scoreboard [PASS]         309 RAM[0x80010004] | Valor: 0x4
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7465: uvm_test_top.m_env.m_scoreboard [PASS]         310 Reg x1 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7475: uvm_test_top.m_env.m_scoreboard [PASS]         311 Reg x2 | Valor: 0x6
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7485: uvm_test_top.m_env.m_scoreboard [PASS]         312 Reg x3 | Valor: 0x7
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7495: uvm_test_top.m_env.m_scoreboard [PASS]         313 Reg x4 | Valor: 0x8
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7505: uvm_test_top.m_env.m_scoreboard [PASS]         314 Reg x5 | Valor: 0x9
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7515: uvm_test_top.m_env.m_scoreboard [PASS]         315 Reg x6 | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(77) @ 7515: uvm_test_top.m_env.m_scoreboard [PASS]         316 RAM[0x80010000] | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7545: uvm_test_top.m_env.m_scoreboard [PASS]         317 Reg x7 | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7555: uvm_test_top.m_env.m_scoreboard [PASS]         318 Reg x8 | Valor: 0x28
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7565: uvm_test_top.m_env.m_scoreboard [PASS]         319 Reg x9 | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7575: uvm_test_top.m_env.m_scoreboard [PASS]         320 Reg x10 | Valor: 0x3c
+# UVM_INFO tb/my_scoreboard.sv(77) @ 7575: uvm_test_top.m_env.m_scoreboard [PASS]         321 RAM[0x80010004] | Valor: 0x3c
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7595: uvm_test_top.m_env.m_scoreboard [PASS]         322 Reg x11 | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7615: uvm_test_top.m_env.m_scoreboard [PASS]         323 Reg x12 | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(77) @ 7615: uvm_test_top.m_env.m_scoreboard [PASS]         324 RAM[0x80010008] | Valor: 0x14
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7635: uvm_test_top.m_env.m_scoreboard [PASS]         325 Reg x13 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(77) @ 7635: uvm_test_top.m_env.m_scoreboard [PASS]         326 RAM[0x8001000c] | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7655: uvm_test_top.m_env.m_scoreboard [PASS]         327 Reg x14 | Valor: 0xfffffff0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7665: uvm_test_top.m_env.m_scoreboard [PASS]         328 Reg x15 | Valor: 0xfffffffc
+# UVM_INFO tb/my_scoreboard.sv(77) @ 7665: uvm_test_top.m_env.m_scoreboard [PASS]         329 RAM[0x80010010] | Valor: 0xfffffffc
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7685: uvm_test_top.m_env.m_scoreboard [PASS]         330 Reg x16 | Valor: 0xffffffff
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7695: uvm_test_top.m_env.m_scoreboard [PASS]         331 Reg x17 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7705: uvm_test_top.m_env.m_scoreboard [PASS]         332 Reg x18 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(77) @ 7705: uvm_test_top.m_env.m_scoreboard [PASS]         333 RAM[0x80010014] | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7725: uvm_test_top.m_env.m_scoreboard [PASS]         334 Reg x19 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7735: uvm_test_top.m_env.m_scoreboard [PASS]         335 Reg x20 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7745: uvm_test_top.m_env.m_scoreboard [PASS]         336 Reg x21 | Valor: 0x0
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7785: uvm_test_top.m_env.m_scoreboard [PASS]         337 Reg x22 | Valor: 0xde
+# UVM_INFO tb/my_scoreboard.sv(77) @ 7785: uvm_test_top.m_env.m_scoreboard [PASS]         338 RAM[0x80010018] | Valor: 0xde
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7835: uvm_test_top.m_env.m_scoreboard [PASS]         339 Reg x23 | Valor: 0x14d
+# UVM_INFO tb/my_scoreboard.sv(77) @ 7835: uvm_test_top.m_env.m_scoreboard [PASS]         340 RAM[0x8001001c] | Valor: 0x14d
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7855: uvm_test_top.m_env.m_scoreboard [PASS]         341 Reg x1 | Valor: 0x40a00000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7865: uvm_test_top.m_env.m_scoreboard [PASS]         342 Reg x2 | Valor: 0x40c00000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7875: uvm_test_top.m_env.m_scoreboard [PASS]         343 Reg x3 | Valor: 0x41300000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7885: uvm_test_top.m_env.m_scoreboard [PASS]         344 Reg x4 | Valor: 0x425c0000
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7895: uvm_test_top.m_env.m_scoreboard [PASS]         345 Reg x26 | Valor: 0x425c0000
+# UVM_INFO tb/my_scoreboard.sv(77) @ 7895: uvm_test_top.m_env.m_scoreboard [PASS]         346 RAM[0x80010020] | Valor: 0x425c0000
+# UVM_ERROR tb/my_scoreboard.sv(87) @ 7925: uvm_test_top.m_env.m_scoreboard [FAIL]         347 Esp: Reg x30=0x800004ea | Rec: Reg x30=0x4ea
+# UVM_INFO tb/my_scoreboard.sv(79) @ 7955: uvm_test_top.m_env.m_scoreboard [PASS]         348 Reg x25 | Valor: 0x1
+# UVM_ERROR tb/my_scoreboard.sv(87) @ 7995: uvm_test_top.m_env.m_scoreboard [FAIL]         349 Esp: Reg x30=0x800004ee | Rec: Reg x30=0x4ee
+# UVM_INFO tb/my_scoreboard.sv(79) @ 8025: uvm_test_top.m_env.m_scoreboard [PASS]         350 Reg x23 | Valor: 0x14d
+# UVM_ERROR tb/my_scoreboard.sv(87) @ 8035: uvm_test_top.m_env.m_scoreboard [FAIL]         351 Esp: Reg x31=0x80000508 | Rec: Reg x31=0x508
+# UVM_ERROR tb/my_scoreboard.sv(87) @ 8065: uvm_test_top.m_env.m_scoreboard [FAIL]         352 Esp: Reg x31=0x800004f2 | Rec: Reg x31=0x4f2
+# UVM_INFO tb/my_scoreboard.sv(79) @ 8095: uvm_test_top.m_env.m_scoreboard [PASS]         353 Reg x1 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 8105: uvm_test_top.m_env.m_scoreboard [PASS]         354 Reg x2 | Valor: 0xa
+# UVM_INFO tb/my_scoreboard.sv(79) @ 8115: uvm_test_top.m_env.m_scoreboard [PASS]         355 Reg x3 | Valor: 0x5
+# UVM_INFO tb/my_scoreboard.sv(79) @ 8155: uvm_test_top.m_env.m_scoreboard [PASS]         356 Reg x4 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 8195: uvm_test_top.m_env.m_scoreboard [PASS]         357 Reg x5 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 8235: uvm_test_top.m_env.m_scoreboard [PASS]         358 Reg x6 | Valor: 0x1
+# UVM_ERROR tb/my_scoreboard.sv(87) @ 8245: uvm_test_top.m_env.m_scoreboard [FAIL]         359 Esp: Reg x7=0x8000052a | Rec: Reg x7=0x52a
+# UVM_INFO tb/my_scoreboard.sv(79) @ 8275: uvm_test_top.m_env.m_scoreboard [PASS]         360 Reg x9 | Valor: 0x2a
+# UVM_INFO tb/my_scoreboard.sv(79) @ 8315: uvm_test_top.m_env.m_scoreboard [PASS]         361 Reg x24 | Valor: 0x1
+# UVM_INFO tb/my_scoreboard.sv(79) @ 8325: uvm_test_top.m_env.m_scoreboard [PASS]         362 Reg x8 | Valor: 0x7b
+# UVM_INFO C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 17345: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO tb/my_scoreboard.sv(102) @ 17345: uvm_test_top.m_env.m_scoreboard [SCOREBOARD_REPORT] ========================================
+# UVM_INFO tb/my_scoreboard.sv(103) @ 17345: uvm_test_top.m_env.m_scoreboard [SCOREBOARD_REPORT] Total de Instrucoes Avaliadas: 363
+# UVM_INFO tb/my_scoreboard.sv(104) @ 17345: uvm_test_top.m_env.m_scoreboard [SCOREBOARD_REPORT] Acertos: 356
+# UVM_INFO tb/my_scoreboard.sv(105) @ 17345: uvm_test_top.m_env.m_scoreboard [SCOREBOARD_REPORT] Erros: 7
+# UVM_INFO tb/my_scoreboard.sv(106) @ 17345: uvm_test_top.m_env.m_scoreboard [SCOREBOARD_REPORT] Taxa de Sucesso: 98.07%
+# UVM_INFO tb/my_scoreboard.sv(107) @ 17345: uvm_test_top.m_env.m_scoreboard [SCOREBOARD_REPORT] ========================================
+# UVM_INFO C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 17345: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO : 1052
+# UVM_WARNING :    0
+# UVM_ERROR :    7
+# UVM_FATAL :    0
+# ** Report counts by id
+# [FAIL]     7
+# [NO_DPI_TSTNAME]     1
+# [PASS]   356
+# [RNTST]     1
+# [SCOREBOARD_REPORT]     6
+# [TEST_DONE]     1
+# [UVM/COMP/NAMECHECK]     1
+# [UVM/RELNOTES]     1
+# [UVMTOP]     1
+# [my_agent]     2
+# [my_driver]   337
+# [my_env]     2
+# [my_monitor]     2
+# [my_scoreboard]     1
+# [my_sequence]   337
+# [my_test]     3
+# 
+# ** Note: $finish    : C:/intelFPGA/18.1/modelsim_ase/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 17345 ps  Iteration: 71  Instance: /top_tb
+# End time: 13:36:54 on Jul 10,2026, Elapsed time: 0:00:08
+# Errors: 1, Warnings: 6
