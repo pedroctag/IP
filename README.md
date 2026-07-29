@@ -52,6 +52,48 @@ This stage uses one mux and the control signals for the writeback in the registe
 
 In addition to the pipeline stages, the processor includes a Hazard Unit for Read After Write (RAW) hazards. It monitors the destination register (Rd), both source registers (Rs) and Write Enable signals between stages. When a hazard is detected, the unit makes the appropriate correction, being a stall, a forwarding or a flush.
 
+### Testbench
+The testbench consists of a loading stage and an execution stage. Since no IP is used in the design, the instruction memory has an unusual asynchronous write operation. The right way to run the testbench is to keep the reset and the write-enable signals asserted while the instructions are placed on the data input bus, this is achieved with a "for" loop. After that stage, the reset and write-enable are deasserted and execution begins. One unfortunate effect of that approach is that the gate-level simulation cannot load the instructions. The reason for this behavior is that, in the transition from one instruction to the next, the rapid changes in the state of the bus corrupt the data being written. Changing the write-enable along with the clock signal also is not possible, since the simulator enters an infinite loop once the signal changes state.
+
+ **Test Run**
+ 
+ The assembly program used for to test the testbench is shown below:
+```assembly
+c.li        x5, 17
+c.slli      x5, 12
+addi        x5, x5, 2000
+addi        x5, x5, 458
+c.li        x6, 5
+c.slli      x6, 15
+lui         x7, 1048516
+lui         x8, 66
+fcvt.s.w    f1, x5
+fcvt.s.w    f2, x6
+fcvt.s.w    f3, x7
+fcvt.s.w    f4, x8
+lui         x10, 227328
+addi        x10, x10, 0x74
+fmv.w.x     f9, x10
+fmul.s      f1, f1, f9
+fmul.s      f2, f2, f9
+fmul.s      f3, f3, f9
+fmul.s      f4, f4, f9
+fadd.s      f5, f1, f2
+fadd.s      f6, f5, f3
+fadd.s      f7, f6, f4
+fsw         f7, 0(x31)
+fcvt.w.s    x9, f7
+sw          x9, 4(x31)
+end:
+beq         x0, x0, end
+```
+
+The screenshot results for RFX, RFF and data memory contents are shown below
+
+<img width="792" height="282" alt="image" src="https://github.com/user-attachments/assets/4abeb13b-dd32-4fbe-81e9-f575ed29d48e" />
+<img width="792" height="354" alt="image" src="https://github.com/user-attachments/assets/2a6ed709-adb3-4ab0-956b-81fe21809529" />
+<img width="412" height="279" alt="image" src="https://github.com/user-attachments/assets/3b849df6-bd26-4370-8821-09e931d629ef" />
+
 ## Synthesis and STA
 
 The design was synthesized using Cadence Genus under three different scenarios:
@@ -106,7 +148,7 @@ For the functional coverage analysis, all instructions from the assembly program
 |363|356|7|98.07%|
 
 The mismatches here were caused by the difference between the design and the simulator addresses. The RTL data memory is truncated in 16 address bits, while the simulator uses 32, with the data starting in 0x80000000, which is a problem with instructions like JAL (the loaded memory address does not match the simulator). This can be verified with the following lines from the transcript file:
-```
+```log
 scoreboard [FAIL] 347 Expected: Reg x30=0x800004ea | Returned: Reg x30=0x4ea
 scoreboard [FAIL] 349 Expected: Reg x30=0x800004ee | Returned: Reg x30=0x4ee
 scoreboard [FAIL] 351 Expected: Reg x31=0x80000508 | Returned: Reg x31=0x508
@@ -114,14 +156,14 @@ scoreboard [FAIL] 352 Expected: Reg x31=0x800004f2 | Returned: Reg x31=0x4f2
 scoreboard [FAIL] 359 Expected: Reg x7=0x8000052a  | Returned: Reg x7=0x52a
 ```
 Another source of mismatch is from the F.ADD instruction. The floating-point adder does not use the last three bits during the rounding stage in order to run synthesis. As a result, a rounding difference occurs in some cases, as shown below. Note that this issue generates two mismatches because the incorrect result is subsequently stored in memory
-```
+```log
 scoreboard [FAIL] 306 Expected: Reg f7=0x407e6767          | Returned: Reg f7=0x407e6768
 scoreboard [FAIL] 307 Expected: RAM[0x80010000]=0x407e6767 | Returned: RAM[0x80010000]=0x407e6768
 ```
 
 **Functional Coverage**
 
-Functional coverage was obtained by executing a total of 1,386 instructions: the 363 instructions from the golden model test program and an additional 1,023 randomly generated valid RISC-V instructions. Covergroups were used to measure the coverage of opcodes, register accesses, control signals, hazard logic, branch logic, and compressed instruction support.
+Functional coverage was obtained by executing a total of 1,353 instructions: 330 instructions from the golden model test program and an additional 1,023 randomly generated valid RISC-V instructions. Covergroups were used to measure the coverage of opcodes, register accesses, control signals, hazard logic, branch logic, and compressed instruction support.
 
 | Category | Coverage |
 |----------|---------:|
