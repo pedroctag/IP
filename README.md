@@ -52,6 +52,12 @@ This stage uses one mux and the control signals for the writeback in the registe
 
 In addition to the pipeline stages, the processor includes a Hazard Unit for Read After Write (RAW) hazards. It monitors the destination register (Rd), both source registers (Rs) and Write Enable signals between stages. When a hazard is detected, the unit makes the appropriate correction, being a stall, a forwarding or a flush.
 
+## Implementation Notes
+
+- The instruction memory uses an asynchronous write interface to simplify testbench loading.
+- The floating-point adder omits the last three rounding bits to reduce synthesis cost.
+- The current forwarding implementation determines the reported critical path but can be further optimized.
+- 
 ### Testbench
 The testbench consists of a loading stage and an execution stage. Since no IP is used in the design, the instruction memory has an unusual asynchronous write operation. The right way to run the testbench is to keep the reset and the write-enable signals asserted while the instructions are placed on the data input bus, this is achieved with a "for" loop. After that stage, the reset and write-enable are deasserted and execution begins. One unfortunate effect of that approach is that the gate-level simulation cannot load the instructions. The reason for this behavior is that, in the transition from one instruction to the next, the rapid changes in the state of the bus corrupt the data being written. Changing the write-enable along with the clock signal also is not possible, since the simulator enters an infinite loop once the signal changes state.
 
@@ -122,6 +128,15 @@ The critical path reported by Cadence Genus is shown below:
 
 The critical path starts at the RdM signal, which is an input to the Hazard Unit. Inside this module, the forwarding logic determines the control signals for the multiplexers. Once the multiplexers have settled, the critical path follows the main data path all the way to the input multiplexer of the PC register.
 
+> [!NOTE]
+> The reported critical path is not representative of the longest functional execution path of the processor. From a connectivity perspective, the synthesized netlist contains a path from the FPU output to the PC register through the final Execute-stage multiplexer. However, this path cannot be activated by any valid instruction, since the JALR instruction always selects the ALU output and there is no instruction that uses the FPU result as the source for the PC.
+>
+> This path exists only because the FPU and ALU outputs share the same result bus. A simple structural modification, connecting the JALR address input directly to the ALU output instead of the shared bus, would eliminate this path without changing the processor behavior. Unfortunately, this optimization could not be evaluated because access to the synthesis environment was no longer available after the project was completed, and the achieved timing results were already sufficient for the target scenarios. The image below shows the proposed modification:
+> 
+> <img width="247" height="271" alt="image" src="https://github.com/user-attachments/assets/aad8fc09-f1dc-4853-8400-4ccae75cb69c" />
+
+
+
 ## UVM and Testing
 
 > [!IMPORTANT]
@@ -188,6 +203,7 @@ Functional coverage was obtained by executing a total of 1,353 instructions: 330
 | **PREFETCH AND COMPRESSED INSTRUCTIONS** | **100.00%** |
 | - Compressed Instructions | 100.00% |
 | - Misaligned Fetch (PC1) | 100.00% |
+
 
 ## Acknowledgements
 
