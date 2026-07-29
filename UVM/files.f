@@ -1,6 +1,7 @@
 -y ./../RTL/lib/Common
 -y ./../RTL/lib/Core_FPU
 -y ./../RTL/lib/Core_FPU/memory
+-y ./../RTL/lib/misc
 +libext+.v+.sv
 +incdir+rtl
 +incdir+tb
